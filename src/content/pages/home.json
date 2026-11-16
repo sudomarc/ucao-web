@@ -1,0 +1,83 @@
+{
+  "slug": "home",
+  "title": "Accueil",
+  "metaDescription": "Université Catholique de l’Afrique de l’Ouest – Unité Universitaire de Conakry : formations, admissions, vie universitaire et actualités à Conakry, Guinée.",
+  "hero": {
+    "kicker": "Université Catholique de l’Afrique de l’Ouest",
+    "title": "Unité Universitaire de Conakry",
+    "lead": "Une formation académique exigeante, ancrée en Guinée et ouverte sur l’Afrique de l’Ouest, au service des étudiantes et étudiants, des enseignants et des partenaires.",
+    "image": "/assets/images/hero-conakry.webp",
+    "imageAlt": "Vue de Conakry, Guinée — ville où est implantée l’Unité Universitaire de Conakry. Illustration libre de droit (Wikimedia Commons, CC BY-SA 4.0).",
+    "imageCredit": "Photo : Wikimedia Commons, CC BY-SA 4.0 — Ville de Conakry. Illustration, non une photo du campus UCAO-UUCo.",
+    "ctaPrimary": { "label": "Découvrir les formations", "href": "/formations/" },
+    "ctaSecondary": { "label": "S’informer sur les admissions", "href": "/admissions/" }
+  },
+  "intro": {
+    "title": "L’exigence académique au service de l’humain",
+    "lead": "L’Unité Universitaire de Conakry porte les mêmes exigences académiques et humaines que le réseau UCAO, adaptées au contexte guinéen.",
+    "text": "Fondée dans le réseau UCAO, l’unité universitaire de Conakry propose des formations de Licence et de Master conçues pour répondre aux besoins du marché de l’emploi local et international, dans une approche intellectuelle et humaine de qualité."
+  },
+  "stats": {
+    "title": "L’UCAO en quelques repères",
+    "text": "Repères institutionnels à confirmer avec l’administration.",
+    "items": [
+      { "number": "7", "label": "Pays du réseau UCAO [À CONFIRMER]" },
+      { "number": "2000", "label": "Fondation de l’UCAO [À CONFIRMER]" },
+      { "number": "2", "label": "Cycles : Licence et Master" }
+    ],
+    "note": "Les chiffres présentés sont issus de l’ancien site et doivent être confirmés par l’administration avant publication."
+  },
+  "formationsIntro": {
+    "title": "Nos formations",
+    "text": "L’Unité Universitaire de Conakry propose des formations de premier cycle (Licence) et de second cycle (Master), organisées par spécialité. Le catalogue détaillé est à confirmer avec l’administration."
+  },
+  "formationsImage": {
+    "image": "WhatsApp Image 2026-11-14 at 3.03.04 PM.jpeg",
+    "imageAlt": "Étudiantes en cours à l’UCAO-UUCo, Conakry.",
+    "credit": "Photo fournie par l’UCAO-UUCo — vie étudiante sur le campus de Conakry.",
+    "reverse": false
+  },
+  "formations": {
+    "title": "Formations en bref",
+    "note": "À développer avec le catalogue confirmé par l’administration.",
+    "items": [
+      { "label": "Licence", "desc": "Premier cycle après le baccalauréat.", "href": "/formations/?niveau=licence", "note": "[À CONFIRMER]" },
+      { "label": "Master", "desc": "Second cycle après une licence ou équivalent.", "href": "/formations/?niveau=master", "note": "[À CONFIRMER]" }
+    ],
+    "cta": { "label": "Voir toutes les formations", "href": "/formations/" }
+  },
+  "admissions": {
+    "title": "Admissions",
+    "text": "Les procédures, conditions et documents nécessaires sont détaillés sur la page Admissions. Les informations financières ne sont présentées que lorsqu’elles sont confirmées par l’administration.",
+    "cta": { "label": "Voir la procédure d’admission", "href": "/admissions/" }
+  },
+  "quote": {
+    "text": "« Former des compétences humaines et intellectuelles de qualité, au service du développement de l’Afrique de l’Ouest. »",
+    "cite": "Mission de l’UCAO — [À CONFIRMER]"
+  },
+  "actualites": {
+    "title": "Actualités récentes",
+    "note": "Les actualités ci-dessous proviennent de l’ancien site et doivent être confirmées.",
+    "items": [
+      { "title": "L’UCAO-UUCo célèbre son Jubilé des 25 ans", "date": "28 novembre 2025", "summary": "Un quart de siècle d’excellence, de mission et de service.", "category": "Événement", "href": "/actualites/#jubile-25-ans", "note": "[À CONFIRMER]" },
+      { "title": "Colloque international sur la gouvernance de la diversité culturelle", "date": "16 novembre 2025", "summary": "Organisé par l’UCAO-UUCo.", "category": "Colloque", "href": "/actualites/#colloque-diversite", "note": "[À CONFIRMER]" },
+      { "title": "Journée de l’étudiant à l’UCAO", "date": "14 novembre 2025", "summary": "Une journée dédiée à la vie étudiante sur le campus de Conakry.", "category": "Vie étudiante", "href": "/actualites/#journee-etudiant", "note": "[À CONFIRMER]" }
+    ],
+    "cta": { "label": "Voir toutes les actualités", "href": "/actualites/" }
+  },
+  "vie": {
+    "title": "Vie universitaire",
+    "text": "Étudiants, campus, activités et environnement académique à Conakry. Contenu à compléter avec l’administration.",
+    "cta": { "label": "En savoir plus sur la vie universitaire", "href": "/vie-universitaire/" }
+  },
+  "valeurs": {
+    "title": "Nos valeurs",
+    "note": "À confirmer avec l’administration.",
+    "items": [
+      { "label": "Exigence académique", "desc": "Une formation intellectuelle rigoureuse et de qualité." },
+      { "label": "Formation humaine", "desc": "Le développement de la personne dans sa globalité." },
+      { "label": "Service à la communauté", "desc": "Contribuer au développement de la Guinée et de l’Afrique de l’Ouest." },
+      { "label": "Ouverture et partenariat", "desc": "Un réseau ouvert sur l’international et les partenaires." }
+    ]
+  }
+}

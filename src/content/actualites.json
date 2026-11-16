@@ -1,0 +1,35 @@
+{
+  "note": "Actualités observées sur l’ancien site (archive Web, février 2026). À confirmer par l’administration avant publication. Aucune actualité n’est inventée.",
+  "items": [
+    {
+      "id": "jubile-25-ans",
+      "title": "L’UCAO-UUCo célèbre son Jubilé des 25 ans",
+      "date": "28 novembre 2025",
+      "summary": "Un quart de siècle d’excellence, de mission et de service.",
+      "category": "Événement",
+      "note": "[À CONFIRMER]",
+      "imageAlt": "Célébration du jubilé des 25 ans de l’UCAO-UUCo"
+    },
+    {
+      "id": "colloque-diversite",
+      "title": "Colloque international sur la gouvernance de la diversité culturelle",
+      "date": "16 novembre 2025",
+      "summary": "Organisé par l’UCAO-UUCo.",
+      "category": "Colloque",
+      "note": "[À CONFIRMER]",
+      "imageAlt": "Colloque international sur la diversité culturelle"
+    },
+    {
+      "id": "journee-etudiant",
+      "title": "Journée de l’étudiant à l’UCAO",
+      "date": "14 novembre 2025",
+      "summary": "Une journée dédiée à la vie étudiante sur le campus de Conakry.",
+      "category": "Vie étudiante",
+      "note": "[À CONFIRMER]",
+      "imageAlt": "Journée de l’étudiant à l’UCAO-UUCo"
+    }
+  ],
+  "emptyState": "Aucune actualité publiée pour le moment.",
+  "ctaLabel": "Voir toutes les actualités",
+  "ctaHref": "/actualites/"
+}

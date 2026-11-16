@@ -1,0 +1,14 @@
+{
+  "slug": "actualites",
+  "title": "Actualités",
+  "metaDescription": "Actualités de l’UCAO-UUCo : publications, dates et catégories à Conakry, Guinée.",
+  "hero": {
+    "kicker": "Actualités",
+    "title": "Actualités de l’UCAO-UUCo",
+    "lead": "Retrouvez les publications récentes de l’Unité Universitaire de Conakry : événements, colloques et vie du campus."
+  },
+  "intro": {
+    "text": "Les actualités ci-dessous proviennent de l’ancien site et doivent être confirmées par l’administration. Aucune actualité n’est inventée."
+  },
+  "note": "À compléter avec les contenus confirmés par l’administration."
+}

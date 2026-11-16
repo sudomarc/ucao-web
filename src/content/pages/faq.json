@@ -1,0 +1,18 @@
+{
+  "slug": "faq",
+  "title": "FAQ",
+  "metaDescription": "Foire aux questions de l’UCAO-UUCo : formations, admissions, vie universitaire et contact à Conakry.",
+  "hero": {
+    "kicker": "FAQ",
+    "title": "Foire aux questions",
+    "lead": "Réponses aux questions les plus fréquentes sur l’UCAO-UUCo."
+  },
+  "items": [
+    { "q": "Où se trouve l’UCAO-UUCo ?", "a": "À Coléah, sur la route de Niger, à côté de l’église catholique Saint Michel, Conakry, Guinée. [À CONFIRMER]" },
+    { "q": "Quelles formations sont proposées ?", "a": "Des formations de Licence et de Master. Le catalogue détaillé est à confirmer par l’administration." },
+    { "q": "Comment s’inscrire ?", "a": "Consultez la procédure d’admission sur la page Admissions." },
+    { "q": "Les diplômes sont-ils reconnus ?", "a": "L’UCAO indique des diplômes reconnus par l’État guinéen et une appartenance au CAMES. Ces informations doivent être confirmées par l’administration." },
+    { "q": "Quel est l’adresse e-mail de contact ?", "a": "Deux variantes ont été observées (info@ucao.uuco.org et info@ucao-uuco.org). L’adresse officielle est en cours de confirmation." }
+  ],
+  "note": "Toutes les réponses sont à confirmer avec l’administration. Aucune réponse n’est inventée."
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "mentions-legales",
+  "title": "Mentions légales",
+  "metaDescription": "Mentions légales de l’UCAO-UUCo : éditeur, hébergeur et informations légales.",
+  "hero": {
+    "kicker": "Mentions légales",
+    "title": "Mentions légales",
+    "lead": "Informations légales concernant le site de l’UCAO-UUCo."
+  },
+  "blocks": [
+    { "title": "Éditeur", "content": "Université Catholique de l’Afrique de l’Ouest – Unité Universitaire de Conakry (UCAO-UUCo). [À CONFIRMER]" },
+    { "title": "Siège", "content": "Coléah, route de Niger, Conakry, Guinée. [À CONFIRMER]" },
+    { "title": "Directeur de la publication", "content": "[À CONFIRMER]" },
+    { "title": "Hébergement", "content": "[À CONFIRMER — hébergeur à préciser]" },
+    { "title": "Crédits", "content": "Conception et réalisation du site : refonte institutionnelle UCAO-UUCo." }
+  ],
+  "note": "Les informations manquantes sont marquées [À CONFIRMER] et ne sont pas inventées."
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "formations",
+  "title": "Formations",
+  "metaDescription": "Catalogue des formations de l’UCAO-UUCo par niveau et spécialité à Conakry, Guinée.",
+  "hero": {
+    "kicker": "Formations",
+    "title": "Trouver une formation",
+    "lead": "Consultez le catalogue des formations de Licence et de Master proposées par l’Unité Universitaire de Conakry.",
+    "image": "WhatsApp Image 2026-11-14 at 3.02.58 PM.jpeg",
+    "imageAlt": "Entrée du campus de l’UCAO-UUCo à Conakry.",
+    "imageCredit": "Photo fournie par l’UCAO-UUCo — campus de Conakry.",
+    "ctaPrimary": { "label": "Voir toutes les formations", "href": "/formations/" },
+    "ctaSecondary": { "label": "S’informer sur les admissions", "href": "/admissions/" }
+  },
+  "intro": {
+    "title": "Un catalogue par niveau et par spécialité",
+    "text": "Les formations sont organisées par niveau et par spécialité. Utilisez le champ de recherche pour trouver rapidement la formation qui correspond à votre projet. Le catalogue détaillé doit être confirmé par l’administration."
+  },
+  "formationsImage": {
+    "image": "WhatsApp Image 2026-11-14 at 3.03.04 PM.jpeg",
+    "imageAlt": "Étudiantes en cours à l’UCAO-UUCo, Conakry.",
+    "credit": "Photo fournie par l’UCAO-UUCo — vie étudiante en salle de cours.",
+    "reverse": true
+  },
+  "note": "Le catalogue complet, les effectifs et les listes précises de formations doivent être confirmés par l’administration. Aucun chiffre n’est inventé."
+}

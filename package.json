@@ -1,0 +1,31 @@
+{
+  "name": "ucao-uuco-web",
+  "version": "1.0.0",
+  "description": "Site vitrine de l'Université Catholique de l'Afrique de l'Ouest – Unité Universitaire de Conakry (UCAO-UUCo). Site statique, en français, responsive, accessible, performant.",
+  "private": true,
+  "scripts": {
+    "build": "node src/build.js",
+    "start": "node src/build.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sudomarc/ucao-web.git"
+  },
+  "keywords": [
+    "university",
+    "ucaO",
+    "conakry",
+    "guinee",
+    "static-site",
+    "french"
+  ],
+  "author": "UCAO-UUCo",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "rea": "^0.0.1",
+    "rea-agents": "^6.9.0"
+  }
+}

@@ -1,0 +1,12 @@
+[
+  { "label": "Accueil", "href": "/" },
+  { "label": "Université", "href": "/universite/" },
+  { "label": "Formations", "href": "/formations/" },
+  { "label": "Admissions", "href": "/admissions/" },
+  { "label": "Vie universitaire", "href": "/vie-universitaire/" },
+  { "label": "Actualités", "href": "/actualites/" },
+  { "label": "Contact", "href": "/contact/" },
+  { "label": "FAQ", "href": "/faq/" },
+  { "label": "Mentions légales", "href": "/mentions-legales/" },
+  { "label": "Politique de confidentialité", "href": "/politique-confidentialite/" }
+]

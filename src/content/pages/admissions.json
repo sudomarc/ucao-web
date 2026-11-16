@@ -1,0 +1,50 @@
+{
+  "slug": "admissions",
+  "title": "Admissions",
+  "metaDescription": "Procédures d’admission, conditions, documents nécessaires et étapes pour s’inscrire à l’UCAO-UUCo à Conakry.",
+  "hero": {
+    "kicker": "Admissions",
+    "title": "Rejoindre l’UCAO-UUCo",
+    "lead": "Découvrez la procédure d’admission, les conditions et les documents nécessaires pour intégrer l’une de nos formations.",
+    "image": "WhatsApp Image 2026-11-14 at 3.03.15 PM.jpeg",
+    "imageAlt": "Portrait d’une étudiante de l’UCAO-UUCo à Conakry.",
+    "imageCredit": "Photo fournie par l’UCAO-UUCo — étudiante sur le campus.",
+    "ctaPrimary": { "label": "Voir le catalogue des formations", "href": "/formations/" },
+    "ctaSecondary": { "label": "Contacter le service des admissions", "href": "/contact/" }
+  },
+  "intro": {
+    "title": "Une procédure claire, étape par étape",
+    "text": "Rejoindre l’UCAO-UUCo se fait en plusieurs étapes, du choix de la formation à l’inscription finale. Chaque étape est décrite ci-dessous pour vous guider dans votre démarche."
+  },
+  "steps": [
+    { "title": "1. Choisir une formation", "text": "Consultez le catalogue des formations et identifiez celle qui correspond à votre projet." },
+    { "title": "2. Vérifier les conditions d’admission", "text": "Chaque formation définit ses propres conditions d’accès (niveau requis, diplôme, etc.)." },
+    { "title": "3. Constituer le dossier", "text": "Rassemblez les documents nécessaires : pièce d’identité, diplômes, relevés de notes, photos, etc." },
+    { "title": "4. Déposer la candidature", "text": "Déposez votre dossier auprès du service des admissions de l’unité de Conakry." },
+    { "title": "5. Réponse et inscription", "text": "Après examen du dossier, vous recevrez une réponse et pourrez finaliser votre inscription." }
+  ],
+  "documents": [
+    "Pièce d’identité ou passeport",
+    "Diplôme(s) obtenu(s) et relevés de notes",
+    "Acte de naissance",
+    "Photos d’identité",
+    "Justificatif de domicile"
+  ],
+  "documentsNote": "Liste à confirmer par le service des admissions de l’UCAO-UUCo.",
+  "financial": {
+    "title": "Informations financières",
+    "text": "Les tarifs, échéances et conditions de paiement figurant sur l’ancien site concernaient l’année 2025-2026. Ils ne sont pas présentés comme les tarifs actuels et doivent être confirmés par l’administration avant toute republication.",
+    "note": "[À CONFIRMER] Aucun tarif n’est affiché sur ce site en l’absence de confirmation officielle."
+  },
+  "contactAdmissions": {
+    "text": "Pour toute question sur la procédure d’admission, contactez le service des admissions de l’unité de Conakry.",
+    "email": "[À CONFIRMER]",
+    "phones": ["(+224) 620 42 66 12", "(+224) 621 28 66 81", "(+224) 629 38 90 58"]
+  },
+  "campusImage": {
+    "image": "WhatsApp Image 2026-11-14 at 3.02.57 PM (1).jpeg",
+    "imageAlt": "Étudiants de l’UCAO-UUCo lors d’un événement sur le campus (Octobre Rose).",
+    "credit": "Photo fournie par l’UCAO-UUCo — événement étudiant sur le campus de Conakry.",
+    "reverse": false
+  }
+}

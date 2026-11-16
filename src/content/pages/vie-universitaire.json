@@ -1,0 +1,31 @@
+{
+  "slug": "vie-universitaire",
+  "title": "Vie universitaire",
+  "metaDescription": "Vie étudiante, campus, activités et environnement académique de l’UCAO-UUCo à Conakry.",
+  "hero": {
+    "kicker": "Vie universitaire",
+    "title": "Vivre l’université à Conakry",
+    "lead": "Étudiants, campus, activités et environnement académique de l’Unité Universitaire de Conakry.",
+    "image": "WhatsApp Image 2026-11-14 at 3.03.04 PM.jpeg",
+    "imageAlt": "Étudiantes en cours à l’UCAO-UUCo, Conakry.",
+    "imageCredit": "Photo fournie par l’UCAO-UUCo — vie étudiante en salle de cours.",
+    "ctaPrimary": { "label": "Découvrir les formations", "href": "/formations/" },
+    "ctaSecondary": { "label": "S’informer sur les admissions", "href": "/admissions/" }
+  },
+  "intro": {
+    "title": "Une vie étudiante sur le campus de Conakry",
+    "text": "La vie universitaire à l’UCAO-UUCo s’organise autour des études, du campus et des activités qui rythment l’année académique. Cette page est en cours de constitution avec l’administration."
+  },
+  "sections": [
+    { "title": "Étudiants", "text": "Vie étudiante et accompagnement à Conakry. [À CONFIRMER]", "image": "WhatsApp Image 2026-11-14 at 3.02.57 PM.jpeg", "imageAlt": "Étudiants sur le campus de l’UCAO-UUCo.", "credit": "Photo fournie par l’UCAO-UUCo." },
+    { "title": "Campus", "text": "Le campus de Coléah, route de Niger, à côté de l’église catholique Saint Michel. [À CONFIRMER]", "image": "WhatsApp Image 2026-11-14 at 3.03.26 PM.jpeg", "imageAlt": "Étudiants sur le campus de l’UCAO-UUCo à Conakry.", "credit": "Photo fournie par l’UCAO-UUCo." },
+    { "title": "Activités et événements", "text": "Conférences, colloques et journées étudiantes organisées par l’UCAO-UUCo. [À CONFIRMER]", "image": "WhatsApp Image 2026-11-14 at 3.02.57 PM (1).jpeg", "imageAlt": "Événement étudiant Octobre Rose à l’UCAO-UUCo.", "credit": "Photo fournie par l’UCAO-UUCo." },
+    { "title": "Environnement académique", "text": "Bibliothèque, espaces de travail et encadrement pédagogique. [À CONFIRMER]", "image": "WhatsApp Image 2026-11-14 at 3.03.04 PM.jpeg", "imageAlt": "Salle de cours à l’UCAO-UUCo.", "credit": "Photo fournie par l’UCAO-UUCo." }
+  ],
+  "campusImage": {
+    "image": "WhatsApp Image 2026-11-14 at 3.02.58 PM.jpeg",
+    "imageAlt": "Environnement du campus de l’UCAO-UUCo à Conakry.",
+    "credit": "Photo fournie par l’UCAO-UUCo — campus de Conakry.",
+    "reverse": false
+  }
+}

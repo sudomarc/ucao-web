@@ -1,0 +1,29 @@
+{
+  "note": "Ce catalogue est un point de départ à vérifier avec l’administration. Aucun chiffre d’effectifs ni de formations n’est inventé. Les licences et masters listés ci-dessous sont des exemples à valider ; les chiffres annoncés sur l’ancien site ne correspondaient pas parfaitement aux listes affichées.",
+  "levels": [
+    {
+      "id": "licence",
+      "label": "Licence",
+      "description": "Formation de premier cycle, accès après le baccalauréat.",
+      "programs": [
+        { "id": "licence-droit", "label": "Licence en Droit", "note": "[À CONFIRMER]" },
+        { "id": "licence-gestion", "label": "Licence en Gestion", "note": "[À CONFIRMER]" },
+        { "id": "licence-economie", "label": "Licence en Économie", "note": "[À CONFIRMER]" },
+        { "id": "licence-sociologie", "label": "Licence en Sociologie", "note": "[À CONFIRMER]" }
+      ]
+    },
+    {
+      "id": "master",
+      "label": "Master",
+      "description": "Formation de second cycle, accès après une licence ou équivalent.",
+      "programs": [
+        { "id": "master-droit", "label": "Master en Droit", "note": "[À CONFIRMER]" },
+        { "id": "master-gestion", "label": "Master en Gestion", "note": "[À CONFIRMER]" },
+        { "id": "master-economie", "label": "Master en Économie", "note": "[À CONFIRMER]" }
+      ]
+    }
+  ],
+  "searchPlaceholder": "Rechercher une formation…",
+  "ctaLabel": "Voir toutes les formations",
+  "ctaHref": "/formations/"
+}

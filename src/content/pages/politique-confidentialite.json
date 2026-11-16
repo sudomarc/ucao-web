@@ -1,0 +1,21 @@
+{
+  "slug": "politique-confidentialite",
+  "title": "Politique de confidentialité",
+  "metaDescription": "Politique de confidentialité de l’UCAO-UUCo : données collectées, cookies et droits des utilisateurs.",
+  "hero": {
+    "kicker": "Confidentialité",
+    "title": "Politique de confidentialité",
+    "lead": "Comment l’UCAO-UUCo protège vos données personnelles."
+  },
+  "blocks": [
+    { "title": "Responsable de traitement", "content": "Université Catholique de l’Afrique de l’Ouest – Unité Universitaire de Conakry (UCAO-UUCo). [À CONFIRMER]" },
+    { "title": "Données collectées", "content": "Le formulaire de contact collecte le nom, l’e-mail, le sujet et le message. Aucune donnée sensible n’est collectée. Ce site ne dépose pas de cookie non nécessaire et n’effectue pas de suivi publicitaire." },
+    { "title": "Finalité", "content": "Répondre aux demandes envoyées par le formulaire de contact." },
+    { "title": "Destinataires", "content": "Les données sont transmises uniquement au service concerné de l’UCAO-UUCo. Aucun tiers n’y a accès." },
+    { "title": "Conservation", "content": "[À CONFIRMER — durée de conservation à préciser]" },
+    { "title": "Vos droits", "content": "Vous disposez d’un droit d’accès, de rectification et de suppression de vos données. Contactez-nous à l’adresse indiquée sur la page Contact." },
+    { "title": "Cookies", "content": "Ce site n’utilise pas de cookies non nécessaires. Aucun banner de consentement n’est requis." },
+    { "title": "Sécurité", "content": "Les données sont transmises en HTTPS. Aucune donnée n’est stockée dans le navigateur (localStorage, IndexedDB) ni dans les paramètres d’URL." }
+  ],
+  "note": "Les éléments manquants sont marqués [À CONFIRMER] et ne sont pas inventés."
+}
