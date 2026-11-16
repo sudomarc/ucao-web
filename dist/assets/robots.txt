@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: [À CONFIRMER — URL de production à préciser]
