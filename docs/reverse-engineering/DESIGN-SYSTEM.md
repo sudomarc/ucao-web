@@ -44,10 +44,10 @@ Defined in `:root` of `src/styles/main.css`. Reference: `--color-*` variables.
 ## 2. Typography
 
 ### Font Stack (editorial display + system body)
-\`\`\`css
+```css
 --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 --font-body: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-\`\`\`
+```
 
 Display typography uses a locally available serif stack for institutional character; body copy stays on the system sans-serif stack to preserve legibility, offline resilience and zero external font requests.
 
@@ -255,7 +255,7 @@ Motion is used to clarify hierarchy and provide feedback, not as decoration.
 
 **On-scroll reveal**
 - Cards, statistics, split-content blocks, quotations and FAQ items reveal once when they enter the viewport.
-- Implemented with \`IntersectionObserver\`; no scroll polling loop.
+- Implemented with `IntersectionObserver`; no scroll polling loop.
 - Without JavaScript, all content remains visible. If the API is unavailable, elements are immediately visible.
 
 **Interaction**
@@ -265,7 +265,7 @@ Motion is used to clarify hierarchy and provide feedback, not as decoration.
 - Header elevation changes after the first scroll threshold.
 
 **Reduced motion**
-- \`prefers-reduced-motion: reduce\` disables entrance and reveal motion and keeps all content visible.
+- `prefers-reduced-motion: reduce` disables entrance and reveal motion and keeps all content visible.
 - Motion never carries information required to understand or use a page.
 
 ## 8. Implementation Checklist (src/styles/main.css)
