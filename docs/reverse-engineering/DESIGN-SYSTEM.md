@@ -11,11 +11,11 @@ Defined in `:root` of `src/styles/main.css`. Reference: `--color-*` variables.
 | Role | Variable | Value | Source | Usage |
 |------|----------|-------|--------|-------|
 | Primary | `--color-primary` | #312783 | Bleu logo (UCAO/UCWA) | Primary buttons, links, active nav, focus outline |
-| Primary dark | `--color-primary-dark` | #1f1a5c | Dérivé sombre (20% darker) | Primary button `:hover`, active states |
-| Primary light | `--color-primary-light` | #e8e7f2 | Dérivé clair (15% opacity) | Subtle backgrounds, secondary button hover |
+| Primary dark | `--color-primary-dark` | #211b60 | Dérivé sombre (20% darker) | Primary button `:hover`, active states |
+| Primary light | `--color-primary-light` | #efedf8 | Dérivé clair (15% opacity) | Subtle backgrounds, secondary button hover |
 | Secondary | `--color-secondary` | #991915 | Rouge logo (carte/croix) | Secondary buttons, kickers, accent elements |
-| Secondary dark | `--color-secondary-dark` | #7a1411 | Dérivé sombre | Secondary button `:hover` |
-| Secondary light | `--color-secondary-light` | #f3e5e5 | Dérivé clair | Alternating section backgrounds, badges |
+| Secondary dark | `--color-secondary-dark` | #78120f | Dérivé sombre | Secondary button `:hover` |
+| Secondary light | `--color-secondary-light` | #f6ece9 | Dérivé clair | Alternating section backgrounds, badges |
 | Accent | `--color-accent` | #991915 | = Secondary | Sparing highlights only |
 | Accent hover | `--color-accent-hover` | #7a1411 | = Secondary dark | Hover on accent elements |
 | Background | `--color-bg` | #f7f5f0 | Blanc cassé du logo (off-white) | Page background (all pages) |
@@ -25,19 +25,19 @@ Defined in `:root` of `src/styles/main.css`. Reference: `--color-*` variables.
 | Text light | `--color-text-light` | #827e89 | Light gray | Timestamps, author names, footnotes |
 | Borders | `--color-border` | #e5e0d8 | Light gray | Component borders, dividers |
 | Border focus | `--color-border-focus` | #312783 | = Primary | `:focus-visible` outline |
-| Shadow | `--color-shadow` | rgba(31,27,65,0.12) | Primary at 8% | Card elevation on hover only |
+| Shadow | `--color-shadow` | rgba(31,27,65,0.12) | Deep violet at 12% | Card elevation on hover only |
 
 ### Contrast Verification (WCAG 2.1 AA)
 
 | Pair | Ratio | Status |
 |------|-------|--------|
-| `--color-text` on `--color-bg` | 4.5:1 | ✅ AA |
-| `--color-primary` on `--color-bg` | 5.1:1 | ✅ AA+ |
-| `--color-secondary` on `--color-surface` | 4.9:1 | ✅ AA+ |
-| `--color-text-muted` on `--color-bg` | 3.1:1 | ⚠️ Large text only (≥18pt) |
-| `--color-text-light` on `--color-bg` | 2.1:1 | ❌ Non-text only (icons, dividers) |
+| `--color-text` on `--color-bg` | 14.7:1 | ✅ AAA |
+| `--color-primary` on `--color-bg` | 11.02:1 | ✅ AAA |
+| `--color-secondary` on `--color-surface` | 8.39:1 | ✅ AAA |
+| `--color-text-muted` on `--color-bg` | 5.71:1 | ✅ AA |
+| `--color-text-light` on `--color-bg` | 3.75:1 | ⚠️ Large text / non-essential metadata |
 
-**Rule**: `--color-text-muted` only for text ≥ 18pt (1.125rem) or non-essential metadata. Never for body copy.
+**Rule**: `--color-text-muted` meets AA for normal text on the page background. Keep `--color-text-light` for non-essential metadata and decorative content.
 
 ---
 
@@ -58,10 +58,10 @@ Display typography uses a locally available serif stack for institutional charac
 | `--size-display` | `clamp(2.75rem, 5.2vw, 4.75rem)` | fluid | fluid | Hero title, major section openers |
 | `--size-h1` | `clamp(2.2rem, 4.2vw, 3.7rem)` | fluid | fluid | Page-level H1 |
 | `--size-h2` | `clamp(1.7rem, 2.8vw, 2.55rem)` | fluid | fluid | Section titles (H2) |
-| `--size-h3` | 1.25rem | 1.25 | 20 | Card titles, program names, H3 |
-| `--size-body` | 1.0625rem | 1.0625 | 17 | Paragraph text |
-| `--size-caption` | 0.8125rem | 0.8125 | 13 | Captions, footnotes, `[À CONFIRMER]` notes |
-| `--size-nav` | 0.875rem | 0.875 | 14 | Navigation links |
+| `--size-h3` | `clamp(1.2rem, 1.5vw, 1.45rem)` | fluid | fluid | H3 hierarchy |
+| `--size-body` | 1rem | 1 | 16 | Paragraph text |
+| `--size-caption` | 0.78rem | 0.78 | 12.5 | Captions and notes |
+| `--size-nav` | 0.82rem | 0.82 | 13.1 | Navigation links |
 
 ### Hierarchy Rules
 
@@ -76,13 +76,13 @@ Display typography uses a locally available serif stack for institutional charac
 
 ### Reading Width
 ```css
---read-width: 65ch;
+--read-width: 66ch;
 ```
 All extended text containers (`.text-block`, `.hero__content`, `.card__desc`, `.news-card__desc`) must have `max-width: var(--read-width)`.
 
 ### Line Height
-- Body: 1.6
-- Headings: 1.2
+- Body: 1.72
+- Headings: 1.08
 - Captions: 1.4
 
 ---
@@ -107,8 +107,9 @@ All extended text containers (`.text-block`, `.hero__content`, `.card__desc`, `.
 
 ### Container
 ```css
---container-max: 1200px;
---container-padding: var(--space-lg);
+--container-max: 1280px;
+--container-wide: 1440px;
+--container-padding: clamp(1.1rem, 3vw, 2.25rem);
 ```
 `.container { max-width: var(--container-max); padding-inline: var(--container-padding); margin-inline: auto; }`
 
