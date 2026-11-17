@@ -1,62 +1,125 @@
 /**
- * UCAO-UUCo — JavaScript vanilla (progressive enhancement uniquement).
- *
- * Comportements :
- * 1. Menu mobile accessible (ouverture/fermeture, Échap, restitution du focus).
- * 2. Formulaire de contact : validation côté client, états réels, aucune
- *    simulation de succès (aucun backend n’est identifié — la limite est
- *    documentée et affichée honnêtement).
- * 3. Respect strict de prefers-reduced-motion (aucune animation).
+ * UCAO-UUCo — progressive enhancements.
+ * Accessible mobile navigation, honest contact-form feedback and
+ * motion-safe reveal transitions. The page remains readable without JS.
  */
-
 (function () {
   'use strict';
 
-  // ---------- Menu mobile ----------
+  var body = document.body;
   var toggle = document.querySelector('.menu-toggle');
   var nav = document.querySelector('.main-nav');
-  var navLinks = document.querySelectorAll('.nav-link');
+  var header = document.querySelector('.site-header');
+  var mobileQuery = window.matchMedia('(max-width: 960px)');
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+  /* ---------- Mobile navigation ---------- */
   if (toggle && nav) {
+    var backdrop = document.createElement('button');
+    backdrop.type = 'button';
+    backdrop.className = 'mobile-nav-backdrop';
+    backdrop.setAttribute('aria-label', 'Fermer le menu');
+    backdrop.setAttribute('aria-hidden', 'true');
+    backdrop.hidden = true;
+    body.appendChild(backdrop);
+
+    function setMenuOpen(open, restoreFocus) {
+      var mobile = mobileQuery.matches;
+      var shouldOpen = Boolean(open && mobile);
+
+      nav.classList.toggle('main-nav--open', shouldOpen);
+      body.classList.toggle('menu-open', shouldOpen);
+      toggle.setAttribute('aria-expanded', String(shouldOpen));
+      toggle.setAttribute('aria-label', shouldOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+      backdrop.hidden = !shouldOpen;
+
+      if ('inert' in nav) {
+        nav.inert = mobile && !shouldOpen;
+      } else if (mobile) {
+        nav.setAttribute('aria-hidden', String(!shouldOpen));
+      } else {
+        nav.removeAttribute('aria-hidden');
+      }
+
+      if (!shouldOpen && restoreFocus) {
+        toggle.focus();
+      }
+    }
+
     toggle.addEventListener('click', function () {
-      var isOpen = nav.classList.toggle('is-open');
-      toggle.setAttribute('aria-expanded', String(isOpen));
+      setMenuOpen(!nav.classList.contains('main-nav--open'), false);
     });
 
-    // Fermer le menu au clic sur un lien.
-    navLinks.forEach(function (link) {
+    backdrop.addEventListener('click', function () {
+      setMenuOpen(false, true);
+    });
+
+    nav.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
-        nav.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
+        setMenuOpen(false, false);
       });
     });
 
-    // Fermer le menu sur Échap et restituer le focus sur le bouton.
     document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape' && nav.classList.contains('is-open')) {
-        nav.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.focus();
+      if (!nav.classList.contains('main-nav--open')) return;
+
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        setMenuOpen(false, true);
+        return;
+      }
+
+      if (event.key === 'Tab') {
+        var links = Array.prototype.slice.call(
+          nav.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+        ).filter(function (element) {
+          return element.offsetWidth || element.offsetHeight || element.getClientRects().length;
+        });
+
+        if (!links.length) {
+          event.preventDefault();
+          toggle.focus();
+          return;
+        }
+
+        var first = links[0];
+        var last = links[links.length - 1];
+
+        if (event.shiftKey && (document.activeElement === first || document.activeElement === toggle)) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          toggle.focus();
+        }
       }
     });
+
+    function syncNavigationMode() {
+      setMenuOpen(false, false);
+    }
+
+    if (typeof mobileQuery.addEventListener === 'function') {
+      mobileQuery.addEventListener('change', syncNavigationMode);
+    } else if (typeof mobileQuery.addListener === 'function') {
+      mobileQuery.addListener(syncNavigationMode);
+    }
+
+    syncNavigationMode();
   }
 
-  // ---------- Header : effet au scroll ----------
-  var header = document.querySelector('.site-header');
+  /* ---------- Header elevation ---------- */
   if (header) {
-    var lastScroll = 0;
-    window.addEventListener('scroll', function () {
-      var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-      if (currentScroll > 60) {
-        header.classList.add('site-header--scrolled');
-      } else {
-        header.classList.remove('site-header--scrolled');
-      }
-      lastScroll = currentScroll;
-    });
+    function updateHeader() {
+      var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      header.classList.toggle('site-header--scrolled', scrollPosition > 24);
+    }
+
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    updateHeader();
   }
 
-  // ---------- Formulaire de contact ----------
+  /* ---------- Contact form: no simulated delivery ---------- */
   var form = document.getElementById('contact-form');
   var status = document.getElementById('form-status');
   var submitBtn = document.getElementById('form-submit');
@@ -64,7 +127,6 @@
   if (form && status && submitBtn) {
     var fields = form.querySelectorAll('input[required], textarea[required]');
 
-    // Validation immédiate : effacer l’erreur à la saisie.
     fields.forEach(function (field) {
       field.addEventListener('input', function () {
         var error = document.getElementById(field.id + '-error');
@@ -76,39 +138,34 @@
     form.addEventListener('submit', function (event) {
       event.preventDefault();
 
-      var valid = true;
+      var firstInvalid = null;
+
       fields.forEach(function (field) {
         var error = document.getElementById(field.id + '-error');
+        var message = '';
+
         if (!field.value.trim()) {
-          valid = false;
-          field.setAttribute('aria-invalid', 'true');
-          if (error) error.textContent = 'Ce champ est requis.';
-          field.focus();
+          message = 'Ce champ est requis.';
         } else if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) {
-          valid = false;
-          field.setAttribute('aria-invalid', 'true');
-          if (error) error.textContent = 'Adresse e-mail invalide.';
-          field.focus();
-        } else {
-          field.setAttribute('aria-invalid', 'false');
-          if (error) error.textContent = '';
+          message = 'Adresse e-mail invalide.';
         }
+
+        field.setAttribute('aria-invalid', String(Boolean(message)));
+        if (error) error.textContent = message;
+        if (message && !firstInvalid) firstInvalid = field;
       });
 
-      if (!valid) {
+      if (firstInvalid) {
         status.textContent = 'Veuillez corriger les champs signalés.';
         status.setAttribute('aria-live', 'assertive');
+        firstInvalid.focus();
         return;
       }
 
-      // Soumission : aucun backend n’est configuré. On n’affiche PAS de succès
-      // simulé. On informe honnêtement de la limite.
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Envoi…';
+      submitBtn.textContent = 'Vérification…';
 
-      // Simuler un délai réseau pour montrer l’état pending, puis afficher la
-      // limite réelle (aucun endpoint de réception n’est identifié).
-      setTimeout(function () {
+      window.setTimeout(function () {
         submitBtn.disabled = false;
         submitBtn.textContent = 'Envoyer le message';
         status.textContent =
@@ -117,27 +174,41 @@
           'avant que les messages puissent être envoyés. Aucune donnée n’est stockée ' +
           'dans ce navigateur.';
         status.setAttribute('aria-live', 'assertive');
-        // Conserver les données saisies pour éviter la resaisie.
-      }, 700);
+      }, 450);
     });
   }
 
-  // ---------- Reveal au scroll (désactivé sous prefers-reduced-motion) ----------
-  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-  var revealEls = document.querySelectorAll('.card, .news-card, .step-card');
+  /* ---------- Scroll reveals: IntersectionObserver, once per element ---------- */
+  var revealElements = document.querySelectorAll(
+    '.card, .news-card, .step-card, .stat, .split-section__text, ' +
+    '.split-section__media, .pullquote, .faq-item'
+  );
 
-  function reveal() {
-    if (reduced.matches) return;
-    revealEls.forEach(function (el) {
-      var rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 60 && !el.classList.contains('is-visible')) {
-        el.classList.add('is-visible');
-      }
+  if (reducedMotion.matches || !('IntersectionObserver' in window)) {
+    revealElements.forEach(function (element) {
+      element.classList.add('is-visible');
     });
+    return;
   }
 
-  if (!reduced.matches && revealEls.length) {
-    window.addEventListener('scroll', reveal);
-    reveal();
+  if (revealElements.length) {
+    document.documentElement.classList.add('motion-ready');
+
+    var observer = new IntersectionObserver(function (entries, currentObserver) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        currentObserver.unobserve(entry.target);
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -48px 0px',
+      threshold: 0.08
+    });
+
+    revealElements.forEach(function (element) {
+      element.classList.add('reveal-item');
+      observer.observe(element);
+    });
   }
 })();
