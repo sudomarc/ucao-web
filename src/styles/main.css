@@ -2266,12 +2266,10 @@ a {
     box-shadow: -16px 0 44px rgba(20, 17, 36, 0.12);
     transform: translateX(105%);
     transition: transform 380ms var(--easing);
-    visibility: hidden;
   }
 
   .main-nav--open {
     transform: translateX(0);
-    visibility: visible;
   }
 
   .nav-list {
