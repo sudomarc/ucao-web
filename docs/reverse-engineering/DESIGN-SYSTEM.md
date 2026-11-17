@@ -17,7 +17,7 @@ Defined in `:root` of `src/styles/main.css`. Reference: `--color-*` variables.
 | Secondary dark | `--color-secondary-dark` | #78120f | Dérivé sombre | Secondary button `:hover` |
 | Secondary light | `--color-secondary-light` | #f6ece9 | Dérivé clair | Alternating section backgrounds, badges |
 | Accent | `--color-accent` | #991915 | = Secondary | Sparing highlights only |
-| Accent hover | `--color-accent-hover` | #7a1411 | = Secondary dark | Hover on accent elements |
+| Accent hover | `--color-accent-hover` | #78120f | = Secondary dark | Hover on accent elements |
 | Background | `--color-bg` | #f7f5f0 | Blanc cassé du logo (off-white) | Page background (all pages) |
 | Surface | `--color-surface` | #ffffff | Blanc pur | Cards, panels, modals, dropdowns |
 | Text | `--color-text` | #211f2d | Near-black with blue undertone | Primary body text |
@@ -31,11 +31,11 @@ Defined in `:root` of `src/styles/main.css`. Reference: `--color-*` variables.
 
 | Pair | Ratio | Status |
 |------|-------|--------|
-| `--color-text` on `--color-bg` | 14.7:1 | ✅ AAA |
+| `--color-text` on `--color-bg` | 14.84:1 | ✅ AAA |
 | `--color-primary` on `--color-bg` | 11.02:1 | ✅ AAA |
 | `--color-secondary` on `--color-surface` | 8.39:1 | ✅ AAA |
 | `--color-text-muted` on `--color-bg` | 5.71:1 | ✅ AA |
-| `--color-text-light` on `--color-bg` | 3.75:1 | ⚠️ Large text / non-essential metadata |
+| `--color-text-light` on `--color-bg` | 3.64:1 | ⚠️ Large text / non-essential metadata |
 
 **Rule**: `--color-text-muted` meets AA for normal text on the page background. Keep `--color-text-light` for non-essential metadata and decorative content.
 
@@ -127,11 +127,11 @@ All extended text containers (`.text-block`, `.hero__content`, `.card__desc`, `.
 ```css
 .hero__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-2xl);
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  gap: clamp(2.5rem, 6vw, 5.5rem);
   align-items: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   .hero__inner { grid-template-columns: 1fr; }
 }
 ```
@@ -241,7 +241,7 @@ Two buttons only: `.button--primary` "Accepter" / `.button--ghost` "Refuser". Li
 --bp-wide: 1440px;    /* desktop wide */
 ```
 
-**Mobile-first** CSS: base styles = mobile; `@media (min-width: 768px)` for tablet+; `@media (min-width: 1024px)` for desktop.
+**Responsive behavior**: desktop masthead above 960px; accessible slide-in navigation at 960px and below; compact single-column hero and sections on narrow mobile screens.
 
 ---
 
