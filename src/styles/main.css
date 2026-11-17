@@ -2361,7 +2361,7 @@ a {
   .stat:nth-child(2n) { border-right: 0; }
 
   .stat:nth-last-child(-n + 2) { border-bottom: 0; }
-  .stat:nth-last-child(2):nth-child(odd) { border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+  .stat:nth-last-child(2):nth-child(even) { border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
 
   .news-grid { grid-template-columns: minmax(0, 1fr); }
 
