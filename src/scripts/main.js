@@ -20,6 +20,7 @@
     backdrop.className = 'mobile-nav-backdrop';
     backdrop.setAttribute('aria-label', 'Fermer le menu');
     backdrop.setAttribute('aria-hidden', 'true');
+    backdrop.tabIndex = -1;
     backdrop.hidden = true;
     body.appendChild(backdrop);
 
