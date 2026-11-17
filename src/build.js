@@ -96,12 +96,48 @@ function skipLink() {
   `;
 }
 
+function emergencyAlert(site) {
+  const alert = site.emergencyAlert;
+  if (!alert || !alert.text) return '';
+  return `
+    <div class="emergency-alert" role="alert" aria-live="assertive">
+      ${escapeHtml(alert.text)}
+      ${alert.link ? `<a href="${escapeHtml(alert.link.href)}">${escapeHtml(alert.link.label)}</a>` : ''}
+    </div>
+  `;
+}
+
+function langSwitcher(site) {
+  const langs = site.languages;
+  if (!langs || !langs.length) return '';
+  const current = site.lang || 'fr';
+  const items = langs.map(l => `
+    <a href="${escapeHtml(l.href)}" hreflang="${escapeHtml(l.code)}" ${l.code === current ? 'aria-current="true"' : ''}>${escapeHtml(l.label)}</a>
+  `).join('');
+  return `<nav class="lang-switcher" aria-label="Langue">${items}</nav>`;
+}
+
+function consentBanner(site) {
+  const consent = site.consent;
+  if (!consent || !consent.text) return '';
+  return `
+    <div class="consent-banner" id="consent-banner" role="dialog" aria-label="Consentement aux cookies" hidden>
+      <p class="consent-banner__text">${escapeHtml(consent.text)} <a href="${escapeHtml(consent.policyHref || '/politique-confidentialite/')}">En savoir plus</a></p>
+      <div class="consent-banner__actions">
+        <button class="button button--primary" id="consent-accept">${escapeHtml(consent.acceptLabel || 'Accepter')}</button>
+        <button class="button button--ghost" id="consent-reject">${escapeHtml(consent.rejectLabel || 'Refuser')}</button>
+      </div>
+    </div>
+  `;
+}
+
 function nav(site, navItems, currentSlug) {
   const itemsHtml = navItems
     .map(
       (item) => {
         const active = item.href === currentSlug || (currentSlug === '' && item.label === 'Accueil') ? ' aria-current="page"' : '';
-        return `<li><a class="nav-link${active ? ' nav-link--active' : ''}" href="${escapeHtml(item.href)}"${active}>${escapeHtml(item.label)}</a></li>`;
+        const submenu = item.children && item.children.length ? renderSubmenu(item.children) : '';
+        return `<li class="nav-item${submenu ? ' nav-item--has-submenu' : ''}"><a class="nav-link${active ? ' nav-link--active' : ''}" href="${escapeHtml(item.href)}"${active}>${escapeHtml(item.label)}</a>${submenu}</li>`;
       }
     )
     .join('');
@@ -113,7 +149,6 @@ function nav(site, navItems, currentSlug) {
     </div>
   `;
 
-  // Vrai logo institutionnel (image fournie, pas de texte de substitution).
   const logoMarkup = `
     <img src="${escapeHtml(site.logoSrc || '/assets/images/UCAO_LOGO.png')}"
          alt="${escapeHtml(site.logoAlt || 'Logo UCAO-UUCo')}"
@@ -130,6 +165,8 @@ function nav(site, navItems, currentSlug) {
             <span class="site-brand__sub">${escapeHtml(site.fullName)}</span>
           </span>
         </a>
+
+        ${langSwitcher(site)}
 
         <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Ouvrir le menu">
           <span class="menu-toggle__bar"></span>
@@ -148,6 +185,11 @@ function nav(site, navItems, currentSlug) {
   `;
 }
 
+function renderSubmenu(children) {
+  const items = children.map(c => `<li><a class="nav-sublink" href="${escapeHtml(c.href)}">${escapeHtml(c.label)}</a></li>`).join('');
+  return `<ul class="nav-submenu">${items}</ul>`;
+}
+
 function footer(site, navItems) {
   const quickLinks = navItems
     .slice(0, 5)
@@ -164,6 +206,8 @@ function footer(site, navItems) {
          width="140" height="104" loading="lazy">
   `;
 
+  const email = site.email?.replace(/\[À CONFIRMER\] /, '') || '';
+
   return `
     <footer class="site-footer">
       <div class="footer-inner">
@@ -173,7 +217,7 @@ function footer(site, navItems) {
           <p class="footer-text">${escapeHtml(site.address)}</p>
           <ul class="footer-contact">
             ${phonesHtml}
-            <li><a class="footer-link" href="mailto:${escapeHtml(site.email.replace(/\[À CONFIRMER\] /, ''))}">${escapeHtml(site.email)}</a></li>
+            <li><a class="footer-link" href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></li>
           </ul>
           ${site.facebook ? `<p class="footer-social"><a class="footer-link" href="${escapeHtml(site.facebook)}" target="_blank" rel="noopener">Facebook</a></p>` : ''}
         </div>
@@ -204,6 +248,25 @@ function footer(site, navItems) {
   `;
 }
 
+function head(site, data) {
+  return `
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${pageTitle(data, site)}</title>
+    <meta name="description" content="${metaDesc(data, site)}">
+    <meta name="language" content="fr">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" href="${escapeHtml(site.faviconSrc || '/assets/images/favicon.svg')}" type="image/svg+xml">
+    <meta property="og:title" content="${pageTitle(data, site)}">
+    <meta property="og:description" content="${metaDesc(data, site)}">
+    <meta property="og:type" content="website">
+    ${site.ogImage ? `<meta property="og:image" content="${escapeHtml(site.ogImage)}">` : ''}
+    <meta property="og:locale" content="fr_FR">
+    ${canonical(data.slug) ? `<link rel="canonical" href="${canonical(data.slug)}">` : ''}
+  `;
+}
+
+/** Head complet pour le <head> HTML. */
 function head(site, data) {
   return `
     <meta charset="utf-8">
@@ -335,6 +398,31 @@ function textCta(data, key, alt) {
           ${block.text ? `<p>${escapeHtml(block.text)}</p>` : ''}
           ${block.cta ? `<div class="cta-wrap"><a class="button button--primary" href="${escapeHtml(block.cta.href)}">${escapeHtml(block.cta.label)}</a></div>` : ''}
           ${block.note ? `<p class="note note--block">${escapeHtml(block.note)}</p>` : ''}
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+/** ---------- NOUVEAU : Vidéo embarquée (lecteur HTML5 natif) ---------- */
+function videoBlock(data, key, alt) {
+  const block = data[key];
+  if (!block || !block.video) return '';
+  const poster = block.poster ? resolveImage(block.poster) : '';
+  const sectionClass = alt ? 'section section--video section--alt' : 'section section--video';
+  return `
+    <section class="${sectionClass}">
+      <div class="container">
+        <div class="video-block">
+          ${block.title ? `<h2 class="section-title">${escapeHtml(block.title)}</h2>` : ''}
+          ${block.lead ? `<p class="lead">${escapeHtml(block.lead)}</p>` : ''}
+          <div class="video-block__player">
+            <video controls preload="metadata" width="100%" ${poster ? `poster="${escapeHtml(poster)}"` : ''}>
+              <source src="${escapeHtml(block.video)}" type="video/mp4">
+              Votre navigateur ne prend pas en charge la vidéo HTML5.
+            </video>
+          </div>
+          ${block.credit ? `<p class="image-credit">${escapeHtml(block.credit)}</p>` : ''}
         </div>
       </div>
     </section>
@@ -760,11 +848,13 @@ ${head(site, data)}
 </head>
 <body>
 ${skipLink()}
+${emergencyAlert(site)}
 ${nav(site, navItems, currentSlug)}
 <main id="main" class="page-main">
 ${body}
 </main>
 ${footer(site, navItems)}
+${consentBanner(site)}
 <script src="/js/main.js"></script>
 </body>
 </html>`;
@@ -773,20 +863,99 @@ ${footer(site, navItems)}
 function renderHome(site, navItems, data) {
   const body = `
 ${hero(data)}
-<section class="section-divider"></section>
 ${intro(data)}
 ${statsGrid(data, 'stats')}
-<section class="section-divider"></section>
-${splitSection(data, 'formationsIntro', 'formationsImage')}
-${cards(data, 'formations', true)}
+${programDiscovery(data, 'programs')}
 ${textCta(data, 'admissions', false)}
-<section class="section-divider"></section>
-${pullquote(data, 'quote')}
-${newsBlock(data, true)}
+${videoBlock(data, 'video', false)}
+${newsEvents(data, 'newsEvents')}
 ${textCta(data, 'vie', false)}
-${valeurGrid(data, 'valeurs')}
+${valeursGrid(data, 'valeurs')}
   `;
   return layout(site, navItems, data, body);
+}
+
+function programDiscovery(data, key) {
+  const block = data[key];
+  if (!block) return '';
+  return `
+    <section class="section section--programs">
+      <div class="container">
+        ${block.title ? `<h2 class="section-title">${escapeHtml(block.title)}</h2>` : ''}
+        ${block.lead ? `<p class="lead">${escapeHtml(block.lead)}</p>` : ''}
+        ${block.searchPlaceholder ? `
+          <div class="formation-search" style="max-width: var(--read-width); margin-bottom: var(--space-2xl);">
+            <label class="sr-only" for="program-search">${escapeHtml(block.searchPlaceholder)}</label>
+            <input type="search" id="program-search" placeholder="${escapeHtml(block.searchPlaceholder)}" aria-label="${escapeHtml(block.searchPlaceholder)}">
+          </div>
+        ` : ''}
+        ${block.items && block.items.length ? `
+          <div class="card-grid">
+            ${block.items.map(item => `
+              <article class="card program-card">
+                <h3 class="card__title">${escapeHtml(item.label)}</h3>
+                <p class="card__desc">${escapeHtml(item.desc || '')}</p>
+                ${item.href ? `<a class="button button--ghost card__cta" href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>` : ''}
+              </article>
+            `).join('')}
+          </div>
+        ` : ''}
+        ${block.cta ? `<div class="cta-wrap"><a class="button button--primary" href="${escapeHtml(block.cta.href)}">${escapeHtml(block.cta.label)}</a></div>` : ''}
+      </div>
+    </section>
+  `;
+}
+
+function newsEvents(data, key) {
+  const block = data[key];
+  if (!block || !block.items) return '';
+  const itemsHtml = block.items
+    .map(
+      (item) => `
+        <article class="news-card">
+          ${item.image ? `<div class="news-card__media"><img src="${escapeHtml(resolveImage(item.image))}" alt="${escapeHtml(item.imageAlt || item.title)}" loading="lazy"></div>` : ''}
+          <time class="news-card__date">${escapeHtml(item.date)}</time>
+          <h3 class="news-card__title">${escapeHtml(item.title)}</h3>
+          <p class="news-card__desc">${escapeHtml(item.summary || '')}</p>
+          <span class="news-card__category">${escapeHtml(item.category || '')}</span>
+        </article>
+      `
+    )
+    .join('');
+
+  return `
+    <section class="section section--news section--alt">
+      <div class="container">
+        ${block.title ? `<h2 class="section-title">${escapeHtml(block.title)}</h2>` : ''}
+        <div class="news-grid">${itemsHtml}</div>
+        ${block.cta ? `<div class="cta-wrap"><a class="button button--primary" href="${escapeHtml(block.cta.href)}">${escapeHtml(block.cta.label)}</a></div>` : ''}
+      </div>
+    </section>
+  `;
+}
+
+function valeursGrid(data, key) {
+  const block = data[key];
+  if (!block || !block.items) return '';
+  const itemsHtml = block.items
+    .map(
+      (item) => `
+        <article class="card valeur-card">
+          <h3 class="card__title">${escapeHtml(item.label)}</h3>
+          <p class="card__desc">${escapeHtml(item.desc || item.text || '')}</p>
+        </article>
+      `
+    )
+    .join('');
+  return `
+    <section class="section section--values section--alt">
+      <div class="container">
+        ${block.title ? `<h2 class="section-title">${escapeHtml(block.title)}</h2>` : ''}
+        <div class="card-grid">${itemsHtml}</div>
+        ${block.note ? `<p class="note note--block">${escapeHtml(block.note)}</p>` : ''}
+      </div>
+    </section>
+  `;
 }
 
 function renderGeneric(site, navItems, data, globals) {

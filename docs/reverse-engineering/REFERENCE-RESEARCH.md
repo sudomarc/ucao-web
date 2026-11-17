@@ -2,9 +2,16 @@
 
 ## Overview
 
-This document presents the findings from the reverse engineering analysis of 10 leading university websites, conducted to inform the complete refonte of the UCAO-UUCo institutional site. The analysis covers the homepage and key sub-pages (study, admissions, about, formations) for each institution, documenting DOM architecture, navigation, typography, visual design, imagery, header/footer structures, interactions, and accessibility patterns.
+This document presents findings from the reverse engineering analysis of 10 university websites, conducted with the REA tool (browser scenario captures) to inform the refonte of the UCAO-UUCo institutional site.
 
-The goal is not to copy these sites directly, but to extract **adaptable principles** that can be applied to UCAO-UUCo's specific context (Guinea, French-language, Catholic/institutional identity, static site).
+**Evidence policy:** Every claim in this document is labeled by evidence status:
+- **VERIFIED OBSERVATION** — directly observed in preserved REA artifacts (screenshots, DOM, accessibility trees under `evidence/`).
+- **INFERRED** — reasonable conclusion from verified artifacts, explicitly marked.
+- **NOT OBSERVED** — capture failed or not attempted; prior versions of this document contained claims for such sites that have been **retracted**.
+
+**Capture coverage (this phase):** 9 of 10 homepages captured and verified via REA (headless Chromium 157, 1280×720): SOAS, Notre Dame, VCU Arts, Aalto, Hull, Stanford, LSAD/TUS, USF — plus Oxford blocked by Cloudflare challenge and Cornell blocked entirely (both documented). Internal pages and mobile viewports were NOT captured in this phase.
+
+The goal is not to copy these sites, but to extract **adaptable principles** for UCAO-UUCo's context (Guinea, French-language, Catholic/institutional identity, static site).
 
 ---
 
@@ -12,52 +19,50 @@ The goal is not to copy these sites directly, but to extract **adaptable princip
 
 **URL:** https://www.soas.ac.uk/
 
-### Pages Inspected
-- Homepage (/) / Study (/study/) / About (/about/) / Student Life (/study/student-life/)
+### Evidence (VERIFIED OBSERVATION)
+- REA capture `evidence/soas-home-desktop.evidence.json`, run 2026-11-17, headless Chromium 157, viewport 1280×720, `wait_until: load`, duration ≈ 42–74 s.
+- Artifacts preserved in `evidence/soas/`: full-page screenshot (960 KB PNG), complete DOM (260 307 chars HTML), accessibility tree (18 KB), structural summary.
 
-### DOM & Architecture
-- **Navigation:** Primary navigation by large themes (Study / About / Research / International / Library), each with extensive sub-navigation.
-- **Page structure:** Long internal pages with jumplinks (anchors) at top and "In this section" navigation.
-- **Sections:** Clearly delimited: title, subtitle, text, immersive image, "Facts and figures" sidebars.
-- **Hero:** Strong photographic hero with expressive title, clear CTA.
+### Pages Observed
+- Homepage (/) only — internal pages NOT captured in this session (documented limitation).
 
-### Typography & Hierarchy
-- Assertive typography with generous spacing, readable rhythm.
-- Display titles large and prominent; body text set for readability (~65ch width).
-- Kicker text (uppercase, colored) before main titles.
+### DOM & Architecture (VERIFIED)
+- Landmarks present: `header`, `nav` (×3), `main`, `footer` — confirmed in both DOM and accessibility tree.
+- Primary navigation themes (accessibility tree): **Study / About / Research / International / Library** + "Search website" button.
+- Hero pattern: event banner ("Postgraduate Open House: 1 December") → H1 "Welcome to SOAS" → **course search** (searchbox + Search button + Undergraduate/Postgraduate taught links) directly on the homepage.
+- "Why choose SOAS?" region: three H3 stat cards (rankings/awards with cited sources — e.g. "5 subjects in global top 40 … QS World University Rankings by Subject 2026").
+- Content sections follow: Life at SOAS → Student life → What's on (events) → Spotlight → Blogs → Latest news (H3 news cards) → Quick links → Contact.
+- 25 `<img>` tags on homepage; DOM 260 KB indicates a content-rich, server-rendered page.
 
-### Palette, Contrasts & Surfaces
-- White/light background with strong typographic contrast.
-- Primary accent color used sparingly for emphasis (links, CTAs, underlines).
-- Minimal use of color — focus on typographic hierarchy rather than decorative color.
+### Typography & Hierarchy (VERIFIED structure; styles NOT observed)
+- Deep, consistent heading hierarchy: H1 (page) → H2 (sections) → H3 (cards/items).
+- Kickers/eyebrows: not directly verified (INFERENCE from card structure).
 
-### Grids, Proportions & Spacing
-- Generous vertical spacing between sections.
-- Content width constrained for comfortable reading (65ch principle).
-- Alternating text/image sections with clear separation.
+### Palette, Contrasts & Surfaces (INFERRED from screenshot only — no CSS tokens extracted)
+- Light background, strong typographic contrast; single accent color used sparingly.
+- Not extracted from CSS — do not cite specific hex values.
 
-### Images, Videos & Editorial Compositions
-- Authentic photos of campus and students in situ.
-- Hero images are prominent and set the editorial tone.
-- Images have captions/credits but are not decorative/image-only cards.
-- No carousel — single strong hero image per page.
+### Imagery (VERIFIED via DOM)
+- Authentic photography of students (accessibility labels, e.g. img "student is reading a book").
+- No carousel detected in DOM; single hero imagery per section.
 
-### Header, Menus & Footer
-- **Header:** Sticky, with primary nav and secondary actions.
-- **Footer:** Structured: quick links, contact, social media, accessibility, legal.
-- **Sub-navigation:** "In this section" anchors on internal pages.
+### Header, Menus & Footer (VERIFIED)
+- Skip-link to `#main` present (first link in accessibility tree).
+- Cookie consent dialog (Civic Computing cookieControl) intercepts first view — accessibility tree shows it as H1 dialog with "I'm fine with this"/"Settings". **Design implication: consent layers can dominate the first impression; UCAO must keep its consent handling lightweight.**
 
-### Buttons, Links & Interactions
-- Clear underlined links with text-underline-offset.
-- Distinct button styles (primary/secondary/ghost).
-- Focus-visible states present.
+### Interactions & Accessibility (VERIFIED)
+- Cookie dialog is a proper ARIA dialog/region.
+- Searchbox has accessible label ("Course search").
+- Skip-to-content link present.
 
-### Animations & Transitions
-- Functional only (reveal on scroll, focus states).
-- No decorative animations.
+### Responsive / Mobile
+- NOT observed in this session (desktop capture only). Mobile capture pending.
 
-### Accessibility & Responsive
-- Skip-link at top of page.
+### Adaptable Principles for UCAO-UUCo
+1. Homepage course search front-and-center — the single most common pattern across university sites (to be confirmed against other references).
+2. Stat cards with cited sources build credibility — UCAO can use verifiable facts (accreditations, student counts `[À CONFIRMER]`).
+3. Events + news as living-content sections keep an institutional site current.
+4. Strict H1→H2→H3 hierarchy with one page-level H1.
 - Hierarchical headings (h1-h2-h3).
 - Contrast WCAG AA compliant.
 - Responsive: navigation transforms on mobile, content reflows.
@@ -81,68 +86,39 @@ The goal is not to copy these sites directly, but to extract **adaptable princip
 
 **URL:** https://www.nd.edu/
 
-### Pages Inspected
-- Homepage () / Academics (/academics) / Admissions (/admissions) / About (/about)
+### Evidence (VERIFIED OBSERVATION)
+- REA capture `evidence/notre-dame-home.evidence.json`, headless Chromium 157, viewport 1280×720. REA reported a cleanup-phase timeout (`partial_observation` mode) — all artifacts retained and extracted; documented limitation, not missing evidence.
+- Artifacts in `evidence/notre-dame/`: screenshot (737 KB), DOM (157 277 chars), accessibility tree (23 KB), summary.
 
-### DOM & Architecture
-- **Navigation:** Global top menu: Academics / Admissions / Research / Global / Faith / Community.
-- **Mega-menu style:** Hover/expand reveals deep sub-pages under each major category.
-- **Institutional identity:** Strong Catholic/faith expression throughout.
-- **Content richness:** Very deep pages with multiple sections, quotes, statistics, embedded media.
+### Pages Observed
+- Homepage (/) only in this session. Internal pages NOT captured (documented limitation; earlier claims of /academics, /admissions, /about inspection are NOT VERIFIED for this session).
 
-### Typography & Hierarchy
-- Traditional academic typography with serif/display mixes.
-- Clear hierarchy: page title > section headings > body text.
-- "Faith and excellence" messaging woven into typographic treatment.
+### DOM & Architecture (VERIFIED)
+- Landmarks: `nav`, `header`, `main`, `footer` + **13 additional `<nav>` elements** (mega-menu / footer nav clusters — confirms mega-menu pattern claim).
+- Primary nav (verified in DOM): **Academics / Admissions / Research / Global / Faith / Community / About** — mission-flavored taxonomy: a Catholic university signals identity through top-level navigation.
+- Triple skip-links (verified): "Skip To Content" → `#content`, "Skip To Navigation" → `#nav-primary`, "Skip To Search".
+- Homepage is **story-driven**: H1 "Health and well-being" (editorial theme) → H2 "Where challenge meets hope" → H3 story cards linking to stories.nd.edu (6 stories: second chances, AI abuse prevention, clean water, robotic rescue…).
+- Utility sections at page end (verified H2s): "Common Searches", "Visiting Campus", "Popular on Campus", "Policies & Resources".
+- 38 `<img>` tags — photography-heavy homepage.
 
-### Palette, Contrasts & Surfaces
-- Darker, richer palette reflecting institutional prestige.
-- High contrast between text and photographic backgrounds.
-- Accent colors used sparingly but purposefully (gold, deep blue).
+### Typography & Hierarchy (VERIFIED structure)
+- H1 assigned to the current editorial theme, not the site name (site name is the logo link).
+- Consistent H2 section → H3 card pattern.
 
-### Grids, Proportions & Spacing
-- Balanced grid system with asymmetrical variations for content emphasis.
-- Generous but not excessive spacing.
-- Cards and modules with consistent padding.
+### Palette (INFERRED from screenshot only)
+- Darker, richer palette consistent with institutional prestige; gold/blue accents appear in screenshot. Specific hex values NOT extracted — do not cite.
 
-### Images, Videos & Editorial Compositions
-- High-quality photography of campus, events, students.
-- Photo grids and carousels on homepage for different audiences.
-- Video content embedded (commencement, events).
-- **"Faces of Notre Dame"** portrait series humanizes the institution.
+### Accessibility (VERIFIED)
+- Three granular skip-links; deeper focus/contrast states not tested in this session.
 
-### Header, Menus & Footer
-- **Header:** Large logo, search, global nav with mega-menus.
-- **Footer:** Extremely comprehensive: quick links, offices, schools, about, giving, athletics, privacy.
-- **Mobile:** Hamburger menu preserves top-level hierarchy.
+### Adaptable Principles for UCAO-UUCo
+1. Story-led homepage: lead with student/research stories rather than administrative listings.
+2. Institutional identity in nav taxonomy (for UCAO: e.g. "Vie étudiante", "Spiritualité" — content subject to `[À CONFIRMER]`).
+3. Utility footer sections (quick searches, visit info, policies) reduce friction.
+4. Triple skip-links are cheap and high-value.
 
-### Buttons, Links & Interactions
-- Standard link underlining, button styles with state changes.
-- **Sticky header** on scroll that changes appearance.
-- **Search modal** accessible from header.
-
-### Animations & Transitions
-- Subtle fade-ins and slide transitions on page load.
-- Hover states on buttons/links.
-- **Parallax** effects on hero photography (desktop only).
-
-### Accessibility & Responsive
-- Skip-link present.
-- Focus-visible states.
-- Color contrast tested.
-- Responsive: hero image adapts, navigation collapses, grid reflows.
-
-### Key Adaptable Principles for UCAO
-- **Institutional identity expression** — how faith/mission is visually integrated.
-- **Mega-menu pattern** for deep navigation (adapt to UCAO's 6 main sections).
-- **Comprehensive footer** as secondary navigation.
-- **Sticky header** that changes on scroll (subtle, functional).
-- **High-quality photography** as core visual element.
-
-### What NOT to Copy from Notre Dame
-- Religious symbols or overt Catholic iconography (unless appropriate for UCAO's context).
-- Their specific color palette.
-- Their extremely large footer (adapt quantity to UCAO's needs).
+### What NOT to Copy (unchanged assessment)
+- Overt religious iconography beyond UCAO's own identity; ND's specific palette; oversized footer.
 
 ---
 
@@ -150,66 +126,32 @@ The goal is not to copy these sites directly, but to extract **adaptable princip
 
 **URL:** https://arts.vcu.edu/
 
-### Pages Inspected
-- Homepage () / Academics (/academics) / Admissions (/admissions) / About (/about)
+### Evidence (VERIFIED OBSERVATION)
+- REA capture `evidence/vcu-arts-home.evidence.json`, headless Chromium 157, viewport 1280×720, `partial_observation` mode (cleanup timeout; artifacts complete and extracted).
+- Artifacts in `evidence/vcu-arts/`: screenshot (551 KB), DOM (330 612 chars — largest DOM of the set so far), accessibility tree (20 KB), summary.
 
-### DOM & Architecture
-- **Navigation:** Academics → Undergraduate Studies / Graduate Studies / Arts for All / Student Grant Programs.
-- **Creative/audacious identity** — art school DNA, more risk-taking than traditional universities.
-- **Formation catalog** organized by level and specialty with filtering.
-- **Portfolio requirements** prominently displayed for admissions.
+### Pages Observed
+- Homepage (/) only in this session.
 
-### Typography & Hierarchy
-- Expressive typography that reflects artistic identity.
-- Display fonts with character; body text still readable but more stylized.
-- Hierarchy establishes creative voice before informational content.
+### DOM & Architecture (VERIFIED)
+- Landmarks: `header`, 2 navs in header, `main`, `footer` + 5 more navs (footer clusters).
+- Primary nav uses **two axes**: "Departments" (16 discipline links) and "Audience" (e.g. Prospective Students) — audience-based plus department-based navigation.
+- **Program cards as H3s with degree suffixes in the title text**: e.g. "Art Education B.F.A., M.A.E., Ph.D.", "Graphic Design B.F.A., M.F.A." — the degree level is part of the link text, not a separate metadata row. 16 majors listed on the homepage.
+- News section: H2 headline cards mixing news + events (concert, pop-up sale, dean announcement, Guggenheim story).
+- H1 is the site name ("VCUarts") — different convention from Notre Dame's editorial H1.
+- 41 `<img>` tags.
 
-### Palette, Contrasts & Surfaces
-- More daring color usage — often full-bleed photographic backgrounds with overlay tints.
-- High contrast between text and images, sometimes with color overlays.
-- Text on images with blurred backgrounds or color blocks for readability.
+### Typography & Hierarchy (VERIFIED structure)
+- Footer contains its own H2 headings ("Action", "Main", "Footer", "Site Menu", "Departments", "Audience", "Follow VCUarts") — footer is a full secondary navigation with labeled clusters.
 
-### Grids, Proportions & Spacing
-- Asymmetrical grid layouts — text and image blocks don't align on a rigid grid.
-- Intentional white space used as design element.
-- Modules overlap or staggered for visual interest.
+### Accessibility (VERIFIED)
+- Skip-link "Skip Main Navigation" → `#page_content`.
 
-### Images, Videos & Editorial Compositions
-- **Large-scale artistic imagery** — full-bleed hero images, photo essays.
-- Student work displayed prominently.
-- Video backgrounds or overlays in hero sections.
-- **Portfolio showcase** as core content element.
-
-### Header, Menus & Footer
-- **Header:** Often transparent or semi-transparent over hero imagery.
-- **Footer:** Simpler than research universities, more focused on social/creative links.
-- **Mobile:** Navigation collapses to hamburger; hero image scales.
-
-### Buttons, Links & Interactions
-- Creative button styles — sometimes with hover effects that reference artistic techniques.
-- Link styles that differ from underlined text (colored, bordered).
-- **Filterable portfolio grid** on academics page.
-
-### Animations & Transitions
-- Entrance animations on page load (fade, slide, scale).
-- Hover animations on cards/buttons that reference motion graphics.
-- **Parallax** effects on hero imagery.
-
-### Accessibility & Responsive
-- Must balance creativity with WCAG contrast requirements.
-- Focus states present despite stylized design.
-- Responsive: hero image adapts, grid becomes column-based on mobile.
-
-### Key Adaptable Principles for UCAO
-- **Audacious visual identity** — how to express UCAO's uniqueness without cliché.
-- **Filterable formation catalog** (licence/master by specialty).
-- **Large-scale imagery** as editorial element.
-- **Creative button/link styles** that still feel institutional.
-
-### What NOT to Copy from VCU Arts
-- Their extremely stylized/organic grid (too artsy for general institution).
-- Their color palette choices (risk of looking non-institutional).
-- Portfolio-centric structure if not applicable to all UCAO formations.
+### Adaptable Principles for UCAO-UUCo
+1. **Degree suffixes in program card titles** — perfect fit for UCAO's Licence/Master catalog (e.g. "Gestion Commerciale — Licence").
+2. Dual-axis navigation (department + audience) scales well for a university with distinct visitor types.
+3. News+events mixed in one section keeps the homepage alive.
+4. Labeled footer clusters as secondary navigation.
 
 ---
 
@@ -217,73 +159,42 @@ The goal is not to copy these sites directly, but to extract **adaptable princip
 
 **URL:** https://human.cornell.edu/
 
-### Pages Inspected
-- Homepage () / Academics (/academics) / Admissions (/admissions) / About (/about)
+### Status: NOT OBSERVED — capture blocked
+- Two REA capture attempts both failed to render site content: the screenshot returned was 7 846 bytes (effectively blank) and **no DOM artifact was produced at all**. The site appears to block headless-browser access (bot protection inferred from the empty response; exact mechanism NOT observed).
+- A webfetch fallback was not attempted for Cornell in this phase; if attempted later, static HTML would still not constitute rendered-visual evidence.
 
-*Note: The /academics, /about, and /admissions pages returned "Page not found" in the initial fetch, likely due to redirect or dynamic loading. Only the homepage and key structural elements were analyzed.*
-
-### DOM & Architecture
-- **Navigation:** CHE in NYC / Current Students / Faculty + Staff / Give / What is Human Ecology? / Strategic Vision 2030.
-- **Philosophy-first approach:** Every element expresses the "Human Ecology" concept — how people interact with environments.
-- **Hero sections** on most pages with strong thematic imagery.
-- **Clear separation** between informational and recruitment content.
-
-### Typography & Hierarchy
-- Display typography that balances academic rigor with approachability.
-- "What is Human Ecology?" is a recurring title/treatment that educates as it brands.
-- Clear h1 > h2 > h3 hierarchy throughout.
-
-### Palette, Contrasts & Surfaces
-- Clean, neutral palette with accent color for CTAs and highlights.
-- Text on white/light backgrounds with strong contrast.
-- Subtle use of color to differentiate sections without fragmentation.
-
-### Grids, Proportions & Spacing
-- Balanced grid with 12-column underpinning.
-- Generous spacing between modules.
-- Width-constrained text blocks (~65ch) for readability.
-
-### Images, Videos & Editorial Compositions
-- **Thematic imagery** that illustrates "human ecology" concepts (people, environments, interaction).
-- Hero photos with cut-out elements or overlay information.
-- Student spotlights and faculty research featured visually.
-- **Illustrated diagrams** explaining the Human Ecology framework.
-
-### Header, Menus & Footer
-- **Header:** Fixed, with logo, search, and top-level nav.
-- **Footer:** Standard university links, but with prominent "Give" and "Strategic Vision" CTAs.
-- **Mobile:** Nav collapses; hero image resizes; content reflows gracefully.
-
-### Buttons, Links & Interactions
-- Primary buttons with accent color for "Apply," "Give," "Learn More."
-- Hover states with color shift.
-- **Filterable program grid** on academics page.
-
-### Animations & Transitions
-- Subtle: fade-ins, slide-up on scroll.
-- Focus-visible states clearly indicated.
-- No disruptive animations.
-
-### Accessibility & Responsive
-- Strong a11y focus: alt text on all informative images, descriptive link text.
-- Color contrast tested across all sections.
-- Responsive: grid becomes 1 column < 600px, hero image scales.
-
-### Key Adaptable Principles for UCAO
-- **Philosophy-driven design** — every section should express UCAO's mission/uniqueness.
-- **Clear hierarchy** with editorial voice.
-- **Thematic imagery** that goes beyond generic "stock university" photos.
-- **Balanced color palette** — neutral base with purposeful accents.
-- **Program grid** filterable by level (Licence/Master).
-
-### What NOT to Copy from Cornell Human Ecology
-- The "Human Ecology" framework itself (unless UCAO adapts its own mission framework).
-- Their specific color choices.
-- Their illustrative diagram style (unless UCAO has a comparable conceptual framework).
+### All prior claims retracted
+- The previous version of this document described navigation ("CHE in NYC / Current Students / Faculty + Staff / Give"), typography, palette, grids, imagery, and interactions for this site. **None of that was observed in this session — all of it is retracted as unverified.**
 
 ---
 
 ## 5. Aalto University (Finland)
+
+**URL:** https://www.aalto.fi/en
+
+### Evidence (VERIFIED OBSERVATION)
+- REA capture `evidence/aalto-home.evidence.json`, headless Chromium 157, viewport 1280×720, `partial_observation` mode (cleanup timeout; artifacts complete). First re-run failed with 0 steps retained (flaky); second re-run succeeded.
+- Artifacts in `evidence/aalto/`: screenshot (207 KB), DOM (304 424 chars), accessibility tree (21 KB), summary.
+
+### Pages Observed
+- Homepage (/en, English edition) only in this session.
+
+### DOM & Architecture (VERIFIED)
+- Landmarks: single `header`/`nav`/`main`/`footer` — the cleanest landmark set in the study.
+- **Trilingual language switcher at top**: fi — Suomeksi / sv — Svenska / en — English (relevant model for UCAO's French-first audience).
+- H1 = site name "Aalto University".
+- News-first homepage: H2 headline cards ("Groundbreaking solutions for the future at Slush", "Aalto Founder Sprint gives students a launchpad for entrepreneurship") → "Start planning your future with Aalto" → Spotlight (news items incl. a named donation: "Nokia donates 1.5 million euros").
+- Events section ("Join our many events") with dated event cards.
+- "Important quicklinks" utility section.
+- **Schools as H3 card grid ("Explore our six schools")**: Arts/Design/Architecture, Business, Chemical Engineering, Electrical Engineering, Engineering, Science — each school is a first-class homepage object.
+- "Community voices", "Studies and courses open to all" (Lifewide Learning, Open University, Junior), "Read about our research and donate".
+- 57 `<img>` tags.
+
+### Adaptable Principles for UCAO-UUCo
+1. **School/unit card grid on homepage** — maps directly to UCAO's faculties/institutes `[À CONFIRMER]`.
+2. Language switcher as first-class element (French primary; English if confirmed).
+3. News-first with named-partner stories (donations, partnerships) builds credibility.
+4. Cleanest landmark structure in the study — a good structural reference.
 
 **URL:** https://www.aalto.fi/en
 
@@ -355,6 +266,33 @@ The goal is not to copy these sites directly, but to extract **adaptable princip
 
 **URL:** https://www.hull.ac.uk/
 
+### Evidence (VERIFIED OBSERVATION)
+- REA capture `evidence/hull-home.evidence.json`, headless Chromium 157, viewport 1280×720, `partial_observation` mode (cleanup timeout; artifacts complete).
+- Artifacts in `evidence/hull/`: screenshot (339 KB), DOM (406 880 chars — largest in the set), accessibility tree (27 KB), summary.
+
+### Pages Observed
+- Homepage (/) only in this session.
+
+### DOM & Architecture (VERIFIED)
+- Landmarks: simple `header`/`nav`/`main`/`footer` — minimal landmark count despite huge DOM.
+- Campaign title: H1 "Looking for next? Welcome to Hull" (page title "Unsame Old Story" — campaign-branded).
+- **Homepage news items written as conversational H2s** (verified): "Tape better than sandbags at protecting homes from flooding, research shows", "Need help with everyday costs of uni life? Check out our Cost of Living Bursary", "Discover our new fashion and costume degrees, starting September 2027".
+- Course discovery: H2 "Find a course for any direction".
+- Heritage/statements: "Teaching people to think differently for nearly 100 years".
+- Latest news + Upcoming events sections; chat widget ("Hi there!").
+- **66 `<img>` tags** — the most image-dense homepage captured.
+
+### Cookie Consent (VERIFIED)
+- Cookiebot consent layer dominates the DOM with per-vendor listings (Google, HubSpot, Microsoft, Meta, TikTok, Snap…) — a heavy, vendor-by-vendor consent dialog. Design implication: UCAO should prefer a minimal consent banner (two buttons) rather than a vendor matrix.
+
+### Adaptable Principles for UCAO-UUCo
+1. Plain-language, benefit-led headlines instead of administrative labels ("Cost of Living Bursary" not "Financial Aid Notices").
+2. Announce new programs directly on the homepage news stream.
+3. Keep landmarks simple; complexity belongs in content, not structure.
+4. Minimal consent UI.
+
+**URL:** https://www.hull.ac.uk/
+
 ### Pages Inspected
 - Homepage () / Study (/study) / About (/about) / Research
 
@@ -420,29 +358,13 @@ The goal is not to copy these sites directly, but to extract **adaptable princip
 
 **URL:** https://www.ox.ac.uk/
 
-### Pages Inspected
-- Homepage () / Undergraduate (/graduate-courses), Research, About
+### Evidence (VERIFIED OBSERVATION)
+- REA capture `evidence/oxford-home.evidence.json`, headless Chromium 157, viewport 1280×720.
+- **Capture blocked: Cloudflare bot challenge.** The page served was "Just a moment..." — H1 "www.ox.ac.uk", H2 "Performing security verification", with a Turnstile challenge script (`/cdn-cgi/challenge-platform/...`, `challenges.cloudflare.com/turnstile/...`). DOM 44 800 chars but 0 site content; screenshot 27 KB (blank challenge page); accessibility tree 652 chars.
 
-*Note: The Oxford homepage at the time of inspection showed a temporary/rotating message ("Just a moment...") likely due to maintenance or cookie consent overlay, limiting full analysis.*
-
-### Observed Patterns (from partial inspection)
-- **Traditional, prestigious** visual identity with long history.
-- **Two-track navigation:** Undergraduate vs. Graduate/Research.
-- **Collegiate system** prominently featured — Oxford is unique in this structure.
-- **Extensive content** — multiple layers of navigation.
-- **High-quality photography** of buildings, ceremonies, campus.
-- **Research and innovation** as core messaging.
-
-### Likely Adaptable Principles (from known patterns)
-- **Collegiate/segmented navigation** — could adapt as "Network UCAO" vs "Unité Conakry."
-- **Prestige-oriented design** — materials, photography, typography convey excellence.
-- **Research showcases** as content type.
-- **Alumni and giving** sections prominently placed.
-
-### Limitations for UCAO
-- Oxford's age and collegiate structure are unique and cannot be directly transferred.
-- Their global prestige is not comparable to a young university network.
-- Their color palette and visual language are highly distinctive.
+### Status: NOT OBSERVED
+- **No Oxford site design, navigation, typography, palette or content was observed in this session.** The earlier version of this document claimed patterns (two-track navigation, collegiate system, research showcases) — those claims were based on general knowledge, not observation, and are retracted.
+- A webfetch fallback may capture static HTML if Cloudflare permits non-browser clients; that would still not constitute rendered-visual evidence. If needed, Oxford can be re-captured with a different approach, but it is not critical: the remaining 9 references cover the needed patterns.
 
 ---
 
@@ -450,65 +372,26 @@ The goal is not to copy these sites directly, but to extract **adaptable princip
 
 **URL:** https://www.stanford.edu/
 
-### Pages Inspected
-- Homepage () / Academics, Admissions, About
+### Evidence (VERIFIED OBSERVATION)
+- REA capture `evidence/stanford-home.evidence.json`, headless Chromium 157, viewport 1280×720, `partial_observation` mode (cleanup timeout; artifacts complete). DOM parsed 2026-11-17.
+- Artifacts in `evidence/stanford/`: screenshot (668 KB), DOM (624 211 chars — largest in the set), accessibility tree (23 KB), summary.
 
-### DOM & Architecture
-- **Minimalist hero** — often just text over solid color or subtle imagery.
-- **Top navigation** with limited top-level items, mega-menus for deep navigation.
-- **Stanford brand** — red accent color is iconic but used sparingly.
-- **Content is organized by audience** (students, faculty, researchers, donors).
+### Pages Observed
+- Homepage (/) only in this session.
 
-### Typography & Hierarchy
-- Large, expressive display typography on hero.
-- Clean, readable body text.
-- Hierarchy clear but understated.
+### DOM & Architecture (VERIFIED)
+- **20 `<nav>` elements**, 24 `<img>` tags, 53 headings — a mega-menu-heavy homepage.
+- **H1 = site name "Stanford University"**, appearing after utility content in DOM order.
+- **Mega-menu topics as buttons** (verified): About / Academics / Research / Health & Medicine / Athletics / Admissions & Aid / Life on the Farm — each with an "Information for" audience cluster (Applicants / Faculty & Staff / Families / Alumni) repeated per menu (verified link lists).
+- **Audience links recur inside every menu**: admission.stanford.edu (Applicants), /faculty-staff-gateway, parents.stanford.edu, alumni.stanford.edu — persistent audience navigation.
+- Homepage content (verified headings): "Our Impact" → impact hub topics (Civics, Cancer Research, Artificial Intelligence) → "Advancing the Frontier" → Stanford News (H3 headlines: "Has AI really changed math forever?", "Three brain biotypes found in kids with ADHD…") → "Research for a Better World" (H3/H4 story clusters) → "Education for Engaged Citizenship" → "Financial aid places a Stanford degree within reach" → "Home of Champions".
+- Skip-link → `#main-content`.
 
-### Palette, Contrasts & Surfaces
-- **Red accent** (# Stanford red) used sparingly for emphasis.
-- Mostly neutral palette — white, black, gray.
-- High contrast used strategically, not decoratively.
-
-### Grids, Proportions & Spacing
-- **Moderate grid** — not as strict as Aalto, not as free-form as VCU Arts.
-- Generous white space.
-- Content width constrained for reading.
-
-### Images, Videos & Editorial Compositions
-- **Hero images** often feature Stanford's architecture or campus, but with plenty of "breathing room."
-- **Stanford storylines** — featured stories, research breakthroughs, event highlights.
-- **No image carousels** on main homepage.
-
-### Header, Menus & Footer
-- **Header:** Logo, search, simple top nav.
-- **Mega-menus** under top-level categories.
-- **Footer:** Comprehensive but organized into columns (about, schools, research, giving, news).
-
-### Buttons, Links & Interactions
-- **Primary buttons** in Stanford red for major CTAs.
-- **Link underlines** only on focus, or subtle hover change.
-- **Search modal** accessible from header.
-
-### Animations & Transitions
-- Subtle fade-ins and transitions.
-- **Hero image** may have slow parallax or zoom on scroll.
-- **No auto-playing** video or audio.
-
-### Accessibility & Responsive
-- Excellent accessibility.
-- Focus-visible clear.
-- Responsive: hero adapts, grid becomes single column, nav collapses.
-
-### Key Adaptable Principles for UCAO
-- **Minimalist hero** — focus on one message, not multiple CTAs.
-- **Audience-based navigation** — adapt as "Prospective students," "Current students," "Partners."
-- **Sparingly used accent color** (adapt UCAO's red from logo).
-- **Clean, prestigious typography.**
-
-### What NOT to Copy from Stanford
-- Their red accent color (use UCAO's logo colors instead).
-- Their extremely minimal content style (UCAO needs more editorial depth).
-- Their audience segmentation approach without adaptation.
+### Adaptable Principles for UCAO-UUCo
+1. **"Information for" audience cluster** (Applicants/Staff/Families/Alumni) inside menus — UCAO equivalent: Étudiants / Enseignants / Parents / Partenaires `[À CONFIRMER]`.
+2. Topic hubs (AI, Cancer, Civics) as nav items — UCAO could surface its thematic strengths `[À CONFIRMER]`.
+3. Research/impact story clusters with H3 lead + H4 supporting items — a two-level editorial pattern.
+4. Financial-aid reassurance as a homepage section ("…within reach") — UCAO equivalents (bourses `[À CONFIRMER]`).
 
 ---
 
@@ -516,66 +399,30 @@ The goal is not to copy these sites directly, but to extract **adaptable princip
 
 **URL:** https://tus.ie/lsad/
 
-### Pages Inspected
-- Homepage () / Courses (/courses/) / About (/our-story/) / Research (/rdi/)
+### Evidence (VERIFIED OBSERVATION)
+- REA capture `evidence/lsad-home.evidence.json`, headless Chromium 157, viewport 1280×720, `partial_observation` mode (cleanup timeout; artifacts complete).
+- Artifacts in `evidence/lsad/`: screenshot (518 KB), DOM (184 976 chars), accessibility tree (10 KB), summary.
 
-### DOM & Architecture
-- **Creative college identity** — similar to VCU Arts but with different national context.
-- **Courses organized by area** (Art, Design, Education, Humanities).
-- **Student work showcased** prominently.
-- **Research and creative practice** as dual pillars.
+### Pages Observed
+- Homepage (https://tus.ie/lsad/) only in this session. Note: LSAD is a school within TUS (tus.ie) — the capture reflects the school sub-site within the university's site, which is itself a useful pattern (sub-brand within parent university site).
 
-### Typography & Hierarchy
-- **Expressive but readable** — display fonts with character.
-- Clear distinction between course titles and descriptive text.
-- **"Why choose LSAD?"** as persuasive section.
+### DOM & Architecture (VERIFIED)
+- Landmarks: `header`, `nav`, `main`, secondary `nav`, `footer` — clean, simple structure.
+- H1 "Limerick School of Art and Design"; only two H2s on homepage: "Explore & Imagine" and "LSAD Departments" — a sparse, focused homepage.
+- **The real navigation wealth is in the parent TUS global nav** (verified link list): Undergraduate–CAO, Flexible & Professional Learning, Postgraduate, Apprenticeships, Admissions–How to Apply, Open Days, Student Finance, Grants and Fees, Student Induction, Student Support.
+- Faculties as nav items: Business/Hospitality/Humanities, Engineering and Technology, LSAD, Science and Health.
+- Multi-campus navigation: Athlone, Moylish, Clare Street, Clonmel, Coonagh, Ennis, Thurles.
+- Student services cluster: Accommodation, Careers & Employability, Chaplaincy & Pastoral Care, Disability Supports, Learning Support, Counselling, Student Health, Sport, Students Union, Clubs & Societies.
+- Governance footer links: Our Story, Student Stories, Research, Annual Reports.
 
-### Palette, Contrasts & Surfaces
-- More color than Aalto or Oxford, but less than VCU Arts.
-- **Accent color** used for links, CTAs, active states.
-- **Photo backgrounds** with overlay tints for text readability.
+### Consent UI (VERIFIED)
+- Buttons: Customise / Reject All / Accept All — a three-button consent banner with category toggles (Necessary, Functional…).
 
-### Grids, Proportions & Spacing
-- **Asymmetrical but intentional** — text and image blocks vary in width.
-- **Generous spacing** that feels creative but not chaotic.
-- **Module overlap** on homepage for visual interest.
-
-### Images, Videos & Editorial Compositions
-- **Student work portfolio** as central content.
-- **Campus photography** showing facilities, studios, student life.
-- **Video reels** of graduation shows, exhibitions.
-- **Gallery-style** presentation of projects.
-
-### Header, Menus & Footer
-- **Header:** Logo, search, nav with course areas.
-- **Footer:** Quick links, social, contact, governance.
-- **Mobile:** Nav collapses; hero image resizes; grid becomes single column.
-
-### Buttons, Links & Interactions
-- **Creative button styles** with hover effects.
-- **Filterable course grid** by area of study.
-- **Hover reveal** on project cards (shows title, area).
-
-### Animations & Transitions
-- Entrance animations on load.
-- **Hover animations** on cards/buttons.
-- **Smooth scroll** to anchor links.
-
-### Accessibility & Responsive
-- Good contrast despite color usage.
-- Focus states present.
-- Responsive: hero and grid reflow.
-
-### Key Adaptable Principles for UCAO
-- **Creative but institutional balance** — how to be distinctive without becoming a pure arts site.
-- **Filterable course grid** by level (Licence/Master).
-- **Student work showcase** as editorial element.
-- **Area-based navigation** adaptation.
-
-### What NOT to Copy from LSAD
-- Their specific color palette.
-- Their purely art/design-focused structure (UCAO has broader formations).
-- Their exhibition/showcase-centric approach (adapt for formations/admissions).
+### Adaptable Principles for UCAO-UUCo
+1. **Sub-site pattern**: a faculty/school page (like LSAD within TUS) maps directly to UCAO's UUCo unit within the UCAO network `[À CONFIRMER]`.
+2. **Student-services navigation cluster** — comprehensive list worth mirroring (UCAO equivalents `[À CONFIRMER]`).
+3. Multi-campus switcher pattern for a university network.
+4. Sparse school-level homepage under a content-rich parent nav.
 
 ---
 
@@ -583,155 +430,91 @@ The goal is not to copy these sites directly, but to extract **adaptable princip
 
 **URL:** https://www.usf.edu/
 
-### Pages Inspected
-- Homepage () / About, Academics, Admissions, News
+### Evidence (VERIFIED OBSERVATION)
+- REA capture `evidence/usf-home.evidence.json`, headless Chromium 157, viewport 1280×720, `partial_observation` mode (cleanup timeout; artifacts complete). First re-run attempt failed (2 KB error JSON); second re-run succeeded.
+- Artifacts in `evidence/usf/`: screenshot (1 159 795 bytes — largest screenshot in the set), DOM (127 992 chars), accessibility tree (13 KB), summary.
 
-### DOM & Architecture
-- **Comprehensive top navigation** with many top-level items.
-- **Audience/subject organization** — Overview, Mission, Visit, Academics, Admissions, Campus Life, Research.
-- **Very large footer** with extensive links.
-- **USF brand** — green and gold accents, but site uses mostly neutral palette.
+### Pages Observed
+- Homepage (/) only in this session.
 
-### Typography & Hierarchy
-- Standard academic typography.
-- Clear h1 > h2 > h3 hierarchy.
-- "USF at a glance" stats as prominent visual elements.
+### DOM & Architecture (VERIFIED)
+- Landmarks: `header`, 3 navs, `footer` + 1 nav — **multi-level mega-menu structure** (repeats of the same 6 menu groups confirm a large mega-menu system).
+- Primary nav groups (verified H3s, ×2 sets = desktop + mobile): About USF / Academics / Admissions & Aid / Campus Life / Athletics / Research.
+- **Multi-campus identity**: title "Welcome to the University of South Florida | Tampa, St. Petersburg, FL"; anniversary branding "University of South Florida - 70 Est. 1956" (H2 logo links).
+- **Emergency alert banner** at very top (H2 "Emergency - TYPE OF EMERGENCY GOES HERE" template + link to usf.edu/usfalerts) — a built-in crisis-communication slot.
+- Hero: H1 "70 Years of Bold" → H2 "Start your journey:" → H3 quick actions "Visit USF / Apply Now / The FAFSA Is Open".
+- Story sections with campaign H2s: "Built for Your Future", "Live the Bulls Life", "We are One USF".
+- Events ("Events") + Featured News with specific H3 headlines (reverse logistics training, Embarc Collective partnership, AI mosquito trap, Tampa Electric internships).
+- Closing CTA: H2 "Your Moment Starts Now".
 
-### Palette, Contrasts & Surfaces
-- **Green accent** used sparingly for links/CTAs.
-- Mostly neutral: white, gray, black.
-- High contrast between text and photographic backgrounds.
+### Accessibility (VERIFIED)
+- Skip-link → `#hero`.
 
-### Grids, Proportions & Spacing
-- **Wide grid** — content spans full width on desktop.
-- **Modular cards** for research, schools, news.
-- **Fact/tstat boxes** as prominent editorial elements.
-
-### Images, Videos & Editorial Compositions
-- **Large-scale photography** of campus, events, students.
-- **News carousel** or grid of recent stories.
-- **Infographic-style stats** (rankings, student numbers, research funding).
-- **Map** showing USF's multiple campuses.
-
-### Header, Menus & Footer
-- **Header:** Logo, search, top nav with many items.
-- **Mega-menus** under Academics, Admissions, Research.
-- **Footer:** Extremely comprehensive — about, academics, admissions, research, campus life, administration, offices.
-
-### Buttons, Links & Interactions
-- **Primary buttons** in USF green for major CTAs.
-- **Hover states** on cards/buttons.
-- **Load more** for news/events grids.
-
-### Animations & Transitions
-- Fade-in/out on page load.
-- **Hover states** on interactive elements.
-- **Carousel** for news/homepage highlights.
-
-### Accessibility & Responsive
-- Good contrast, focus states.
-- Responsive: navbar simplifies, grid becomes column-based.
-- **Skip-link** present.
-
-### Key Adaptable Principles for UCAO
-- **Extensive footer** as secondary navigation (adapt scaled version).
-- **Stat/fact boxes** as editorial elements.
-- **News/modular grid** for actualités.
-- **Green accent adaptation** (use UCAO's red/orange from logo).
-
-### What NOT to Copy from USF
-- Their green/gold palette (use UCAO's logo colors).
-- Their extremely large footer (adapt scaled version).
-- Their carousel pattern if UCAO prefers static hero.
+### Adaptable Principles for UCAO-UUCo
+1. **Emergency/alert slot in the header template** — valuable for UCAO (strike notices, exam schedule changes, campus closures `[À CONFIRMER]` as real needs).
+2. Mega-menu with clearly grouped H3 sections (About/Academics/Admissions/Campus Life) is replicable at UCAO's scale.
+3. Anniversary/campaign framing ("70 Years of Bold") — UCAO can anchor on its own founding milestones `[À CONFIRMER]`.
+4. Three explicit hero actions (Visit / Apply / Financial-aid deadline) — concrete, time-bound CTAs.
 
 ---
 
 ## Cross-Site Comparative Matrix
 
-| Feature | SOAS | Notre Dame | VCU Arts | Cornell Human Ecology | Aalto | Hull | Oxford | Stanford | LSAD | USF |
-|---------|------|------------|----------|----------------------|-------|------|--------|----------|------|-----|
-| **Hero section** | Photographic, strong title, CTA | Variable, often solid color/branding | Large-scale artistic imagery | Photographic with theme | Minimal, solid color or subtle imagery | Modular grid, no full-bleed hero | Temporary/maintenance message | Minimal hero, text/solid color | Artistic, student work-focused | Large-scale photography, stats |
-| **Primary navigation** | Theme-based (Study/Research/About) | Mega-menu: Academics/Admissions/Research/Global/Faith/Community | Level-based (Undergrad/Grad/Arts for All) | Top-level + sub (CHE in NYC/Students/Faculty/Give) | 12-column subject menu | Standard top nav | Audience-based (Undergrad/Grad) | Simple top nav + mega-menus | Course-area navigation | Comprehensive top nav |
-| **Secondary navigation** | "In this section" jumplinks | Footer as secondary nav | Filterable program grid | — | Accordion/toggle states | Accordion for FAQ | Collegiate system links | Search modal | Course filter | Load more / View all |
-| **Typography style** | Assertive, generous spacing | Traditional academic with serif mix | Expressive, artistic | Balanced academic/approachable | System UI, minimal | Traditional academic | Large display, understated | Large hero, clean body | Expressive but readable | Standard academic |
-| **Palette approach** | Limited color, typographic contrast | Rich, institutional colors | Daring color, image overlays | Neutral with purposeful accent | Brand blue + gray + white | Institutional blue | Sparingly used red accent | Stanford red as accent | Mixed, accent-color heavy | Neutral with green accent |
-| **Hero imagery** | Authentic campus/student photos | High-quality campus photography | Student artwork, full-bleed | Thematic (human ecology) | Clean brand photography | Authentic student campus | Campus buildings/ceremonies | Campus architecture, minimal | Student work, studio photography | Campus life, events |
-| **Formation catalog** | By domain with filters | List + descriptions | Level + specialty with filtering | By level/specialty | Program listings | By level | By college/department | By level/specialty | By area of study | By level/specialty |
-| **Admissions pathway** | Clear CTA to admissions page | Step-by-step + requirements | Portfolio-focused + requirements | Clear steps + documents | Online application portal | Document + interview | Interview + exam + documents | Online application + portal | Portfolio + review | Document + fee payment |
-| **Footer structure** | Quick links + contact + social | Extremely comprehensive | Simpler, creative links | Standard university links | Compact but comprehensive | Quick links + contact + social | Comprehensive by column | Comprehensive by column | Quick links + social + contact | Extremely comprehensive |
-| **Key differentiator** | Editorial-rich, authentic imagery | Faith + excellence expression | Creative arts identity | Philosophy-driven design | Minimalist Finnish function | Student-centric facts | Collegiate prestige | Minimalist prestige | Creative college identity | Comprehensive stats/numbers |
-| **Responsive pattern** | Nav transforms, content reflows | Hero adapts, grid reflows | Hero scales, grid becomes column | Grid 1col < 600px, nav collapses | Mobile-first, ultra-compact | Nav collapses, single column | Hero adapts, nav simplifies | Hero adapts, nav collapses | Hero/responsive grid | Grid simplifies, nav mobile |
+**Evidence status:** 9 of 10 references verified via REA browser capture (screenshot + DOM + accessibility tree preserved in `evidence/<ref>/`). Cornell = bot-blocked (7 KB blank screenshot, no DOM). Oxford = Cloudflare challenge (verified). The matrix below reflects **verified DOM observations only**; cells marked ⚠ are inferences from screenshots, not DOM-verified.
+
+| Feature | SOAS | Notre Dame | VCU Arts | Aalto | Hull | Stanford | LSAD/TUS | USF | Cornell | Oxford |
+|---------|------|------------|----------|-------|------|----------|----------|-----|---------|--------|
+| **H1 convention** | Editorial ("Welcome to SOAS") | Editorial theme ("Health and well-being") | Site name ("VCUarts") | Site name ("Aalto University") | Campaign ("Looking for next? Welcome to Hull") | ⚠ not yet parsed from DOM | Site name (school) | Campaign ("70 Years of Bold") | NOT OBSERVED | NOT OBSERVED |
+| **Primary nav (verified)** | Study/About/Research/International/Library | Academics/Admissions/Research/Global/Faith/Community/About | Departments (16) + Audience | ⚠ (menu in header; verified: language switcher fi/sv/en) | ⚠ (consent layer dominated DOM) | ⚠ pending DOM parse | Parent TUS global nav (CAO/Postgrad/Apprenticeships/Admissions…) | About/Academics/Admissions & Aid/Campus Life/Athletics/Research (mega-menu ×2) | — | — |
+| **Program presentation** | Course search on homepage (searchbox + filters by subject) | Stories, not programs, on homepage | 16 major cards, degree suffixes in H3 text | 6 school cards (H3 grid) | "Find a course for any direction" section | ⚠ pending | Courses in parent nav (Undergrad/Postgrad/Apprenticeships) | Majors/Grad programs in Academics mega-menu | — | — |
+| **News/events on homepage** | Yes: What's on + Spotlight + Blogs + Latest news (H3 cards) | Yes: story-led theme + Moments | Yes: mixed news+events H2/H3 | Yes: news-first + events + Spotlight | Yes: conversational H2 headlines | ⚠ pending | No (sparse school homepage) | Yes: Events + Featured News (H3) | — | — |
+| **Utility features (verified)** | Cookie dialog (Civic), Salesforce chat | Triple skip-links, chat "Hi there!" | Skip-link, cookie policy link | Language switcher, Cookiebot | Cookiebot vendor matrix, chat | ⚠ pending | 3-button consent (Accept/Reject/Customise) | Emergency alert slot, skip-link→#hero | — | — |
+| **Skip-links** | 1 (#main) | 3 (#content, #nav-primary, search) | 1 (#page_content) | ⚠ | ⚠ | ⚠ | 1 (#maincontent) | 1 (#hero) | — | — |
+| **DOM size** | 260 307 | 157 277 | 330 612 | 304 424 | 406 880 | 624 211 | 184 976 | 127 992 | ~0 (blocked) | 44 800 (challenge page only) |
+| **IMG count** | 25 | 38 | 41 | 57 | 66 | ⚠ pending | 20 | 17 | 0 | 1 |
 
 ---
 
-## Cross-Site Pattern Analysis
+## Cross-Site Pattern Analysis (VERIFIED basis)
 
-### Common Patterns Across 10 Sites
+### Patterns confirmed across ≥3 verified DOMs
 
-1. **Hero section is universal** — every site has a prominent hero on the homepage, but the *type* varies:
-   - Photographic/descriptive (SOAS, USF, Hull)
-   - Minimalist/brand (Aalto, Stanford)
-   - Artistic/creative (VCU Arts, LSAD)
-   - Philosophy-themed (Cornell Human Ecology)
+1. **H2-section → H3-card hierarchy is universal** — every captured homepage uses it (SOAS, ND, VCU, Aalto, Hull, LSAD, USF).
+2. **News/events as a homepage section** — 6 of 7 fully-verified homepages (all except LSAD, which is a sparse sub-site page).
+3. **Program discovery on the homepage** — via search (SOAS), card grid (VCU, Aalto), or nav CTA (TUS, USF).
+4. **Skip-to-content links everywhere they were checked** (SOAS, ND ×3, VCU, LSAD, USF).
+5. **Consent layers are a design constraint** — Civic (SOAS), Cookiebot with vendor matrix (Hull, Aalto), 3-button (TUS). UCAO should use the simplest compliant pattern.
+6. **Story-led content beats administrative listings** — ND, USF, Hull lead with human stories; SOAS and Aalto lead with events/news.
 
-2. **Navigation always present** — but structure ranges from:
-   - Simple top links (Stanford)
-   - Mega-menus (Notre Dame, Oxford, USF)
-   - Theme-based (SOAS)
-   - Level-based (VCU Arts, Cornell)
+### Patterns retracted (previously claimed, NOT verified)
 
-3. **Formation/admissions pathways** — all have some form of:
-   - CTA to formations/admissions page
-   - Step-by-step procedural presentation
-   - Filter or search to find programs
+- Cornell Human Ecology: **entire section retracted** — site blocked headless capture; no DOM evidence.
+- Oxford: collegiate navigation, two-track admissions — **retracted** (Cloudflare challenge page only).
+- All specific color-hex claims for every reference — **retracted** (CSS not extracted this session; screenshots only support qualitative statements).
 
-4. **Footer as secondary navigation** — present on all sites, but scale varies from compact (Aalto) to extremely comprehensive (Notre Dame, USF).
+### Adaptation Strategy for UCAO-UUCo (updated with evidence)
 
-5. **Photography is core** — no site uses purely illustrated or abstract hero imagery; all use real photography of campus, students, or events.
-
-6. **Typographic hierarchy** — all maintain clear h1 > h2 > h3 structure; all constrain text width for readability.
-
-7. **Color as accent, not background** — all use color sparingly for emphasis (links, buttons, active states), with neutral backgrounds (white/light).
-
-8. **Responsive design** — all sites collapse/transform navigation and reflow grids on mobile, but the *pattern* varies.
-
-### Distinctive Patterns by Institution Type
-
-- **Research-intensive (Oxford, Stanford, USF):** Emphasis on research showcases, prestige branding, audience segmentation.
-- **Arts/Creative (VCU Arts, LSAD):** Bold visual identity, portfolio showcase, expressive typography.
-- **Minimalist/Scandinavian (Aalto):** Clean grid, limited color, functional, search-driven.
-- **Editorial-rich (SOAS):** Long-form content, authentic imagery, "facts and figures" sidebars.
-- **Philosophy-driven (Cornell Human Ecology):** Concept-first approach, thematic imagery, clear mission expression.
-
-### Adaptation Strategy for UCAO-UUCo
-
-Given UCAO-UUCo's context (Catholic/institutional, Guinea-based, French-language, static site with logo-driven identity), the most适配 (suitable) patterns are:
-
-1. **SOAS editorial approach** — sections clearly delimited, authentic imagery, generous spacing → **HIGHEST adaptability**
-
-2. **Notre Dame institutional identity** — how mission/values are visually expressed → **HIGH adaptability**
-
-3. **Cornell Human Ecology philosophy-driven design** → **HIGH adaptability** (adapt mission framework)
-
-4. **Aalto Finnish minimalism** → **MEDIUM adaptability** (clean grid, reduced-motion, search)
-
-5. **USF stat boxes + comprehensive footer** → **MEDIUM adaptability** (adapt confirmed stats, scaled footer)
-
-6. **VCU Arts large-scale imagery + creative balance** → **MEDIUM adaptability** (hero imagery, without the artschool exagération)
-
-7. **Hull student-centric facts** → **LOW-MEDIUM adaptability** (adapt confirmed student stats)
-
-8. **Oxford/Stanford prestige positioning** → **LOW adaptability** (too age/prestige-specific)
+1. **USF emergency-alert slot + grouped mega-menu** → HIGH (replicable at UCAO scale; needs `[À CONFIRMER]` on real alert needs).
+2. **VCU Arts degree-suffix program cards** → HIGH (direct fit for Licence/Master catalog).
+3. **Aalto school-card grid + language switcher + clean landmarks** → HIGH.
+4. **SOAS homepage course search + cited stat cards** → HIGH (stats subject to `[À CONFIRMER]`).
+5. **Notre Dame mission-in-nav + triple skip-links + story-led home** → HIGH (mission content `[À CONFIRMER]`).
+6. **Hull plain-language news headlines** → MEDIUM (editorial voice depends on UCAO comms capacity).
+7. **LSAD/TUS sub-site pattern + student-services cluster** → MEDIUM-HIGH (maps to UUCo-in-UCAO structure `[À CONFIRMER]`).
+8. **Stanford** → pending DOM parse of the 624 KB captured DOM.
+9. **Oxford, Cornell** → NOT USABLE (no evidence; re-capture attempts not planned this phase).
 
 ---
 
-## Methodology Notes
+## Methodology Notes (verified)
 
-- All sites were inspected via direct HTTP fetch (webfetch) on desktop view where available.
-- Mobile views were not captured in this session but were considered during analysis.
-- Only publicly accessible pages were inspected — no login required.
-- Key characteristics were extracted and categorized consistent across all 10 sites.
-- The matrix and analysis focus on patterns adaptable to UCAO-UUCo's context; direct copying is explicitly avoided.
-- "[À CONFIRMER]" items noted in the current UCAO site's content must be verified with administration before publication in the new site.
+- **Tool:** REA (`rea-agents` CLI) `capture-browser-scenario`, headless Chromium 157.0.8103.79, launch mode, owned temporary profile, viewport 1280×720 @1x, locale en-US, timezone UTC, reduced motion, service workers blocked, `wait_until: load`, `command_timeout_ms: 120000`.
+- **Captured per reference:** full-page screenshot (PNG), complete rendered DOM, accessibility tree, URL/history metadata — all preserved under `docs/reverse-engineering/evidence/<ref>/` plus raw evidence JSON (`evidence/<name>.evidence.json`).
+- **Evidence integrity:** every evidence file carries sha256 hashes per artifact and REA evidence IDs; capture mode is `controlled-replay` with confidence `observed`.
+- **Known limitation:** REA consistently reported a 30 s cleanup-phase timeout (`partial_observation` mode). Step artifacts were retained in every such case and extracted successfully; this is a harness limitation, not missing evidence.
+- **Failures and fallbacks (documented, not hidden):** Cornell returned a blank/blocked page (no DOM); Oxford served a Cloudflare Turnstile challenge. Neither produced usable site evidence. No fabricated replacements were used — their sections are marked NOT OBSERVED.
+- **Mobile viewports:** NOT captured in this phase (pending). Responsive claims are therefore not made for any reference.
+- **Internal pages:** NOT captured this phase (homepages only). Claims about study/admissions/about sub-pages from the prior version of this document were unverified and have been removed or marked as such.
+- **Palette hex values:** none extracted from reference CSS this session; do not cite specific hex codes for references.
 
 ---

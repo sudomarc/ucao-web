@@ -1,0 +1,535 @@
+- document:
+  - region "This website uses cookies":
+    - img "logo"
+    - link "Cookiebot by Usercentrics - opens in a new window":
+      - /url: https://www.cookiebot.com/en/what-is-behind-powered-by-cookiebot/?utm_source=banner_cb&utm_medium=referral&utm_content=v2
+    - tablist:
+      - tab "Consent" [selected]
+      - tab "Details"
+      - tab "About"
+    - tabpanel "Consent":
+      - heading "This website uses cookies" [level=2]
+      - text: We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services.
+      - group "Consent Selection":
+        - text: Consent Selection
+        - strong: Necessary
+        - checkbox "Necessary" [checked] [disabled]
+        - strong: Preferences
+        - switch "Preferences"
+        - strong: Statistics
+        - switch "Statistics" [checked]
+        - strong: Marketing
+        - switch "Marketing"
+    - button "Deny"
+    - button "Allow selection"
+    - button "Allow all"
+  - banner:
+    - link "University of Hull homepage":
+      - /url: /
+      - img
+    - navigation "Main":
+      - list:
+        - listitem:
+          - button "Study"
+        - listitem:
+          - button "Life at Hull"
+        - listitem:
+          - button "Research"
+        - listitem:
+          - button "Collaborate"
+        - listitem:
+          - link "News & events":
+            - /url: /news-and-events
+        - listitem:
+          - button "Alumni"
+        - listitem:
+          - button "About"
+        - listitem:
+          - button "Search":
+            - img "Search"
+  - main:
+    - img "Three students stood in front of a wall painted in colourful stripes"
+    - heading "Looking for next? Welcome to Hull" [level=1]:
+      - text: Looking for next?
+      - emphasis: Welcome
+      - text: to Hull
+    - img
+    - paragraph: One day can change every day. Book an Open Day and see where your future could take you.
+    - link "Link to book an open day":
+      - /url: /study/undergraduate/meet-us/open-days
+      - img
+      - text: Book an open day
+    - paragraph: Top Stories
+    - text: Tue 17 November 2026, 00:54 GMT
+    - img "Clear"
+    - text: 2º Hull, UK
+    - link "1 Three of Hull’s students stand confidently together in front of the business schools' beautiful listed buildings Talent spotters Leading firms team up with university to give business students real-world experience":
+      - /url: /news-and-events/news/leading-hull-businesses-join-forces-with-hull-university-business-school-to-develop-future-talent
+      - text: "1"
+      - img "Three of Hull’s students stand confidently together in front of the business schools' beautiful listed buildings"
+      - paragraph: Talent spotters
+      - heading "Leading firms team up with university to give business students real-world experience" [level=2]
+    - link "2 historic city street flooded with door protected by barrier Duct tape to water Tape better than sandbags at protecting homes from flooding, research shows":
+      - /url: /news-and-events/news/forget-sandbags-tape-can-keep-out-99-of-flood-water
+      - text: "2"
+      - img "historic city street flooded with door protected by barrier"
+      - paragraph: Duct tape to water
+      - heading "Tape better than sandbags at protecting homes from flooding, research shows" [level=2]
+    - link "3 5 students walking down Humber street while Talking. More life. Less cost. Need help with everyday costs of uni life? Check out our Cost of Living Bursary":
+      - /url: /study/undergraduate/fees-and-funding/scholarships-and-awards/cost-of-living-bursary
+      - text: "3"
+      - img "5 students walking down Humber street while Talking."
+      - paragraph: More life. Less cost.
+      - heading "Need help with everyday costs of uni life? Check out our Cost of Living Bursary" [level=2]
+    - link "4 Fashion students alter a blue ball gown on a tailor's dummy Fancy a new look? Discover our new fashion and costume degrees, starting September 2027":
+      - /url: /study/undergraduate/courses/fashion-ba-hons
+      - text: "4"
+      - img "Fashion students alter a blue ball gown on a tailor's dummy"
+      - paragraph: Fancy a new look?
+      - heading "Discover our new fashion and costume degrees, starting September 2027" [level=2]
+    - link "5 two female students talking on a bench on the university campus Make yourself at home Short stays, student kitchens, transport links. Everything you need to commute to uni.":
+      - /url: /life-at-hull/commuting-to-university
+      - text: "5"
+      - img "two female students talking on a bench on the university campus"
+      - paragraph: Make yourself at home
+      - heading "Short stays, student kitchens, transport links. Everything you need to commute to uni." [level=2]
+    - region "Who's doing what":
+      - heading "Find a course for any direction" [level=2]
+      - paragraph: From Accounting to Zoology, you’ll find your true calling right here. Search for your perfect course now or browse all our courses to start your university journey at Hull.
+      - img "search"
+      - combobox [expanded]
+      - listbox "Suggestions"
+      - link "See all courses":
+        - /url: /search/courses?q=
+        - text: See all courses
+        - img "upload"
+        - img
+      - text: Choose a study level or type
+      - link "Link to Undergraduate page":
+        - /url: /study/undergraduate
+        - text: Undergraduate
+        - img "upload"
+        - img
+      - link "Link to Postgraduate taught page":
+        - /url: /study/postgraduate-taught
+        - text: Postgraduate taught
+        - img "upload"
+        - img
+      - link "Link to Postgraduate research page":
+        - /url: /study/postgraduate-research
+        - text: Postgraduate research
+        - img "upload"
+        - img
+      - link "Link to funded opportunities page":
+        - /url: /study/postgraduate-research/funded-opportunities
+        - text: PhD scholarships
+        - img "upload"
+        - img
+      - link "Link to Hull Online site":
+        - /url: https://online.hull.ac.uk
+        - text: Online courses
+        - img "upload"
+        - img
+      - link "Link to London campus site":
+        - /url: https://london.hull.ac.uk
+        - text: London campus
+        - img "upload"
+        - img
+    - region "Why we do what we do":
+      - text: Why we do what we do
+      - heading "Tackling the challenges facing our world head on" [level=2]:
+        - text: Tackling the challenges facing our world
+        - emphasis: head on
+      - paragraph: When injustices confront our society, when challenges threaten our planet, when opportunities are in short supply, we give ourselves permission to face them. It won’t be easy, but that’s never stopped us. Because we believe every step – and misstep – takes us closer to the world we all want.
+      - link "Link to research":
+        - /url: /research
+        - text: Discover our research
+        - img "upload"
+        - img
+      - link "Donate to support our work":
+        - /url: /alumni/give-to-hull
+        - text: Donate to support our work
+        - img "upload"
+        - img
+      - region:
+        - group:
+          - paragraph:
+            - text: The NHS spends
+            - strong: 8.3bn on wound care
+            - text: every year.
+          - paragraph:
+            - text: Our £48mn Wound Innovation Institute is
+            - strong: accelerating new discoveries
+            - text: through to the clinic,
+            - strong: transforming quality of life.
+          - 'link "Find out more: Wound Innovation Institute"':
+            - /url: /research/institutes/wound-innovation-institute
+            - 'button "Find out more: Wound Innovation Institute"'
+        - group:
+          - paragraph:
+            - strong: 8 million homes
+            - text: in the UK are at risk of flooding by 2050.
+          - paragraph:
+            - text: Hull is leading a partnership to better
+            - strong: protect our coastal communities
+            - text: .
+          - 'link "Find out more: University of Hull to lead major partnership addressing coastal resilience"':
+            - /url: /news-and-events/news/university-of-hull-to-lead-major-partnership-addressing-coastal-resilience
+            - 'button "Find out more: University of Hull to lead major partnership addressing coastal resilience"'
+        - group:
+          - paragraph:
+            - text: Disadvantaged people are still
+            - strong: overlooked
+            - text: in education and work.
+          - paragraph:
+            - text: Our higher education access scheme is the model for
+            - strong: UK best practice
+            - text: .
+          - 'link "Find out more: University of Hull''s higher education access scheme praised as UK best practice"':
+            - /url: /news-and-events/news/university-of-hulls-higher-education-access-scheme-praised-as-uk-best-practice
+            - 'button "Find out more: University of Hull''s higher education access scheme praised as UK best practice"'
+        - group:
+          - paragraph:
+            - strong: 1 in 4 adults
+            - text: and
+            - strong: 1 in 10 children
+            - text: experience mental illness.
+          - paragraph:
+            - text: Our new research centre is helping to
+            - strong: boost essential mental health services
+            - text: .
+          - 'link "Find out more: Centre for Addiction and Mental Health Research"':
+            - /url: /research/centres/centre-for-addiction-and-mental-health-research
+            - 'button "Find out more: Centre for Addiction and Mental Health Research"'
+        - group:
+          - paragraph:
+            - text: Our region is one of the biggest contributors of
+            - strong: industrial carbon emissions
+            - text: .
+          - paragraph:
+            - text: We’re
+            - strong: driving low-carbon innovation
+            - text: while powering economic growth.
+          - 'link "Find out more: Accelerating our region’s decarbonisation ambitions"':
+            - /url: /news-and-events/news/accelerating-our-regions-decarbonisation-ambitions
+            - 'button "Find out more: Accelerating our region’s decarbonisation ambitions"'
+        - group:
+          - paragraph:
+            - text: The UK needs a
+            - strong: smarter, stronger, greener
+            - text: rail freight network.
+          - paragraph:
+            - text: Our technology is helping to deliver
+            - strong: more goods at lower cost
+            - text: while slashing emissions.
+          - 'link "Find out more: New business spins out rail-tested technology to transform freight industry"':
+            - /url: /news-and-events/news/new-business-spins-out-rail-tested-technology-to-transform-freight-industry
+            - 'button "Find out more: New business spins out rail-tested technology to transform freight industry"'
+        - button "Go to slide 1"
+        - button "Go to slide 2"
+        - button "Go to slide 3"
+        - button "Go to slide 4"
+        - button "Go to slide 5"
+        - button "Go to slide 6"
+        - button "arrow left Previous slide":
+          - img "arrow left"
+          - text: Previous slide
+          - img
+        - button "arrow right Next slide":
+          - img "arrow right"
+          - text: Next slide
+          - img
+    - region "Who's doing it":
+      - text: Who’s doing it
+      - heading "Working together for humanity’s future" [level=2]:
+        - text: Working together for
+        - emphasis: humanity’s future
+      - paragraph: A university is only as good as its people. And ours are a breed apart. Hull is a haven for unconventionally brilliant minds. People who are unafraid to step up, speak out and stand together for the benefit of us all.
+      - link "Link to alumni page":
+        - /url: /alumni
+        - text: Our alumni
+        - img "upload"
+        - img
+      - link "Link to find a researcher page":
+        - /url: /research/find-a-researcher
+        - text: Meet our researchers
+        - img "upload"
+        - img
+      - link "Link to jobs page":
+        - /url: /about/jobs
+        - text: Current job vacancies
+        - img "upload"
+        - img
+      - region:
+        - group:
+          - paragraph:
+            - strong: Dr Holly Wilkinson
+            - text: is leading the charge in the
+            - strong: fight against wounds
+            - text: ", using the skin's microbiome defences."
+          - 'link "Read more: Beneath the surface - skin microbiomes"':
+            - /url: /research/projects/beneath-the-surface-skin-microbiomes
+            - 'button "Read more: Beneath the surface - skin microbiomes"'
+        - group:
+          - paragraph:
+            - strong: Dr Kate Smith
+            - text: was a
+            - strong: Rising Star
+            - text: at the Women in Flood and Coastal Erosion Risk Management (WiFCERM) Awards 2025.
+          - 'link "Read more: University of Hull researcher receives Rising Star Award"':
+            - /url: /news-and-events/news/university-of-hull-researcher-receives-rising-star-award
+            - 'button "Read more: University of Hull researcher receives Rising Star Award"'
+        - group:
+          - paragraph:
+            - text: Criminology researcher
+            - strong: Dr Stephanie Brown
+            - text: has been named one of the
+            - strong: BBC’s New Generation Thinkers
+            - text: for 2025.
+          - 'link "Read more: University of Hull academic named BBC New Generation Thinker for 2025"':
+            - /url: /news-and-events/news/university-of-hull-academic-named-bbc-new-generation-thinker-for-2025
+            - 'button "Read more: University of Hull academic named BBC New Generation Thinker for 2025"'
+        - group:
+          - paragraph:
+            - text: Business Management alumnus
+            - strong: Laura Su
+            - text: is leading on
+            - strong: transforming waste into renewable resources
+            - text: .
+          - 'link "Read more: Laura Su"':
+            - /url: /alumni/notable-alumni/alumni-stories/laura-su
+            - 'button "Read more: Laura Su"'
+        - group:
+          - paragraph:
+            - strong: Professor Kevin Pimbblet
+            - text: ", Director of DAIM, is leading our research into how to"
+            - strong: responsibly harness AI
+            - text: .
+          - 'link "Read more: Centre of Excellence for Data Science, Artificial Intelligence and Modelling"':
+            - /url: /research/centres/centre-of-excellence-for-data-science-artificial-intelligence-and-modelling
+            - 'button "Read more: Centre of Excellence for Data Science, Artificial Intelligence and Modelling"'
+        - group:
+          - paragraph:
+            - text: Drama alumnus
+            - strong: Indhu Rubasingham
+            - text: is the
+            - strong: first person of colour
+            - text: to be Artistic Director at the National Theatre.
+          - 'link "Read more: Indhu Rubasingham MBE"':
+            - /url: /alumni/notable-alumni/alumni-stories/indhu-rubasingham
+            - 'button "Read more: Indhu Rubasingham MBE"'
+        - group:
+          - paragraph:
+            - strong: Fred Gough
+            - text: ", Professional Policing student, is ready to use his degree to"
+            - strong: help victims of crime
+            - text: .
+          - 'link "Read more: Fred Gough, BA Professional Policing"':
+            - /url: /study/student-stories/fred-gough-ba-professional-policing
+            - 'button "Read more: Fred Gough, BA Professional Policing"'
+        - text: 01/07
+        - button "arrow left Previous slide":
+          - img "arrow left"
+          - text: Previous slide
+          - img
+        - button "arrow right Next slide":
+          - img "arrow right"
+          - text: Next slide
+          - img
+    - text: Why we’re the right people for the job
+    - heading "Teaching people to think differently for nearly 100 years" [level=2]
+    - link "Link to About page":
+      - /url: /about
+      - text: About the University
+      - img "upload"
+      - img
+    - link "Link to TEF page":
+      - /url: /study/undergraduate/how-you-will-learn/teaching-excellence-framework
+      - text: Our teaching excellence
+      - img "upload"
+      - img
+    - paragraph:
+      - strong: Rated Gold for teaching quality
+    - paragraph: and student success in the latest Teaching Excellence Framework (TEF)
+    - paragraph:
+      - strong: World-leading research
+    - paragraph:
+      - text: as recognised by the Research Excellence Framework (REF)
+      - superscript: "1"
+    - paragraph:
+      - strong: Founded in 1927
+    - paragraph: with a lifelong mission to further knowledge for the benefit of humanity’s future
+    - paragraph:
+      - strong: 94.4% of our students
+    - paragraph:
+      - text: of our graduates are in work, further study or meaningful activity 18 months after graduating
+      - superscript: "2"
+    - paragraph:
+      - strong: 2nd in Yorkshire and the Humber
+    - paragraph:
+      - text: for preparing students for the future
+      - superscript: "3"
+    - paragraph:
+      - strong: 3rd in Yorkshire for student outcomes
+    - paragraph:
+      - text: and outperforming 75% of universities across the UK
+      - superscript: "4"
+    - img "Students and parents walking around campus on an Open Day"
+    - text: Book your open day
+    - heading "One day can change every day" [level=2]:
+      - text: One day can change
+      - emphasis: every
+      - text: day
+    - paragraph:
+      - text: Explore a university and a city at the end of the line that have been the
+      - emphasis: start
+      - text: for so many changemakers over the years.
+    - paragraph: Secure your place now at our next Open Day, and let's write your future together.
+    - link "Book your place now":
+      - /url: https://events.blackthorn.io/en/8eNd4w6/g/6azwhJ58xa?_gl=1*poxwyu*_ga*NTc5NzExMTE5LjE3Nzg0OTgwNDM.*_ga_6TRDMJPDQV*czE3Nzg1NzQwNjgkbzUkZzEkdDE3Nzg1NzQ3NzEkajYwJGwwJGgxNzYwODQ0MTUy
+      - img
+      - text: Book your place now
+      - img "upload"
+    - region "News and Events":
+      - heading "Latest news" [level=2]
+      - link "See all upload":
+        - /url: /news-and-events/news/
+        - text: See all
+        - img "upload"
+        - img
+      - link "two rows of seated students following a presentation from a speaker standing at a University of Hull branded podium 04 Nov 2026 Leading Hull businesses join forces with Hull University Business School to develop future talent Hull employers have signed a partnership agreement with Hull University Business School to help access future talent and boost graduate employability.":
+        - /url: /news-and-events/news/leading-hull-businesses-join-forces-with-hull-university-business-school-to-develop-future-talent
+        - img "two rows of seated students following a presentation from a speaker standing at a University of Hull branded podium"
+        - text: 04 Nov 2026 Leading Hull businesses join forces with Hull University Business School to develop future talent
+        - paragraph: Hull employers have signed a partnership agreement with Hull University Business School to help access future talent and boost graduate employability.
+      - link "a man posing at the side of a verge side Hull city boundary marker with gear loaded into a trolley 02 Nov 2026 Welcome back, Karl We are delighted to welcome Karl Bushby back to Hull and congratulate him on an extraordinary achievement, a remarkable feat of endurance and courage.":
+        - /url: /news-and-events/news/welcome-back-karl
+        - img "a man posing at the side of a verge side Hull city boundary marker with gear loaded into a trolley"
+        - text: 02 Nov 2026 Welcome back, Karl
+        - paragraph: We are delighted to welcome Karl Bushby back to Hull and congratulate him on an extraordinary achievement, a remarkable feat of endurance and courage.
+      - link "Representatives from different organisations standing at the foot of the stairs outside the Hull Institute 21 Oct 2026 University of Hull expands global reach with launch of Hull Institute in China The brand new Hull Institute has opened at Chongqing Technology and Business University offering courses in business, technology and marketing.":
+        - /url: /news-and-events/news/hull-institute-opens-in-china
+        - img "Representatives from different organisations standing at the foot of the stairs outside the Hull Institute"
+        - text: 21 Oct 2026 University of Hull expands global reach with launch of Hull Institute in China
+        - paragraph: The brand new Hull Institute has opened at Chongqing Technology and Business University offering courses in business, technology and marketing.
+      - heading "Upcoming events" [level=2]
+      - link "See all upload":
+        - /url: /news-and-events/events/
+        - text: See all
+        - img "upload"
+        - img
+      - 'link "Students enjoying an open day with the library building in the background Undergraduate Open Day at the University of Hull 28 Nov 2026 Now booking: Undergraduate Open Day on Saturday 28 November 2026 at the University of Hull. Book now to secure your place."':
+        - /url: /news-and-events/events/open-day-november-2026
+        - img "Students enjoying an open day with the library building in the background"
+        - text: Undergraduate Open Day at the University of Hull 28 Nov 2026
+        - paragraph: "Now booking: Undergraduate Open Day on Saturday 28 November 2026 at the University of Hull. Book now to secure your place."
+      - link "Battle of Waterloo Professor Catherine Wynne - Inaugural Lecture 09 Dec 2026 Join us for Professor Catherine Wynne's Inaugural Lecture!":
+        - /url: /news-and-events/events/professor-catherine-wynne-inaugural-lecture
+        - img "Battle of Waterloo"
+        - text: Professor Catherine Wynne - Inaugural Lecture 09 Dec 2026
+        - paragraph: Join us for Professor Catherine Wynne's Inaugural Lecture!
+      - link "A student teacher speaking to a class of students Teachers and Advisors Conference 2027 20 May 2027 A CPD and networking event for teachers and advisers, offering higher education insights, professional development and opportunities to connect.":
+        - /url: /news-and-events/events/teachers-and-advisors-conference-2027-1
+        - img "A student teacher speaking to a class of students"
+        - text: Teachers and Advisors Conference 2027 20 May 2027
+        - paragraph: A CPD and networking event for teachers and advisers, offering higher education insights, professional development and opportunities to connect.
+    - region "More to explore":
+      - text: More to explore
+      - link "Link to services for business page":
+        - /url: /collaborate/services-for-business
+        - text: Services for business
+        - img "upload"
+        - img
+      - link "Link to international students":
+        - /url: /study/international-students
+        - text: International students
+        - img "upload"
+        - img
+      - link "Link to accommodation page":
+        - /url: /life-at-hull/accommodation
+        - text: Accommodation
+        - img "upload"
+        - img
+      - link "Link to Library page":
+        - /url: /life-at-hull/our-campus/library
+        - text: University Library
+        - img "upload"
+        - img
+      - link "Link to jobs page":
+        - /url: /about/jobs
+        - text: Current vacancies
+        - img "upload"
+        - img
+      - link "Link to contact page":
+        - /url: /about/contact-us
+        - text: Contact us
+        - img "upload"
+        - img
+    - region "Footnotes":
+      - text: "1."
+      - paragraph: 82% of our research is recognised as world-leading or internationally excellent. Research Excellence Framework (REF) 2021.
+      - text: "2."
+      - paragraph: HESA Graduate Outcomes 2026.
+      - text: "3."
+      - paragraph: National Student Survey (NSS) 2026, HEIs only.
+      - text: "4."
+      - paragraph: OFS Student outcomes data August 2025 looking at the proportion of full-time, first degree, UK-domiciled graduates in highly skilled employment or further study 15 months after graduating.
+  - contentinfo:
+    - button "Back to top square arrow up":
+      - text: Back to top
+      - img "square arrow up"
+    - link "University of Hull homepage":
+      - /url: /
+      - img
+    - paragraph: Cottingham Road, Hull, HU6 7RX, United Kingdom
+    - paragraph:
+      - link "+44 (0)1482 346311":
+        - /url: tel:+441482346311
+    - list:
+      - listitem:
+        - link "Help Centre":
+          - /url: /help-centre
+      - listitem:
+        - link "Policies & information":
+          - /url: /policies-and-information
+      - listitem:
+        - link "How to find us":
+          - /url: /about/how-to-find-us
+      - listitem:
+        - link "Staff and students":
+          - /url: /about/staff-and-students
+    - link "facebook":
+      - /url: https://www.facebook.com/UniversityOfHull
+      - img "facebook"
+    - link "instagram":
+      - /url: https://www.instagram.com/universityofhull
+      - img "instagram"
+    - link "tiktok":
+      - /url: https://www.tiktok.com/@uniofhull
+      - img "tik-tok"
+    - link "linkedin":
+      - /url: https://uk.linkedin.com/school/university-of-hull
+      - img "linkedin"
+    - link "bluesky":
+      - /url: https://bsky.app/profile/uniofhull.bsky.social
+      - img "bluesky"
+    - list:
+      - listitem:
+        - link "Accessibility":
+          - /url: /policies-and-information/general/web-accessibility
+      - listitem:
+        - link "Freedom of Information":
+          - /url: /policies-and-information/general/freedom-of-information
+      - listitem:
+        - link "Model Publication Scheme":
+          - /url: /policies-and-information/general/model-publication-scheme
+      - listitem:
+        - link "Modern Slavery Act":
+          - /url: /policies-and-information/general/modern-slavery-act
+      - listitem:
+        - link "Privacy & cookies":
+          - /url: /policies-and-information/general/privacy-and-cookies
+      - listitem:
+        - link "Terms & conditions":
+          - /url: /policies-and-information/general/terms-and-conditions
+    - text: © University of Hull, 2026

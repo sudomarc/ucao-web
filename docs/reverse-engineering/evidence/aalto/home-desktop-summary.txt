@@ -1,0 +1,151 @@
+URL: https://www.aalto.fi/en
+TITLE: Aalto University
+DOM size: 304424 chars; IMG tags: 57
+
+STRUCTURAL ELEMENTS:
+  header
+  nav
+  main
+  footer
+
+HEADINGS:
+  h1: Aalto University
+  h2: Groundbreaking solutions for the future at Slush
+  h2: Aalto Founder Sprint gives students a launchpad for entrepreneurship
+  h2: Start planning your future with Aalto
+  h2: Spotlight
+  h3: Find more current news and interesting events on the News and events page .
+  h3: Nokia donates 1.5 million euros to Aalto University and strengthens R&amp;D collaboration
+  h3: Finding beauty in grey November
+  h3: Health x technology: Magnetic stimulation activates neurons to target depression
+  h2: Welcome to Aalto University!
+  h2: Join our many events
+  h3: Find more current news and interesting events on the News and events page .
+  h3: High‑Up! 2026 – An official Slush side event for high school students
+  h3: Aalto Founder Talks #11: Saara Kujala, Co-Founder and CEO of Ren-Gas Oy
+  h3: Summer Job Day 2027
+  h2: Important quicklinks
+  h2: Welcome to our campus!
+  h2: Explore our six schools
+  h3: School of Arts, Design and Architecture
+  h3: School of Business
+  h3: School of Chemical Engineering
+  h3: School of Electrical Engineering
+  h3: School of Engineering
+  h3: School of Science
+  h2: Community voices
+  h2: Studies and courses open to all
+  h3: Lifewide Learning
+  h3: Aalto University Open University
+  h3: Aalto University Junior
+  h2: Information on Ukraine
+  h3: Ukraine war
+  h2: Read about our research and donate
+  h3: Research &amp; Art
+  h3: Give for the future
+  h2: Follow us
+  h2: Follow us:
+  h2: Quicklinks
+  h2: Latest
+  h2: Contact
+  h2: For students
+  h2: Together towards a better world.
+
+NAV/CTA LINKS (first 50):
+  fi — Suomeksi
+  sv — Svenska
+  en — English
+  # — Consent
+  # — Details
+  # — [#IABV2SETTINGS#]
+  # — About
+  # — Show details
+  # — Cloudflare 1
+  https://www.cloudflare.com/privacypolicy/ — Learn more about this provider
+  # — Cookiebot 1
+  https://www.cookiebot.com/goto/privacy-policy/ — Learn more about this provider
+  # — Google 1
+  https://business.safety.google/privacy/ — Learn more about this provider
+  # — LinkedIn 2
+  https://www.linkedin.com/legal/privacy-policy — Learn more about this provider
+  # — Siteimprove 1
+  https://siteimprove.com/en/privacy/ — Learn more about this provider
+  # — Unibuddy 3
+  https://unibuddy.com/privacy-policy/ — Learn more about this provider
+  # — Vimeo 1
+  https://vimeo.com/privacy — Learn more about this provider
+  # — aalto.cloud.panopto.eu 2
+  # — acris.aalto.fi 1
+  # — acris.aalto.fi linkedin.com vimeo.com 3
+  # — cdn.jsdelivr.net 4
+  # — embed.app.guidde.com 1
+  # — eum.instana.io 1
+  # — idp.aalto.fi 1
+  # — static-assets-cdn.i.cloud.panopto.eu 1
+  # — LinkedIn 1
+  https://www.linkedin.com/legal/privacy-policy — Learn more about this provider
+  # — Sketchfab 1
+  https://sketchfab.com/privacy — Learn more about this provider
+  # — aalto.cloud.panopto.eu 1
+  # — embed.app.guidde.com 1
+  # — ninchat.com 3
+  # — Adobe Inc. 1
+  https://www.adobe.com/privacy.html — Learn more about this provider
+  # — Google 2
+  https://business.safety.google/privacy/ — Learn more about this provider
+  # — Hotjar 8
+  https://www.hotjar.com/legal/policies/privacy/ — Learn more about this provider
+  # — Issuu 11
+  https://issuu.com/legal/privacy — Learn more about this provider
+  # — Microsoft 4
+  https://privacy.microsoft.com/en-us/privacystatement — Learn more about this provider
+  # — Siteimprove 2
+  https://siteimprove.com/en/privacy/ — Learn more about this provider
+  # — Sketchfab 1
+
+BUTTONS:
+  EN
+  Show more
+  Necessary 24
+  Functional 7
+  Statistics 43
+  Marketing 47
+  Unclassified 2
+  [#IABV2_LABEL_PURPOSES#]
+  [#IABV2_LABEL_FEATURES#]
+  [#IABV2_LABEL_PARTNERS#]
+  Decline all
+  Allow selection
+  Customize
+  Allow all
+  Valitse sivuston kieli / Välj webbplatsens språk / Select site language EN
+  Search
+  Menu Close menu
+  Admissions and studies
+  Research and art
+  Schools and departments
+  Collaboration
+  News and events
+  About us
+  Tools and services
+
+STYLESHEETS:
+  /sites/default/files/css/css_Tvn2mhiA1LbA0kZydf6PvaBHMe29bzK37u40QA24xmA.css?delta=0&amp;language=en&amp;theme=aalto_aaltofi&amp;include=eJxVy_0KAiEQBPAX8k4KInoaGXXz7MwVV6Hevovs659h58cOkBobPPMcNX6b-mvaVmQfczBOxOwPx9NOYVtEExJbJOWY10jGcW6Um7GJ3UpVv3gaPA0e35ab_lybVdK-9oI044KbKqgIFWWRN39l7rl0m6Is5JXcpdFVWwg9APNJULU
+  /sites/default/files/css/css_rCRqq7Se0ksECnms86765ytHvPI0GGwSIxPAkZpinHA.css?delta=1&amp;language=en&amp;theme=aalto_aaltofi&amp;include=eJxVy_0KAiEQBPAX8k4KInoaGXXz7MwVV6Hevovs659h58cOkBobPPMcNX6b-mvaVmQfczBOxOwPx9NOYVtEExJbJOWY10jGcW6Um7GJ3UpVv3gaPA0e35ab_lybVdK-9oI044KbKqgIFWWRN39l7rl0m6Is5JXcpdFVWwg9APNJULU
+
+SCRIPTS:
+  https://consent.cookiebot.com/7439002e-4a7e-4422-bda9-d575b2a8d8ce/cc.js?renew=false&amp;referer=www.aalto.fi&amp;dnt=false&amp;init=false&amp;culture=en
+  /core/assets/vendor/jquery/jquery.min.js?v=4.0.0
+  /sites/default/files/js/js_UnCjQa0D9xPRW3jMjpjzPQB43_YsX32AW9x71y86Xks.js?scope=header&amp;delta=1&amp;language=en&amp;theme=aalto_aaltofi&amp;include=eJx1ke12gyAMhm9IxyXlBIyYisRJaOvdDyt2bnN_QvLkPeQLMagAbrZng-eowYtcYh9BenADRk-XEl1neiystIDSUw9NN3GErBxYV3PBqs5iopr-zOzGRLi44W9SZY54P3Oe0BOIvZFT6Pko7ERGpvLERFHNFazKDhUDrrSYt1czoQybt9_Tg9UNRfEPr3qZKeKxjz3YNnYUumcyC04dNpuIwQexGJrvprQ0BTaIG0upHbcVtxVXtRU1bw-ya7yIDwSK3vhifscfeMPnTzg1HJNiRKA8mZO_ddKzb-bO7qO0r4u0-0lML1Ju_AU6oeMr
+  https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js
+  /sites/default/files/js/js_U62w2e4vVpNwscy7v5W6y6f_fRPR6BwDkCjFgKi-AH4.js?scope=header&amp;delta=3&amp;language=en&amp;theme=aalto_aaltofi&amp;include=eJx1ke12gyAMhm9IxyXlBIyYisRJaOvdDyt2bnN_QvLkPeQLMagAbrZng-eowYtcYh9BenADRk-XEl1neiystIDSUw9NN3GErBxYV3PBqs5iopr-zOzGRLi44W9SZY54P3Oe0BOIvZFT6Pko7ERGpvLERFHNFazKDhUDrrSYt1czoQybt9_Tg9UNRfEPr3qZKeKxjz3YNnYUumcyC04dNpuIwQexGJrvprQ0BTaIG0upHbcVtxVXtRU1bw-ya7yIDwSK3vhifscfeMPnTzg1HJNiRKA8mZO_ddKzb-bO7qO0r4u0-0lML1Ju_AU6oeMr
+  https://consent.cookiebot.com/uc.js
+  /modules/contrib/google_tag/js/gtag.js?toe7j8
+  /modules/contrib/google_tag/js/gtm.js?toe7j8
+  https://www.googletagmanager.com/gtm.js?id=GTM-N6WP2H
+  /sites/default/files/js/js_sv-KLc-xzvBtR_XkC4-Xa1fFvZmmVaDnevV_8uMc8ps.js?scope=header&amp;delta=7&amp;language=en&amp;theme=aalto_aaltofi&amp;include=eJx1ke12gyAMhm9IxyXlBIyYisRJaOvdDyt2bnN_QvLkPeQLMagAbrZng-eowYtcYh9BenADRk-XEl1neiystIDSUw9NN3GErBxYV3PBqs5iopr-zOzGRLi44W9SZY54P3Oe0BOIvZFT6Pko7ERGpvLERFHNFazKDhUDrrSYt1czoQybt9_Tg9UNRfEPr3qZKeKxjz3YNnYUumcyC04dNpuIwQexGJrvprQ0BTaIG0upHbcVtxVXtRU1bw-ya7yIDwSK3vhifscfeMPnTzg1HJNiRKA8mZO_ddKzb-bO7qO0r4u0-0lML1Ju_AU6oeMr
+  https://eum.instana.io/eum.min.js
+  /sites/default/files/js/js_JbId8NsSLVvA1b6DoEGlqZsJccdyNwcuhvv8zeAYAq0.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=aalto_aaltofi&amp;include=eJx1ke12gyAMhm9IxyXlBIyYisRJaOvdDyt2bnN_QvLkPeQLMagAbrZng-eowYtcYh9BenADRk-XEl1neiystIDSUw9NN3GErBxYV3PBqs5iopr-zOzGRLi44W9SZY54P3Oe0BOIvZFT6Pko7ERGpvLERFHNFazKDhUDrrSYt1czoQybt9_Tg9UNRfEPr3qZKeKxjz3YNnYUumcyC04dNpuIwQexGJrvprQ0BTaIG0upHbcVtxVXtRU1bw-ya7yIDwSK3vhifscfeMPnTzg1HJNiRKA8mZO_ddKzb-bO7qO0r4u0-0lML1Ju_AU6oeMr
+  /themes/custom/aalto_base/js/aalto_accordion.js?toe7j8
+  /themes/custom/aalto_base/js/aalto_menu.js?toe7j8
+  /sites/default/files/js/js_p4Ow_oVbC2NDHJVLj6m4356bcW1u-GFDmKvdzrus25E.js?scope=footer&amp;delta=3&amp;language=en&amp;theme=aalto_aaltofi&amp;include=eJx1ke12gyAMhm9IxyXlBIyYisRJaOvdDyt2bnN_QvLkPeQLMagAbrZng-eowYtcYh9BenADRk-XEl1neiystIDSUw9NN3GErBxYV3PBqs5iopr-zOzGRLi44W9SZY54P3Oe0BOIvZFT6Pko7ERGpvLERFHNFazKDhUDrrSYt1czoQybt9_Tg9UNRfEPr3qZKeKxjz3YNnYUumcyC04dNpuIwQexGJrvprQ0BTaIG0upHbcVtxVXtRU1bw-ya7yIDwSK3vhifscfeMPnTzg1HJNiRKA8mZO_ddKzb-bO7qO0r4u0-0lML1Ju_AU6oeMr

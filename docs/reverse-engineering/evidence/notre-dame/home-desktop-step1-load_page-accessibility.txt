@@ -1,0 +1,452 @@
+- document:
+  - navigation "Skip links":
+    - list:
+      - listitem:
+        - link "Skip To Content":
+          - /url: "#content"
+      - listitem:
+        - link "Skip To Navigation":
+          - /url: "#nav-primary"
+      - listitem:
+        - link "Skip To Search":
+          - /url: "#search-input-navbar-footer"
+  - banner:
+    - link "University of Notre Dame":
+      - /url: /
+      - img
+      - text: University of Notre Dame
+    - navigation "Primary navigation":
+      - list:
+        - listitem:
+          - link "Academics":
+            - /url: /academics/
+        - listitem:
+          - link "Admissions":
+            - /url: /admissions/
+        - listitem:
+          - link "Research":
+            - /url: /research/
+        - listitem:
+          - link "Global":
+            - /url: /global/
+        - listitem:
+          - link "Faith":
+            - /url: /faith/
+        - listitem:
+          - link "Community":
+            - /url: /community/
+        - listitem:
+          - link "About":
+            - /url: /about/
+    - button "Open global menu and search":
+      - img
+    - text: Language
+    - combobox "Language":
+      - option "EN" [selected]
+  - main:
+    - figure:
+      - img "A male researcher in a white lab coat leans over to look into a microscope, while a female colleague wearing safety goggles looks toward a computer screen displaying colorful scientific imagery in a laboratory."
+      - button "Play background video":
+        - img
+    - heading "Health and well-being" [level=1]
+    - paragraph:
+      - link "Read about how Notre Dame's research and scholarship is leading to a healthier society":
+        - /url: https://stories.nd.edu/topics/health/health-and-well-being/
+        - text: ⁠ From preventing certain UTIs to developing mental health interventions, Notre Dame research and scholarship is leading to a healthier society.
+    - separator
+    - heading "Where challenge meets hope." [level=2]:
+      - text: Where challenge meets
+      - emphasis: hope
+      - text: .
+    - paragraph: Notre Dame scholars and researchers pursue breakthroughs for a world in need.
+    - paragraph:
+      - text: United by our commitment to the common good, the global Notre Dame community builds bridges between the world we know and the world we desire.
+      - emphasis: What would you fight for?
+      - text: For us, it is not just a question. It's a call to action.
+    - list:
+      - listitem:
+        - figure:
+          - img "Three people walk and talk through a lush, grassy field with wildflowers next to rows of solar panel arrays on a bright sunny day."
+        - heading "Providing second chances ⁠" [level=3]:
+          - link "Providing second chances ⁠":
+            - /url: https://stories.nd.edu/stories/fighting-for-second-chances/
+        - paragraph: Through Notre Dame’s Inspired Leadership Initiative, Marty Whalen turned a second act into second chances for formerly incarcerated people.
+      - listitem:
+        - figure:
+          - img "Woman with long brown hair in a green Notre Dame sweatshirt with the ND monogram poses against a dark background, the left side of the portrait distorted by a vertical ribbed-glass effect."
+        - heading "Using AI to prevent online abuse ⁠" [level=3]:
+          - link "Using AI to prevent online abuse ⁠":
+            - /url: https://stories.nd.edu/stories/fighting-online-abuse-using-ai
+        - paragraph: With athletes noting increases in cyberstalking and harassment, Notre Dame is leveraging the power of AI to identify and stop abuse.
+      - listitem:
+        - figure:
+          - img "A researcher wearing safety goggles, a lab coat, and blue nitrile gloves uses tweezers to lower tubing into a glass flask filled with clear liquid."
+        - heading "Prevent infections ⁠" [level=3]:
+          - link "Prevent infections ⁠":
+            - /url: https://stories.nd.edu/stories/fighting-to-prevent-infections/
+        - paragraph: Notre Dame researchers have created a novel catheter adaptation that prevents infections before they begin.
+      - listitem:
+        - figure:
+          - img "A young child in a pink shirt and red skirt drinks clean water directly flowing from an outdoor hand-operated water pump."
+        - heading "Access to clean water ⁠" [level=3]:
+          - link "Access to clean water ⁠":
+            - /url: https://stories.nd.edu/stories/fighting-for-universal-access-to-clean-water/
+        - paragraph: More than 700 million people lack access to clean water, but research from the University of Notre Dame is helping organizations optimize how they manage, maintain, and build water pumps to reduce water scarcity.
+      - listitem:
+        - figure:
+          - img "Two people in red helmets examine equipment amidst rubble."
+        - heading "Robotic search and rescue ⁠" [level=3]:
+          - link "Robotic search and rescue ⁠":
+            - /url: https://stories.nd.edu/stories/fighting-for-robotic-search-and-rescue/
+        - paragraph: Notre Dame engineer develops vine robot to help first responders after disasters.
+      - listitem:
+        - figure:
+          - img "A grandfather kisses the forehead of his granddaughter in a wheelchair wearing sunglasses as they share a quiet, affectionate moment outdoors."
+        - heading "Nonverbal communication ⁠" [level=3]:
+          - link "Nonverbal communication ⁠":
+            - /url: https://stories.nd.edu/stories/fighting-for-nonverbal-communication/
+        - paragraph: Notre Dame researchers are developing AI technology designed to help caregivers interpret the nonverbal communication of people with profound intellectual and multiple disabilities.
+    - heading "Addressing pressing challenges" [level=2]
+    - paragraph: Discovery at Notre Dame is grounded in ethical inquiry and a commitment to human flourishing. Across disciplines, our faculty and students are leading where they are needed most, working with partners to bring research and scholarship to bear on urgent challenges at home and abroad.
+    - heading "Explore Notre Dame’s impact:" [level=3]
+    - list:
+      - listitem:
+        - link "Health ⁠":
+          - /url: https://stories.nd.edu/topics/health/
+      - listitem:
+        - link "Global ⁠":
+          - /url: https://stories.nd.edu/topics/global/
+      - listitem:
+        - link "Arts and humanities ⁠":
+          - /url: https://stories.nd.edu/topics/arts-and-humanities/
+      - listitem:
+        - link "Science and technology ⁠":
+          - /url: https://stories.nd.edu/topics/tech/
+      - listitem:
+        - link "National security ⁠":
+          - /url: https://stories.nd.edu/topics/faith-and-service/national-security/
+    - figure:
+      - img "A researcher wearing black-rimmed glasses looks down attentively with a focused expression while working in a laboratory surrounded by blurred sample tubes."
+    - heading "What makes us distinctive" [level=2]
+    - figure:
+      - img "An aerial view of the Golden Dome on the Main Building at the University of Notre Dame, with the Sacred Heart Basilica spire beside it, against a blue sky."
+    - figure:
+      - img "Three women are gathered around a large open book on a table in a room with orange walls and a painting in the background."
+    - figure:
+      - img "Three individuals, two wearing safety glasses and one with a black knit hat, are engaged in a research activity in a lab setting."
+    - figure:
+      - img "A man with a hiking stick points towards a rocky, grassy hillside while three students listen attentively."
+    - figure:
+      - img "A priest in a black clerical shirt smiles and talks with two young women outdoors on a sunny day, with a crowd of people and buildings in the background."
+    - group:
+      - text: Catholic ﹣
+      - paragraph: At Notre Dame, faith informs and guides students' academic and spiritual journeys.
+      - paragraph:
+        - link "Faith ⁠":
+          - /url: /faith/
+    - group: Academic excellence +
+    - group: Research +
+    - group: Global +
+    - group: Community +
+    - heading "Official Podcast" [level=2]
+    - list:
+      - listitem:
+        - figure:
+          - img "A woman with short dark hair and geometric earrings smiles gently while gazing off-camera outdoors in winter. She wears a dark brown coat with shearling trim, set against a background of a brick wall and snow-covered plants."
+        - heading "Cold plunges and unicorns ⁠" [level=3]:
+          - link "Cold plunges and unicorns ⁠":
+            - /url: https://stories.nd.edu/podcast/cold-plunges-and-unicorns/
+      - listitem:
+        - figure:
+          - img "A neonatal intensive care unit room equipped with a clear infant incubator, medical monitoring devices, and a padded recliner chair with an attached tray table."
+        - heading "A better start for NICU families ⁠" [level=3]:
+          - link "A better start for NICU families ⁠":
+            - /url: https://stories.nd.edu/podcast/a-better-start-for-nicu-families-notre-dame-leads-the-way-in-neonatal-intensive-care/
+      - listitem:
+        - figure:
+          - img "Economist Melissa Kearney smiles warmly, wearing a dark blue jacket and gold hoop earrings, positioned in front of a bookshelf filled with books."
+        - heading "What happened to the American family? ⁠" [level=3]:
+          - link "What happened to the American family? ⁠":
+            - /url: https://stories.nd.edu/podcast/what-happened-to-the-traditional-american-family/
+      - listitem:
+        - figure:
+          - img "Professor Nosang Myung stands with arms crossed, smiling slightly in a laboratory illuminated with blue light. He wears glasses and a bright blue lab coat with an embroidered patch on the sleeve."
+        - heading "New tech to help stop the spread of bird flu ⁠" [level=3]:
+          - link "New tech to help stop the spread of bird flu ⁠":
+            - /url: https://stories.nd.edu/podcast/new-tech-to-help-stop-the-spread-of-bird-flu/
+    - paragraph: Highlighted Videos
+    - heading "Moments at Notre Dame" [level=2]
+    - link "A doctor in a white lab coat speaks with a patient wearing a pink gown and seated in a medical recliner. A cart between them holds laptops showing colorful thermal imaging scans.":
+      - /url: https://www.youtube.com/watch?v=npfJyQ33P3g&t=1s
+      - img "A doctor in a white lab coat speaks with a patient wearing a pink gown and seated in a medical recliner. A cart between them holds laptops showing colorful thermal imaging scans."
+    - list:
+      - listitem:
+        - figure:
+          - img "A doctor in a white lab coat speaks with a patient wearing a pink gown and seated in a medical recliner. A cart between them holds laptops showing colorful thermal imaging scans."
+        - heading "Watch a video about how Notre Dame is fighting for breast cancer patients." [level=3]:
+          - link "Watch a video about how Notre Dame is fighting for breast cancer patients.":
+            - /url: https://www.youtube.com/watch?v=npfJyQ33P3g&t=1s
+            - text: Fighting for breast cancer patients
+      - listitem:
+        - figure:
+          - img "A tiny white medical implant rests on a person's fingertip against a black background, accompanied by text asking how this small device is changing spinal fusion surgeries."
+        - heading "Watch a video about how Notre Dame researchers are transforming spinal surgery." [level=3]:
+          - link "Watch a video about how Notre Dame researchers are transforming spinal surgery.":
+            - /url: https://www.youtube.com/watch?v=DOAFKWlC898
+            - text: Transforming spinal surgery in South Bend, Indiana
+      - listitem:
+        - figure:
+          - 'img "Text reading ”Hometown in Crisis: How opioids devastated a community“ overlaid on a close-up of a chain-link fence with a blurred playground in the background."'
+        - heading "Watch a video about how opioids devastated a community" [level=3]:
+          - link "Watch a video about how opioids devastated a community":
+            - /url: https://www.youtube.com/watch?v=IcRqz9DQqaM
+            - text: "Hometown in Crisis: How opioids devastated a community"
+      - listitem:
+        - figure:
+          - img "wears a black t-shirt and grey sweatpants. Behind him are shelves with memorabilia and a wooden dresser."
+        - heading "Watch a video about how Notre Dame supports rare disease research" [level=3]:
+          - link "Watch a video about how Notre Dame supports rare disease research":
+            - /url: https://www.youtube.com/watch?v=JjoqZx_pRvg
+            - text: "Alec's Story: How Notre Dame supports rare disease research"
+      - listitem:
+        - figure:
+          - img "A woman stands with her arm around a young girl at a wooden fence, looking out across a grassy field under an overcast sky. The girl wears a turquoise shirt and glasses, while the woman wears an olive green top."
+        - heading "Watch a video about the Notre Dame in fighting for those with cystic fibrosis" [level=3]:
+          - link "Watch a video about the Notre Dame in fighting for those with cystic fibrosis":
+            - /url: https://www.youtube.com/watch?v=1-LMvzNvpEY&t=2s
+            - text: Fighting for those with cystic fibrosis
+    - heading "October's golden glow" [level=2]
+    - text: The month in photos, October 2026. . . . And that’s why they call it “fall”!
+    - list:
+      - listitem:
+        - link "Four dancers in regalia with feathered headdresses walk near a green mural of portraits and nature scenes.":
+          - /url: https://www25.nd.edu/assets/685557/fullsize/1_pokagon_1600.jpg
+          - img "Four dancers in regalia with feathered headdresses walk near a green mural of portraits and nature scenes."
+      - listitem:
+        - link "Notre Dame marching band performs for a large crowd in green near the Golden Dome.":
+          - /url: https://www25.nd.edu/assets/685554/fullsize/2_band_1600.jpg
+          - img "Notre Dame marching band performs for a large crowd in green near the Golden Dome."
+      - listitem:
+        - link "Woman in blue jacket sprays fire with extinguisher while another woman in dark shirt watches.":
+          - /url: https://www25.nd.edu/assets/685560/fullsize/3_fire_demo_1600.webp
+          - img "Woman in blue jacket sprays fire with extinguisher while another woman in dark shirt watches."
+      - listitem:
+        - link "Young man balances on a slackline with the Golden Dome of Notre Dame in the background.":
+          - /url: https://www25.nd.edu/assets/685556/fullsize/4_tightrope_1600.jpg
+          - img "Young man balances on a slackline with the Golden Dome of Notre Dame in the background."
+      - listitem:
+        - link "Golden sunrise over Notre Dame campus with misty St. Joseph's Lake and iconic buildings.":
+          - /url: https://www25.nd.edu/assets/685548/fullsize/5_lake_1600.jpg
+          - img "Golden sunrise over Notre Dame campus with misty St. Joseph's Lake and iconic buildings."
+      - listitem:
+        - link "Man in green suit cheers holding Notre Dame leprechaun flag in stadium.":
+          - /url: https://www25.nd.edu/assets/685550/fullsize/6_flag_1600.jpg
+          - img "Man in green suit cheers holding Notre Dame leprechaun flag in stadium."
+      - listitem:
+        - link "Three people run alongside a lake surrounded by autumn foliage.":
+          - /url: https://www25.nd.edu/assets/685555/fullsize/7_lake_fall_1066.jpg
+          - img "Three people run alongside a lake surrounded by autumn foliage."
+      - listitem:
+        - 'link "Football player in green jersey #24 jumps to catch a pass, defended by a player in white."':
+          - /url: https://www25.nd.edu/assets/685558/fullsize/8_catch_1066.jpg
+          - 'img "Football player in green jersey #24 jumps to catch a pass, defended by a player in white."'
+      - listitem:
+        - link "Notre Dame Stadium at sunset with an illuminated green building.":
+          - /url: https://www25.nd.edu/assets/685551/fullsize/9_stadium_1600.jpg
+          - img "Notre Dame Stadium at sunset with an illuminated green building."
+      - listitem:
+        - link "A lone orange leaf falls through a blue sky, framed by autumn foliage.":
+          - /url: https://www25.nd.edu/assets/685549/fullsize/10_falling_leaf_1066.jpg
+          - img "A lone orange leaf falls through a blue sky, framed by autumn foliage."
+      - listitem:
+        - link "Students study outdoors near bronze statues in front of a brick building.":
+          - /url: https://www25.nd.edu/assets/685553/fullsize/11_class.jpg
+          - img "Students study outdoors near bronze statues in front of a brick building."
+      - listitem:
+        - link "Pope Francis holds a yellow sign with a group of students in formal attire.":
+          - /url: https://www25.nd.edu/assets/685552/fullsize/12_pope_1600.jpg
+          - img "Pope Francis holds a yellow sign with a group of students in formal attire."
+      - listitem:
+        - link "Black and white dog curiously watches a green and yellow parrot in a cage.":
+          - /url: https://www25.nd.edu/assets/685651/fullsize/13_pets_1600.webp
+          - img "Black and white dog curiously watches a green and yellow parrot in a cage."
+      - listitem:
+        - link "Two young men, one in a blue hoodie and the other dressed as Waldo, ride a carnival swing ride at night.":
+          - /url: https://www25.nd.edu/assets/685652/fullsize/14_waldo_1600.webp
+          - img "Two young men, one in a blue hoodie and the other dressed as Waldo, ride a carnival swing ride at night."
+    - button "next"
+    - blockquote:
+      - paragraph: “We aspire to become the leading global Catholic research university—called to push the frontiers of human knowledge and cultivating, in the words of our mission statement, ‘a disciplined sensibility to the poverty, injustice, and oppression that burden the lives of so many.’”
+      - paragraph: Rev. Robert A. Dowd, C.S.C.
+      - paragraph: President
+    - figure:
+      - img "An aerial view of the University of Notre Dame campus shows the Golden Dome and Sacred Heart Basilica surrounded by green trees and academic buildings under a cloudy sky."
+  - contentinfo:
+    - link "University of Notre Dame":
+      - /url: /
+      - img
+      - text: University of Notre Dame
+    - paragraph: Notre Dame, IN 46556 USA 41.703234 -86.238985
+    - paragraph:
+      - text: "Phone:"
+      - link "(574) 631-5000":
+        - /url: tel:5746315000
+    - paragraph:
+      - link "Contact":
+        - /url: /about/contact/
+    - navigation "Social media navigation":
+      - list:
+        - listitem:
+          - link "Facebook":
+            - /url: https://www.facebook.com/notredame/
+            - img
+            - text: Facebook
+        - listitem:
+          - link "X/Twitter":
+            - /url: https://twitter.com/NotreDame/
+            - img
+            - text: X/Twitter
+        - listitem:
+          - link "Instagram":
+            - /url: https://www.instagram.com/notredame/
+            - img
+            - text: Instagram
+        - listitem:
+          - link "YouTube":
+            - /url: https://www.youtube.com/user/NDdotEDU
+            - img
+            - text: YouTube
+        - listitem:
+          - link "LinkedIn":
+            - /url: https://www.linkedin.com/school/university-of-notre-dame/
+            - img
+            - text: LinkedIn
+    - search "Site search":
+      - searchbox "Site Search input"
+      - button "Search":
+        - img
+    - navigation "External navigation":
+      - list:
+        - listitem:
+          - link "News":
+            - /url: https://news.nd.edu/
+        - listitem:
+          - link "Stories":
+            - /url: https://stories.nd.edu/
+        - listitem:
+          - link "Events":
+            - /url: https://events.nd.edu/
+        - listitem:
+          - link "Giving":
+            - /url: https://giving.nd.edu/
+        - listitem:
+          - link "Alumni":
+            - /url: https://my.nd.edu/
+        - listitem:
+          - link "Athletics":
+            - /url: https://fightingirish.com/
+    - navigation "Common Searches navigation":
+      - heading "Common Searches" [level=2]
+      - list:
+        - listitem:
+          - link "Majors and Programs":
+            - /url: /academics/programs/
+        - listitem:
+          - link "Tuition and Financial Aid":
+            - /url: https://financialaid.nd.edu/
+        - listitem:
+          - link "Colleges and Schools":
+            - /url: /academics/colleges-schools-and-departments/
+        - listitem:
+          - link "Undergraduate Admissions":
+            - /url: https://admissions.nd.edu/
+        - listitem:
+          - link "Human Resources":
+            - /url: https://hr.nd.edu/
+        - listitem:
+          - link "Careers":
+            - /url: https://careers.nd.edu/
+        - listitem:
+          - link "Study Abroad":
+            - /url: https://studyabroad.nd.edu/
+        - listitem:
+          - link "Registrar":
+            - /url: https://registrar.nd.edu/
+    - navigation "Visiting Campus navigation":
+      - heading "Visiting Campus" [level=2]
+      - list:
+        - listitem:
+          - link "Visit Notre Dame":
+            - /url: /about/visit/
+        - listitem:
+          - link "Hammes Bookstore":
+            - /url: https://nd.bncollege.com/
+        - listitem:
+          - link "Campus Map":
+            - /url: https://map.nd.edu/
+        - listitem:
+          - link "Campus Tour":
+            - /url: /about/visit/take-a-tour/
+        - listitem:
+          - link "ND Mobile App":
+            - /url: https://mobile.nd.edu/
+        - listitem:
+          - link "Parking":
+            - /url: https://police.nd.edu/parking/guest-visitor-parking/
+        - listitem:
+          - link "ND Hospitality":
+            - /url: https://hospitality.nd.edu/
+        - listitem:
+          - link "Morris Inn":
+            - /url: https://morrisinn.nd.edu/
+    - navigation "Campus Tools navigation":
+      - heading "Popular on Campus" [level=2]
+      - list:
+        - listitem:
+          - link "Academic Calendar":
+            - /url: https://registrar.nd.edu/calendar/
+        - listitem:
+          - link "InsideND":
+            - /url: https://inside.nd.edu/
+        - listitem:
+          - link "Directory":
+            - /url: https://directory.nd.edu/
+        - listitem:
+          - link "Canvas":
+            - /url: https://canvas.nd.edu/
+        - listitem:
+          - link "Hesburgh Library":
+            - /url: https://www.library.nd.edu/
+        - listitem:
+          - link "Campus Dining":
+            - /url: https://dining.nd.edu/
+        - listitem:
+          - link "RecSports":
+            - /url: https://recsports.nd.edu/
+        - listitem:
+          - link "Basilica Schedule":
+            - /url: https://basilica.nd.edu/prayer-and-worship/mass-confession-schedule/
+    - list:
+      - listitem:
+        - checkbox "Light/Dark"
+        - text: Light/Dark
+    - paragraph:
+      - link "© 2026":
+        - /url: /copyright/
+      - link "University of Notre Dame":
+        - /url: /
+    - navigation "Footer links navigation":
+      - heading "Policies & Resources" [level=2]
+      - list:
+        - listitem:
+          - link "Accessibility":
+            - /url: /about/accessibility/
+        - listitem:
+          - link "Emergency":
+            - /url: https://emergency.nd.edu/
+        - listitem:
+          - link "Closed Captioning":
+            - /url: /about/closed-captioning/
+        - listitem:
+          - link "Notice of Non-Discrimination":
+            - /url: https://dulac.nd.edu/university-mission-and-vision/non-discrimination/

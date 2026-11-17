@@ -1,0 +1,224 @@
+- document:
+  - link "Aller au contenu principal":
+    - /url: "#main"
+  - alert: Aucune alerte en cours.
+  - banner:
+    - link "Logo officiel de l'UCAO-UUCo UCAO-UUCo Université Catholique de l'Afrique de l'Ouest – Unité Universitaire de Conakry":
+      - /url: /
+      - img "Logo officiel de l'UCAO-UUCo"
+      - text: UCAO-UUCo Université Catholique de l'Afrique de l'Ouest – Unité Universitaire de Conakry
+    - navigation "Langue":
+      - link "FR":
+        - /url: /
+      - link "EN":
+        - /url: /en/
+    - navigation:
+      - list:
+        - listitem:
+          - link "Accueil":
+            - /url: /
+        - listitem:
+          - link "Université":
+            - /url: /universite/
+        - listitem:
+          - link "Formations":
+            - /url: /formations/
+          - list:
+            - listitem:
+              - link "Licence":
+                - /url: /formations/?niveau=licence
+            - listitem:
+              - link "Master":
+                - /url: /formations/?niveau=master
+            - listitem:
+              - link "Toutes les formations":
+                - /url: /formations/
+        - listitem:
+          - link "Admissions":
+            - /url: /admissions/
+        - listitem:
+          - link "Vie universitaire":
+            - /url: /vie-universitaire/
+        - listitem:
+          - link "Actualités":
+            - /url: /actualites/
+        - listitem:
+          - link "Contact":
+            - /url: /contact/
+        - listitem:
+          - link "FAQ":
+            - /url: /faq/
+        - listitem:
+          - link "Mentions légales":
+            - /url: /mentions-legales/
+        - listitem:
+          - link "Politique de confidentialité":
+            - /url: /politique-confidentialite/
+      - link "Découvrir les formations":
+        - /url: /formations/
+      - link "Admissions":
+        - /url: /admissions/
+  - main:
+    - region "Unité Universitaire de Conakry":
+      - text: Université Catholique de l'Afrique de l'Ouest
+      - heading "Unité Universitaire de Conakry" [level=1]
+      - paragraph: Une formation académique exigeante, ancrée en Guinée et ouverte sur l'Afrique de l'Ouest, au service des étudiantes et étudiants, des enseignants et des partenaires.
+      - link "Découvrir les formations":
+        - /url: /formations/
+      - link "S'informer sur les admissions":
+        - /url: /admissions/
+      - img "Étudiantes en cours à l'UCAO-UUCo, Conakry — photo authentique du campus."
+      - paragraph: "Photo : UCAO-UUCo — vie étudiante sur le campus de Conakry."
+    - heading "L'exigence académique au service de l'humain" [level=2]
+    - paragraph: L'Unité Universitaire de Conakry porte les mêmes exigences académiques et humaines que le réseau UCAO, adaptées au contexte guinéen.
+    - paragraph: Fondée dans le réseau UCAO, l'unité universitaire de Conakry propose des formations de Licence et de Master conçues pour répondre aux besoins du marché de l'emploi local et international, dans une approche intellectuelle et humaine de qualité.
+    - heading "L'UCAO en quelques repères" [level=2]
+    - text: "7 Pays du réseau UCAO 2000 Année de fondation 2 Cycles : Licence et Master"
+    - heading "Nos formations" [level=2]
+    - paragraph: Trouvez votre parcours par niveau ou par spécialité.
+    - text: Rechercher une formation par nom ou spécialité...
+    - searchbox "Rechercher une formation par nom ou spécialité..."
+    - article:
+      - heading "Gestion Commerciale — Licence" [level=3]
+      - paragraph: "Premier cycle : gestion, marketing, finance d'entreprise."
+      - link "Gestion Commerciale — Licence":
+        - /url: /formations/gestion-commerciale-licence
+    - article:
+      - heading "Droit — Licence" [level=3]
+      - paragraph: "Premier cycle : droit privé, public, international."
+      - link "Droit — Licence":
+        - /url: /formations/droit-licence
+    - article:
+      - heading "Sciences de l'Éducation — Licence" [level=3]
+      - paragraph: "Premier cycle : pédagogie, didactique, administration scolaire."
+      - link "Sciences de l'Éducation — Licence":
+        - /url: /formations/sciences-education-licence
+    - article:
+      - heading "Gestion Commerciale — Master" [level=3]
+      - paragraph: "Second cycle : management stratégique, entrepreneuriat."
+      - link "Gestion Commerciale — Master":
+        - /url: /formations/gestion-commerciale-master
+    - article:
+      - heading "Droit — Master" [level=3]
+      - paragraph: "Second cycle : droit des affaires, droit international."
+      - link "Droit — Master":
+        - /url: /formations/droit-master
+    - article:
+      - heading "Sciences de l'Éducation — Master" [level=3]
+      - paragraph: "Second cycle : ingénierie de formation, recherche éducative."
+      - link "Sciences de l'Éducation — Master":
+        - /url: /formations/sciences-education-master
+    - link "Voir toutes les formations":
+      - /url: /formations/
+    - heading "Admissions" [level=2]
+    - paragraph: Les procédures, conditions et documents nécessaires sont détaillés sur la page Admissions. Les informations financières ne sont présentées que lorsqu'elles sont confirmées par l'administration.
+    - link "Voir la procédure d'admission":
+      - /url: /admissions/
+    - 'heading "Animation : Et si votre ombre vous précédait ?" [level=2]'
+    - paragraph: Une courte animation produite par notre studio interne — 20 secondes, sans dialogue, musique seulement.
+    - text: Votre navigateur ne prend pas en charge la vidéo HTML5.
+    - paragraph: Animation « What If Your Shadow Walked Ahead of You? » — UCAO-UUCo What If Studio (Remotion, SVG in code).
+    - heading "Actualités & Événements" [level=2]
+    - article:
+      - time: 15 mars 2025
+      - heading "Jubilé des 25 ans de l'UCAO-UUCo" [level=3]
+      - paragraph: Un quart de siècle d'excellence, de mission et de service à Conakry.
+      - text: Événement
+    - article:
+      - time: 12 novembre 2024
+      - heading "Colloque international sur la gouvernance de la diversité culturelle" [level=3]
+      - paragraph: Organisé par l'UCAO-UUCo avec des partenaires africains et européens.
+      - text: Colloque
+    - article:
+      - time: 14 novembre 2024
+      - heading "Journée de l'étudiant à l'UCAO" [level=3]
+      - paragraph: Une journée dédiée à la vie étudiante sur le campus de Conakry.
+      - text: Vie étudiante
+    - link "Voir toutes les actualités":
+      - /url: /actualites/
+    - heading "Vie universitaire" [level=2]
+    - paragraph: Découvrez le campus de Conakry, les activités étudiantes, les services d'accompagnement et l'environnement académique de l'UCAO-UUCo.
+    - link "En savoir plus sur la vie universitaire":
+      - /url: /vie-universitaire/
+    - heading "Nos valeurs" [level=2]
+    - article:
+      - heading "Exigence académique" [level=3]
+      - paragraph: Une formation intellectuelle rigoureuse et de qualité, alignée sur les standards internationaux.
+    - article:
+      - heading "Formation humaine" [level=3]
+      - paragraph: "Le développement de la personne dans sa globalité : intelligence, cœur, engagement."
+    - article:
+      - heading "Service à la communauté" [level=3]
+      - paragraph: Contribuer activement au développement de la Guinée et de l'Afrique de l'Ouest.
+    - article:
+      - heading "Ouverture et partenariat" [level=3]
+      - paragraph: Un réseau universitaire ouvert sur l'international et les partenaires locaux.
+  - contentinfo:
+    - img "Logo officiel de l'UCAO-UUCo"
+    - paragraph: Université Catholique de l'Afrique de l'Ouest – Unité Universitaire de Conakry
+    - paragraph: Coléah, route de Niger, à côté de l'église catholique Saint Michel, Conakry, Guinée
+    - list:
+      - listitem:
+        - link "(+224) 620 42 66 12":
+          - /url: tel:(+224)620426612
+      - listitem:
+        - link "(+224) 621 28 66 81":
+          - /url: tel:(+224)621286681
+      - listitem:
+        - link "(+224) 629 38 90 58":
+          - /url: tel:(+224)629389058
+      - listitem:
+        - link "info@ucao-uuco.org":
+          - /url: mailto:info@ucao-uuco.org
+    - paragraph:
+      - link "Facebook":
+        - /url: https://www.facebook.com/ucaoguinee
+    - heading "Liens rapides" [level=2]
+    - list:
+      - listitem:
+        - link "Accueil":
+          - /url: /
+      - listitem:
+        - link "Université":
+          - /url: /universite/
+      - listitem:
+        - link "Formations":
+          - /url: /formations/
+      - listitem:
+        - link "Admissions":
+          - /url: /admissions/
+      - listitem:
+        - link "Vie universitaire":
+          - /url: /vie-universitaire/
+    - heading "Informations" [level=2]
+    - list:
+      - listitem:
+        - link "Université":
+          - /url: /universite/
+      - listitem:
+        - link "Formations":
+          - /url: /formations/
+      - listitem:
+        - link "Admissions":
+          - /url: /admissions/
+      - listitem:
+        - link "Actualités":
+          - /url: /actualites/
+      - listitem:
+        - link "Contact":
+          - /url: /contact/
+      - listitem:
+        - link "Mentions légales":
+          - /url: /mentions-legales/
+      - listitem:
+        - link "Confidentialité":
+          - /url: /politique-confidentialite/
+    - paragraph: © UCAO-UUCo – Tous droits réservés.
+    - paragraph: "Deux variantes observées sur l'ancien site : info@ucao.uuco.org et info@ucao-uuco.org. L'adresse officielle doit être confirmée par l'administration avant publication."
+  - dialog "Consentement aux cookies":
+    - paragraph:
+      - text: Nous utilisons des cookies pour améliorer votre expérience. En cliquant sur « Accepter », vous consentez à leur utilisation.
+      - link "En savoir plus":
+        - /url: /politique-confidentialite/
+    - button "Accepter"
+    - button "Refuser"

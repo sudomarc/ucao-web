@@ -1,0 +1,56 @@
+{
+  "browser": {
+    "mode": "launch",
+    "executable_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "headless": true
+  },
+  "start_url": {
+    "url": "https://www.ox.ac.uk/",
+    "query": []
+  },
+  "environment": {
+    "viewport": {
+      "width": 1280,
+      "height": 720,
+      "device_scale_factor": 1
+    },
+    "locale": "en-US",
+    "timezone": "UTC",
+    "color_scheme": "light",
+    "reduced_motion": "reduce",
+    "service_workers": "block"
+  },
+  "actions": [
+    {
+      "step_id": "load_page",
+      "action": "goto",
+      "destination": {
+        "url": "https://www.ox.ac.uk/",
+        "query": []
+      },
+      "wait_until": "load"
+    }
+  ],
+  "capture": {
+    "after_each_step": [
+      "screenshot",
+      "dom",
+      "accessibility"
+    ],
+    "at_end": [
+      "url",
+      "screenshot",
+      "dom",
+      "accessibility",
+      "history"
+    ],
+    "events": [],
+    "network": {
+      "request_body": false,
+      "response_body": false,
+      "header_values": false
+    },
+    "limits": {}
+  },
+  "command_timeout_ms": 120000
+}

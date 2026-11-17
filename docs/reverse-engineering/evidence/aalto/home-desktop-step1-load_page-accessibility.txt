@@ -1,0 +1,412 @@
+- document:
+  - region "We use cookies to make aalto.fi better":
+    - button "EN"
+    - tablist:
+      - tab "Consent" [selected]
+      - tab "Details"
+      - tab "About"
+    - tabpanel "Consent":
+      - heading "We use cookies to make aalto.fi better" [level=2]
+      - paragraph: Some of the cookies we use ensure functionality, while others gather anonymous data to help us improve our services. We also use cookies to support our marketing efforts. We hope you will accept all cookies, but you can also decline them or choose which types of cookies are installed through the cookie settings. If you change your mind later, you can change your settings in the page footer.
+    - button "Decline all"
+    - button "Customize"
+    - button "Allow all"
+  - banner:
+    - link "Skip to main content":
+      - /url: "#main-content"
+    - link "Home":
+      - /url: /en
+    - text: Sign of Change
+    - navigation "Menu":
+      - list:
+        - listitem:
+          - link "Donate":
+            - /url: /en/a-sign-of-change
+        - listitem:
+          - link "Apply to Aalto":
+            - /url: /en/study-at-aalto
+        - listitem
+        - listitem:
+          - button "Valitse sivuston kieli / Välj webbplatsens språk / Select site language"
+        - listitem:
+          - button "Search"
+        - listitem:
+          - link "Log in":
+            - /url: /en/saml_login
+        - listitem:
+          - button "Menu"
+  - main:
+    - heading "Aalto University" [level=1]
+    - heading "Groundbreaking solutions for the future at Slush Copy link to Groundbreaking solutions for the future at Slush section to clipboard" [level=2]:
+      - text: Groundbreaking solutions for the future at Slush
+      - button "Copy link to Groundbreaking solutions for the future at Slush section to clipboard"
+    - paragraph: Aalto University presents 12 new innovations at Slush that help tackle sustainability challenges and drive economic growth.
+    - list:
+      - listitem:
+        - link "Read more about Aalto-born innovations":
+          - /url: /en/aalto-innovation/aalto-at-slush-2026-these-solutions-are-revolutionising-the-insulation-market-joint-replacement
+      - listitem:
+        - link "Get to know our new Aalto Innovation unit":
+          - /url: /en/aalto-innovation
+    - img "Two people with badges watch a glowing tech display at a busy startup event"
+    - heading "Aalto Founder Sprint gives students a launchpad for entrepreneurship Copy link to Aalto Founder Sprint gives students a launchpad for entrepreneurship section to clipboard" [level=2]:
+      - text: Aalto Founder Sprint gives students a launchpad for entrepreneurship
+      - button "Copy link to Aalto Founder Sprint gives students a launchpad for entrepreneurship section to clipboard"
+    - paragraph: The programme is tailored for ambitious Aalto students who are passionate about becoming founders. Applications for spring 2027 are now open!
+    - list:
+      - listitem:
+        - link "Find out more and apply – the deadline is 4.12.":
+          - /url: /en/founder-school/aalto-founder-sprint
+      - listitem:
+        - link "Read participants’ stories":
+          - /url: /en/news/the-runway-for-an-entrepreneurial-journey-students-13-week-sprint-into-startup-reality
+    - img "Woman in denim jacket stands among seated audience, holding notes and speaking into a black microphone"
+    - heading "Start planning your future with Aalto Copy link to Start planning your future with Aalto section to clipboard" [level=2]:
+      - text: Start planning your future with Aalto
+      - button "Copy link to Start planning your future with Aalto section to clipboard"
+    - paragraph: Master's applications open on 7 December 2026, and applications for English-taught bachelor's programmes open on 7 January 2027.
+    - list:
+      - listitem:
+        - link "Browse our programmes":
+          - /url: /en/study-options
+      - listitem:
+        - link "How to apply to master's programmes":
+          - /url: /en/admission-services/apply-to-masters-programmes
+      - listitem:
+        - link "How to apply to bachelor's programmes":
+          - /url: /en/admission-services/apply-to-bachelors-programmes-in-english
+    - img "Two smiling people in winter clothes pose closely outdoors by a brick building and leafless trees"
+    - heading "Spotlight Copy link to Spotlight section to clipboard" [level=2]:
+      - text: Spotlight
+      - button "Copy link to Spotlight section to clipboard"
+    - heading "Find more current news and interesting events on the News and events page." [level=3]:
+      - text: Find more current news and interesting events on the
+      - link "News and events page":
+        - /url: /en/node/137746
+      - text: .
+    - link "See all Aalto University news":
+      - /url: /en/news
+    - img "Bright light shining into a blue acoustic or RF test chamber with dense triangular foam spikes"
+    - heading "Nokia donates 1.5 million euros to Aalto University and strengthens R&D collaboration" [level=3]:
+      - link "Nokia donates 1.5 million euros to Aalto University and strengthens R&D collaboration":
+        - /url: /en/news/nokia-donates-15-million-euros-to-aalto-university-and-strengthens-rd-collaboration
+    - paragraph: The collaboration aims to strengthen Finland’s position in building the intelligent, energy-efficient networks of the future and in harnessing the opportunities of the AI era.
+    - time: 12.11.2026
+    - text: News
+    - img "Bare tree silhouette on the right against dark grey, cloudy evening sky"
+    - heading "Finding beauty in grey November" [level=3]:
+      - link "Finding beauty in grey November":
+        - /url: /en/news/finding-beauty-in-grey-november
+    - paragraph: Dreary autumn skies getting you down? Aesthetics researcher Sanna Lehtinen says there’s infinite beauty in the shades of grey––if only we take the time to look.
+    - time: 16.11.2026
+    - text: News
+    - img "Three researchers discuss a wired brain model in a lab, with a brain scan displayed on a large screen."
+    - 'heading "Health x technology: Magnetic stimulation activates neurons to target depression" [level=3]':
+      - 'link "Health x technology: Magnetic stimulation activates neurons to target depression"':
+        - /url: /en/news/health-x-technology-magnetic-stimulation-activates-neurons-to-target-depression
+    - paragraph: Brain stimulation has helped depression patients for years, yet only a small minority can access the therapy. Researchers are now making it easier, faster, and more personalised.
+    - time: 13.10.2026
+    - text: News
+    - region "Welcome to Aalto University! Copy link to Welcome to Aalto University! section to clipboard":
+      - heading "Welcome to Aalto University! Copy link to Welcome to Aalto University! section to clipboard" [level=2]:
+        - text: Welcome to Aalto University!
+        - button "Copy link to Welcome to Aalto University! section to clipboard"
+      - link "Study at Aalto":
+        - /url: /en/study-at-aalto
+      - link "Open positions":
+        - /url: /en/open-positions
+      - link "Contact us":
+        - /url: /en/aalto-university/aalto-university-contact-information
+    - heading "Join our many events Copy link to Join our many events section to clipboard" [level=2]:
+      - text: Join our many events
+      - button "Copy link to Join our many events section to clipboard"
+    - heading "Find more current news and interesting events on the News and events page." [level=3]:
+      - text: Find more current news and interesting events on the
+      - link "News and events page":
+        - /url: /en/node/137746
+      - text: .
+    - link "See all events":
+      - /url: /en/events
+    - img "High-Up!"
+    - heading "High‑Up! 2026 – An official Slush side event for high school students" [level=3]:
+      - link "High‑Up! 2026 – An official Slush side event for high school students":
+        - /url: /en/events/high-up-2026
+    - paragraph: High-Up! is a free two-day innovation event taking place at Aalto University on 19–20 November during Slush week. It brings together 16–18-year-old high school students from across Finland to tackle societal challenges with expert mentors.
+    - time: "19."
+    - text: –
+    - time: 20.11.2026
+    - text: Events
+    - img "Black background, white text. Aalto founder talks."
+    - 'heading "Aalto Founder Talks #11: Saara Kujala, Co-Founder and CEO of Ren-Gas Oy" [level=3]':
+      - 'link "Aalto Founder Talks #11: Saara Kujala, Co-Founder and CEO of Ren-Gas Oy"':
+        - /url: /en/events/aalto-founder-talks-11-saara-kujala-co-founder-and-ceo-of-ren-gas-oy
+    - paragraph: Tuomas Rasila is the founder and CEO of Sensofusion, a Finnish defense-tech company developing technology to detect and counter drone threats.
+    - time: 19.11.2026 16:00
+    - text: –
+    - time: 17:30 (UTC +2)
+    - text: Events
+    - img "SJD 2027 banneri"
+    - heading "Summer Job Day 2027" [level=3]:
+      - link "Summer Job Day 2027":
+        - /url: /en/events/summer-job-day-2027
+    - paragraph: During this live event, arts, design, technical and business students meet employers offering summer jobs.
+    - time: 26.1.2027 11:00
+    - text: –
+    - time: 17:00 (UTC +2)
+    - text: Events
+    - region "Important quicklinks Copy link to Important quicklinks section to clipboard":
+      - heading "Important quicklinks Copy link to Important quicklinks section to clipboard" [level=2]:
+        - text: Important quicklinks
+        - button "Copy link to Important quicklinks section to clipboard"
+      - img
+      - link "For personnel":
+        - /url: /en/for-personnel
+      - img
+      - link "Student Guide":
+        - /url: /en/student-guide
+      - img
+      - link "Security":
+        - /url: /en/security
+    - figure:
+      - img "Campus park with green and orange autumn trees before a brick building under a blue sky with clouds"
+    - heading "Welcome to our campus! Copy link to Welcome to our campus! section to clipboard" [level=2]:
+      - text: Welcome to our campus!
+      - button "Copy link to Welcome to our campus! section to clipboard"
+    - paragraph:
+      - text: Planning a visit or hosting a group? Learn how to make the most of your visit to Aalto University campus or how to give a memorable visit to your delegation.
+      - link "Visiting Aalto University":
+        - /url: /en/node/381721
+      - link "Marsio, the campus open-to-all meeting place":
+        - /url: /en/node/1026046
+      - link "Explore our campus":
+        - /url: /node/5736
+      - link "Take a virtual tour of the campus":
+        - /url: https://virtualtour.aalto.fi/
+      - link "Explore our vibrant innovation ecosystem":
+        - /url: /en/node/8851
+    - region "Explore our six schools Copy link to Explore our six schools section to clipboard":
+      - heading "Explore our six schools Copy link to Explore our six schools section to clipboard" [level=2]:
+        - text: Explore our six schools
+        - button "Copy link to Explore our six schools section to clipboard"
+      - paragraph: Scientific research and artistic activities are carried out at six schools and their departments and units.
+      - link "\"\" School of Arts, Design and Architecture":
+        - /url: /en/school-of-arts-design-and-architecture
+        - img "\"\""
+        - heading "School of Arts, Design and Architecture" [level=3]
+      - link "\"\" School of Business":
+        - /url: /en/school-of-business
+        - img "\"\""
+        - heading "School of Business" [level=3]
+      - link "\"\" School of Chemical Engineering":
+        - /url: /en/school-of-chemical-engineering
+        - img "\"\""
+        - heading "School of Chemical Engineering" [level=3]
+      - link "\"\" School of Electrical Engineering":
+        - /url: /en/school-of-electrical-engineering
+        - img "\"\""
+        - heading "School of Electrical Engineering" [level=3]
+      - link "\"\" School of Engineering":
+        - /url: /en/school-of-engineering
+        - img "\"\""
+        - heading "School of Engineering" [level=3]
+      - 'link "Foam-projekti, kuva: Matti Ahlgren. School of Science"':
+        - /url: /en/school-of-science
+        - 'img "Foam-projekti, kuva: Matti Ahlgren."'
+        - heading "School of Science" [level=3]
+    - region "Community voices Copy link to Community voices section to clipboard":
+      - heading "Community voices Copy link to Community voices section to clipboard" [level=2]:
+        - text: Community voices
+        - button "Copy link to Community voices section to clipboard"
+      - img
+      - link "Watch our videos (external link)":
+        - /url: https://www.youtube.com/user/aaltouniversity
+        - text: Watch our videos
+        - img "(external link)"
+      - img
+      - link "Read our blogs (external link)":
+        - /url: https://ourblogs.aalto.fi/
+        - text: Read our blogs
+        - img "(external link)"
+      - img
+      - link "Listen to podcasts":
+        - /url: /en/podcasts
+    - heading "Studies and courses open to all Copy link to Studies and courses open to all section to clipboard" [level=2]:
+      - text: Studies and courses open to all
+      - button "Copy link to Studies and courses open to all section to clipboard"
+    - img "A person with headphones sits on a wooden bench using a tablet, with a lake and cloudy sky in the background."
+    - heading "Lifewide Learning" [level=3]:
+      - link "Lifewide Learning":
+        - /url: /en/lifewide-learning
+    - paragraph: Aalto University Lifewide Learning helps you develop your skills in an ever-changing environment.
+    - img "Wide Open Uni"
+    - heading "Aalto University Open University" [level=3]:
+      - link "Aalto University Open University":
+        - /url: /en/aalto-university-open-university
+    - paragraph: Open University courses are open to everyone regardless of background or age. Open University offers individual courses in Business, Technology, Languages, and Art and Design. Students are admitted to individual courses in the order of registration.
+    - img "Aalto Junior logo"
+    - heading "Aalto University Junior" [level=3]:
+      - link "Aalto University Junior":
+        - /url: /en/aalto-university-junior
+    - paragraph: Aalto University Junior is art, science, technology and entrepreneurship for children, young people and teachers - to support teaching, personal joy and a source of enthusiasm.
+    - heading "Information on Ukraine Copy link to Information on Ukraine section to clipboard" [level=2]:
+      - text: Information on Ukraine
+      - button "Copy link to Information on Ukraine section to clipboard"
+    - img "Blue and yellow flags."
+    - heading "Ukraine war" [level=3]:
+      - link "Ukraine war":
+        - /url: /en/aalto-university/ukraine-war
+    - heading "Read about our research and donate Copy link to Read about our research and donate section to clipboard" [level=2]:
+      - text: Read about our research and donate
+      - button "Copy link to Read about our research and donate section to clipboard"
+    - paragraph: At Aalto University, we create the conditions for innovation, economic growth, employment and wellbeing. A gift to the university is an investment in a better future.
+    - img "Black and blue illustration of quantum world"
+    - heading "Research & Art" [level=3]:
+      - link "Research & Art":
+        - /url: /en/research-art
+    - paragraph: Our research focuses on seven key areas combining four core competences in the fields of digitalisation, materials, arts and design, and business together with three grand challenges related to energy, living environments, and health.
+    - img "A collage of various 'A' letters in different fonts and styles. In the centre, 'A! Sign of Change' on a black background."
+    - heading "Give for the future" [level=3]:
+      - link "Give for the future":
+        - /url: /en/give-for-the-future
+    - paragraph: Join us in building a sustainable future! Together we can solve some of the toughest problems of our time.
+    - heading "Follow us Copy link to Follow us section to clipboard" [level=2]:
+      - text: Follow us
+      - button "Copy link to Follow us section to clipboard"
+    - link "Facebook":
+      - /url: http://www.facebook.com/aaltouniversity
+    - link "Bluesky":
+      - /url: https://bsky.app/profile/aalto.fi
+    - link "Instagram":
+      - /url: http://instagram.com/aaltouniversity
+    - link "LinkedIn":
+      - /url: https://www.linkedin.com/school/aalto-university/
+  - contentinfo:
+    - link "Home":
+      - /url: /en
+      - img
+    - text: Sign of Change
+    - paragraph: "Aalto University P.O. Box 11000 (Otakaari 1B) FI-00076 AALTO Switchboard: +358 9 47001"
+    - heading "Follow us:" [level=2]
+    - list:
+      - listitem:
+        - link "Facebook":
+          - /url: https://www.facebook.com/aaltouniversity
+      - listitem:
+        - link "LinkedIn":
+          - /url: https://www.linkedin.com/school/aalto-university/
+      - listitem:
+        - link "Bluesky":
+          - /url: https://bsky.app/profile/aalto.fi
+      - listitem:
+        - link "Instagram":
+          - /url: https://www.instagram.com/aaltouniversity/
+      - listitem:
+        - link "Youtube":
+          - /url: https://www.youtube.com/user/aaltouniversity
+      - listitem:
+        - link "Snapchat":
+          - /url: https://www.snapchat.com/add/aaltouniversity
+      - listitem:
+        - link "Blogs":
+          - /url: https://ourblogs.aalto.fi/
+    - heading "Quicklinks" [level=2]
+    - list:
+      - listitem:
+        - link "Research and artistic outputs":
+          - /url: /en/research-art
+      - listitem:
+        - link "Library – Learning Centre":
+          - /url: /en/learning-centre
+      - listitem:
+        - link "Admissions":
+          - /url: /en/study-at-aalto
+      - listitem:
+        - link "Alumni":
+          - /url: /en/for-alumni
+      - listitem:
+        - link "Media":
+          - /url: /en/for-the-media
+      - listitem:
+        - link "IT services":
+          - /url: /en/it-services
+      - listitem:
+        - link "Open University":
+          - /url: /en/aalto-university-open-university
+      - listitem:
+        - link "Aalto University Shop":
+          - /url: https://shop.aalto.fi/
+      - listitem:
+        - link "Site index":
+          - /url: /en/site-index
+    - heading "Latest" [level=2]
+    - list:
+      - listitem:
+        - link "News":
+          - /url: /en/news
+      - listitem:
+        - link "Events":
+          - /url: /en/events
+      - listitem:
+        - link "Careers":
+          - /url: /en/open-positions
+    - heading "Contact" [level=2]
+    - list:
+      - listitem:
+        - link "Campus maps":
+          - /url: /en/campus/campus-maps-addresses-and-opening-hours-in-otaniemi
+      - listitem:
+        - link "Contact information":
+          - /url: /en/aalto-university/aalto-university-contact-information
+      - listitem:
+        - link "Ethical channel – Whistleblowing":
+          - /url: /en/aalto-university/ethical-channel
+    - heading "For students" [level=2]
+    - list:
+      - listitem:
+        - link "Student Guide":
+          - /url: /en/student-guide
+      - listitem:
+        - link "Webmail":
+          - /url: https://outlook.office.com
+      - listitem:
+        - link "MyCourses":
+          - /url: https://mycourses.aalto.fi/?lang=fi
+      - listitem:
+        - link "MyStudies":
+          - /url: https://mystudies.aalto.fi
+      - listitem:
+        - link "Sisu":
+          - /url: https://sis-aalto.funidata.fi/
+    - heading "Together towards a better world." [level=2]
+    - paragraph: Support new ideas, research, work and leadership development towards a stronger Finland.
+    - link "Donate to Aalto University":
+      - /url: /en/give-for-the-future
+    - list:
+      - listitem:
+        - link "Privacy notice":
+          - /url: /en/aalto-handbook/privacy-notice-for-aaltofi
+      - listitem:
+        - link "Cookie policy":
+          - /url: /en/aalto-handbook/cookie-policy
+      - listitem:
+        - link "Feedback":
+          - /url: /en/services/feedback-on-aaltofi
+      - listitem:
+        - link "Accessibility statement":
+          - /url: /en/aalto-handbook/accessibility-statement-aalto-university
+      - listitem:
+        - link "Cookie settings":
+          - /url: "javascript: Cookiebot.renew()"
+    - list:
+      - listitem:
+        - link "Suomeksi":
+          - /url: /fi
+      - listitem:
+        - link "Svenska":
+          - /url: /sv
+      - listitem:
+        - link "English":
+          - /url: /en
+  - region "Floating action buttons"
+  - region "Docked chat windows"
+  - status

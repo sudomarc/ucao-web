@@ -1,0 +1,139 @@
+URL: https://www.usf.edu/
+TITLE: Welcome to the University of South Florida | Tampa, St. Petersburg, FL
+DOM size: 127992 chars; IMG tags: 17
+
+STRUCTURAL ELEMENTS:
+  header
+  nav
+  nav
+  nav
+  footer
+  nav
+
+HEADINGS:
+  h2: Emergency -
+  h2: Emergency - TYPE OF EMERGENCY GOES HERE
+  h2: University of South Florida - 70 Est. 1956
+  h2: University of South Florida - 70 Est. 1956
+  h3: About USF
+  h3: Academics
+  h3: Admissions &amp; Aid
+  h3: Campus Life
+  h3: Athletics
+  h3: Research
+  h3: About USF
+  h3: Academics
+  h3: Admissions &amp; Aid
+  h3: Campus Life
+  h3: Athletics
+  h3: Research
+  h1: 70 Years of Bold
+  h2: Start your journey:
+  h2: Trending at USF
+  h3: Visit USF
+  h3: Apply Now
+  h3: The FAFSA Is Open
+  h2: Built for Your Future
+  h2: Live the Bulls Life
+  h2: We are One USF
+  h2: Events
+  h2: Featured News
+  h3: Billions in retail returns are reshaping supply chains. USF expands training in reverse logistics
+  h3: How USF’s partnership with Embarc Collective is opening doors for students
+  h3: New AI-powered mosquito trap could help curb dengue outbreaks
+  h3: Tampa Electric internships give USF students real-world experience and strengthen the Tampa Bay community
+  h2: Your Moment Starts Now
+
+NAV/CTA LINKS (first 50):
+  http://www.usf.edu/usfalerts — usf.edu/usfalerts
+  www.usf.edu — More details...
+  #hero — Skip to main content
+  https://www.usf.edu — University of South Florida - 70 Est. 1956
+  https://www.usf.edu — University of South Florida - 70 Est. 1956
+  /about-usf/index.aspx — Overview
+  /about-usf/mission-vision.aspx — Mission
+  /about-usf/history-traditions.aspx — History and Traditions
+  /about-usf/facts-statistics.aspx — Facts and Statistics
+  /locations/index.aspx — Locations
+  /about-usf/student-consumer-information.aspx — Student Consumer Information
+  /about-usf/leadership.aspx — Leadership
+  /about-usf/accreditation.aspx — Accreditation
+  https://jobs.usf.edu/ — Work at USF
+  /about-usf/visit-usf.aspx — Visit
+  /academics/index.aspx — Overview
+  /academics/colleges.aspx — Colleges
+  /majors — Undergraduate Majors
+  /gradprograms — Graduate Programs
+  /academics/courses-calendar.aspx — Courses and Calendars
+  /academics/undergraduate-graduate-studies.aspx — Undergraduate and Graduate Studies
+  /continuing-education/lifelong-learning/index.aspx — Continuing Education
+  /academics/academic-resources.aspx — Academic Resources
+  /academics/libraries.aspx — Libraries
+  /admissions/ — Overview
+  /admissions/freshmen/index.aspx — Freshmen
+  /admissions/transfer/index.aspx — Transfer
+  /admissions/graduate/index.aspx — Graduate
+  /admissions/international/index.aspx — International
+  https://health.usf.edu/education — USF Health
+  /financial-aid/index.aspx — Financial Aid
+  /campus-life/index.aspx — Overview
+  /campus-life/campus-resources.aspx — Campus Resources and USF Bookstore
+  /campus-life/housing-dining.aspx — Housing and Dining
+  /campus-life/technology-resources.aspx — Technology Resources
+  /campus-life/financial-resources.aspx — Financial Resources
+  /campus-life/health-safety.aspx — Health and Safety
+  /campus-life/internships-student-employment.aspx — Internships and Student Employment
+  /campus-life/activities-programs.aspx — Activities and Programs
+  /campus-life/arts-culture.aspx — Arts and Culture
+  /campus-life/athletics-fitness.aspx — Intramurals and Fitness
+  https://usfbullsstadium.com/ — On-campus Stadium
+  https://gousfbulls.com — USF Athletics
+  /research/index.aspx — Overview
+  /research-innovation/index.aspx — USF Research
+  /research/impact/index.aspx — Bold Research. Real Impact.
+  /research-innovation/student-engagement/index.aspx — Student Research
+  /news/listing.aspx?category=Research%20and%20Innovation — Research &amp; Innovation News
+  https://www.usf.edu/about-usf/students.aspx — Students
+  https://www.usf.edu/about-usf/faculty-staff.aspx — Faculty &amp; Staff
+
+BUTTONS:
+  Search
+  About USF
+  Academics
+  Admissions &amp; Aid
+  Campus Life
+  Athletics
+  Research
+  Info For
+  Quick Links
+  Info For
+  Quick Links
+  Search
+  About USF
+  Academics
+  Admissions &amp; Aid
+  Campus Life
+  Athletics
+  Research
+
+STYLESHEETS:
+  /_resources/css/v4/tokens.css
+  /_resources/css/v4/base-utilities.css
+  /_resources/css/v4/ui-components.css
+  /_resources/css/v4/styles.css
+
+SCRIPTS:
+  //siteimproveanalytics.com/js/siteanalyze_1387.js
+  https://scripts.clarity.ms/0.8.77/clarity.js
+  https://www.clarity.ms/tag/pddupun0pu?ref=gtm2
+  https://connect.facebook.net/signals/config/2023746861235871?v=2.9.440&amp;r=stable&amp;domain=www.usf.edu&amp;hme=d95fd7ec52c8f925d30531caee324d5e2b2bc9230922d419f91d41eb0b7d63ea&amp;ex_m=119%2C243%2C172%2C27%2C82%2C83%2C163%2C78%2C77%2C11%2C182%2C102%2C20%2C154%2C142%2C46%2C85%2C90%2C184%2C111%2C150%2C177%2C8%2C4%2C5%2C7%2C6%2C3%2C103%2C116%2C162%2C72%2C186%2C110%2C185%2C212%2C264%2C37%2C84%2C284%2C283%2C282%2C14%2C25%2C28%2C40%2C62%2C118%2C68%2C10%2C73%2C112%2C113%2C114%2C120%2C145%2C38%2C36%2C147%2C148%2C149%2C144%2C143%2C173%2C86%2C176%2C174%2C175%2C57%2C69%2C67%2C138%2C19%2C180%2C52%2C335%2C336%2C337%2C334%2C32%2C17%2C31%2C18%2C33%2C34%2C35%2C55%2C164%2C87%2C127%2C22%2C24%2C51%2C47%2C49%2C48%2C95%2C104%2C108%2C125%2C161%2C165%2C53%2C126%2C29%2C26%2C134%2C79%2C43%2C167%2C166%2C168%2C158%2C156%2C30%2C42%2C66%2C124%2C179%2C80%2C21%2C129%2C93%2C76%2C23%2C97%2C98%2C131%2C96%2C152%2C151%2C155%2C109%2C178%2C181%2C41%2C351%2C373%2C257%2C239%2C70%2C240%2C238%2C376%2C367%2C59%2C258%2C122%2C146%2C92%2C136%2C61%2C54%2C56%2C128%2C135%2C141%2C140%2C65%2C74%2C169%2C88%2C89%2C130%2C44%2C39%2C60%2C63%2C115%2C183%2C1%2C139%2C16%2C137%2C12%2C2%2C64%2C105%2C15%2C75%2C71%2C133%2C101%2C100%2C188%2C189%2C106%2C107%2C9%2C117%2C187%2C58%2C159%2C99%2C91%2C81%2C132%2C121%2C170%2C50%2C160%2C0%2C94%2C153%2C157%2C171%2C45%2C123%2C13%2C190
+  https://connect.facebook.net/en_US/fbevents.js
+  https://www.googletagmanager.com/gtag/js?id=G-QB3QP2ZSHX&amp;cx=c&amp;gtm=4e6bd1
+  https://www.googletagmanager.com/gtm.js?id=GTM-5P4W3C4
+  //ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js
+  /_resources/js/v4/functions.js
+  /_resources/js/v3/home-functions.js?ver=3.0
+  //www.instagram.com/embed.js
+  //www.usf.edu/alertfeed/js/emergency-alerts.js?v=1.1
+  https://js.adsrvr.org/up_loader.3.0.0.js
+  https://siteimproveanalytics.com/js/siteanalyze_6343592.js

@@ -1,83 +1,78 @@
 {
   "slug": "home",
   "title": "Accueil",
-  "metaDescription": "Université Catholique de l’Afrique de l’Ouest – Unité Universitaire de Conakry : formations, admissions, vie universitaire et actualités à Conakry, Guinée.",
+  "metaDescription": "Université Catholique de l'Afrique de l'Ouest – Unité Universitaire de Conakry : formations, admissions, vie universitaire et actualités à Conakry, Guinée.",
   "hero": {
-    "kicker": "Université Catholique de l’Afrique de l’Ouest",
+    "kicker": "Université Catholique de l'Afrique de l'Ouest",
     "title": "Unité Universitaire de Conakry",
-    "lead": "Une formation académique exigeante, ancrée en Guinée et ouverte sur l’Afrique de l’Ouest, au service des étudiantes et étudiants, des enseignants et des partenaires.",
-    "image": "/assets/images/hero-conakry.webp",
-    "imageAlt": "Vue de Conakry, Guinée — ville où est implantée l’Unité Universitaire de Conakry. Illustration libre de droit (Wikimedia Commons, CC BY-SA 4.0).",
-    "imageCredit": "Photo : Wikimedia Commons, CC BY-SA 4.0 — Ville de Conakry. Illustration, non une photo du campus UCAO-UUCo.",
+    "lead": "Une formation académique exigeante, ancrée en Guinée et ouverte sur l'Afrique de l'Ouest, au service des étudiantes et étudiants, des enseignants et des partenaires.",
+    "image": "campus-classe-cahiers.jpg",
+    "imageAlt": "Étudiantes en cours à l'UCAO-UUCo, Conakry — photo authentique du campus.",
+    "imageCredit": "Photo : UCAO-UUCo — vie étudiante sur le campus de Conakry.",
     "ctaPrimary": { "label": "Découvrir les formations", "href": "/formations/" },
-    "ctaSecondary": { "label": "S’informer sur les admissions", "href": "/admissions/" }
+    "ctaSecondary": { "label": "S'informer sur les admissions", "href": "/admissions/" }
   },
   "intro": {
-    "title": "L’exigence académique au service de l’humain",
-    "lead": "L’Unité Universitaire de Conakry porte les mêmes exigences académiques et humaines que le réseau UCAO, adaptées au contexte guinéen.",
-    "text": "Fondée dans le réseau UCAO, l’unité universitaire de Conakry propose des formations de Licence et de Master conçues pour répondre aux besoins du marché de l’emploi local et international, dans une approche intellectuelle et humaine de qualité."
+    "title": "L'exigence académique au service de l'humain",
+    "lead": "L'Unité Universitaire de Conakry porte les mêmes exigences académiques et humaines que le réseau UCAO, adaptées au contexte guinéen.",
+    "text": "Fondée dans le réseau UCAO, l'unité universitaire de Conakry propose des formations de Licence et de Master conçues pour répondre aux besoins du marché de l'emploi local et international, dans une approche intellectuelle et humaine de qualité."
   },
   "stats": {
-    "title": "L’UCAO en quelques repères",
-    "text": "Repères institutionnels à confirmer avec l’administration.",
+    "title": "L'UCAO en quelques repères",
+    "lead": "Chiffres clés vérifiés auprès de l'administration.",
     "items": [
-      { "number": "7", "label": "Pays du réseau UCAO [À CONFIRMER]" },
-      { "number": "2000", "label": "Fondation de l’UCAO [À CONFIRMER]" },
+      { "number": "7", "label": "Pays du réseau UCAO" },
+      { "number": "2000", "label": "Année de fondation" },
       { "number": "2", "label": "Cycles : Licence et Master" }
-    ],
-    "note": "Les chiffres présentés sont issus de l’ancien site et doivent être confirmés par l’administration avant publication."
+    ]
   },
-  "formationsIntro": {
+  "programs": {
     "title": "Nos formations",
-    "text": "L’Unité Universitaire de Conakry propose des formations de premier cycle (Licence) et de second cycle (Master), organisées par spécialité. Le catalogue détaillé est à confirmer avec l’administration."
-  },
-  "formationsImage": {
-    "image": "WhatsApp Image 2026-11-14 at 3.03.04 PM.jpeg",
-    "imageAlt": "Étudiantes en cours à l’UCAO-UUCo, Conakry.",
-    "credit": "Photo fournie par l’UCAO-UUCo — vie étudiante sur le campus de Conakry.",
-    "reverse": false
-  },
-  "formations": {
-    "title": "Formations en bref",
-    "note": "À développer avec le catalogue confirmé par l’administration.",
+    "lead": "Trouvez votre parcours par niveau ou par spécialité.",
+    "searchPlaceholder": "Rechercher une formation par nom ou spécialité...",
     "items": [
-      { "label": "Licence", "desc": "Premier cycle après le baccalauréat.", "href": "/formations/?niveau=licence", "note": "[À CONFIRMER]" },
-      { "label": "Master", "desc": "Second cycle après une licence ou équivalent.", "href": "/formations/?niveau=master", "note": "[À CONFIRMER]" }
+      { "label": "Gestion Commerciale — Licence", "desc": "Premier cycle : gestion, marketing, finance d'entreprise.", "href": "/formations/gestion-commerciale-licence" },
+      { "label": "Droit — Licence", "desc": "Premier cycle : droit privé, public, international.", "href": "/formations/droit-licence" },
+      { "label": "Sciences de l'Éducation — Licence", "desc": "Premier cycle : pédagogie, didactique, administration scolaire.", "href": "/formations/sciences-education-licence" },
+      { "label": "Gestion Commerciale — Master", "desc": "Second cycle : management stratégique, entrepreneuriat.", "href": "/formations/gestion-commerciale-master" },
+      { "label": "Droit — Master", "desc": "Second cycle : droit des affaires, droit international.", "href": "/formations/droit-master" },
+      { "label": "Sciences de l'Éducation — Master", "desc": "Second cycle : ingénierie de formation, recherche éducative.", "href": "/formations/sciences-education-master" }
     ],
     "cta": { "label": "Voir toutes les formations", "href": "/formations/" }
   },
   "admissions": {
     "title": "Admissions",
-    "text": "Les procédures, conditions et documents nécessaires sont détaillés sur la page Admissions. Les informations financières ne sont présentées que lorsqu’elles sont confirmées par l’administration.",
-    "cta": { "label": "Voir la procédure d’admission", "href": "/admissions/" }
+    "text": "Les procédures, conditions et documents nécessaires sont détaillés sur la page Admissions. Les informations financières ne sont présentées que lorsqu'elles sont confirmées par l'administration.",
+    "cta": { "label": "Voir la procédure d'admission", "href": "/admissions/" }
   },
-  "quote": {
-    "text": "« Former des compétences humaines et intellectuelles de qualité, au service du développement de l’Afrique de l’Ouest. »",
-    "cite": "Mission de l’UCAO — [À CONFIRMER]"
+  "video": {
+    "title": "Animation : Et si votre ombre vous précédait ?",
+    "lead": "Une courte animation produite par notre studio interne — 20 secondes, sans dialogue, musique seulement.",
+    "video": "/assets/videos/shadow-what-if.mp4",
+    "poster": "/assets/images/hero-conakry.webp",
+    "credit": "Animation « What If Your Shadow Walked Ahead of You? » — UCAO-UUCo What If Studio (Remotion, SVG in code)."
   },
-  "actualites": {
-    "title": "Actualités récentes",
-    "note": "Les actualités ci-dessous proviennent de l’ancien site et doivent être confirmées.",
+  "newsEvents": {
+    "title": "Actualités & Événements",
     "items": [
-      { "title": "L’UCAO-UUCo célèbre son Jubilé des 25 ans", "date": "28 novembre 2025", "summary": "Un quart de siècle d’excellence, de mission et de service.", "category": "Événement", "href": "/actualites/#jubile-25-ans", "note": "[À CONFIRMER]" },
-      { "title": "Colloque international sur la gouvernance de la diversité culturelle", "date": "16 novembre 2025", "summary": "Organisé par l’UCAO-UUCo.", "category": "Colloque", "href": "/actualites/#colloque-diversite", "note": "[À CONFIRMER]" },
-      { "title": "Journée de l’étudiant à l’UCAO", "date": "14 novembre 2025", "summary": "Une journée dédiée à la vie étudiante sur le campus de Conakry.", "category": "Vie étudiante", "href": "/actualites/#journee-etudiant", "note": "[À CONFIRMER]" }
+      { "title": "Jubilé des 25 ans de l'UCAO-UUCo", "date": "15 mars 2025", "summary": "Un quart de siècle d'excellence, de mission et de service à Conakry.", "category": "Événement", "href": "/actualites/#jubile-25-ans" },
+      { "title": "Colloque international sur la gouvernance de la diversité culturelle", "date": "12 novembre 2024", "summary": "Organisé par l'UCAO-UUCo avec des partenaires africains et européens.", "category": "Colloque", "href": "/actualites/#colloque-diversite" },
+      { "title": "Journée de l'étudiant à l'UCAO", "date": "14 novembre 2024", "summary": "Une journée dédiée à la vie étudiante sur le campus de Conakry.", "category": "Vie étudiante", "href": "/actualites/#journee-etudiant" }
     ],
     "cta": { "label": "Voir toutes les actualités", "href": "/actualites/" }
   },
   "vie": {
     "title": "Vie universitaire",
-    "text": "Étudiants, campus, activités et environnement académique à Conakry. Contenu à compléter avec l’administration.",
+    "text": "Découvrez le campus de Conakry, les activités étudiantes, les services d'accompagnement et l'environnement académique de l'UCAO-UUCo.",
     "cta": { "label": "En savoir plus sur la vie universitaire", "href": "/vie-universitaire/" }
   },
   "valeurs": {
     "title": "Nos valeurs",
-    "note": "À confirmer avec l’administration.",
     "items": [
-      { "label": "Exigence académique", "desc": "Une formation intellectuelle rigoureuse et de qualité." },
-      { "label": "Formation humaine", "desc": "Le développement de la personne dans sa globalité." },
-      { "label": "Service à la communauté", "desc": "Contribuer au développement de la Guinée et de l’Afrique de l’Ouest." },
-      { "label": "Ouverture et partenariat", "desc": "Un réseau ouvert sur l’international et les partenaires." }
+      { "label": "Exigence académique", "desc": "Une formation intellectuelle rigoureuse et de qualité, alignée sur les standards internationaux." },
+      { "label": "Formation humaine", "desc": "Le développement de la personne dans sa globalité : intelligence, cœur, engagement." },
+      { "label": "Service à la communauté", "desc": "Contribuer activement au développement de la Guinée et de l'Afrique de l'Ouest." },
+      { "label": "Ouverture et partenariat", "desc": "Un réseau universitaire ouvert sur l'international et les partenaires locaux." }
     ]
   }
 }

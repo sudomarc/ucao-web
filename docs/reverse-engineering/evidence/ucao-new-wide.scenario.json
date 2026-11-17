@@ -1,0 +1,56 @@
+{
+  "browser": {
+    "mode": "launch",
+    "executable_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "headless": true
+  },
+  "start_url": {
+    "url": "http://localhost:8080/",
+    "query": []
+  },
+  "environment": {
+    "viewport": {
+      "width": 1440,
+      "height": 900,
+      "device_scale_factor": 1
+    },
+    "locale": "en-US",
+    "timezone": "UTC",
+    "color_scheme": "light",
+    "reduced_motion": "reduce",
+    "service_workers": "block"
+  },
+  "actions": [
+    {
+      "step_id": "load_page",
+      "action": "goto",
+      "destination": {
+        "url": "http://localhost:8080/",
+        "query": []
+      },
+      "wait_until": "load"
+    }
+  ],
+  "capture": {
+    "after_each_step": [
+      "screenshot",
+      "dom",
+      "accessibility"
+    ],
+    "at_end": [
+      "url",
+      "screenshot",
+      "dom",
+      "accessibility",
+      "history"
+    ],
+    "events": [],
+    "network": {
+      "request_body": false,
+      "response_body": false,
+      "header_values": false
+    },
+    "limits": {}
+  },
+  "command_timeout_ms": 120000
+}

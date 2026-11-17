@@ -1,0 +1,296 @@
+- document:
+  - banner:
+    - link "Skip to main content":
+      - /url: "#hero"
+    - heading "University of South Florida - 70 Est. 1956" [level=2]:
+      - link "University of South Florida - 70 Est. 1956":
+        - /url: https://www.usf.edu
+    - navigation:
+      - list:
+        - listitem:
+          - button "Info For"
+        - listitem:
+          - button "Quick Links"
+        - listitem:
+          - link "Give":
+            - /url: https://giving.usf.edu/
+        - listitem:
+          - button "Search"
+        - listitem:
+          - link "MyUSF":
+            - /url: https://my.usf.edu/
+        - listitem:
+          - link "Apply":
+            - /url: https://www.usf.edu/application
+    - navigation:
+      - list:
+        - listitem:
+          - button "About USF"
+        - listitem:
+          - button "Academics"
+        - listitem:
+          - button "Admissions & Aid"
+        - listitem:
+          - button "Campus Life"
+        - listitem:
+          - button "Athletics"
+        - listitem:
+          - button "Research"
+  - main:
+    - button "Play video"
+    - text: Five students holding up Bull U hand gestures.
+    - heading "70 Years of Bold" [level=1]
+    - paragraph: Celebrating how far we’ve come while building a bolder future
+    - link "Explore our story":
+      - /url: https://www.usf.edu/campaigns/bold70/?utm_source=homepage&utm_medium=homepage-hero&utm_campaign=bold70
+    - text: "Start your journey:"
+    - combobox "Start your journey:":
+      - option "Choose your next step" [disabled] [selected]
+      - option "Undergraduate Majors"
+      - option "Cost Calculator"
+      - option "Financial Aid"
+      - option "Check Application Status"
+      - option "Graduate Programs"
+      - option "Future Freshman Students"
+      - option "Future Transfer Students"
+      - option "Future International Students"
+      - option "Future Medical Students"
+    - link "Get Info for About USF":
+      - /url: /about-usf/index.aspx
+    - heading "Trending at USF" [level=2]
+    - img "Group of people taking a tour of campus"
+    - heading "Visit USF" [level=3]:
+      - link "Visit USF":
+        - /url: https://www.usf.edu/admissions/visit/index.aspx
+    - paragraph: Take a guided tour for an up-close look at each USF campus.
+    - img "Student smiling and doing a Go Bulls hand gesture."
+    - heading "Apply Now" [level=3]:
+      - link "Apply Now":
+        - /url: https://www.usf.edu/admissions/index.aspx
+    - paragraph: Ready to become a Bull? Our application is open!
+    - img "Students walking outside of Marshall Student Center"
+    - heading "The FAFSA Is Open" [level=3]:
+      - link "The FAFSA Is Open":
+        - /url: https://www.usf.edu/financial-aid/apply/
+    - paragraph: Apply early to maximize your financial aid opportunities.
+    - img "USF student smiles while sitting at a table and writing on paper."
+    - heading "Built for Your Future" [level=2]
+    - paragraph: At the University of South Florida, your goals fuel everything we do. Explore a community driven by innovation, and the power to shape what comes next.
+    - list:
+      - listitem:
+        - link "Find Your Major":
+          - /url: https://catalog.usf.edu/
+      - listitem:
+        - link "Calculate Your Cost of Attendance":
+          - /url: /financial-aid/cost-of-attendance/index.aspx
+      - listitem:
+        - link "Plan Your Visit":
+          - /url: /admissions/visit/index.aspx
+      - listitem:
+        - link "Request More Information":
+          - /url: https://discover.usf.edu/register/undergraduate-admissions-info
+    - paragraph
+    - text: "#46 Among all Public Universities Top 16 Medical School in the Nation Top 30 Best Value Among all Public Universities $775M in Research Funding (2026)"
+    - paragraph
+    - heading "Live the Bulls Life" [level=2]
+    - button "Watch Homecoming at USF":
+      - img "Watch Homecoming at USF"
+    - button "Watch USF Week of Welcome":
+      - img "Watch USF Week of Welcome"
+    - button "Watch Campus Scenes":
+      - img "Watch Campus Scenes"
+    - button "Watch What Being a Bull Means":
+      - img "Watch What Being a Bull Means"
+    - paragraph:
+      - link "Watch more videos":
+        - /url: https://www.youtube.com/usfchannel
+    - img "University of South Florida Tampa campus."
+    - img "University of South Florida St. Petersburg campus."
+    - img "University of South Florida sign with palm trees"
+    - img "USF Health"
+    - heading "We are One USF" [level=2]
+    - paragraph: Located in the vibrant Tampa Bay region, USF's campuses and USF Health connect to serve nearly 50,000 students. Explore each location below.
+    - list:
+      - listitem:
+        - link "Tampa":
+          - /url: /locations/tampa-campus.aspx
+      - listitem:
+        - link "St. Petersburg":
+          - /url: /locations/stpetersburg-campus.aspx
+      - listitem:
+        - link "USF Health":
+          - /url: https://health.usf.edu
+    - heading "Events" [level=2]
+    - list:
+      - listitem:
+        - link "Nov 26 University Closed - Thanksgiving Holiday Nov. 26 - Nov. 27":
+          - /url: https://www.usf.edu/calendar/#event-details/d38f8877-c53c-4c2e-b7b5-5bf08d520720
+          - text: Nov 26
+          - paragraph: University Closed - Thanksgiving Holiday Nov. 26 - Nov. 27
+      - listitem:
+        - link "Dec 5 Fall Final Exam Week Dec. 5 - Dec. 10":
+          - /url: https://www.usf.edu/calendar/#event-details/b271c025-23da-4b80-9c65-9f17b8ca31e4
+          - text: Dec 5
+          - paragraph: Fall Final Exam Week Dec. 5 - Dec. 10
+      - listitem:
+        - link "Dec 11 Fall Commencement Dec. 11 - Dec. 12":
+          - /url: https://www.usf.edu/calendar/#event-details/2f49731a-a854-49c7-8dd3-72181cc9ed18
+          - text: Dec 11
+          - paragraph: Fall Commencement Dec. 11 - Dec. 12
+    - list:
+      - listitem:
+        - link "More events":
+          - /url: https://www.usf.edu/calendar?utm_source=calendar-widget-more&amp;utm_medium=widget&amp;utm_campaign=usfhomepage
+      - listitem:
+        - link "Student Events Calendar":
+          - /url: https://bullsconnect.usf.edu/events?utm_source=calendar-widget-student&amp;utm_medium=widget&amp;utm_campaign=usfhomepage
+      - listitem:
+        - link "Registrar Dates and Deadlines":
+          - /url: https://www.usf.edu/registrar/calendars/index.aspx?utm_source=calendar-widget-registrar&amp;utm_medium=widget&amp;utm_campaign=usfhomepage
+    - heading "Featured News" [level=2]
+    - paragraph:
+      - link "Read more news":
+        - /url: /news/index.aspx
+    - img "Billions in retail returns are reshaping supply chains. USF expands training in reverse logistics"
+    - text: Student Success
+    - heading "Billions in retail returns are reshaping supply chains. USF expands training in reverse logistics" [level=3]:
+      - link "Billions in retail returns are reshaping supply chains. USF expands training in reverse logistics":
+        - /url: https://www.usf.edu/news/2026/billions-in-retail-returns-are-reshaping-supply-chains.aspx
+    - img "How USF’s partnership with Embarc Collective is opening doors for students"
+    - text: Student Success
+    - heading "How USF’s partnership with Embarc Collective is opening doors for students" [level=3]:
+      - link "How USF’s partnership with Embarc Collective is opening doors for students":
+        - /url: https://www.usf.edu/news/2026/how-usfs-partnership-with-embarc-collective-is-opening-doors-for-students.aspx
+    - img "New AI-powered mosquito trap could help curb dengue outbreaks"
+    - text: Innovation
+    - heading "New AI-powered mosquito trap could help curb dengue outbreaks" [level=3]:
+      - link "New AI-powered mosquito trap could help curb dengue outbreaks":
+        - /url: https://www.usf.edu/news/2026/new-ai-powered-mosquito-trap-could-help-curb-dengue-outbreaks.aspx
+    - img "Tampa Electric internships give USF students real-world experience and strengthen the Tampa Bay community"
+    - text: Student Success
+    - heading "Tampa Electric internships give USF students real-world experience and strengthen the Tampa Bay community" [level=3]:
+      - link "Tampa Electric internships give USF students real-world experience and strengthen the Tampa Bay community":
+        - /url: https://www.usf.edu/news/2026/tampa-electric-internships-give-usf-students-real-world-experience.aspx
+    - 'img "A vibrant collage depicting university life: kayaking, discussions, gardening, cooking, city skyline, mascot cheering, research, and celebrations."'
+    - heading "Your Moment Starts Now" [level=2]
+    - paragraph: Connect with us on social media to stay inspired by campus moments, student stories, and the people who make USF extraordinary.
+    - list:
+      - listitem:
+        - link "Instagram":
+          - /url: https://www.instagram.com/usouthflorida/?hl=en
+      - listitem:
+        - link "YouTube":
+          - /url: https://www.youtube.com/usfchannel
+      - listitem:
+        - link "Facebook":
+          - /url: https://www.facebook.com/USouthFlorida/
+      - listitem:
+        - link "LinkedIn":
+          - /url: https://www.linkedin.com/school/usouthflorida/posts/?feedView=all
+      - listitem:
+        - link "X":
+          - /url: https://x.com/USouthFlorida
+  - contentinfo:
+    - link "University of South Florida":
+      - /url: https://www.usf.edu
+    - paragraph: Located in Tampa and St. Petersburg.
+    - paragraph: 4202 E. Fowler Avenue Tampa, FL 33620, USA 813-974-2011
+    - paragraph: "Connect with us:"
+    - list:
+      - listitem:
+        - link "Facebook":
+          - /url: http://facebook.com/USouthFlorida
+      - listitem:
+        - link "X":
+          - /url: http://twitter.com/USouthFlorida
+      - listitem:
+        - link "YouTube":
+          - /url: http://www.youtube.com/usfchannel
+      - listitem:
+        - link "LinkedIn":
+          - /url: http://www.linkedin.com/edu/school?id=18130
+      - listitem:
+        - link "Instagram":
+          - /url: https://www.instagram.com/usouthflorida
+    - navigation:
+      - list:
+        - listitem:
+          - link "About USF":
+            - /url: https://www.usf.edu/about-usf/index.aspx
+        - listitem:
+          - link "Academics":
+            - /url: https://www.usf.edu/academics/index.aspx
+        - listitem:
+          - link "Admissions":
+            - /url: https://www.usf.edu/admissions/index.aspx
+        - listitem:
+          - link "Locations":
+            - /url: https://www.usf.edu/locations/index.aspx
+        - listitem:
+          - link "Campus Life":
+            - /url: https://www.usf.edu/campus-life/index.aspx
+        - listitem:
+          - link "Research":
+            - /url: https://www.usf.edu/research/index.aspx
+        - listitem:
+          - link "Administrative Units":
+            - /url: https://www.usf.edu/about-usf/administrative-units.aspx
+        - listitem:
+          - link "Regulations & Policies":
+            - /url: https://www.usf.edu/regulations-policies/index.aspx
+        - listitem:
+          - link "Human Resources":
+            - /url: https://www.usf.edu/hr/index.aspx
+        - listitem:
+          - link "Work at USF":
+            - /url: https://jobs.usf.edu
+        - listitem:
+          - link "Emergency & Safety":
+            - /url: https://www.usf.edu/public-safety/emergency-management/index.aspx
+        - listitem:
+          - link "Title IX":
+            - /url: https://www.usf.edu/title-ix/index.aspx
+        - listitem:
+          - link "USF Health":
+            - /url: http://health.usf.edu/
+        - listitem:
+          - link "USF Athletics":
+            - /url: https://gousfbulls.com/
+        - listitem:
+          - link "USF Alumni":
+            - /url: https://www.usfalumni.org
+        - listitem:
+          - link "Support USF":
+            - /url: https://giving.usf.edu/
+        - listitem:
+          - link "USF Libraries":
+            - /url: https://www.lib.usf.edu/
+        - listitem:
+          - link "USF World":
+            - /url: https://www.usf.edu/world/index.aspx
+    - paragraph:
+      - text: Copyright
+      - link "©":
+        - /url: https://a.cms.omniupdate.com/11/?skin=usf&account=USFMainPROD&site=usf_edu&action=de&path=/index.pcf
+      - text: 2026, University of South Florida. All rights reserved.
+    - paragraph:
+      - text: This website is maintained by
+      - link "University Communications and Marketing":
+        - /url: mailto:ucm@usf.edu
+      - text: .
+    - list:
+      - listitem:
+        - link "Privacy":
+          - /url: http://www.usf.edu/about-usf/about-this-site.aspx
+      - listitem:
+        - link "Site Map":
+          - /url: http://www.usf.edu/about-usf/site-map.aspx
+      - listitem:
+        - link "Contact USF":
+          - /url: http://www.usf.edu/about-usf/contact-usf.aspx
+      - listitem:
+        - link "Visit USF":
+          - /url: http://www.usf.edu/about-usf/visit-usf.aspx?utm_source=visit-usf&utm_medium=footer&utm_campaign=usfcms
+      - listitem:
+        - link "Accessibility":
+          - /url: https://www.usf.edu/about-usf/about-this-site.aspx#accessibility

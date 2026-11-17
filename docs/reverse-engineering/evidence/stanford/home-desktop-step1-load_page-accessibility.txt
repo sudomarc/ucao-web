@@ -1,0 +1,458 @@
+- document:
+  - banner:
+    - link "Skip to main content":
+      - /url: "#main-content"
+    - navigation "Our Impact":
+      - heading "Our Impact" [level=2]
+      - list:
+        - listitem:
+          - link "Civics":
+            - /url: /civics
+        - listitem:
+          - link "Cancer Research":
+            - /url: /cancer-research
+        - listitem:
+          - link "Artificial Intelligence":
+            - /url: /artificial-intelligence
+        - listitem:
+          - link "See all impact hub topics":
+            - /url: /about/impact
+      - search:
+        - combobox "Search query"
+        - button "Submit search"
+    - navigation "Main Menu":
+      - link "Stanford University":
+        - /url: /
+      - list:
+        - listitem:
+          - button "About"
+        - listitem:
+          - button "Academics"
+        - listitem:
+          - button "Research"
+        - listitem:
+          - button "Health & Medicine"
+        - listitem:
+          - button "Athletics"
+        - listitem:
+          - button "Admissions & Aid"
+        - listitem:
+          - button "Life on the Farm"
+      - status
+      - status
+  - main:
+    - heading "Stanford University" [level=1]
+    - region "page hero":
+      - status
+      - heading "Stanford researchers build predictive digital models of the brain" [level=2]:
+        - link "Stanford researchers build predictive digital models of the brain":
+          - /url: https://news.stanford.edu/stories/2026/11/stanford-digital-brain-project
+      - status
+      - region "video player":
+        - button "closed captions"
+        - button "play"
+    - heading "Advancing the Frontier" [level=2]
+    - paragraph: At Stanford, a spirit of optimism and possibility energizes our mission of discovery and learning. Here you’ll find a place of intellectual expansiveness, wide-ranging perspectives, and freedom to explore new lines of thinking. Alive with ideas and innovation, approaching questions with openness and curiosity, pursuing excellence in all we do – this is Stanford.
+    - link "About Stanford Navigate to the About Stanford page for more information on the university.":
+      - /url: /about
+    - img "Jenn Brophy in a blue lab coat holds a small plant pot while working in a greenhouse filled with seedlings and grow lights."
+    - heading "Stanford News" [level=2]
+    - paragraph: Stories to keep you informed and inspired, from one of the world’s leading research and teaching institutions.
+    - link "Stanford Report Visit the Stanford Report website for the latest research, scholarship, and campus news.":
+      - /url: https://news.stanford.edu/
+    - list:
+      - listitem:
+        - article:
+          - figure:
+            - img "Ravi Vakil poses beside a chalkboard filled with geometric diagrams."
+          - text: News Science & Engineering
+          - heading "Has AI really changed math forever?" [level=3]:
+            - link "Has AI really changed math forever?":
+              - /url: https://news.stanford.edu/stories/2026/11/ai-math-ravi-vakil
+          - paragraph: Stanford mathematician Ravi Vakil looks past the headlines to explain how AI is speeding up the field, why human understanding still matters, and what’s at stake for the next generation.
+          - text: 6 min read
+          - time: Nov 6, 2026
+      - listitem:
+        - article:
+          - figure:
+            - img "A faculty member talks with students seated under umbrellas, part of an outdoor campus discussion event."
+          - text: News Constructive Dialogue
+          - heading "‘What would convince you that you’re wrong?’" [level=3]:
+            - link "‘What would convince you that you’re wrong?’":
+              - /url: https://news.stanford.edu/stories/2026/11/disagree-with-professor
+          - paragraph: “Disagree with a Professor” invites students to take up provocative ideas with Stanford faculty in an informal, low-stakes setting.
+          - text: 6 min read
+          - time: Nov 9, 2026
+      - listitem:
+        - article:
+          - figure:
+            - img "A silhouette of a child’s head shows a tangled scribble pattern inside."
+          - text: News Health & Medicine
+          - heading "Three brain biotypes found in kids with ADHD, anxiety" [level=3]:
+            - link "Three brain biotypes found in kids with ADHD, anxiety":
+              - /url: https://news.stanford.edu/stories/2026/11/three-brain-biotypes-found-in-kids-with-adhd-anxiety
+          - paragraph: A Stanford Medicine-led study offers a foundation for future research on underlying biology and treatment approaches for the common, overlapping childhood conditions.
+          - text: 6 min read
+          - time: Nov 10, 2026
+      - listitem:
+        - article:
+          - figure:
+            - img "Teacher with two students"
+          - text: News Education
+          - heading "Despite falling enrollment, public schools haven’t downsized" [level=3]:
+            - link "Despite falling enrollment, public schools haven’t downsized":
+              - /url: https://news.stanford.edu/stories/2026/11/falling-enrollment-public-schools-havent-downsized
+          - paragraph: A new Stanford study finds that most districts have not yet adjusted to enrollment losses since the pandemic, leaving smaller schools, more teachers per student, and ongoing budgetary pressures.
+          - text: 4 min read
+          - time: Nov 10, 2026
+    - button "Reveal content below"
+    - status
+    - region "video player"
+    - button "closed captions"
+    - button "play"
+    - heading "Research for a Better World" [level=2]
+    - paragraph: Solving society’s pressing challenges requires state-of-the-art laboratories and smart people. It also takes a deep belief in the power of cross-disciplinary collaboration and the audacity to go in new directions.
+    - link "Research Read more about research at Stanford.":
+      - /url: /research
+    - img "Stephen Palumbi examining small coral specimens in an illuminated blue-lit water tank in a laboratory setting."
+    - list:
+      - listitem:
+        - text: $ 9 4 B
+        - paragraph: Private investment in companies that grew out of federally funded Stanford research
+      - listitem:
+        - text: 3 5 0 , 0 0 0 +
+        - paragraph: Jobs created by companies that grew out of federally funded Stanford research
+      - listitem:
+        - text: 4 0 0 +
+        - paragraph: New companies based on federally funded Stanford research
+      - listitem:
+        - text: 6 , 6 9 9
+        - paragraph: Inventions created by federally funded Stanford research
+    - heading "Achieving the promise of human-centered AI" [level=3]
+    - link "Our impact Learn more about financial aid at Stanford.":
+      - /url: /artificial-intelligence
+    - figure:
+      - img "Karen Liu poses alongside a silver humanoid robot in a modern research lab, resting her arm on its shoulder."
+    - paragraph: Computer science Professor John McCarthy, a “founding father” of AI, established the Stanford Artificial Intelligence Laboratory on campus in 1963. It was one of the first in the world to pursue the development of AI systems.
+    - blockquote:
+      - paragraph: Today, the university continues to be at the technology’s vanguard – supporting scientific inquiry, accelerating discoveries, building pathways for exciting new applications, and shaping policies that protect the public.
+    - status: Video muted
+    - region "video player":
+      - link "Original social media post":
+        - /url: https://www.instagram.com/reel/DX7wpb0D_6h/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA==
+      - button "enter fullscreen mode"
+      - button "unmute"
+      - button "closed captions"
+      - button "play"
+    - text: "@stanford"
+    - paragraph: “It’s a fun time now, where we can generate big amounts of biological data and also have the tools to model from it.”
+    - article:
+      - figure:
+        - img "A technician connects cables on a server rack, focusing on organizing data connections in a tech environment."
+      - heading "Computing ecosystem allows faculty to aim high" [level=4]:
+        - link "Computing ecosystem allows faculty to aim high":
+          - /url: https://news.stanford.edu/stories/2024/12/stanford-welcomes-first-gpu-based-supercomputer
+      - paragraph: Massive computing power at Stanford functions as a universal accelerant – compressing research timelines, enabling simulations that would otherwise be impossible, and opening entirely new categories of scientific inquiry.
+      - text: 5 min read
+      - time: Jul 7, 2025
+    - article:
+      - heading "12 takeaways from the 2026 AI Index Report" [level=4]:
+        - link "12 takeaways from the 2026 AI Index Report":
+          - /url: https://hai.stanford.edu/news/inside-the-ai-index-12-takeaways-from-the-2026-report
+      - paragraph: The annual report reveals a field hitting breakthrough capabilities while raising urgent questions about environmental costs, transparency, and who benefits from the technology.
+      - text: 5 min read
+      - time: Apr 13, 2026
+    - article:
+      - heading "Stanford merges AI and data science efforts under single institute" [level=4]:
+        - link "Stanford merges AI and data science efforts under single institute":
+          - /url: https://news.stanford.edu/stories/2026/05/stanford-merges-hai-data-science
+      - paragraph: The combined institute will retain the Stanford HAI name and be helmed by computer scientist James Landay.
+      - text: 6 min read
+      - time: May 4, 2026
+    - iframe
+    - heading "An infrastructure for innovation" [level=3]
+    - paragraph: Stanford’s campus and culture make unexpected connections, well, expected. Explore just a few of the venues where students and faculty mix deep expertise from disparate fields to come up with surprising new answers to important questions.
+    - heading "Education for Engaged Citizenship" [level=2]
+    - paragraph: Stanford prepares students to thrive and lead with principle in a complex society through open inquiry and vigorous debate.
+    - link "Academics Learn more on the academics page.":
+      - /url: /academics
+    - img "Jadon Geathers smiles and looks up at a chalkboard, holding chalk mid-thought while working through a problem in a classroom."
+    - heading "Civic engagement on a lively campus" [level=3]
+    - paragraph: Ideas are born and tested in both quiet reflection and noisy debate. In classrooms, dorms, and third places on campus, Stanford students learn to listen with curiosity, embrace new perspectives, and engage differing views with rigor and respect.
+    - link "Civics at Stanford Visit the page to learn more about civic engagement at Stanford.":
+      - /url: /civics
+    - article:
+      - figure:
+        - img "Students sit around a large table in a seminar course as part of a Stanford Civics Initiative course"
+      - text: News COLLEGE
+      - heading "New undergraduate minor launches in civic thought and practice" [level=4]:
+        - link "New undergraduate minor launches in civic thought and practice":
+          - /url: https://news.stanford.edu/stories/2026/09/new-undergraduate-minor-launches-civic-thought-and-practice
+      - paragraph:
+        - text: "Building on the first-year course COLLEGE 102:"
+        - emphasis: Citizenship in the 21st Century
+        - text: ", the minor is open to students of all majors and encourages discussion of contentious issues facing democratic societies."
+      - text: 5 min read
+      - time: Sep 30, 2026
+    - article:
+      - figure:
+        - img "Students seated around a table listen attentively to one another during a discussion period in class."
+      - text: News Academics
+      - heading "Course helps students put pluralism into practice" [level=4]:
+        - link "Course helps students put pluralism into practice":
+          - /url: https://news.stanford.edu/stories/2025/05/citizenship-21st-century-class
+      - text: 7 min read
+      - time: May 7, 2025
+    - article:
+      - figure:
+        - img "Luke Kemp gestures while presenting at a Stanford University event."
+      - text: News Constructive Dialogue
+      - heading "Why democracy may be our best defense against collapse" [level=4]:
+        - link "Why democracy may be our best defense against collapse":
+          - /url: https://news.stanford.edu/stories/2026/04/luke-kemp-college-speaker-goliaths-curse
+      - text: 6 min read
+      - time: Apr 29, 2026
+    - button "Reveal content below"
+    - blockquote:
+      - paragraph: “Stanford’s culture of inquiry is defined by our shared commitment to pursuing knowledge wherever it leads – by asking questions, testing assumptions, and embracing new understanding.”
+      - text: —Provost Jenny Martinez
+    - heading "Financial aid places a Stanford degree within reach" [level=3]
+    - link "Admissions & aid Learn more about financial aid at Stanford.":
+      - /url: /admissions-aid
+    - figure:
+      - img "Four students sit on a blanket on a sunny lawn, one playing acoustic guitar, with a Stanford sandstone building behind them."
+    - figure:
+      - img "Katelyn and Lorelei Santa Maria having a lively conversation with their friends at a picnic table outdoors, with trees and the Hoover Tower visible in the background."
+    - paragraph: Stanford meets the full financial need of every undergrad who qualifies, providing assistance to more than 70% of admitted students.
+    - blockquote:
+      - paragraph: Tuition is free for undergrads with family incomes under $150,000 and typical assets. Tuition, room, and board are free for undergrads with family incomes under $100,000.
+    - article:
+      - heading "Easing the transition to college" [level=4]:
+        - link "Easing the transition to college":
+          - /url: https://summerbridge.stanford.edu/
+      - paragraph: The Summer Bridge Program gives incoming undergraduate and transfer students the tools and confidence they need to succeed at Stanford through academic preparation, community building, and enhanced advising support.
+    - article:
+      - heading "Holistic support for first-gen and low-income students" [level=4]:
+        - link "Holistic support for first-gen and low-income students":
+          - /url: https://flissc.stanford.edu/
+      - paragraph: Stanford’s First-Generation and/or Low-Income Student Success Center offers funding, mentorship, and more to help students thrive over the course of the undergraduate experience.
+    - heading "Home of Champions" [level=2]
+    - paragraph: Stanford’s athletics program is the most dominant in college sports. Our 36 varsity teams have won an unmatched 139 NCAA titles, and at least one in each of the past 50 years.
+    - link "Stanford Athletics Learn more about being a student-athlete at Stanford.":
+      - /url: /athletics
+    - img "Virginia Miller prepares to throw a javelin on a sunny outdoor track."
+    - heading "Nerd Nation" [level=3]
+    - paragraph: On the Farm, student-athletes pursue rigorous academics and elite competition, supported by resources to help them thrive. They have included 655 individual national champions and 400 Academic All-Americans.
+    - figure:
+      - img "Coach Tara VanDerveer, wearing a jacket with tally marks on it, poses for a selfie with a group of Stanford women's basketball players"
+    - figure:
+      - img "Stanford students cheering at a Cardinal football game."
+    - figure:
+      - img "Hal Nystrom, '77, carrying a trombone and waving at the crowd as he marches with students in the Leland Stanford Junior University Marching Band on the way the to the stadium."
+    - list:
+      - listitem:
+        - article:
+          - figure:
+            - img "Students cover their ears beside a loud train whistle during a countdown event celebrating an annual football rivalry tradition."
+          - text: News Athletics
+          - heading "Here’s a breakdown of Big Game Week 2026" [level=4]:
+            - link "Here’s a breakdown of Big Game Week 2026":
+              - /url: https://news.stanford.edu/stories/2026/11/big-game-week-2026
+          - text: 1 min read
+          - time: Nov 11, 2026
+      - listitem:
+        - article:
+          - figure:
+            - img "Smiling Stanford football player Braden Marceau-Olayinka, wearing No. 75, gestures on the field after a game as teammates celebrate behind him."
+          - text: News Athletics
+          - heading "Braden Marceau-Olayinka finds joy in giving back" [level=4]:
+            - link "Braden Marceau-Olayinka finds joy in giving back":
+              - /url: https://news.stanford.edu/stories/2026/10/braden-marceau-olayinka-football-service
+          - text: 5 min read
+          - time: Oct 20, 2026
+      - listitem:
+        - article:
+          - figure:
+            - img "A Cardinal volleyball player leaps to hit the ball over the net as two opposing blockers reach up with their arms."
+          - text: News Athletics
+          - heading "9 Cardinal athletes to watch this fall" [level=4]:
+            - link "9 Cardinal athletes to watch this fall":
+              - /url: https://news.stanford.edu/stories/2026/10/fall-athletes-to-watch
+          - text: 3 min read
+          - time: Oct 8, 2026
+      - listitem:
+        - article:
+          - figure
+          - text: News Institutional News
+          - heading "Dan Grunfeld named general manager of men’s basketball" [level=4]:
+            - link "Dan Grunfeld named general manager of men’s basketball":
+              - /url: https://news.stanford.edu/stories/2026/10/dan-grunfeld-named-general-manager-of-men-s-basketball
+          - text: 3 min read
+          - time: Oct 2, 2026
+    - button "Reveal content below"
+    - status
+    - region "video player"
+    - button "closed captions"
+    - button "play"
+  - contentinfo:
+    - link "Stanford University":
+      - /url: /
+    - navigation "Overview":
+      - heading "Overview" [level=2]
+      - list:
+        - listitem:
+          - link "Home":
+            - /url: /
+        - listitem:
+          - link "About Stanford":
+            - /url: /about
+        - listitem:
+          - link "Academics":
+            - /url: /academics
+        - listitem:
+          - link "Research":
+            - /url: /research
+        - listitem:
+          - link "Health & Medicine":
+            - /url: /health-medicine
+        - listitem:
+          - link "Athletics":
+            - /url: /athletics
+        - listitem:
+          - link "Admissions & Aid":
+            - /url: /admissions-aid
+        - listitem:
+          - link "Life on the Farm":
+            - /url: /life
+    - navigation "Action":
+      - heading "Action" [level=2]
+      - list:
+        - listitem:
+          - link "Apply":
+            - /url: https://admission.stanford.edu
+        - listitem:
+          - link "Visit":
+            - /url: /life/visit
+        - listitem:
+          - link "Give":
+            - /url: https://giving.stanford.edu
+        - listitem:
+          - link "Reconnect":
+            - /url: https://alumni.stanford.edu
+    - navigation "Follow Us":
+      - heading "Follow Us" [level=2]
+      - list:
+        - listitem:
+          - link "Newsletter":
+            - /url: https://news.stanford.edu/subscribe
+        - listitem:
+          - link "YouTube":
+            - /url: https://www.youtube.com/stanford
+        - listitem:
+          - link "Instagram":
+            - /url: https://www.instagram.com/stanford/
+        - listitem:
+          - link "Facebook":
+            - /url: https://www.facebook.com/Stanford/
+        - listitem:
+          - link "X/Twitter":
+            - /url: https://x.com/Stanford
+        - listitem:
+          - link "LinkedIn":
+            - /url: https://www.linkedin.com/school/stanford-university/
+        - listitem:
+          - link "Apple Podcasts":
+            - /url: https://podcasts.apple.com/us/artist/stanford/1280771285
+    - navigation "The 7 Schools":
+      - heading "The 7 Schools" [level=2]
+      - list:
+        - listitem:
+          - link "Business":
+            - /url: https://gsb.stanford.edu
+        - listitem:
+          - link "Education":
+            - /url: https://ed.stanford.edu
+        - listitem:
+          - link "Engineering":
+            - /url: https://engineering.stanford.edu
+        - listitem:
+          - link "Humanities & Sciences":
+            - /url: https://humsci.stanford.edu
+        - listitem:
+          - link "Law":
+            - /url: https://law.stanford.edu
+        - listitem:
+          - link "Medicine":
+            - /url: https://med.stanford.edu
+        - listitem:
+          - link "Sustainability":
+            - /url: https://sustainability.stanford.edu
+    - navigation "Careers":
+      - heading "Careers" [level=2]
+      - list:
+        - listitem:
+          - link "Work at Stanford":
+            - /url: https://careersearch.stanford.edu
+        - listitem:
+          - link "Faculty Positions":
+            - /url: http://openfacultypositions.stanford.edu/
+        - listitem:
+          - link "Career Education":
+            - /url: https://careered.stanford.edu
+    - navigation "Contact":
+      - heading "Contact" [level=2]
+      - list:
+        - listitem:
+          - link "Contact":
+            - /url: /contact
+        - listitem:
+          - link "Directory":
+            - /url: https://stanfordwho.stanford.edu
+        - listitem:
+          - link "Stanford Profiles":
+            - /url: https://profiles.stanford.edu
+        - listitem:
+          - link "Cookies":
+            - /url: /cookies
+        - listitem:
+          - link "Policies":
+            - /url: /policies
+        - listitem:
+          - link "Accreditation":
+            - /url: https://wasc.stanford.edu/
+    - navigation "Important Stanford links":
+      - list:
+        - listitem:
+          - link "Stanford Home":
+            - /url: /
+        - listitem:
+          - link "Maps & Directions":
+            - /url: https://visit.stanford.edu/basics
+        - listitem:
+          - link "Search Stanford":
+            - /url: /search
+        - listitem:
+          - link "Emergency Info":
+            - /url: https://emergency.stanford.edu
+    - navigation "Stanford legal and policy links":
+      - list:
+        - listitem:
+          - link "Terms of Use":
+            - /url: /terms
+        - listitem:
+          - link "Privacy":
+            - /url: /privacy
+        - listitem:
+          - link "Copyright":
+            - /url: https://uit.stanford.edu/security/copyright-infringement
+        - listitem:
+          - link "Trademarks":
+            - /url: https://adminguide.stanford.edu/chapter-1/subchapter-5/policy-1-5-4
+        - listitem:
+          - link "Non-Discrimination":
+            - /url: https://non-discrimination.stanford.edu/
+        - listitem:
+          - link "Accessibility":
+            - /url: /accessibility
+    - text: © Stanford University. Stanford, California 94305.
+  - alert

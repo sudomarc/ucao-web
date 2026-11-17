@@ -1,0 +1,114 @@
+URL: https://www.nd.edu/
+TITLE: University of Notre Dame
+DOM size: 157277 chars; IMG tags: 38
+
+STRUCTURAL ELEMENTS:
+  nav
+  header
+  nav
+  nav
+  main
+  footer
+  nav
+  nav
+  nav
+  nav
+  nav
+  nav
+  nav
+  nav
+  nav
+  nav
+
+HEADINGS:
+  h1: Health and well-being
+  h2: Where challenge meets hope .
+  h3: Providing second chances
+  h3: Using AI to prevent online abuse
+  h3: Prevent infections
+  h3: Access to clean water
+  h3: Robotic search and rescue
+  h3: Nonverbal communication
+  h2: Addressing pressing challenges
+  h3: Explore Notre Dame’s impact:
+  h2: What makes us distinctive
+  h2: Official Podcast
+  h3: Cold plunges and unicorns
+  h3: A better start for NICU families
+  h3: What happened to the American family?
+  h3: New tech to help stop the spread of bird flu
+  h2: Moments at Notre Dame
+  h3: Fighting for breast cancer patients
+  h3: Transforming spinal surgery in South Bend, Indiana
+  h3: Hometown in Crisis: How opioids devastated a community
+  h3: Alec's Story: How Notre Dame supports rare disease research
+  h3: Fighting for those with cystic fibrosis
+  h2: October's golden glow
+  h2: Common Searches
+  h2: Visiting Campus
+  h2: Popular on Campus
+  h2: Policies &amp; Resources
+
+NAV/CTA LINKS (first 50):
+  #content — Skip To Content
+  #nav-primary — Skip To Navigation
+  #search-input-navbar-footer — Skip To Search
+  / — University of Notre Dame
+  /academics/ — Academics
+  /admissions/ — Admissions
+  /research/ — Research
+  /global/ — Global
+  /faith/ — Faith
+  /community/ — Community
+  /about/ — About
+  / — University of Notre Dame
+  /academics/ — Academics
+  /admissions/ — Admissions
+  /research/ — Research
+  /global/ — Global
+  /faith/ — Faith
+  /community/ — Community
+  /about/ — About
+  https://stories.nd.edu/topics/health/health-and-well-being/ — From preventing certain UTIs to developing mental health interventions, Notre Dame research and scholarship is leading to a healthier society.
+  https://stories.nd.edu/stories/fighting-for-second-chances/ — Providing second chances
+  https://stories.nd.edu/stories/fighting-online-abuse-using-ai — Using AI to prevent online abuse
+  https://stories.nd.edu/stories/fighting-to-prevent-infections/ — Prevent infections
+  https://stories.nd.edu/stories/fighting-for-universal-access-to-clean-water/ — Access to clean water
+  https://stories.nd.edu/stories/fighting-for-robotic-search-and-rescue/ — Robotic search and rescue
+  https://stories.nd.edu/stories/fighting-for-nonverbal-communication/ — Nonverbal communication
+  https://stories.nd.edu/topics/health/ — Health
+  https://stories.nd.edu/topics/global/ — Global
+  https://stories.nd.edu/topics/arts-and-humanities/ — Arts and humanities
+  https://stories.nd.edu/topics/tech/ — Science and technology
+  https://stories.nd.edu/topics/faith-and-service/national-security/ — National security
+  /faith/ — Faith
+  /academics/ — Academics
+  /research/ — Research
+  /global/ — Global
+  /community/ — Community
+  https://stories.nd.edu/podcast/cold-plunges-and-unicorns/ — Cold plunges and unicorns
+  https://stories.nd.edu/podcast/a-better-start-for-nicu-families-notre-dame-leads-the-way-in-neonatal-intensive-care/ — A better start for NICU families
+  https://stories.nd.edu/podcast/what-happened-to-the-traditional-american-family/ — What happened to the American family?
+  https://stories.nd.edu/podcast/new-tech-to-help-stop-the-spread-of-bird-flu/ — New tech to help stop the spread of bird flu
+  https://www.youtube.com/watch?v=npfJyQ33P3g&amp;t=1s — Fighting for breast cancer patients
+  https://www.youtube.com/watch?v=DOAFKWlC898 — Transforming spinal surgery in South Bend, Indiana
+  https://www.youtube.com/watch?v=IcRqz9DQqaM — Hometown in Crisis: How opioids devastated a community
+  https://www.youtube.com/watch?v=JjoqZx_pRvg — Alec's Story: How Notre Dame supports rare disease research
+  https://www.youtube.com/watch?v=1-LMvzNvpEY&amp;t=2s — Fighting for those with cystic fibrosis
+  / — University of Notre Dame
+  tel:5746315000 — (574) 631-5000
+  /about/contact/ — Contact
+  https://www.facebook.com/notredame/ — Facebook
+  https://twitter.com/NotreDame/ — X/Twitter
+
+BUTTONS:
+  Previous
+  Next
+
+STYLESHEETS:
+  https://static.nd.edu/js/weglot/1.0.css
+
+SCRIPTS:
+  /assets/js/lb.js?v=2023-05-17
+  https://static.nd.edu/js/weglot/1.0.js
+  /assets/js/bgvideo.1792662485.js

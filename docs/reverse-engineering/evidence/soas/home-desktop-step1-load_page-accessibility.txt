@@ -1,0 +1,250 @@
+- document:
+  - region "Cookie preferences":
+    - dialog "We use cookies to optimise site functionality and give you the best possible experience.":
+      - heading "We use cookies to optimise site functionality and give you the best possible experience." [level=1]
+      - paragraph
+      - button "I'm fine with this"
+      - button "Settings"
+  - link "Skip to main content":
+    - /url: "#main"
+  - banner:
+    - link "Go to SOAS homepage":
+      - /url: /
+    - heading "Main navigation" [level=2]
+    - navigation "Main site navigation":
+      - list:
+        - listitem:
+          - link "Study":
+            - /url: /study
+        - listitem:
+          - link "About":
+            - /url: /about
+        - listitem:
+          - link "Research":
+            - /url: /research
+        - listitem:
+          - link "International":
+            - /url: /international
+        - listitem:
+          - link "Library":
+            - /url: /soas-library
+    - button "Search website"
+  - main:
+    - 'heading "Postgraduate Open House: 1 December" [level=2]'
+    - paragraph: Step onto our vibrant London campus and experience SOAS for yourself.
+    - link "Find out more":
+      - /url: /about/event/postgraduate-open-house
+    - heading "Welcome to SOAS" [level=1]
+    - heading "Our courses" [level=2]
+    - text: Course search
+    - searchbox "Course search"
+    - button "Search"
+    - link "Undergraduate":
+      - /url: /undergraduate-courses
+    - link "Postgraduate taught":
+      - /url: /postgraduate-taught-courses
+    - region "Why choose SOAS?":
+      - heading "Why choose SOAS?" [level=2]
+      - heading "Shortlisted for University of the Year" [level=3]
+      - paragraph: Times Higher Education Awards 2026
+      - heading "5 subjects in global top 40" [level=3]
+      - paragraph: Development (2nd), Politics (16th), Anthropology (19th), History of Art (24th), History (36th) – QS World University Rankings by Subject 2026
+      - heading "Joint 1st in the UK for International Faculty" [level=3]
+      - paragraph: QS World University Rankings 2027
+    - region:
+      - img "student is reading a book"
+      - heading "SOAS shortlisted for University of the Year" [level=2]
+      - text: The Times Higher Education Awards 2026 recognise SOAS’s unique contribution to the higher education sector.
+      - link "Discover more":
+        - /url: /about/news/soas-shortlisted-university-year-times-higher-education-awards
+    - region "Life at SOAS":
+      - region:
+        - heading "Life at SOAS" [level=2]
+        - link "See more":
+          - /url: /study/student-life
+        - list:
+          - listitem:
+            - iframe
+          - listitem:
+            - iframe
+          - listitem:
+            - iframe
+    - region "Student life":
+      - heading "Student life" [level=2]
+      - paragraph: Explore student life at SOAS and find out what students have to say about the student experience, campus life, and living in London.
+      - link "Explore":
+        - /url: /study/student-life
+    - region "What's on":
+      - heading "What's on" [level=2]
+      - link "All events":
+        - /url: /about/whats-on
+      - article:
+        - 'link "Event date 17 November 2026 Documentary screening and director Q&A: ''SPI'' Documentary screeing of ''SPI'' (2025), followed by a director Q&A, exploring family relationships, intergenerational tensions, and the preservation of Indigenous Tayal cultural traditions in contemporary Taiwan."':
+          - /url: /about/event/documentary-screening-and-director-qa-spi
+          - text: Event date 17 November 2026
+          - 'heading "Documentary screening and director Q&A: ''SPI''" [level=3]'
+          - paragraph: Documentary screeing of 'SPI' (2025), followed by a director Q&A, exploring family relationships, intergenerational tensions, and the preservation of Indigenous Tayal cultural traditions in contemporary Taiwan.
+      - article:
+        - link "Group of musicians playing thai instruments Event date 18 November 2026 An evening of Thai classical music in memory of David W. Hughes This concert presents traditional Thai music performed by a distinguished ensemble of renowned professional musicians from Thailand, SOAS alumni, and members of the Thai Music Circle in the UK.":
+          - /url: /about/event/evening-thai-classical-music-memory-david-w-hughes
+          - img "Group of musicians playing thai instruments"
+          - text: Event date 18 November 2026
+          - heading "An evening of Thai classical music in memory of David W. Hughes" [level=3]
+          - paragraph: This concert presents traditional Thai music performed by a distinguished ensemble of renowned professional musicians from Thailand, SOAS alumni, and members of the Thai Music Circle in the UK.
+      - article:
+        - 'link "Discover the African influences in Venezuelan Christmas music through a singing and percussion workshop, live bands, DJs and traditional food at SOAS Student Bar to help children affected by the earthquakes in Venezuela return to school. Event date 21 November 2026 to 21 November 2026 Pa’lante Venezuela: discover Afro-Venezuelan Christmas through workshop, music and dance Discover the African influences in Venezuelan Christmas music through a singing and percussion workshop, live bands, DJs and traditional food at SOAS Student Bar to help children affected by the earthquakes in Venezuela return to school."':
+          - /url: /about/event/palante-venezuela-discover-afro-venezuelan-christmas-through-workshop-music-and-dance
+          - img "Discover the African influences in Venezuelan Christmas music through a singing and percussion workshop, live bands, DJs and traditional food at SOAS Student Bar to help children affected by the earthquakes in Venezuela return to school."
+          - text: Event date 21 November 2026 to 21 November 2026
+          - 'heading "Pa’lante Venezuela: discover Afro-Venezuelan Christmas through workshop, music and dance" [level=3]'
+          - paragraph: Discover the African influences in Venezuelan Christmas music through a singing and percussion workshop, live bands, DJs and traditional food at SOAS Student Bar to help children affected by the earthquakes in Venezuela return to school.
+      - article:
+        - 'link "Event date 25 November 2026 Inaugural Lecture Series: Professors Matthew Nelson and Rochana Bajpai Professors Matthew Nelson and Rochana Bajpai will be presenting their inaugural lectures."':
+          - /url: /about/event/inaugural-lecture-series-professors-matthew-nelson-and-rochana-bajpai
+          - text: Event date 25 November 2026
+          - 'heading "Inaugural Lecture Series: Professors Matthew Nelson and Rochana Bajpai" [level=3]'
+          - paragraph: Professors Matthew Nelson and Rochana Bajpai will be presenting their inaugural lectures.
+    - region "SOAS spotlight":
+      - heading "SOAS spotlight" [level=2]
+      - article:
+        - link "College of Humanities, Department of Philosophy & School of History, Religions and Philosophies AI begins and thrives with the humanities The key to understanding AI's place in human society is the humanities, whose scholars have been studying the human-nonhuman relationship for centuries, argues Dr Elvis Imafidon.":
+          - /url: /about/blogs/ai-begins-and-thrives-humanities
+          - text: College of Humanities, Department of Philosophy & School of History, Religions and Philosophies
+          - heading "AI begins and thrives with the humanities" [level=3]
+          - paragraph: The key to understanding AI's place in human society is the humanities, whose scholars have been studying the human-nonhuman relationship for centuries, argues Dr Elvis Imafidon.
+      - article:
+        - 'link "Department of Economics, Department of Politics and International Studies, College of Social Sciences & Department of Philosophy “The degree that runs Britain”: Why I chose PPE and my experience so far BSc Politics, Philosophy and Economics (PPE) student Siddhant Pawar reflects on why they chose to study the combined subject at SOAS and how it’s helped them understand what drives the decisions societies make."':
+          - /url: /about/blogs/degree-runs-britain-why-i-chose-ppe-and-my-experience-so-far
+          - text: Department of Economics, Department of Politics and International Studies, College of Social Sciences & Department of Philosophy
+          - 'heading "“The degree that runs Britain”: Why I chose PPE and my experience so far" [level=3]'
+          - paragraph: BSc Politics, Philosophy and Economics (PPE) student Siddhant Pawar reflects on why they chose to study the combined subject at SOAS and how it’s helped them understand what drives the decisions societies make.
+    - region "SOAS blogs":
+      - heading "SOAS blogs" [level=2]
+      - link "More blogs":
+        - /url: /about/blogs
+      - article:
+        - link "College of Humanities, College of Law & College of Social Sciences Starting uni? Here’s what nobody tells you (and where to find help) The SOAS Student Advice and Wellbeing team are here to offer some tips on how to settle into university life and get the support you need.":
+          - /url: /about/blogs/starting-uni-heres-what-nobody-tells-you-and-where-find-help
+          - text: College of Humanities, College of Law & College of Social Sciences
+          - heading "Starting uni? Here’s what nobody tells you (and where to find help)" [level=3]
+          - paragraph: The SOAS Student Advice and Wellbeing team are here to offer some tips on how to settle into university life and get the support you need.
+      - article:
+        - link "College of Humanities, College of Law & College of Social Sciences Where SOAS graduates are taking their careers after university We asked the Class of 2026 to share what their next career steps are and how their time at SOAS shaped them.":
+          - /url: /about/blogs/where-soas-graduates-are-taking-their-careers-after-university
+          - text: College of Humanities, College of Law & College of Social Sciences
+          - heading "Where SOAS graduates are taking their careers after university" [level=3]
+          - paragraph: We asked the Class of 2026 to share what their next career steps are and how their time at SOAS shaped them.
+      - article:
+        - 'link "College of Humanities, College of Law, College of Social Sciences & Foundation College Finding your place at SOAS: Hannah’s first-year story After studying at two other universities and taking time away, Hannah started at SOAS feeling behind, but support gradually helped her feel like she belonged."':
+          - /url: /about/blogs/finding-your-place-soas-hannahs-first-year-story
+          - text: College of Humanities, College of Law, College of Social Sciences & Foundation College
+          - 'heading "Finding your place at SOAS: Hannah’s first-year story" [level=3]'
+          - paragraph: After studying at two other universities and taking time away, Hannah started at SOAS feeling behind, but support gradually helped her feel like she belonged.
+    - region "Latest news":
+      - heading "Latest news" [level=2]
+      - link "All news":
+        - /url: /about/news
+      - article:
+        - 'link "11 November 2026 | Department: School of Languages, Cultures and Linguistics, College of Humanities & Department of Linguistics The latest SOAS Working Papers in Linguistics offers a platform for new voices Graduate students, faculty, alumni and research associates in the Department of Linguistics share their research in the newly published edition of SOAS Working Papers in Linguistics."':
+          - /url: /about/news/latest-soas-working-papers-linguistics-offers-platform-new-voices
+          - time: 11 November 2026
+          - text: "|"
+          - paragraph: "Department:"
+          - text: School of Languages, Cultures and Linguistics, College of Humanities & Department of Linguistics
+          - heading "The latest SOAS Working Papers in Linguistics offers a platform for new voices" [level=3]
+          - paragraph: Graduate students, faculty, alumni and research associates in the Department of Linguistics share their research in the newly published edition of SOAS Working Papers in Linguistics.
+      - article:
+        - 'link "4 November 2026 | Department: Department of Development Studies Major European Commission grant awarded for research on international landmine detection Dr Sarah Njeri, Reader in Peacebuilding, Humanitarianism and Conflict Studies at SOAS, has been awarded a €1,4 million grant from Horizon Europe as part of a research consortium to enhance the efficiency, coordination, and impact of landmine action. Horizon Europe is administered by the European Research Executive Agency."':
+          - /url: /about/news/major-european-commission-grant-awarded-research-international-landmine-detection
+          - time: 4 November 2026
+          - text: "|"
+          - paragraph: "Department:"
+          - text: Department of Development Studies
+          - heading "Major European Commission grant awarded for research on international landmine detection" [level=3]
+          - paragraph: Dr Sarah Njeri, Reader in Peacebuilding, Humanitarianism and Conflict Studies at SOAS, has been awarded a €1,4 million grant from Horizon Europe as part of a research consortium to enhance the efficiency, coordination, and impact of landmine action. Horizon Europe is administered by the European Research Executive Agency.
+      - article:
+        - 'link "22 October 2026 | Department: Department of Politics and International Studies “Multilateralism is at the very heart of protecting our planet”: UN’s Inger Andersen at SOAS Inger Andersen, Under-Secretary-General of the United Nations and Executive Director of the United Nations Environment Programme, warned the next five years are crucial to limiting the scale and duration of global warming, speaking at a SOAS event this week."':
+          - /url: /about/news/multilateralism-very-heart-protecting-our-planet-uns-inger-andersen-soas
+          - time: 22 October 2026
+          - text: "|"
+          - paragraph: "Department:"
+          - text: Department of Politics and International Studies
+          - 'heading "“Multilateralism is at the very heart of protecting our planet”: UN’s Inger Andersen at SOAS" [level=3]'
+          - paragraph: Inger Andersen, Under-Secretary-General of the United Nations and Executive Director of the United Nations Environment Programme, warned the next five years are crucial to limiting the scale and duration of global warming, speaking at a SOAS event this week.
+      - article:
+        - 'link "22 October 2026 | Department: SOAS-Alphawood Asian Art Programme Art historian appointed advisor to Cambodian government national culture committee Dr Peter D. Sharrock, an expert on the ancient history of the Khmer Empire, has been officially appointed an advisor to Cambodia''s new National Committee for Khmer Culture, History, and Civilization."':
+          - /url: /about/news/art-historian-appointed-advisor-cambodian-government-national-culture-committee
+          - time: 22 October 2026
+          - text: "|"
+          - paragraph: "Department:"
+          - text: SOAS-Alphawood Asian Art Programme
+          - heading "Art historian appointed advisor to Cambodian government national culture committee" [level=3]
+          - paragraph: Dr Peter D. Sharrock, an expert on the ancient history of the Khmer Empire, has been officially appointed an advisor to Cambodia's new National Committee for Khmer Culture, History, and Civilization.
+  - contentinfo:
+    - img
+    - text: SOAS University of London 10 Thornhaugh Street, Russell Square, London WC1H 0XG
+    - paragraph:
+      - text: "Switchboard:"
+      - link "+44 (0)20 7637 2388":
+        - /url: tel:+44(0)2076372388
+    - paragraph:
+      - text: "Study Enquiries:"
+      - link "+44 (0)20 3510 6974":
+        - /url: tel:+44(0)2035106974
+    - text: © SOAS University of London (School of Oriental and African Studies) 2022. All rights reserved.
+    - navigation "Quick links":
+      - heading "Quick links" [level=2]
+      - list:
+        - listitem:
+          - link "Accessibility":
+            - /url: /accessibility-statement
+        - listitem:
+          - link "Freedom of information":
+            - /url: /about/governance/information-compliance/freedom-information
+        - listitem:
+          - link "Cookies and privacy":
+            - /url: /privacy-policy-relating-soas-website
+        - listitem:
+          - link "Modern slavery statement":
+            - /url: /modern-slavery-statement
+        - listitem:
+          - link "Jobs at SOAS":
+            - /url: /about/jobs-soas
+    - navigation "Contact":
+      - heading "Contact" [level=2]
+      - list:
+        - listitem:
+          - link "MySOAS (Staff)":
+            - /url: https://mysoas.sharepoint.com/sites/StaffHome
+        - listitem:
+          - link "MySOAS (Student)":
+            - /url: https://mysoas.sharepoint.com/sites/StudentHome
+        - listitem:
+          - link "Contact SOAS":
+            - /url: /contacts
+    - list:
+      - listitem:
+        - link "Instagram":
+          - /url: https://www.instagram.com/soasuni/
+      - listitem:
+        - link "YouTube":
+          - /url: https://www.youtube.com/user/soasuniversity
+      - listitem:
+        - link "LinkedIn":
+          - /url: https://www.linkedin.com/edu/school?id=12641&trk=edu-cp-title
+      - listitem:
+        - link "Facebook":
+          - /url: https://www.facebook.com/soasunioflondon
+      - listitem:
+        - link "Bluesky":
+          - /url: https://bsky.app/profile/soasuni.bsky.social
+      - listitem:
+        - link "Weibo":
+          - /url: https://www.weibo.com/SOASLondon
+      - listitem:
+        - link "Soundcloud":
+          - /url: https://soundcloud.com/soas-university-of-london
+    - link "This website is proudly built & maintained by Numiko":
+      - /url: https://numiko.com/
+      - paragraph: This website is proudly built & maintained by Numiko
+  - button "Channel Menu"

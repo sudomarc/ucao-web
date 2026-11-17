@@ -1,0 +1,409 @@
+- document:
+  - banner:
+    - link "Skip Main Navigation":
+      - /url: "#page_content"
+    - alert "Our website uses cookies to ensure you get the best experience on our website. View our Cookie Policy to learn more.":
+      - paragraph:
+        - text: Our website uses cookies to ensure you get the best experience on our website. View our
+        - link "Cookie Policy":
+          - /url: "#"
+        - text: to learn more.
+      - button "Accept"
+    - figure
+    - button "Play animation"
+    - heading "VCUarts" [level=1]:
+      - link "VCUarts":
+        - /url: https://arts.vcu.edu
+        - text: VCUarts
+        - img
+    - button "Departments"
+    - button "Resources for"
+    - button "Menu"
+    - paragraph: Creativity meets opportunity at VCUarts. Discover how our nationally ranked programs can take you places you haven't imagined yet.
+    - link "Apply Today":
+      - /url: http://arts.vcu.edu/admissions/application-process
+    - link "Request Info":
+      - /url: https://arts.vcu.edu/admissions/request-information/
+    - link "Visit":
+      - /url: https://arts.vcu.edu/admissions/visit-vcuarts/
+  - main:
+    - heading "News & Events" [level=2]
+    - list "News & Events":
+      - listitem:
+        - paragraph:
+          - link "The CoStar Center for Arts and Innovation ushers in a new era for VCUarts and Richmond":
+            - /url: https://arts.vcu.edu/costar-center-for-arts-and-innovation/
+        - figure:
+          - link "The CoStar Center for Arts and Innovation ushers in a new era for VCUarts and Richmond":
+            - /url: https://arts.vcu.edu/costar-center-for-arts-and-innovation/
+            - img "Construction photo of VCU's CoStar Center for Arts and Innovation building"
+      - listitem:
+        - paragraph:
+          - link "VCUarts ranked No. 1 Best Public Fine Arts Program, No. 2 overall":
+            - /url: https://arts.vcu.edu/news/vcuarts-ranked-no-2-best-fine-arts-program/
+        - figure:
+          - link "VCUarts ranked No. 1 Best Public Fine Arts Program, No. 2 overall":
+            - /url: https://arts.vcu.edu/news/vcuarts-ranked-no-2-best-fine-arts-program/
+      - listitem:
+        - paragraph:
+          - link "VCUarts places 3 artists in the National Academy of Design’s 2026 class":
+            - /url: https://arts.vcu.edu/news/vcuarts-places-3-artists-in-the-national-academy-of-designs-2026-class/
+        - figure:
+          - link "VCUarts places 3 artists in the National Academy of Design’s 2026 class":
+            - /url: https://arts.vcu.edu/news/vcuarts-places-3-artists-in-the-national-academy-of-designs-2026-class/
+    - paragraph:
+      - link "News & Events":
+        - /url: http://arts.vcu.edu/news-events/
+    - paragraph: With 16 diverse academic programs, you will discover emerging and traditional mediums.
+    - link "Academics":
+      - /url: http://arts.vcu.edu/academics/
+    - paragraph: You'll collaborate with exceptional faculty and students from across the world.
+    - link "Our Community":
+      - /url: http://arts.vcu.edu/community-campus/
+    - paragraph: You will take risks and push creative boundaries to create innovative work.
+    - link "The Work":
+      - /url: https://arts.vcu.edu/the-work/
+    - paragraph: And you'll graduate with a nationally recognized degree in the arts ready to make the world better.
+    - link "Get to know VCUarts":
+      - /url: https://arts.vcu.edu/about/
+    - heading "Explore Our Majors" [level=2]
+    - list "Explore Our Majors":
+      - listitem:
+        - heading "Art Education" [level=3]:
+          - button "Art Education"
+        - figure:
+          - img "Friday night art workshop with local 8th-10th grade students, taught by two VCUarts Art Education student instructors."
+      - listitem:
+        - heading "Art History" [level=3]:
+          - button "Art History"
+        - figure:
+          - img "Art History MFA students Liz Chung and Jenah Creecy cateloging a Raymond Meeks acquisition in the Virginia Museum of Fine Arts Library."
+      - listitem:
+        - heading "Cinema" [level=3]:
+          - button "Cinema"
+        - figure:
+          - img "Cinema student holding video camera on set"
+      - listitem:
+        - heading "Communication Arts" [level=3]:
+          - button "Communication Arts"
+        - figure:
+          - img "Students selling their works at the Communication Arts Senior Expo"
+      - listitem:
+        - heading "Craft and Material Studies" [level=3]:
+          - button "Craft and Material Studies"
+        - figure:
+          - img "student blowing glass in glass hot shop"
+      - listitem:
+        - heading "Dance and Choreography" [level=3]:
+          - button "Dance and Choreography"
+        - figure:
+          - img "student dance performance"
+      - listitem:
+        - heading "Fashion Design and Merchandising" [level=3]:
+          - button "Fashion Design and Merchandising"
+        - figure:
+          - img "fashion student working on outfit in the classroom"
+      - listitem:
+        - heading "Graphic Design" [level=3]:
+          - button "Graphic Design"
+        - figure:
+          - img "graphic design student working on laptop designing a colorful mural"
+      - listitem:
+        - heading "Interior Design" [level=3]:
+          - button "Interior Design"
+        - figure:
+          - img "Brooding image of a model of a rainforest-based cultural center"
+      - listitem:
+        - heading "Kinetic Imaging" [level=3]:
+          - button "Kinetic Imaging"
+        - figure:
+          - img "kinetic imaging professor assisting student"
+      - listitem:
+        - heading "Music" [level=3]:
+          - button "Music"
+        - figure
+      - listitem:
+        - heading "Painting and Printmaking" [level=3]:
+          - button "Painting and Printmaking"
+        - figure:
+          - img "Kyle working on a collage exercise for Painting From Observation, taught by Professor Kevin Bacon"
+      - listitem:
+        - heading "Photography and Film" [level=3]:
+          - button "Photography and Film"
+        - figure:
+          - img "A young woman illuminated in blue light is seated in a photo studio, posing for a photograph."
+      - listitem:
+        - heading "Sculpture and Extended Media" [level=3]:
+          - button "Sculpture and Extended Media"
+        - figure
+      - listitem:
+        - heading "Theatre" [level=3]:
+          - button "Theatre"
+        - figure:
+          - img "An actor on stage for Anon(ymous), dress Rehearsal in the W.E. Singleton Center for the Performing ArtsCenter."
+    - heading "The Art Foundation Program Building a strong first-year experience" [level=3]
+    - paragraph: The Art Foundation Program (known as AFO) is a one-year immersive program for all visual arts and design majors. This intellectually rigorous, studio-based experience gives you a comprehensive grounding in the fundamental issues of art and design. New materials, strategies and ideas will challenge you while expanding your skills and helping you set your direction at VCUarts.
+    - link "Learn About AFO":
+      - /url: http://arts.vcu.edu/art-foundation-program/
+    - heading "Creative Research" [level=2]
+    - heading "VCUarts breaks down the walls of rigid arts practices and education." [level=3]
+    - text: Here, you will blend traditionally isolated practices and explore the innovative possibilities of purposeful experimentation and creativity to confront real-world challenges through interdisciplinary arts research. Explore the extraordinary stories and work defining our student and faculty research and creative practice.
+    - link "Arts Research Center":
+      - /url: http://arts.vcu.edu/research-work/arts-research-center/
+    - list "Creative Research":
+      - listitem:
+        - figure
+        - heading "Closing at 2" [level=4]
+        - paragraph:
+          - text: Meet Rachel Farzan (B.F.A ’25) , a Communication Arts student recipient of the
+          - link "VCUarts Undergraduate Research Grant":
+            - /url: https://arts.vcu.edu/academics/student-grant-programs/undergraduate-research-grant/
+          - text: . Rachel created her game
+          - link "Closing at 2":
+            - /url: https://natsrey.itch.io/closing-at-2
+            - emphasis: Closing at 2
+          - text: alongside three of her peers, Natalie Reyes, Olivia McCabe, and Cameron Krainock, for her Intro to Game Dev class in 2023. With the support of Professor Jason Bennett, they were accepted to showcase their game at MAGFest (Music and and Gaming Festival) earlier this year.
+        - paragraph
+        - link "Closing at 2":
+          - /url: https://arts.vcu.edu/the-work/closing-at-2/
+          - text: Explore Story
+      - listitem:
+        - figure
+        - button "Floating"
+      - listitem:
+        - figure
+        - button "Magnaforma"
+    - heading "News & Events" [level=2]
+    - figure:
+      - link "Read more about VCUarts ties for No. 1 public fine arts graduate program in the nation, No. 2 overall":
+        - /url: https://arts.vcu.edu/news/vcuarts-ranked-no-2-best-fine-arts-program/
+    - heading "VCUarts ties for No. 1 public fine arts graduate program in the nation, No. 2 overall" [level=2]:
+      - link "VCUarts ties for No. 1 public fine arts graduate program in the nation, No. 2 overall":
+        - /url: https://arts.vcu.edu/news/vcuarts-ranked-no-2-best-fine-arts-program/
+    - list "Categories":
+      - listitem:
+        - link "Campus":
+          - /url: https://arts.vcu.edu/events/?category[]=campus
+    - figure:
+      - link "Read more about VCU Choirs Fall Concert":
+        - /url: https://arts.vcu.edu/event/vcu-choirs-fall-concert-2/
+    - text: Nov 17
+    - heading "VCU Choirs Fall Concert" [level=2]:
+      - link "VCU Choirs Fall Concert":
+        - /url: https://arts.vcu.edu/event/vcu-choirs-fall-concert-2/
+    - list "Categories":
+      - listitem:
+        - link "Community":
+          - /url: https://arts.vcu.edu/news/?category[]=community
+        - text: ","
+      - listitem:
+        - link "Concert":
+          - /url: https://arts.vcu.edu/news/?category[]=concert
+        - text: ","
+      - listitem:
+        - link "Performances":
+          - /url: https://arts.vcu.edu/news/?category[]=performances
+        - text: ","
+      - listitem:
+        - link "Visiting Artist(s)":
+          - /url: https://arts.vcu.edu/news/?category[]=visiting-artists
+    - time: Nov 17, 2026 @ 7:00 PM - 9:00 PM
+    - figure:
+      - link "Read more about 2026 Fine Arts Pop-Up Sale":
+        - /url: https://arts.vcu.edu/event/2026-fine-arts-pop-up-sale/
+        - img "A flyer with illustrations of a close-up view of two people talking, saying,\" \"Reality is construct. Let's go shopping\" and text reading, \" VCU Fine Arts Department Pop-Up Sale\""
+    - text: Nov 18 Nov 20
+    - heading "2026 Fine Arts Pop-Up Sale" [level=2]:
+      - link "2026 Fine Arts Pop-Up Sale":
+        - /url: https://arts.vcu.edu/event/2026-fine-arts-pop-up-sale/
+    - list "Categories":
+      - listitem:
+        - link "Community":
+          - /url: https://arts.vcu.edu/news/?category[]=community
+        - text: ","
+      - listitem:
+        - link "Exhibition":
+          - /url: https://arts.vcu.edu/news/?category[]=exhibition
+    - time: Nov 18, 2026 - Nov 20, 2026 @ 12:00 PM - 4:00 PM
+    - link "View All Events":
+      - /url: https://arts.vcu.edu/events/
+    - figure:
+      - link "Read more about VCUarts places 3 artists in the National Academy of Design’s 2026 class":
+        - /url: https://arts.vcu.edu/news/vcuarts-places-3-artists-in-the-national-academy-of-designs-2026-class/
+    - heading "VCUarts places 3 artists in the National Academy of Design's 2026 class" [level=2]:
+      - link "VCUarts places 3 artists in the National Academy of Design's 2026 class":
+        - /url: https://arts.vcu.edu/news/vcuarts-places-3-artists-in-the-national-academy-of-designs-2026-class/
+    - list "Categories":
+      - listitem:
+        - link "Alumni":
+          - /url: https://arts.vcu.edu/news/?category[]=alumni
+        - text: ","
+      - listitem:
+        - link "Research":
+          - /url: https://arts.vcu.edu/news/?category[]=research
+    - figure:
+      - link "Read more about VCUarts Dean Carmenita Higginbotham to step down at end of academic year":
+        - /url: https://arts.vcu.edu/news/vcuarts-dean-carmenita-higginbotham-to-step-down-at-end-of-academic-year/
+        - img "Portrait of Carmenita Higginbotham"
+    - heading "VCUarts Dean Carmenita Higginbotham to step down at end of academic year" [level=2]:
+      - link "VCUarts Dean Carmenita Higginbotham to step down at end of academic year":
+        - /url: https://arts.vcu.edu/news/vcuarts-dean-carmenita-higginbotham-to-step-down-at-end-of-academic-year/
+    - list "Categories":
+      - listitem:
+        - link "Campus":
+          - /url: https://arts.vcu.edu/news/?category[]=campus
+    - figure:
+      - link "Read more about Dance alum Eleanor Smith uses movement to explore gender norms—work that has now earned her a Guggenheim Fellowship":
+        - /url: https://arts.vcu.edu/news/dance-alum-eleanor-smith-uses-movement-to-explore-gender-norms-work-that-has-now-earned-her-a-guggenheim-fellowship/
+    - heading "Dance alum Eleanor Smith uses movement to explore gender norms—work that has now earned her a Guggenheim Fellowship" [level=2]:
+      - link "Dance alum Eleanor Smith uses movement to explore gender norms—work that has now earned her a Guggenheim Fellowship":
+        - /url: https://arts.vcu.edu/news/dance-alum-eleanor-smith-uses-movement-to-explore-gender-norms-work-that-has-now-earned-her-a-guggenheim-fellowship/
+    - list "Categories":
+      - listitem:
+        - link "Alumni":
+          - /url: https://arts.vcu.edu/news/?category[]=alumni
+        - text: ","
+      - listitem:
+        - link "Research":
+          - /url: https://arts.vcu.edu/news/?category[]=research
+    - figure:
+      - 'link "Read more about Through the lens, toward the truth: Ashley Davis finds their voice in documentary film"':
+        - /url: https://arts.vcu.edu/news/through-the-lens-toward-the-truth/
+        - img "Ashley Davis"
+    - 'heading "Through the lens, toward the truth: Ashley Davis finds their voice in documentary film" [level=2]':
+      - 'link "Through the lens, toward the truth: Ashley Davis finds their voice in documentary film"':
+        - /url: https://arts.vcu.edu/news/through-the-lens-toward-the-truth/
+    - list "Categories":
+      - listitem:
+        - link "Experience":
+          - /url: https://arts.vcu.edu/news/?category[]=experience
+        - text: ","
+      - listitem:
+        - link "Student":
+          - /url: https://arts.vcu.edu/news/?category[]=student
+    - figure:
+      - link "Read more about Sheryl Oring spent two decades capturing Americans’ hopes and fears. Now she’s helping VCUarts students embrace their voice.":
+        - /url: https://arts.vcu.edu/news/vcuarts-welcomes-sheryl-oring-as-new-chair-of-fine-arts/
+        - img "Headshot of Sheryl Oring"
+    - heading "Sheryl Oring spent two decades capturing Americans’ hopes and fears. Now she’s helping VCUarts students embrace their voice." [level=2]:
+      - link "Sheryl Oring spent two decades capturing Americans’ hopes and fears. Now she’s helping VCUarts students embrace their voice.":
+        - /url: https://arts.vcu.edu/news/vcuarts-welcomes-sheryl-oring-as-new-chair-of-fine-arts/
+    - list "Categories":
+      - listitem:
+        - link "Faculty":
+          - /url: https://arts.vcu.edu/news/?category[]=faculty
+        - text: ","
+      - listitem:
+        - link "Research":
+          - /url: https://arts.vcu.edu/news/?category[]=research
+    - link "View All News":
+      - /url: https://arts.vcu.edu/news/
+  - contentinfo:
+    - link "VCUarts":
+      - /url: https://arts.vcu.edu
+      - text: VCUarts
+      - img
+    - heading "Follow VCUarts" [level=2]
+    - list "Follow VCUarts":
+      - listitem:
+        - link "Instagram":
+          - /url: https://instagram.com/vcuarts/
+          - img
+          - text: Instagram
+      - listitem:
+        - link "Threads":
+          - /url: https://threads.com/@vcuarts/
+          - img
+          - text: Threads
+      - listitem:
+        - link "YouTube":
+          - /url: https://youtube.com/user/VCUarts
+          - img
+          - text: YouTube
+      - listitem:
+        - link "Facebook":
+          - /url: https://facebook.com/profile.php?id=100093996937340
+          - img
+          - text: Facebook
+      - listitem:
+        - link "LinkedIn":
+          - /url: https://linkedin.com/school/virginia-commonwealth-university-school-of-the-arts/
+          - img
+          - text: LinkedIn
+    - navigation "Action":
+      - heading "Action" [level=2]
+      - list "Action":
+        - listitem:
+          - link "Apply":
+            - /url: https://arts.vcu.edu/admissions/application-process/
+        - listitem:
+          - link "Visit":
+            - /url: https://arts.vcu.edu/admissions/visit-vcuarts/
+        - listitem:
+          - link "Give":
+            - /url: https://arts.vcu.edu/give/
+        - listitem:
+          - link "Connect with Us":
+            - /url: https://arts.vcu.edu/about/connect-with-us/
+    - navigation "Main":
+      - heading "Main" [level=2]
+      - list "Main":
+        - listitem:
+          - link "Academics":
+            - /url: https://arts.vcu.edu/academics/
+        - listitem:
+          - link "Admissions":
+            - /url: https://arts.vcu.edu/admissions/
+        - listitem:
+          - link "Community & Campus":
+            - /url: https://arts.vcu.edu/community-campus/
+        - listitem:
+          - link "Research & Work":
+            - /url: https://arts.vcu.edu/research-work/
+        - listitem:
+          - link "News & Events":
+            - /url: https://arts.vcu.edu/news-events/
+        - listitem:
+          - link "About VCUarts":
+            - /url: https://arts.vcu.edu/about/
+    - navigation "Footer":
+      - heading "Footer" [level=2]
+      - list "Footer":
+        - listitem:
+          - link "Faculty & Staff Directory":
+            - /url: https://arts.vcu.edu/directory/
+        - listitem:
+          - link "Student Blog":
+            - /url: https://arts.vcu.edu/lamppost/
+        - listitem:
+          - link "The Work":
+            - /url: https://arts.vcu.edu/the-work/
+        - listitem:
+          - link "Schedule Portfolio Review":
+            - /url: https://ugradadmissions.vcu.edu/portal/vcuarts_ug_meetings
+        - listitem:
+          - link "Careers":
+            - /url: https://arts.vcu.edu/about/work-with-us/
+        - listitem:
+          - link "Privacy":
+            - /url: https://www.vcu.edu/privacy-statement/
+        - listitem:
+          - link "Accessibility":
+            - /url: https://equity.vcu.edu/
+        - listitem:
+          - link "Publications":
+            - /url: https://arts.vcu.edu/about/publications/
+        - listitem:
+          - link "VCUarts Qatar":
+            - /url: https://arts.vcu.edu/academics/vcuarts-qatar/
+        - listitem:
+          - link "Press & Vendors":
+            - /url: https://arts.vcu.edu/press-vendors/
+    - paragraph: Virginia Commonwealth University is a nationally renowned public research institution dedicated to the success and well-being of all members of its community. VCU student, faculty and staff groups and associations are open without regard to any characteristic or identity protected by law.
+    - link "Go to VCU.edu":
+      - /url: http://www.vcu.edu
+      - img
+    - text: Virginia Commonwealth University School of the Arts
+    - link "325 North Harrison Street, Box 842519, Richmond, VA 23284-2519":
+      - /url: //www.google.com/maps/place/?q=place_id:EiozMjUgTiBIYXJyaXNvbiBTdCwgUmljaG1vbmQsIFZBIDIzMjg0LCBVU0EiMRIvChQKEgkJD7qURRGxiRF0wwY2S1CJtxDFAioUChIJB4sQpEgRsYkRpEqtvGuAV44
+    - paragraph: "© 2026 VCUarts –All rights reserved –Updated: 10/01/26"

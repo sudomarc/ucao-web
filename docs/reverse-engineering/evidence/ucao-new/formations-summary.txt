@@ -1,0 +1,70 @@
+URL: http://localhost:8080/formations/
+TITLE: Formations — Université Catholique de l'Afrique de l'Ouest – Unité Universitaire de Conakry
+DOM size: 11993 chars; IMG tags: 4
+
+STRUCTURAL ELEMENTS:
+  header
+  nav
+  nav
+  main
+  footer
+
+HEADINGS:
+  h1: Trouver une formation
+  h2: Un catalogue par niveau et par spécialité
+  h2: Licence
+  h2: Master
+  h2: Liens rapides
+  h2: Informations
+
+NAV/CTA LINKS (first 50):
+  #main — Aller au contenu principal
+  / — UCAO-UUCo Université Catholique de l'Afrique de l'Ouest – Unité Universitaire de Conakry
+  / — FR
+  /en/ — EN
+  / — Accueil
+  /universite/ — Université
+  /formations/ — Formations
+  /formations/?niveau=licence — Licence
+  /formations/?niveau=master — Master
+  /formations/ — Toutes les formations
+  /admissions/ — Admissions
+  /vie-universitaire/ — Vie universitaire
+  /actualites/ — Actualités
+  /contact/ — Contact
+  /faq/ — FAQ
+  /mentions-legales/ — Mentions légales
+  /politique-confidentialite/ — Politique de confidentialité
+  /formations/ — Découvrir les formations
+  /admissions/ — Admissions
+  /formations/ — Voir toutes les formations
+  /admissions/ — S’informer sur les admissions
+  /formations/ — Voir toutes les formations
+  tel:(+224)620426612 — (+224) 620 42 66 12
+  tel:(+224)621286681 — (+224) 621 28 66 81
+  tel:(+224)629389058 — (+224) 629 38 90 58
+  mailto:info@ucao-uuco.org — info@ucao-uuco.org
+  https://www.facebook.com/ucaoguinee — Facebook
+  / — Accueil
+  /universite/ — Université
+  /formations/ — Formations
+  /admissions/ — Admissions
+  /vie-universitaire/ — Vie universitaire
+  /universite/ — Université
+  /formations/ — Formations
+  /admissions/ — Admissions
+  /actualites/ — Actualités
+  /contact/ — Contact
+  /mentions-legales/ — Mentions légales
+  /politique-confidentialite/ — Confidentialité
+  /politique-confidentialite/ — En savoir plus
+
+BUTTONS:
+  Accepter
+  Refuser
+
+STYLESHEETS:
+  /css/main.css
+
+SCRIPTS:
+  /js/main.js

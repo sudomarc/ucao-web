@@ -1,0 +1,151 @@
+URL: https://www.soas.ac.uk/
+TITLE: Welcome to SOAS | SOAS
+DOM size: 260307 chars; IMG tags: 25
+
+STRUCTURAL ELEMENTS:
+  header
+  nav
+  main
+  footer
+  nav
+  nav
+  header
+
+HEADINGS:
+  h1: We use cookies to optimise site functionality and give you the best possible experience.
+  h2: Main navigation
+  h2: Postgraduate Open House: 1 December
+  h1: Welcome to SOAS
+  h2: Our courses
+  h2: Why choose SOAS?
+  h3: Shortlisted for University of the Year
+  h3: 5 subjects in global top 40
+  h3: Joint 1st in the UK for International Faculty
+  h2: SOAS shortlisted for University of the Year
+  h2: Life at SOAS
+  h2: Student life
+  h2: What's on
+  h3: Documentary screening and director Q&amp;A: 'SPI'
+  h3: An evening of Thai classical music in memory of David W. Hughes
+  h3: Pa’lante Venezuela: discover Afro-Venezuelan Christmas through workshop, music and dance
+  h3: Inaugural Lecture Series: Professors Matthew Nelson and Rochana Bajpai
+  h2: SOAS spotlight
+  h3: AI begins and thrives with the humanities
+  h3: “The degree that runs Britain”: Why I chose PPE and my experience so far
+  h2: SOAS blogs
+  h3: Starting uni? Here’s what nobody tells you (and where to find help)
+  h3: Where SOAS graduates are taking their careers after university
+  h3: Finding your place at SOAS: Hannah’s first-year story
+  h2: Latest news
+  h3: The latest SOAS Working Papers in Linguistics offers a platform for new voices
+  h3: Major European Commission grant awarded for research on international landmine detection
+  h3: “Multilateralism is at the very heart of protecting our planet”: UN’s Inger Andersen at SOAS
+  h3: Art historian appointed advisor to Cambodian government national culture committee
+  h2: Quick links
+  h2: Contact
+  h2: Hi there!
+
+NAV/CTA LINKS (first 50):
+  #main — Skip to main content
+  / — Go to SOAS homepage
+  /study — Study
+  /study — Study
+  /study/why-study-soas — Why study at SOAS?
+  https://www.soas.ac.uk/study/find-course?subject=58 — Apply to SOAS
+  https://www.soas.ac.uk/study/find-course?subject=58 — Apply to SOAS
+  /how-apply-undergraduate-study — How to apply for undergraduate study
+  /how-apply-postgraduate-study — How to apply for postgraduate study
+  /how-apply-research-programmes — How to apply for research programmes
+  /apply-online-learning — Apply for online learning
+  /study/find-course — Find a course
+  https://www.soas.ac.uk/study/find-course — Areas of study
+  https://www.soas.ac.uk/study/find-course — Areas of study
+  https://www.soas.ac.uk/study/find-course?subject=3513 — Africa
+  https://www.soas.ac.uk/study/find-course?subject=32 — Anthropology and Sociology
+  https://www.soas.ac.uk/study/find-course?subject=68 — Arts
+  https://www.soas.ac.uk/study/find-course?subject=53 — Business, Finance and Management
+  https://www.soas.ac.uk/study/find-course?subject=3516 — China and Inner Asia
+  https://www.soas.ac.uk/study/find-course?subject=3306 — Climate Change
+  https://www.soas.ac.uk/study/find-course?subject=51 — Development
+  https://www.soas.ac.uk/study/find-course?subject=66 — Diplomacy
+  https://www.soas.ac.uk/study/find-course?subject=52 — Economics
+  https://www.soas.ac.uk/study/find-course?subject=64 — Gender
+  https://www.soas.ac.uk/study/find-course?subject=54 — History
+  https://www.soas.ac.uk/study/find-course?subject=55 — History of Art and Archaeology
+  https://www.soas.ac.uk/study/find-course?subject=3510 — Japan and Korea
+  https://www.soas.ac.uk/study/find-course?subject=57 — Law
+  https://www.soas.ac.uk/study/find-course?subject=58 — Linguistics
+  https://www.soas.ac.uk/study/find-course?subject=65 — Media and Communication
+  https://www.soas.ac.uk/study/find-course?subject=59 — Music
+  https://www.soas.ac.uk/study/find-course?subject=3519 — Near and Middle East
+  https://www.soas.ac.uk/study/find-course?subject=60 — Politics
+  https://www.soas.ac.uk/study/find-course?subject=61 — Religions and Philosophies
+  https://www.soas.ac.uk/study/find-course?subject=3507 — South Asia
+  https://www.soas.ac.uk/study/find-course?subject=3531 — Southeast Asia
+  /study/undergraduate — Undergraduate
+  /study/undergraduate — Undergraduate
+  /undergraduate-courses — Undergraduate courses
+  /study/student-fees-and-funding/undergraduate-funding — Undergraduate funding
+  /study/undergraduate/undergraduate-entry-requirements — Entry requirements
+  /study/undergraduate/contextual-offers — Contextual offers
+  /study/postgraduate — Postgraduate
+  /study/postgraduate — Postgraduate
+  /postgraduate-taught-courses — Postgraduate courses
+  /study/fees-and-funding/postgraduate-funding — Postgraduate funding
+  /study/fees-and-funding/scholarships-bursaries-and-awards/postgraduate-taught-scholarships — Postgraduate scholarships
+  /study/postgraduate/postgraduate-work-placement — Postgraduate placement
+  /study/postgraduate/postgraduate-entry-requirements — Entry requirements
+  /study/postgraduate/masters-offer-holders — Masters offer holders
+
+BUTTONS:
+  I'm fine with this
+  Settings
+  Menu
+  Go back
+  Go back
+  Go back
+  Go back
+  Go back
+  Go back
+  Go back
+  Go back
+  Go back
+  Go back
+  Go back
+  Go back
+  Go back
+  Go back
+  Go back
+  Go back
+  Go back
+  Go back
+  Go back
+  Go back
+  Go back
+  Go back
+  Search website
+  Search site
+  Previous
+  Next
+
+STYLESHEETS:
+  /sites/default/files/css/css_Kib5ik6M30hL3RP1SC2pbIJHTnZTRtYXqostcJm19_Y.css?delta=0&amp;language=en&amp;theme=numiko&amp;include=eJzLTU3JTNTPT81NSk3RS8svyk0sKUkt0skrzc3MztdPz8lPSszRLS6pzMnMSwcAfrcRNA
+  /sites/default/files/css/css_8jOAVvIonxRSueEZeI6tCPxZWEtw37sK9eAcOx825w4.css?delta=1&amp;language=en&amp;theme=numiko&amp;include=eJzLTU3JTNTPT81NSk3RS8svyk0sKUkt0skrzc3MztdPz8lPSszRLS6pzMnMSwcAfrcRNA
+
+SCRIPTS:
+  https://www.googletagmanager.com/gtag/js?id=GT-PB66V3DN&amp;cx=c&amp;gtm=4e6bd1
+  https://www.googletagmanager.com/gtag/js?id=AW-16816369328&amp;cx=c&amp;gtm=4e6bd1
+  https://www.googletagmanager.com/gtag/js?id=DC-9597651&amp;cx=c&amp;gtm=4e6bd1
+  https://www.googletagmanager.com/gtag/js?id=DC-11502701&amp;cx=c&amp;gtm=4e6bd1
+  https://www.googletagmanager.com/gtag/js?id=AW-702730462&amp;cx=c&amp;gtm=4e6bd1
+  https://www.googletagmanager.com/gtm.js?id=GTM-P2D8HJP
+  https://googleads.g.doubleclick.net/pagead/viewthroughconversion/702730462/?random=1794876041231&amp;cv=11&amp;fst=1794876041231&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be6bd1v9211640623za20ozb77943395zd77943395xecxf1&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=100940091~115938465~115938468~118897920~118897930~120213116~120385422~120412526~120420416~120469145~120469153~121191153~121246026~121246034&amp;u_w=1280&amp;u_h=720&amp;url=https%3A%2F%2Fwww.soas.ac.uk%2F&amp;rcb=8&amp;frm=0&amp;tiba=Welcome%20to%20SOAS%20%7C%20SOAS&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=1676351349.1794876041&amp;uaa=x86&amp;uab=64&amp;uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.79%7CChromium%3B157.0.8103.79&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4
+  https://googleads.g.doubleclick.net/pagead/viewthroughconversion/16816369328/?random=1794876044455&amp;cv=11&amp;fst=1794876044455&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;en=gtag.config&amp;gtm=45be6bd1v9202324512za20ozb77943395zd77943395xecxf1&amp;gcd=13l3l3l3l1l1&amp;dma=0&amp;tag_exp=115938465~115938468~118897920~118897930~120213116~120385422~120412526~120420414~120469145~120469153~121191153~121246026~121246034~123785234&amp;u_w=1280&amp;u_h=720&amp;url=https%3A%2F%2Fwww.soas.ac.uk%2F&amp;rcb=4&amp;frm=0&amp;tiba=Welcome%20to%20SOAS%20%7C%20SOAS&amp;hn=www.googleadservices.com&amp;npa=0&amp;pscdl=noapi&amp;auid=1676351349.1794876041&amp;uaa=x86&amp;uab=64&amp;uafvl=Not-A.Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B157.0.8103.79%7CChromium%3B157.0.8103.79&amp;uamb=0&amp;uam=&amp;uap=Windows&amp;uapv=19.0.0&amp;uaw=0&amp;data=event%3Dgtag.config&amp;ept=9&amp;rfmt=3&amp;fmt=4
+  https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js
+  https://athena-gbr.my.salesforce.com/embeddedservice/menu/fab.min.js
+  https://athena-gbr.my.salesforce.com/embeddedservice/5.0/utils/common.min.js
+  https://athena-gbr.my.salesforce.com/embeddedservice/5.0/utils/inert.min.js
+  https://athena-gbr.my.salesforce-scrt.com/embeddedservice/v1/embeddedServiceMenu.jsonp?Settings.prefix=EmbeddedService&amp;org_id=00DKB000000HsLr&amp;EmbeddedServiceMenu.menuName=SOAS_Channel_Menu&amp;callback=embedded_svc.menu.processChannelMenuConfiguration&amp;version=48
+  /sites/default/files/js/js_t1xaivEhDIvIt4sSOA5SzjqfxKcqMiFjNDbu_NTgLXw.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=numiko&amp;include=eJzLK83NzM7XT8_JT0rM0S1OLsosKCkGAFwKCGk
+  https://athena-gbr.my.salesforce.com/embeddedservice/menu/1678932281/channelMenu.min.js
+  https://athena-gbr.my.site.com/SOAS/assets/js/bootstrap.min.js

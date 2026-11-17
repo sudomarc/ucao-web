@@ -1,0 +1,119 @@
+URL: https://tus.ie/lsad/
+TITLE: Limerick School of Art and Design - TUS
+DOM size: 184976 chars; IMG tags: 20
+
+STRUCTURAL ELEMENTS:
+  header
+  nav
+  main
+  nav
+  footer
+
+HEADINGS:
+  h1: Limerick School of Art and Design
+  h2: Explore &amp; Imagine
+  h2: LSAD Departments
+
+NAV/CTA LINKS (first 50):
+  https://tus.ie/cookies-policy/ — Cookie Policy
+  https://business.safety.google/privacy — Google Privacy Policy
+  #maincontent — Skip to main content
+  https://tus.ie/contact-us/ — Contact Us
+  https://tus.ie/our-story/ — About TUS
+  /students/ — Student Hub
+  /staff/ — Staff Hub
+  https://library.tus.ie/ — Library
+  https://alumni.tus.ie/ — Alumni
+  /rdi/ — Research
+  https://tus.ie/news/ — News
+  /events/ — Events
+  /courses/ — All Courses
+  https://tus.ie/undergrad/ — Undergraduate – CAO
+  https://tus.ie/flexible-learning/ — Flexible &amp; Professional Learning
+  https://tus.ie/postgrad/ — Postgraduate
+  https://tus.ie/apprenticeships/ — Apprenticeships
+  https://tus.ie/admissions/ — Admissions – How to Apply
+  https://tus.ie/global/ — TUS Global – International Students
+  https://tus.ie/undergrad/open-days/ — Open Days
+  https://tus.ie/student-finance/ — Student Finance
+  https://tus.ie/grants-fees/ — Grants and Fees
+  https://tus.ie/induction/ — Student Induction
+  https://tus.ie/student-support/ — Student Support
+  https://tus.ie/business-hospitality-humanities/ — Business, Hospitality and Humanities
+  https://tus.ie/engineering-and-technology/ — Engineering and Technology
+  https://tus.ie/lsad/ — Limerick School of Art and Design
+  https://tus.ie/science-and-health/ — Science and Health
+  /campuses/athlone/ — Athlone
+  /campuses/moylish/ — Moylish
+  /campuses/clare-street/ — Clare Street
+  /campuses/clonmel/ — Clonmel
+  https://tus.ie/campuses/coonagh/ — Coonagh
+  /campuses/Ennis/ — Ennis
+  /campuses/thurles/ — Thurles
+  https://tus.ie/access-services/ — Access Services
+  https://tussu.ie/accommodation/ — Accommodation
+  https://tus.ie/careers-employability/ — Careers &amp; Employability
+  https://tus.ie/pastoral-care/ — Chaplaincy &amp; Pastoral Care
+  https://tus.ie/disability-supports/ — Disability Supports
+  https://tus.ie/learning-support/ — Learning Support Unit
+  /counselling/ — Student Counselling
+  https://tus.ie/student-health/ — Student Health
+  https://tus.ie/sport/ — TUS Sport
+  https://tussu.ie/ — Students Union
+  https://tus.ie/sport/clubs-socs/ — Clubs &amp; Societies
+  /our-story/ — Our Story
+  /student-stories/ — Student Stories
+  /rdi/ — Research
+  https://tus.ie/governance/reports/annual-reports/ — Annual Reports
+
+BUTTONS:
+  Customise
+  Reject All
+  Accept All
+  Show more
+  Necessary
+  Functional
+  Analytics
+  Performance
+  Advertisement
+  Uncategorised
+  Reject All
+  Save My Preferences
+  Accept All
+  Study
+  Campus Life
+  Explore TUS
+  Search Site
+  Study
+  Campus Life
+  Explore TUS
+  Search
+  Submit search
+
+STYLESHEETS:
+  https://tus.ie/app/plugins/wp-smartcrop/css/image-renderer.css?ver=2.0.10
+  https://tus.ie/app/plugins/search-filter-pro/public/assets/css/search-filter.min.css?ver=2.5.21
+  https://tus.ie/app/themes/app-theme/assets/main/css/main.min.css?ver=1772097091
+  https://tus.ie/app/themes/app-theme/style.css?ver=1772097091
+  https://tus.ie/app/themes/app-theme/assets/main/css/aos.css?ver=1772097091
+  https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap&amp;ver=2026
+  https://tus.ie/app/plugins/login-with-azure/css/style_login_widget.min.css?ver=2.0.3
+
+SCRIPTS:
+  https://cdn-cookieyes.com/client_data/28903c2258fe474681cbefb0cd0319a4/script.js
+  https://www.googletagmanager.com/gtm.js?id=GTM-PF6DJ9B
+  https://www.googletagmanager.com/gtm.js?id=GTM-PF6DJ9B
+  https://cdn-cookieyes.com/client_data/28903c2258fe474681cbefb0cd0319a4/script.js
+  https://cdn-cookieyes.com/client_data/28903c2258fe474681cbefb0cd0319a4/banner.js
+  https://tus.ie/wp/wp-includes/js/jquery/jquery.min.js?ver=3.7.1
+  https://tus.ie/wp/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1
+  https://tus.ie/app/plugins/search-filter-pro/public/assets/js/search-filter-build.min.js?ver=2.5.21
+  https://tus.ie/app/plugins/search-filter-pro/public/assets/js/chosen.jquery.min.js?ver=2.5.21
+  https://aiden.learnwise.ai/chat_launcher.js
+  https://tus.ie/wp/wp-includes/js/wp-emoji-release.min.js?ver=202bf601f2
+  https://tus.ie/app/plugins/wp-smartcrop/js/jquery.wp-smartcrop.min.js?ver=2.0.10
+  https://tus.ie/wp/wp-includes/js/jquery/ui/core.min.js?ver=1.14.2
+  https://tus.ie/wp/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.14.2
+  https://tus.ie/app/themes/app-theme/assets/main/js/aos.js?ver=1772097091
+  https://tus.ie/app/themes/app-theme/assets/main/js/dist/main-bundle.js?ver=1772097091
+  https://tus.ie/app/themes/app-theme/assets/overrides/script.js?ver=1772097091

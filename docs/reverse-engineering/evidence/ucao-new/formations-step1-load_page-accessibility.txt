@@ -1,0 +1,162 @@
+- document:
+  - link "Aller au contenu principal":
+    - /url: "#main"
+  - alert: Aucune alerte en cours.
+  - banner:
+    - link "Logo officiel de l'UCAO-UUCo UCAO-UUCo Université Catholique de l'Afrique de l'Ouest – Unité Universitaire de Conakry":
+      - /url: /
+      - img "Logo officiel de l'UCAO-UUCo"
+      - text: UCAO-UUCo Université Catholique de l'Afrique de l'Ouest – Unité Universitaire de Conakry
+    - navigation "Langue":
+      - link "FR":
+        - /url: /
+      - link "EN":
+        - /url: /en/
+    - navigation:
+      - list:
+        - listitem:
+          - link "Accueil":
+            - /url: /
+        - listitem:
+          - link "Université":
+            - /url: /universite/
+        - listitem:
+          - link "Formations":
+            - /url: /formations/
+          - list:
+            - listitem:
+              - link "Licence":
+                - /url: /formations/?niveau=licence
+            - listitem:
+              - link "Master":
+                - /url: /formations/?niveau=master
+            - listitem:
+              - link "Toutes les formations":
+                - /url: /formations/
+        - listitem:
+          - link "Admissions":
+            - /url: /admissions/
+        - listitem:
+          - link "Vie universitaire":
+            - /url: /vie-universitaire/
+        - listitem:
+          - link "Actualités":
+            - /url: /actualites/
+        - listitem:
+          - link "Contact":
+            - /url: /contact/
+        - listitem:
+          - link "FAQ":
+            - /url: /faq/
+        - listitem:
+          - link "Mentions légales":
+            - /url: /mentions-legales/
+        - listitem:
+          - link "Politique de confidentialité":
+            - /url: /politique-confidentialite/
+      - link "Découvrir les formations":
+        - /url: /formations/
+      - link "Admissions":
+        - /url: /admissions/
+  - main:
+    - region "Trouver une formation":
+      - text: Formations
+      - heading "Trouver une formation" [level=1]
+      - paragraph: Consultez le catalogue des formations de Licence et de Master proposées par l’Unité Universitaire de Conakry.
+      - link "Voir toutes les formations":
+        - /url: /formations/
+      - link "S’informer sur les admissions":
+        - /url: /admissions/
+      - img "Entrée du campus de l’UCAO-UUCo à Conakry."
+      - paragraph: Photo fournie par l’UCAO-UUCo — campus de Conakry.
+    - heading "Un catalogue par niveau et par spécialité" [level=2]
+    - paragraph: Les formations sont organisées par niveau et par spécialité. Utilisez le champ de recherche pour trouver rapidement la formation qui correspond à votre projet. Le catalogue détaillé doit être confirmé par l’administration.
+    - img "Étudiantes en cours à l’UCAO-UUCo, Conakry."
+    - paragraph: Photo fournie par l’UCAO-UUCo — vie étudiante en salle de cours.
+    - text: Rechercher une formation…
+    - searchbox "Rechercher une formation…"
+    - heading "Licence" [level=2]
+    - paragraph: Formation de premier cycle, accès après le baccalauréat.
+    - list:
+      - listitem: Licence en Droit [À CONFIRMER]
+      - listitem: Licence en Gestion [À CONFIRMER]
+      - listitem: Licence en Économie [À CONFIRMER]
+      - listitem: Licence en Sociologie [À CONFIRMER]
+    - heading "Master" [level=2]
+    - paragraph: Formation de second cycle, accès après une licence ou équivalent.
+    - list:
+      - listitem: Master en Droit [À CONFIRMER]
+      - listitem: Master en Gestion [À CONFIRMER]
+      - listitem: Master en Économie [À CONFIRMER]
+    - link "Voir toutes les formations":
+      - /url: /formations/
+    - paragraph: Ce catalogue est un point de départ à vérifier avec l’administration. Aucun chiffre d’effectifs ni de formations n’est inventé. Les licences et masters listés ci-dessous sont des exemples à valider ; les chiffres annoncés sur l’ancien site ne correspondaient pas parfaitement aux listes affichées.
+  - contentinfo:
+    - img "Logo officiel de l'UCAO-UUCo"
+    - paragraph: Université Catholique de l'Afrique de l'Ouest – Unité Universitaire de Conakry
+    - paragraph: Coléah, route de Niger, à côté de l'église catholique Saint Michel, Conakry, Guinée
+    - list:
+      - listitem:
+        - link "(+224) 620 42 66 12":
+          - /url: tel:(+224)620426612
+      - listitem:
+        - link "(+224) 621 28 66 81":
+          - /url: tel:(+224)621286681
+      - listitem:
+        - link "(+224) 629 38 90 58":
+          - /url: tel:(+224)629389058
+      - listitem:
+        - link "info@ucao-uuco.org":
+          - /url: mailto:info@ucao-uuco.org
+    - paragraph:
+      - link "Facebook":
+        - /url: https://www.facebook.com/ucaoguinee
+    - heading "Liens rapides" [level=2]
+    - list:
+      - listitem:
+        - link "Accueil":
+          - /url: /
+      - listitem:
+        - link "Université":
+          - /url: /universite/
+      - listitem:
+        - link "Formations":
+          - /url: /formations/
+      - listitem:
+        - link "Admissions":
+          - /url: /admissions/
+      - listitem:
+        - link "Vie universitaire":
+          - /url: /vie-universitaire/
+    - heading "Informations" [level=2]
+    - list:
+      - listitem:
+        - link "Université":
+          - /url: /universite/
+      - listitem:
+        - link "Formations":
+          - /url: /formations/
+      - listitem:
+        - link "Admissions":
+          - /url: /admissions/
+      - listitem:
+        - link "Actualités":
+          - /url: /actualites/
+      - listitem:
+        - link "Contact":
+          - /url: /contact/
+      - listitem:
+        - link "Mentions légales":
+          - /url: /mentions-legales/
+      - listitem:
+        - link "Confidentialité":
+          - /url: /politique-confidentialite/
+    - paragraph: © UCAO-UUCo – Tous droits réservés.
+    - paragraph: "Deux variantes observées sur l'ancien site : info@ucao.uuco.org et info@ucao-uuco.org. L'adresse officielle doit être confirmée par l'administration avant publication."
+  - dialog "Consentement aux cookies":
+    - paragraph:
+      - text: Nous utilisons des cookies pour améliorer votre expérience. En cliquant sur « Accepter », vous consentez à leur utilisation.
+      - link "En savoir plus":
+        - /url: /politique-confidentialite/
+    - button "Accepter"
+    - button "Refuser"

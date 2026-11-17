@@ -1,0 +1,126 @@
+URL: https://www.hull.ac.uk/
+TITLE: Unsame Old Story | University of Hull
+DOM size: 406880 chars; IMG tags: 66
+
+STRUCTURAL ELEMENTS:
+  header
+  nav
+  main
+  footer
+  header
+
+HEADINGS:
+  h1: Looking for next? Welcome to Hull
+  h2: Leading firms team up with university to give business students real-world experience
+  h2: Tape better than sandbags at protecting homes from flooding, research shows
+  h2: Need help with everyday costs of uni life? Check out our Cost of Living Bursary
+  h2: Discover our new fashion and costume degrees, starting September 2027
+  h2: Short stays, student kitchens, transport links. Everything you need to commute to uni.
+  h2: Find a course for any direction
+  h2: Tackling the challenges facing our world head on
+  h2: Working together for humanity’s future
+  h2: Teaching people to think differently for nearly 100 years
+  h2: One day can change every day
+  h2: Latest news
+  h2: Upcoming events
+  h2: Hi there!
+
+NAV/CTA LINKS (first 50):
+  # — Consent
+  # — Details
+  # — [#IABV2SETTINGS#]
+  # — About
+  # — Show details
+  # — Cookiebot 1
+  https://www.cookiebot.com/goto/privacy-policy/ — Learn more about this provider
+  # — Google 3
+  https://business.safety.google/privacy/ — Learn more about this provider
+  # — HubSpot 1
+  https://legal.hubspot.com/privacy-policy — Learn more about this provider
+  # — hsadspixel.net hs-banner.com 7
+  # — hull.lightning.force.com hull.my.site.com hull--uohuat.sandbox.my.site.com 8
+  # — hull.my.site.com 2
+  # — hull.my.site.com hull--uohuat.sandbox.my.site.com 2
+  # — tappage-v2.theaccessplatform.com 1
+  # — www.hull.ac.uk 3
+  # — HubSpot 4
+  https://legal.hubspot.com/privacy-policy — Learn more about this provider
+  # — Microsoft 5
+  https://privacy.microsoft.com/en-us/privacystatement — Learn more about this provider
+  # — Siteimprove 3
+  https://siteimprove.com/en/privacy/ — Learn more about this provider
+  # — StackAdapt 2
+  https://www.stackadapt.com/legal-document-centre/platform-and-services-privacy-policy — Learn more about this provider
+  # — TikTok 2
+  https://www.tiktok.com/legal/privacy-policy?lang=en — Learn more about this provider
+  # — force.com hull.my.site.com 3
+  # — sc-static.net 2
+  # — www.hull.ac.uk 2
+  # — Meta Platforms, Inc. 5
+  https://www.facebook.com/policy.php/ — Learn more about this provider
+  # — Google 12
+  https://business.safety.google/privacy/ — Learn more about this provider
+  # — HubSpot 1
+  https://legal.hubspot.com/privacy-policy — Learn more about this provider
+  # — Microsoft 14
+  https://privacy.microsoft.com/en-US/privacystatement — Learn more about this provider
+  # — Snap Inc. 2
+  https://www.snap.com/en-US/cookie-policy/ — Learn more about this provider
+  # — StackAdapt 10
+  https://www.stackadapt.com/legal-document-centre/platform-and-services-privacy-policy — Learn more about this provider
+  # — TikTok 8
+  https://www.tiktok.com/legal/privacy-policy?lang=en — Learn more about this provider
+  # — YouTube 11
+  https://business.safety.google/privacy/ — Learn more about this provider
+  # — hull.my.site.com 2
+  # — sc-static.net 8
+  # — TikTok 1
+  https://www.tiktok.com/legal/privacy-policy?lang=en — Learn more about this provider
+
+BUTTONS:
+  Necessary 28
+  Preferences 0
+  Statistics 23
+  Marketing 73
+  Unclassified 15
+  [#IABV2_LABEL_PURPOSES#]
+  [#IABV2_LABEL_FEATURES#]
+  [#IABV2_LABEL_PARTNERS#]
+  Deny
+  Allow selection
+  Customise
+  Allow all
+  Study
+  Life at Hull
+  Research
+  Collaborate
+  Alumni
+  About
+  Search
+  arrow left Previous slide
+  arrow right Next slide
+  arrow left Previous slide
+  arrow right Next slide
+  Back to top square arrow up
+
+STYLESHEETS:
+  /_Iwb94w_2ff438b6-8037-462b-9513-756366eb415e/static/root-BerULDh_.css
+
+SCRIPTS:
+  https://consent.cookiebot.com/145431d4-5c58-4c63-a5c5-e8da2902a06c/cc.js?renew=false&amp;referer=www.hull.ac.uk&amp;dnt=false&amp;init=false
+  https://www.googletagmanager.com/gtag/js?id=G-6TRDMJPDQV&amp;cx=c&amp;gtm=4e6bd1h1
+  https://snap.licdn.com/li.lms-analytics/insight.min.js
+  https://bat.bing.com/bat.js
+  https://www.googletagmanager.com/gtag/js?id=DC-15392115&amp;cx=c&amp;gtm=4e6bd1h1
+  https://www.googletagmanager.com/gtag/js?id=AW-760781374&amp;cx=c&amp;gtm=4e6bd1h1
+  https://www.googletagmanager.com/gtag/js?id=DC-13730620&amp;cx=c&amp;gtm=4e6bd1h1
+  https://www.googletagmanager.com/gtag/js?id=AW-861974512&amp;cx=c&amp;gtm=4e6bd1h1
+  https://consent.cookiebot.com/uc.js?cbid=145431d4-5c58-4c63-a5c5-e8da2902a06c&amp;implementation=gtm&amp;consentmode-dataredaction=dynamic
+  https://www.googletagmanager.com/gtm.js?id=GTM-5GXGL2LZ
+  https://bat.bing.com/p/action/142002985.js
+  https://hull.my.salesforce.com/embeddedservice/menu/fab.min.js
+  https://hull.my.salesforce.com/embeddedservice/5.0/utils/common.min.js
+  https://hull.my.salesforce.com/embeddedservice/5.0/utils/inert.min.js
+  https://hull.my.salesforce-scrt.com/embeddedservice/v1/embeddedServiceMenu.jsonp?Settings.prefix=EmbeddedService&amp;org_id=00D8e000000Nd4w&amp;EmbeddedServiceMenu.menuName=Enquiry_Form&amp;callback=embedded_svc.menu.processChannelMenuConfiguration&amp;version=48
+  https://hull.my.salesforce.com/embeddedservice/menu/1678932281/channelMenu.min.js
+  https://hull.my.site.com/ESWUOHMessagingforWeb1718020588635/assets/js/bootstrap.min.js

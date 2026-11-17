@@ -1,7 +1,15 @@
 [
   { "label": "Accueil", "href": "/" },
   { "label": "Université", "href": "/universite/" },
-  { "label": "Formations", "href": "/formations/" },
+  {
+    "label": "Formations",
+    "href": "/formations/",
+    "children": [
+      { "label": "Licence", "href": "/formations/?niveau=licence" },
+      { "label": "Master", "href": "/formations/?niveau=master" },
+      { "label": "Toutes les formations", "href": "/formations/" }
+    ]
+  },
   { "label": "Admissions", "href": "/admissions/" },
   { "label": "Vie universitaire", "href": "/vie-universitaire/" },
   { "label": "Actualités", "href": "/actualites/" },

@@ -1,0 +1,206 @@
+- document:
+  - region "We value your privacy":
+    - heading "We value your privacy" [level=2]
+    - paragraph:
+      - text: We use cookies to enhance your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking "Accept All", you consent to our use of cookies.
+      - link "Cookie Policy":
+        - /url: https://tus.ie/cookies-policy/
+    - group:
+      - button "Customise"
+      - button "Reject All"
+      - button "Accept All"
+    - text: Powered by
+    - link "Visit CookieYes website":
+      - /url: https://www.cookieyes.com/product/cookie-consent/?ref=cypbcyb&utm_source=cookie-banner&utm_medium=fl-branding
+  - complementary "Aiden chat assistant"
+  - banner:
+    - link "Skip to main content":
+      - /url: "#maincontent"
+    - list:
+      - listitem:
+        - link "Contact Us":
+          - /url: https://tus.ie/contact-us/
+      - listitem:
+        - link "About TUS":
+          - /url: https://tus.ie/our-story/
+      - listitem:
+        - link "Student Hub":
+          - /url: /students/
+      - listitem:
+        - link "Staff Hub":
+          - /url: /staff/
+      - listitem:
+        - link "Library":
+          - /url: https://library.tus.ie/
+      - listitem:
+        - link "Alumni":
+          - /url: https://alumni.tus.ie/
+    - link "TUS home":
+      - /url: /
+      - img "TUS home"
+    - list:
+      - listitem:
+        - button "Study"
+      - listitem:
+        - button "Campus Life"
+      - listitem:
+        - link "Research":
+          - /url: /rdi/
+      - listitem:
+        - button "Explore TUS"
+      - listitem:
+        - link "News":
+          - /url: https://tus.ie/news/
+      - listitem:
+        - link "Events":
+          - /url: /events/
+      - listitem:
+        - button " Search Site"
+  - main:
+    - navigation "Breadcrumbs":
+      - list:
+        - listitem:
+          - link "Home":
+            - /url: https://tus.ie/
+          - text: / Limerick School of Art and Design
+    - heading "Limerick School of Art and Design" [level=1]
+    - paragraph: As one of Europe’s leading fine art, design and creative media schools, we have been educating and inspiring students and building creative communities for over 170 years. With over 1,500 students in our LSAD faculty on Limerick, Clonmel and Athlone campuses, we bring energy and imagination, as well as enterprise and research to support our student’s art and design practice as well as their future careers.
+    - img "Gallery-image-1"
+    - heading "Explore & Imagine" [level=2]
+    - paragraph: We warmly welcome you to explore LSAD’s diverse range of programmes across Fine Art (Painting/Ceramics/Sculpture/Print) and Education; Fashion and Interior Design; Graphics and Digital Design; Creative Media (Film/Animation/Music); and Broadcast Production and Sound Engineering. We pride ourselves on supporting students to explore, imagine and refine their creative voice within a framework that encourages both specialization and interdisciplinary discovery. Our strong industry links, commitment to research and enterprise, and rich tradition of public exhibitions and engagement, enable us to equip our graduates with the skills, confidence and critical insight necessary to thrive in today’s fast-evolving creative industries, both in Ireland and internationally.
+    - paragraph:
+      - strong: Professor Anthony Caleshu
+      - strong: Dean, Limerick School of Art and Design
+      - strong: Technological University of the Shannon
+    - link "04.03.25TUS LSAD. Photo by Alan Place. Undergraduate Courses":
+      - /url: https://tus.ie/courses/?results-id=768&_sfm_course_type=undergraduate-add-ons-%2C-undergraduate-cao&_sfm_subject_area=art-design-and-media
+      - img "04.03.25TUS LSAD. Photo by Alan Place."
+      - paragraph: Undergraduate Courses
+    - link "TUS Sculpture & Combined Media Student Postgraduate Courses":
+      - /url: https://tus.ie/courses/?results-id=768&_sfm_course_type=postgraduate-taught&_sfm_subject_area=art-design-and-media
+      - img "TUS Sculpture & Combined Media Student"
+      - paragraph: Postgraduate Courses
+    - link "TUS-Athlone-Campus_Stock_2024-02-20-TUS-Act_Tara-Cullen Flexible, Professional, Summer & Short Courses":
+      - /url: https://tus.ie/courses/?results-id=768&_sfm_course_type=flexible-and-professional-learning&_sfm_subject_area=art-design-and-media
+      - img "TUS-Athlone-Campus_Stock_2024-02-20-TUS-Act_Tara-Cullen"
+      - paragraph: Flexible, Professional, Summer & Short Courses
+    - link "Creative design students sketching and working on a range of drawings and models in a studio environment. Summer Portfolio Course":
+      - /url: https://tus.ie/courses/think-draw-make/
+      - img "Creative design students sketching and working on a range of drawings and models in a studio environment."
+      - paragraph: Summer Portfolio Course
+    - link "Ceramics-in-Expanding-Practice-Student-Amy-Smith How to Submit a Portfolio":
+      - /url: /lsad/portfolio/
+      - img "Ceramics-in-Expanding-Practice-Student-Amy-Smith"
+      - paragraph: How to Submit a Portfolio
+    - link "Print-Contemporary-Practice-Student-Darragh-Ryan-2 Discover our Graduates":
+      - /url: https://www.lsadgraduates.ie/
+      - img "Print-Contemporary-Practice-Student-Darragh-Ryan-2"
+      - paragraph: Discover our Graduates
+    - link "Creative-Broadcast-Student-Matthew-Finn LSAD Research":
+      - /url: https://research.tus.ie/en/organisations/limerick-school-of-art-and-design
+      - img "Creative-Broadcast-Student-Matthew-Finn"
+      - paragraph: LSAD Research
+    - link "Meascán Upcoming LSAD Events":
+      - /url: https://tus.ie/lsad/lsad-events/
+      - img "Meascán"
+      - paragraph: Upcoming LSAD Events
+    - heading "LSAD Departments" [level=2]
+    - paragraph: There are four departments within the Limerick School of Art and Design. For further information regarding the departments, please click on the links below.
+    - link "Department of Design Zesty CTA Design Department of Design":
+      - /url: /lsad/design/
+      - img "Department of Design Zesty CTA Design"
+      - paragraph: Department of Design
+    - link "Department of DAM Zesty CTA (1) Department of Digital Arts & Media":
+      - /url: /lsad/digital-arts-and-media/
+      - img "Department of DAM Zesty CTA (1)"
+      - paragraph: Department of Digital Arts & Media
+    - link "Department of Fine Art and Education Zesty CTA Department of Fine Art & Education":
+      - /url: /lsad/fine-art-and-education/
+      - img "Department of Fine Art and Education Zesty CTA"
+      - paragraph: Department of Fine Art & Education
+    - link "Department of Midlands Media and Design Zesty CTA Department of Midlands Media & Design":
+      - /url: /lsad/midlands-media-and-design/
+      - img "Department of Midlands Media and Design Zesty CTA"
+      - paragraph: Department of Midlands Media & Design
+  - contentinfo:
+    - link "TUS home":
+      - /url: /
+      - img "TUS home"
+    - link "Contact Us":
+      - /url: https://tus.ie/contact-us/
+    - link "About TUS":
+      - /url: /our-story/
+    - link "Student Hub":
+      - /url: https://tus.ie/students/
+    - link "Staff Hub":
+      - /url: https://tus.ie/staff/
+    - link "Courses":
+      - /url: /courses/
+    - link "Our Campuses":
+      - /url: /campuses/
+    - link "Governance":
+      - /url: /governance/
+    - link "Research":
+      - /url: /rdi/
+    - strong: Technological University of the Shannon
+    - text: Athlone Campus University Road, Athlone Co. Westmeath N37 HD68
+    - paragraph:
+      - text: "Phone:"
+      - link "+353 090 6468000":
+        - /url: tel:+3530906468000
+    - paragraph:
+      - text: "Email:"
+      - link "reception.midlands@tus.ie":
+        - /url: mailto:reception.midlands@tus.ie
+    - strong: Technological University of the Shannon
+    - text: Moylish Campus Moylish Park Limerick V94 EC5T
+    - paragraph:
+      - text: "Phone:"
+      - link "+353 61 293000":
+        - /url: tel:+35361293000
+    - paragraph:
+      - text: "Email:"
+      - link "reception.midwest@tus.ie":
+        - /url: mailto:reception.midwest@tus.ie
+    - separator
+    - paragraph: CONNECT WITH US
+    - list:
+      - listitem:
+        - link " visit us on Facebook":
+          - /url: https://www.facebook.com/TUoftheShannon
+      - listitem:
+        - link " visit us on X (Twitter)":
+          - /url: https://twitter.com/TUS_ie
+      - listitem:
+        - link " visit us on Instagram":
+          - /url: https://www.instagram.com/tus_ire/
+      - listitem:
+        - link " visit us on YouTube":
+          - /url: https://www.youtube.com/channel/UCk_JmKG2Ghn9ZIMcb6xqAWg
+      - listitem:
+        - link " visit us on TikTok":
+          - /url: https://www.tiktok.com/@tus_ie?is_from_webapp=1&sender_device=pc
+      - listitem:
+        - link " visit us on LinkedIn":
+          - /url: https://ie.linkedin.com/school/tus-ie/
+    - list:
+      - listitem:
+        - link "EU Structural Fund Logo 2021 2027":
+          - /url: https://eufunds.ie/european-structural-and-investment-funds/
+          - img "EU Structural Fund Logo 2021 2027"
+      - listitem:
+        - link "QS Footer Logo":
+          - /url: https://tus.ie/brand/qs/
+          - img "QS Footer Logo"
+    - separator
+    - paragraph: © Copyright of TUS, 2025. All rights reserved.
+    - list:
+      - listitem:
+        - link "Data Protection and Freedom of Information":
+          - /url: https://tus.ie/privacy/
+      - listitem:
+        - link "Cookies Policy":
+          - /url: https://tus.ie/cookies-policy/
+      - listitem:
+        - link "Accessibility":
+          - /url: https://tus.ie/accessibility/

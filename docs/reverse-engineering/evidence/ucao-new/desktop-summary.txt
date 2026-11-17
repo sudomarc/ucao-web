@@ -1,0 +1,97 @@
+URL: http://localhost:8080/
+TITLE: Accueil — Université Catholique de l'Afrique de l'Ouest – Unité Universitaire de Conakry
+DOM size: 17526 chars; IMG tags: 3
+
+STRUCTURAL ELEMENTS:
+  header
+  nav
+  nav
+  main
+  footer
+
+HEADINGS:
+  h1: Unité Universitaire de Conakry
+  h2: L'exigence académique au service de l'humain
+  h2: L'UCAO en quelques repères
+  h2: Nos formations
+  h3: Gestion Commerciale — Licence
+  h3: Droit — Licence
+  h3: Sciences de l'Éducation — Licence
+  h3: Gestion Commerciale — Master
+  h3: Droit — Master
+  h3: Sciences de l'Éducation — Master
+  h2: Admissions
+  h2: Animation : Et si votre ombre vous précédait ?
+  h2: Actualités &amp; Événements
+  h3: Jubilé des 25 ans de l'UCAO-UUCo
+  h3: Colloque international sur la gouvernance de la diversité culturelle
+  h3: Journée de l'étudiant à l'UCAO
+  h2: Vie universitaire
+  h2: Nos valeurs
+  h3: Exigence académique
+  h3: Formation humaine
+  h3: Service à la communauté
+  h3: Ouverture et partenariat
+  h2: Liens rapides
+  h2: Informations
+
+NAV/CTA LINKS (first 50):
+  #main — Aller au contenu principal
+  / — UCAO-UUCo Université Catholique de l'Afrique de l'Ouest – Unité Universitaire de Conakry
+  / — FR
+  /en/ — EN
+  / — Accueil
+  /universite/ — Université
+  /formations/ — Formations
+  /formations/?niveau=licence — Licence
+  /formations/?niveau=master — Master
+  /formations/ — Toutes les formations
+  /admissions/ — Admissions
+  /vie-universitaire/ — Vie universitaire
+  /actualites/ — Actualités
+  /contact/ — Contact
+  /faq/ — FAQ
+  /mentions-legales/ — Mentions légales
+  /politique-confidentialite/ — Politique de confidentialité
+  /formations/ — Découvrir les formations
+  /admissions/ — Admissions
+  /formations/ — Découvrir les formations
+  /admissions/ — S'informer sur les admissions
+  /formations/gestion-commerciale-licence — Gestion Commerciale — Licence
+  /formations/droit-licence — Droit — Licence
+  /formations/sciences-education-licence — Sciences de l'Éducation — Licence
+  /formations/gestion-commerciale-master — Gestion Commerciale — Master
+  /formations/droit-master — Droit — Master
+  /formations/sciences-education-master — Sciences de l'Éducation — Master
+  /formations/ — Voir toutes les formations
+  /admissions/ — Voir la procédure d'admission
+  /actualites/ — Voir toutes les actualités
+  /vie-universitaire/ — En savoir plus sur la vie universitaire
+  tel:(+224)620426612 — (+224) 620 42 66 12
+  tel:(+224)621286681 — (+224) 621 28 66 81
+  tel:(+224)629389058 — (+224) 629 38 90 58
+  mailto:info@ucao-uuco.org — info@ucao-uuco.org
+  https://www.facebook.com/ucaoguinee — Facebook
+  / — Accueil
+  /universite/ — Université
+  /formations/ — Formations
+  /admissions/ — Admissions
+  /vie-universitaire/ — Vie universitaire
+  /universite/ — Université
+  /formations/ — Formations
+  /admissions/ — Admissions
+  /actualites/ — Actualités
+  /contact/ — Contact
+  /mentions-legales/ — Mentions légales
+  /politique-confidentialite/ — Confidentialité
+  /politique-confidentialite/ — En savoir plus
+
+BUTTONS:
+  Accepter
+  Refuser
+
+STYLESHEETS:
+  /css/main.css
+
+SCRIPTS:
+  /js/main.js

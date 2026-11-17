@@ -1,0 +1,22 @@
+URL: https://www.ox.ac.uk/
+TITLE: Just a moment...
+DOM size: 44800 chars; IMG tags: 1
+
+STRUCTURAL ELEMENTS:
+
+HEADINGS:
+  h1: www.ox.ac.uk
+  h2: Performing security verification
+  h2: Verification successful. Waiting for www.ox.ac.uk to respond
+
+NAV/CTA LINKS (first 50):
+  https://www.cloudflare.com?utm_source=challenge&amp;utm_campaign=m — Cloudflare
+  https://www.cloudflare.com/privacypolicy/ — Privacy
+
+BUTTONS:
+
+STYLESHEETS:
+
+SCRIPTS:
+  /cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=a5bac764e858ed85
+  https://challenges.cloudflare.com/turnstile/v0/b/f8df4d4a0cd6/api.js?onload=_55efeac6f04ad4d3c93f635a&amp;render=explicit
