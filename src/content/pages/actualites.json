@@ -1,14 +1,14 @@
 {
   "slug": "actualites",
   "title": "Actualités",
-  "metaDescription": "Actualités de l’UCAO-UUCo : publications, dates et catégories à Conakry, Guinée.",
+  "metaDescription": "Publications institutionnelles, colloques et événements de l’UCAO-UUCo à Conakry.",
   "hero": {
     "kicker": "Actualités",
-    "title": "Actualités de l’UCAO-UUCo",
-    "lead": "Retrouvez les publications récentes de l’Unité Universitaire de Conakry : événements, colloques et vie du campus."
+    "title": "La vie de l’UCAO-UUCo",
+    "lead": "Retrouvez les articles et événements publiés par l’Unité Universitaire de Conakry."
   },
   "intro": {
-    "text": "Les actualités ci-dessous proviennent de l’ancien site et doivent être confirmées par l’administration. Aucune actualité n’est inventée."
-  },
-  "note": "À compléter avec les contenus confirmés par l’administration."
+    "title": "Publications institutionnelles",
+    "text": "Cette sélection reprend les articles disponibles dans les archives du site officiel de l’UCAO-UUCo, avec leur date de publication et un lien vers la source originale."
+  }
 }

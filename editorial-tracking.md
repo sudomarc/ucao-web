@@ -1,45 +1,57 @@
-# Suivi éditorial — Données à confirmer (UCAO-UUCo)
+# Suivi éditorial et vérification des sources — UCAO-UUCo
 
-## Règle
-Aucun chiffre, diplôme, accréditation, partenariat, témoignage, actualité, photo ou information administrative n'est inventé. Les données inconnues sont marquées `[À CONFIRMER]` et ne sont pas présentées comme actives. Ce fichier est la source unique de suivi ; il est mis à jour à mesure que l'administration confirme ou infirme les informations.
+Dernière recherche documentaire : **17 novembre 2026**.
 
-## Conflits identifiés
+## Sources primaires consultées
 
-| Élément | Valeur observée | Statut | Action |
-|---------|----------------|--------|--------|
-| Adresse e-mail (page d'accueil archivée) | `info@ucao.uuco.org` | CONFLIT | Deuxième variante `info@ucao-uuco.org` mentionnée dans le brief utilisateur. Ne pas choisir arbitrairement. Demander à l'administration l'adresse officielle unique. |
-| URL Contact | `contacct/` (faute dans l'URL archivée) | ANOMALIE | Corriger en `contact/` dans la refonte, rediriger `contacct` vers `contact`. |
+| Sujet | Source | Informations retenues |
+|---|---|---|
+| Formations | https://ucao-uuco.org/nos-formations/ | Intitulés Licence et Master, durées générales, cours du soir |
+| Admissions | https://ucao-uuco.org/inscription/ | Pièces publiées pour Licence et Master ; tarifs explicitement datés de 2025-2026 |
+| Histoire et mission | https://ucao-uuco.org/qui-sommes-nous/ | Fondation du réseau en février 2000 ; présence annoncée dans 7 pays ; rectorat à Bobo-Dioulasso ; création de l’unité de Conakry en 2008 |
+| Accueil institutionnel | https://ucao-uuco.org/ | Dates des trois publications de novembre 2025 ; localisation ; e-mail affiché dans l’en-tête |
+| Contact institutionnel | https://ucao-uuco.org/contacct/ | Adresse e-mail affichée sur la page Contact, téléphones et adresse |
+| Jubilé | https://ucao-uuco.org/2025/11/28/lucao-uuco-celebre-son-jubile-des-25-ans-un-quart-de-siecle-dexcellence-de-mission-et-de-service/ | Publication datée du 28 novembre 2025 |
+| Colloque | https://ucao-uuco.org/2025/11/16/colloque-international-sur-la-gouvernance-de-la-diversite-culturelle-organise-par-lucao/ | Colloque avec l’Université Catholique de Lyon, 13–15 novembre 2025, Palais du Peuple à Conakry |
+| Journée de l’étudiant | https://ucao-uuco.org/2025/11/14/cest-la-journee-de-letudiant-a-lucao/ | Activités culturelles, sportives, conférences, ateliers et échanges |
+| Habilitation et qualité | https://parcoursupguinee.org/institutions ; https://mesrs.gov.gn/ceremonie-de-proclamation-des-resultats-definitifs-des-evaluations-et-de-remise-des-attestations-daccreditation-dhabilitation-institutionnelle-et-de-ranking-aux-ies/ | Les habilitations et accréditations relèvent du MESRS/ANAQ ; les listes et actes doivent être vérifiés par filière |
+| Hébergement | https://vercel.com/legal/privacy-notice ; https://vercel.com/legal | Identité et notice légale de Vercel Inc. |
 
-## Données institutionnelles à vérifier
+## Informations intégrées dans le site
 
-| Élément | Valeur actuelle (site existant) | Statut | Commentaire |
-|---------|-------------------------------|--------|-------------|
-| Fondation UCAO | février 2000, Conférence Episcopale Régionale de l'Afrique de l'Ouest à Conakry | À confirmer | Distinguer histoire réseau UCAO vs unité de Conakry |
-| Statut | Université de Droit Pontifical | À confirmer | |
-| Réseau | Plus grand réseau universitaire d'Afrique de l'Ouest, unités dans 7 pays | À confirmer | |
-| Reconnaissance État guinéen | "Diplômes reconnus par l'État guinéen" | À confirmer | |
-| CAMES | "Université membre du CAMES" | À confirmer | |
-| Effectifs | Non communiqués sur l'accueil archivé | À confirmer | |
-| Formations | Non listées sur l'accueil archivé | À confirmer | Chiffres annoncés (licences/masters) ne correspondent pas aux listes affichées sur l'ancien site |
-| Tarifs | 2025-2026 (visibles sur l'ancien site) | NON ACTUELS | Ne pas présenter comme tarifs actuels. Marquer "à confirmer" ou omettre. |
-| Coordonnées bancaires | Non visibles sur l'accueil archivé | À confirmer | Ne pas republier sans vérification |
-| Échéances / conditions de paiement | Non visibles sur l'accueil archivé | À confirmer | Ne pas republier sans vérification |
-| Documents d'inscription | Non listés sur l'accueil archivé | À confirmer | |
-| Localisation | Coléah, route de Niger, à côté de l'église catholique Saint Michel | À confirmer | |
-| Téléphones | (+224) 620 42 66 12 / 621 28 66 81 / 629 38 90 58 | À confirmer | |
-| Facebook | https://www.facebook.com/ucaoguinee | À confirmer | |
+- **Réseau UCAO :** fondation en février 2000 par la CERAO, selon la page institutionnelle.
+- **Unité de Conakry :** création en 2008, selon la page institutionnelle. Ces deux dates ne désignent pas le même événement.
+- **Réseau :** présence annoncée dans 7 pays et rectorat annoncé à Bobo-Dioulasso.
+- **Formations Licence :** le site annonce 8 formations mais en énumère 9 : Science politique, Droit, Économie-Gestion, Biologie médicale – Technicien de laboratoire, Gestion des ressources humaines, Agroalimentaire, Génie informatique, Communication & Journalisme, Sociologie. Les 9 intitulés visibles sont conservés ; aucun total de 8 n’est affiché comme s’il était cohérent.
+- **Formations Master :** 11 intitulés distincts. La page source répète « Santé publique et communautaire » une seconde fois ; le doublon n’est pas reproduit.
+- **Durées :** la page source indique 3 ou 4 ans selon la Licence ; elle précise 4 ans pour Biologie médicale – Technicien de laboratoire, Agroalimentaire, Génie informatique et Communication & Journalisme. Elle présente les Masters comme des cours du soir de 2 ans.
+- **Admissions :** les listes de documents sont reprises de la page institutionnelle. Les modalités précises pour 2026-2027 doivent être confirmées.
+- **Actualités :** trois articles institutionnels publiés les 14, 16 et 28 novembre 2025 ; liens vers les publications originales.
+- **Contact :** page Contact : info@ucao-uuco.org ; en-tête du site : info@ucao.uuco.org. Les trois numéros et l’adresse de Coléah sont affichés sur les pages officielles.
+- **Hébergement :** le projet est déployé sur Vercel ; l’hébergeur technique est indiqué comme Vercel Inc.
 
-## Actualités observées (archive, février 2026)
+## Conflits et limites qui restent ouverts
 
-| Titre | Date | Statut |
-|-------|------|--------|
-| L'UCAO-UUCO célèbre son Jubilé des 25 ans | 28 novembre 2025 | À confirmer |
-| Colloque International sur la gouvernance de la diversité culturelle | 16 novembre 2025 | À confirmer |
-| C'est la journée de l'étudiant à l'UCAO | 14 novembre 2025 | À confirmer |
+| Élément | Constat | Traitement |
+|---|---|---|
+| Nombre de Licences | 8 annoncées, 9 intitulés listés | Publier les intitulés visibles et signaler l’écart |
+| Nombre de Masters | 11 annoncés ; un intitulé répété | Publier les 11 intitulés distincts |
+| Offre 2026-2027 | La page catalogue consultée ne donne pas de date de validité de l’offre | Demander confirmation de l’ouverture de chaque filière |
+| Habilitations | Le site institutionnel affirme la reconnaissance des diplômes et l’appartenance au CAMES, mais aucune preuve primaire récente par filière n’a été retrouvée dans cette recherche | Ne pas présenter ces affirmations comme vérifiées ; demander les actes MESRS/ANAQ en vigueur |
+| Tarifs | Barèmes publiés pour 2025-2026 uniquement | Ne pas réutiliser les montants ni les coordonnées bancaires ; demander le barème 2026-2027 |
+| E-mail | Deux variantes sur le même site officiel | Utiliser l’adresse de la page Contact comme adresse principale et afficher la divergence |
+| Effectifs | Plus de 350 étudiants mentionnés dans la présentation institutionnelle, sans date de référence claire | Ne pas afficher ce chiffre |
+| Jubilé des 25 ans | L’article de novembre 2025 parle d’un jubilé des 25 ans, tandis que la page « Qui sommes-nous » distingue la fondation UCAO en 2000 et la création de l’unité de Conakry en 2008 | Garder le titre exact de l’article mais ne pas en déduire une date de création de l’unité |
+| Vie du campus | Les pages sources documentent des événements et des photos ; elles ne confirment pas précisément les horaires de bibliothèque, laboratoires, logements ou services de tutorat | Ne pas inventer ces équipements ou services |
+| Formulaire | Aucun service de réception n’est configuré dans le code actuel | Indiquer explicitement qu’il n’envoie pas les messages |
+| Mentions légales | Le nom du responsable de publication et les détails juridiques de l’éditeur doivent être confirmés par l’établissement | Notice provisoire, validation institutionnelle requise |
 
-## Règles de publication
+## Références réglementaires
 
-1. Ne jamais présenter un tarif, un effectif, une accréditation ou un partenariat comme confirmé sans source administrative.
-2. Utiliser la mention `[À CONFIRMER]` à côté de toute donnée non vérifiée.
-3. Aucun formulaire ne simule une soumission réussie : documenter le backend réel ou sa limite.
-4. Mettre à jour ce fichier dès qu'une information est confirmée ou infirmée par l'administration.
+- Le MESRS explique que l’ANAQ évalue les programmes et les institutions et délivre des attestations d’accréditation et d’habilitation : https://mesrs.gov.gn/ceremonie-de-proclamation-des-resultats-definitifs-des-evaluations-et-de-remise-des-attestations-daccreditation-dhabilitation-institutionnelle-et-de-ranking-aux-ies/
+- L’arrêté 2022-897 publié par LégisGuinée comporte une liste de diplômes associés à l’UCAO : https://legisguinee.com/textes/arrete-2022-897-habilitation-neuf-09-institutions-enseignement-superieur-delivre
+- Cette référence historique ne suffit pas à établir l’habilitation actuelle de chaque programme en 2026-2027. Une copie des actes en vigueur doit être demandée au MESRS/ANAQ.
+
+## Règle de publication
+
+Le site public peut présenter les informations explicitement publiées par l’établissement, en signalant les contradictions qui changent l’interprétation. Les inconnues administratives, les tarifs périmés et les habilitations non vérifiées ne doivent pas être transformés en faits.

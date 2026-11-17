@@ -179,6 +179,54 @@
     });
   }
 
+  /* ---------- Programme search and level deep-links ---------- */
+  function normaliseSearch(value) {
+    return String(value || '').toLocaleLowerCase('fr').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
+  var homeSearch = document.getElementById('program-search');
+  if (homeSearch) {
+    var homeCards = Array.prototype.slice.call(document.querySelectorAll('.program-card'));
+    var homeStatus = document.getElementById('program-search-status');
+    homeSearch.addEventListener('input', function () {
+      var query = normaliseSearch(homeSearch.value.trim());
+      var visible = 0;
+      homeCards.forEach(function (card) {
+        var match = !query || normaliseSearch(card.getAttribute('data-search')).indexOf(query) !== -1;
+        card.hidden = !match;
+        if (match) visible += 1;
+      });
+      if (homeStatus) homeStatus.textContent = visible ? visible + ' parcours affiché(s).' : 'Aucun parcours ne correspond à votre recherche.';
+    });
+  }
+
+  var catalogueSearch = document.getElementById('formation-search');
+  if (catalogueSearch) {
+    var catalogueLevels = Array.prototype.slice.call(document.querySelectorAll('.catalog-level'));
+    var catalogueStatus = document.getElementById('formation-search-status');
+    var requestedLevel = new URLSearchParams(window.location.search).get('niveau');
+    if (requestedLevel !== 'licence' && requestedLevel !== 'master') requestedLevel = '';
+
+    function filterCatalogue() {
+      var query = normaliseSearch(catalogueSearch.value.trim());
+      var visible = 0;
+      catalogueLevels.forEach(function (section) {
+        var levelAllowed = !requestedLevel || section.getAttribute('data-level') === requestedLevel;
+        var sectionVisible = 0;
+        section.querySelectorAll('.program-item').forEach(function (item) {
+          var match = levelAllowed && (!query || normaliseSearch(item.getAttribute('data-search')).indexOf(query) !== -1);
+          item.hidden = !match;
+          if (match) { sectionVisible += 1; visible += 1; }
+        });
+        section.hidden = !levelAllowed || sectionVisible === 0;
+      });
+      if (catalogueStatus) catalogueStatus.textContent = visible ? visible + ' formation(s) affichée(s).' : 'Aucune formation ne correspond à ces critères.';
+    }
+
+    catalogueSearch.addEventListener('input', filterCatalogue);
+    filterCatalogue();
+  }
+
   /* ---------- Scroll reveals: IntersectionObserver, once per element ---------- */
   var revealElements = document.querySelectorAll(
     '.card, .news-card, .step-card, .stat, .split-section__text, ' +

@@ -1,78 +1,152 @@
 {
   "slug": "home",
   "title": "Accueil",
-  "metaDescription": "Université Catholique de l'Afrique de l'Ouest – Unité Universitaire de Conakry : formations, admissions, vie universitaire et actualités à Conakry, Guinée.",
+  "metaDescription": "Découvrez l’UCAO-UUCo à Conakry : formations de Licence et Master, admissions, vie universitaire et actualités.",
   "hero": {
-    "kicker": "Université Catholique de l'Afrique de l'Ouest",
+    "kicker": "Université Catholique de l’Afrique de l’Ouest",
     "title": "Unité Universitaire de Conakry",
-    "lead": "Une formation académique exigeante, ancrée en Guinée et ouverte sur l'Afrique de l'Ouest, au service des étudiantes et étudiants, des enseignants et des partenaires.",
+    "lead": "Une formation intellectuelle et humaine, ancrée en Guinée et ouverte sur l’Afrique de l’Ouest.",
     "image": "campus-classe-cahiers.jpg",
-    "imageAlt": "Étudiantes en cours à l'UCAO-UUCo, Conakry — photo authentique du campus.",
-    "imageCredit": "Photo : UCAO-UUCo — vie étudiante sur le campus de Conakry.",
-    "ctaPrimary": { "label": "Découvrir les formations", "href": "/formations/" },
-    "ctaSecondary": { "label": "S'informer sur les admissions", "href": "/admissions/" }
+    "imageAlt": "Étudiants en cours à l’UCAO-UUCo.",
+    "imageCredit": "Photo fournie par l’UCAO-UUCo.",
+    "ctaPrimary": {
+      "label": "Explorer les formations",
+      "href": "/formations/"
+    },
+    "ctaSecondary": {
+      "label": "Préparer son admission",
+      "href": "/admissions/"
+    }
   },
   "intro": {
-    "title": "L'exigence académique au service de l'humain",
-    "lead": "L'Unité Universitaire de Conakry porte les mêmes exigences académiques et humaines que le réseau UCAO, adaptées au contexte guinéen.",
-    "text": "Fondée dans le réseau UCAO, l'unité universitaire de Conakry propose des formations de Licence et de Master conçues pour répondre aux besoins du marché de l'emploi local et international, dans une approche intellectuelle et humaine de qualité."
+    "title": "Une université en réseau, une présence à Conakry",
+    "lead": "Foi, science et action au service de la formation.",
+    "text": "Le réseau UCAO a été fondé en février 2000 par la Conférence Épiscopale Régionale de l’Afrique de l’Ouest. Son Unité Universitaire de Conakry, créée en 2008 selon la présentation institutionnelle, propose des formations de Licence et de Master dans plusieurs domaines."
   },
   "stats": {
-    "title": "L'UCAO en quelques repères",
-    "lead": "Chiffres clés vérifiés auprès de l'administration.",
+    "title": "Quelques repères",
+    "lead": "Repères publiés dans la présentation institutionnelle de l’UCAO-UUCo.",
     "items": [
-      { "number": "7", "label": "Pays du réseau UCAO" },
-      { "number": "2000", "label": "Année de fondation" },
-      { "number": "2", "label": "Cycles : Licence et Master" }
+      {
+        "number": "2000",
+        "label": "Fondation du réseau UCAO"
+      },
+      {
+        "number": "2008",
+        "label": "Création de l’unité de Conakry"
+      },
+      {
+        "number": "7",
+        "label": "Pays où le réseau indique être présent"
+      }
     ]
   },
   "programs": {
-    "title": "Nos formations",
-    "lead": "Trouvez votre parcours par niveau ou par spécialité.",
-    "searchPlaceholder": "Rechercher une formation par nom ou spécialité...",
+    "title": "Des parcours dans plusieurs domaines",
+    "lead": "Le catalogue institutionnel présente des formations en droit, gestion, sciences humaines, sciences politiques, technologie et santé.",
+    "searchPlaceholder": "Rechercher une formation…",
     "items": [
-      { "label": "Gestion Commerciale — Licence", "desc": "Premier cycle : gestion, marketing, finance d'entreprise.", "href": "/formations/gestion-commerciale-licence" },
-      { "label": "Droit — Licence", "desc": "Premier cycle : droit privé, public, international.", "href": "/formations/droit-licence" },
-      { "label": "Sciences de l'Éducation — Licence", "desc": "Premier cycle : pédagogie, didactique, administration scolaire.", "href": "/formations/sciences-education-licence" },
-      { "label": "Gestion Commerciale — Master", "desc": "Second cycle : management stratégique, entrepreneuriat.", "href": "/formations/gestion-commerciale-master" },
-      { "label": "Droit — Master", "desc": "Second cycle : droit des affaires, droit international.", "href": "/formations/droit-master" },
-      { "label": "Sciences de l'Éducation — Master", "desc": "Second cycle : ingénierie de formation, recherche éducative.", "href": "/formations/sciences-education-master" }
+      {
+        "label": "Droit — Licence",
+        "desc": "Filière de Licence publiée par l’UCAO-UUCo.",
+        "href": "/formations/#licence"
+      },
+      {
+        "label": "Génie informatique — Licence",
+        "desc": "Durée indiquée dans le catalogue : 4 ans.",
+        "href": "/formations/#licence"
+      },
+      {
+        "label": "Biologie médicale — Licence",
+        "desc": "Technicien de laboratoire · durée indiquée : 4 ans.",
+        "href": "/formations/#licence"
+      },
+      {
+        "label": "Comptabilité, Contrôle et Audit — Master",
+        "desc": "Master annoncé en cours du soir, durée publiée : 2 ans.",
+        "href": "/formations/#master"
+      },
+      {
+        "label": "Monnaie, Finance, Banque — Master",
+        "desc": "Master annoncé en cours du soir, durée publiée : 2 ans.",
+        "href": "/formations/#master"
+      },
+      {
+        "label": "Gestion de projets et développement — Master",
+        "desc": "Master annoncé en cours du soir, durée publiée : 2 ans.",
+        "href": "/formations/#master"
+      }
     ],
-    "cta": { "label": "Voir toutes les formations", "href": "/formations/" }
+    "cta": {
+      "label": "Consulter le catalogue complet",
+      "href": "/formations/"
+    }
   },
   "admissions": {
-    "title": "Admissions",
-    "text": "Les procédures, conditions et documents nécessaires sont détaillés sur la page Admissions. Les informations financières ne sont présentées que lorsqu'elles sont confirmées par l'administration.",
-    "cta": { "label": "Voir la procédure d'admission", "href": "/admissions/" }
-  },
-  "video": {
-    "title": "Animation : Et si votre ombre vous précédait ?",
-    "lead": "Une courte animation produite par notre studio interne — 20 secondes, sans dialogue, musique seulement.",
-    "video": "/assets/videos/shadow-what-if.mp4",
-    "poster": "/assets/images/hero-conakry.webp",
-    "credit": "Animation « What If Your Shadow Walked Ahead of You? » — UCAO-UUCo What If Studio (Remotion, SVG in code)."
+    "title": "Préparer son admission",
+    "text": "Retrouvez les pièces publiées pour les candidatures en Licence et en Master. Les frais affichés sur l’ancien site concernent 2025-2026 : demandez le barème 2026-2027 directement à la scolarité avant tout paiement.",
+    "cta": {
+      "label": "Voir les étapes et les documents",
+      "href": "/admissions/"
+    }
   },
   "newsEvents": {
-    "title": "Actualités & Événements",
+    "title": "Actualités et événements",
     "items": [
-      { "title": "Jubilé des 25 ans de l'UCAO-UUCo", "date": "15 mars 2025", "summary": "Un quart de siècle d'excellence, de mission et de service à Conakry.", "category": "Événement", "href": "/actualites/#jubile-25-ans" },
-      { "title": "Colloque international sur la gouvernance de la diversité culturelle", "date": "12 novembre 2024", "summary": "Organisé par l'UCAO-UUCo avec des partenaires africains et européens.", "category": "Colloque", "href": "/actualites/#colloque-diversite" },
-      { "title": "Journée de l'étudiant à l'UCAO", "date": "14 novembre 2024", "summary": "Une journée dédiée à la vie étudiante sur le campus de Conakry.", "category": "Vie étudiante", "href": "/actualites/#journee-etudiant" }
+      {
+        "title": "L’UCAO-UUCo célèbre son Jubilé des 25 ans",
+        "date": "28 novembre 2025",
+        "summary": "Une publication institutionnelle consacrée au jubilé et à l’histoire de l’établissement.",
+        "category": "Institution",
+        "sourceUrl": "https://ucao-uuco.org/2025/11/28/lucao-uuco-celebre-son-jubile-des-25-ans-un-quart-de-siecle-dexcellence-de-mission-et-de-service/"
+      },
+      {
+        "title": "Colloque international sur la gouvernance de la diversité culturelle",
+        "date": "16 novembre 2025",
+        "summary": "Un colloque organisé avec l’Université Catholique de Lyon au Palais du Peuple, à Conakry.",
+        "category": "Recherche",
+        "sourceUrl": "https://ucao-uuco.org/2025/11/16/colloque-international-sur-la-gouvernance-de-la-diversite-culturelle-organise-par-lucao/"
+      },
+      {
+        "title": "C’est la journée de l’étudiant à l’UCAO !",
+        "date": "14 novembre 2025",
+        "summary": "Une journée consacrée aux talents, aux échanges et à la vie étudiante.",
+        "category": "Vie étudiante",
+        "sourceUrl": "https://ucao-uuco.org/2025/11/14/cest-la-journee-de-letudiant-a-lucao/"
+      }
     ],
-    "cta": { "label": "Voir toutes les actualités", "href": "/actualites/" }
+    "cta": {
+      "label": "Toutes les actualités",
+      "href": "/actualites/"
+    }
   },
   "vie": {
-    "title": "Vie universitaire",
-    "text": "Découvrez le campus de Conakry, les activités étudiantes, les services d'accompagnement et l'environnement académique de l'UCAO-UUCo.",
-    "cta": { "label": "En savoir plus sur la vie universitaire", "href": "/vie-universitaire/" }
+    "title": "La vie universitaire à Conakry",
+    "text": "Journées étudiantes, rencontres académiques et activités de campus rythment la vie de l’UCAO-UUCo.",
+    "cta": {
+      "label": "Découvrir la vie universitaire",
+      "href": "/vie-universitaire/"
+    }
   },
   "valeurs": {
-    "title": "Nos valeurs",
+    "title": "Une mission et des principes",
     "items": [
-      { "label": "Exigence académique", "desc": "Une formation intellectuelle rigoureuse et de qualité, alignée sur les standards internationaux." },
-      { "label": "Formation humaine", "desc": "Le développement de la personne dans sa globalité : intelligence, cœur, engagement." },
-      { "label": "Service à la communauté", "desc": "Contribuer activement au développement de la Guinée et de l'Afrique de l'Ouest." },
-      { "label": "Ouverture et partenariat", "desc": "Un réseau universitaire ouvert sur l'international et les partenaires locaux." }
+      {
+        "label": "Inspiration chrétienne",
+        "desc": "Une identité catholique assumée dans la vie de la communauté universitaire."
+      },
+      {
+        "label": "Dialogue entre foi et raison",
+        "desc": "Une réflexion sur les savoirs et les enjeux de la société à la lumière de la foi."
+      },
+      {
+        "label": "Fidélité et responsabilité",
+        "desc": "Un engagement éducatif inscrit dans la mission de l’Église en Afrique."
+      },
+      {
+        "label": "Service de la société",
+        "desc": "Former des personnes capables de contribuer à la vie sociale et au développement."
+      }
     ]
   }
 }

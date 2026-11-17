@@ -1,26 +1,32 @@
 {
   "slug": "formations",
   "title": "Formations",
-  "metaDescription": "Catalogue des formations de l’UCAO-UUCo par niveau et spécialité à Conakry, Guinée.",
+  "metaDescription": "Catalogue des formations de Licence et de Master publiées par l’UCAO-UUCo à Conakry.",
   "hero": {
-    "kicker": "Formations",
-    "title": "Trouver une formation",
-    "lead": "Consultez le catalogue des formations de Licence et de Master proposées par l’Unité Universitaire de Conakry.",
-    "image": "WhatsApp Image 2026-11-14 at 3.02.58 PM.jpeg",
+    "kicker": "Offre de formation",
+    "title": "Choisir son parcours",
+    "lead": "Découvrez les filières de Licence et de Master présentées dans le catalogue institutionnel de l’UCAO-UUCo.",
+    "image": "campus-entree.jpg",
     "imageAlt": "Entrée du campus de l’UCAO-UUCo à Conakry.",
-    "imageCredit": "Photo fournie par l’UCAO-UUCo — campus de Conakry.",
-    "ctaPrimary": { "label": "Voir toutes les formations", "href": "/formations/" },
-    "ctaSecondary": { "label": "S’informer sur les admissions", "href": "/admissions/" }
+    "imageCredit": "Photo fournie par l’UCAO-UUCo.",
+    "ctaPrimary": {
+      "label": "Préparer son admission",
+      "href": "/admissions/"
+    },
+    "ctaSecondary": {
+      "label": "Poser une question",
+      "href": "/contact/"
+    }
   },
   "intro": {
-    "title": "Un catalogue par niveau et par spécialité",
-    "text": "Les formations sont organisées par niveau et par spécialité. Utilisez le champ de recherche pour trouver rapidement la formation qui correspond à votre projet. Le catalogue détaillé doit être confirmé par l’administration."
+    "title": "Un catalogue par niveau",
+    "text": "Le catalogue officiel couvre des domaines variés : sciences politiques, droit, économie et gestion, sciences humaines, communication, technologie, sciences alimentaires et santé. Les durées et modalités affichées ci-dessous reprennent les informations publiées par l’établissement."
   },
   "formationsImage": {
-    "image": "WhatsApp Image 2026-11-14 at 3.03.04 PM.jpeg",
-    "imageAlt": "Étudiantes en cours à l’UCAO-UUCo, Conakry.",
-    "credit": "Photo fournie par l’UCAO-UUCo — vie étudiante en salle de cours.",
+    "image": "campus-classe-cahiers.jpg",
+    "imageAlt": "Étudiants en cours à l’UCAO-UUCo.",
+    "credit": "Photo fournie par l’UCAO-UUCo.",
     "reverse": true
   },
-  "note": "Le catalogue complet, les effectifs et les listes précises de formations doivent être confirmés par l’administration. Aucun chiffre n’est inventé."
+  "note": "Le site institutionnel annonce 8 formations de Licence tout en en listant 9. La liste ci-dessous reprend les 9 intitulés distincts visibles sur sa page, sans masquer cet écart. L’ouverture de chaque filière pour 2026-2027 et les actes d’habilitation en vigueur doivent être confirmés auprès de la scolarité."
 }

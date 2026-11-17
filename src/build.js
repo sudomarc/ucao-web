@@ -117,20 +117,6 @@ function langSwitcher(site) {
   return `<nav class="lang-switcher" aria-label="Langue">${items}</nav>`;
 }
 
-function consentBanner(site) {
-  const consent = site.consent;
-  if (!consent || !consent.text) return '';
-  return `
-    <div class="consent-banner" id="consent-banner" role="dialog" aria-label="Consentement aux cookies" hidden>
-      <p class="consent-banner__text">${escapeHtml(consent.text)} <a href="${escapeHtml(consent.policyHref || '/politique-confidentialite/')}">En savoir plus</a></p>
-      <div class="consent-banner__actions">
-        <button class="button button--primary" id="consent-accept">${escapeHtml(consent.acceptLabel || 'Accepter')}</button>
-        <button class="button button--ghost" id="consent-reject">${escapeHtml(consent.rejectLabel || 'Refuser')}</button>
-      </div>
-    </div>
-  `;
-}
-
 function nav(site, navItems, currentSlug) {
   const itemsHtml = navItems
     .map(
@@ -464,6 +450,7 @@ function sectionsList(data) {
                 <h2 class="section-title">${escapeHtml(s.title)}</h2>
                 <p>${escapeHtml(s.text)}</p>
                 ${s.note ? `<p class="note">${escapeHtml(s.note)}</p>` : ''}
+                ${s.href ? `<p><a class="button button--ghost" href="${escapeHtml(s.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.linkLabel || "En savoir plus")}</a></p>` : ''}
               </div>
               ${s.image ? `<div class="split-section__media">${renderImageBlock(s)}</div>` : ''}
             </div>
@@ -522,7 +509,7 @@ function statsGrid(data, key) {
     <section class="section section--stats">
       <div class="container">
         ${block.title ? `<h2 class="section-title">${escapeHtml(block.title)}</h2>` : ''}
-        ${block.text ? `<p class="lead text-block--centered">${escapeHtml(block.text)}</p>` : ''}
+        ${(block.lead || block.text) ? `<p class="lead text-block--centered">${escapeHtml(block.lead || block.text)}</p>` : ''}
         <div class="stats-grid">${itemsHtml}</div>
         ${block.note ? `<p class="note note--block">${escapeHtml(block.note)}</p>` : ''}
       </div>
@@ -590,7 +577,7 @@ function steps(data, alt) {
   return `
     <section class="${sectionClass}">
       <div class="container">
-        <h2 class="section-title">Procédure d’admission</h2>
+        <h2 class="section-title">${escapeHtml(data.stepsTitle || "Procédure d’admission")}</h2>
         <div class="step-list">${itemsHtml}</div>
       </div>
     </section>
@@ -609,6 +596,7 @@ function newsBlock(data, alt) {
           <h3 class="news-card__title">${escapeHtml(item.title)}</h3>
           <p class="news-card__desc">${escapeHtml(item.summary || '')}</p>
           <span class="news-card__category">${escapeHtml(item.category || '')}</span>
+          ${sourceLink(item)}
           ${item.note ? `<span class="note">${escapeHtml(item.note)}</span>` : ''}
         </article>
       `
@@ -637,15 +625,15 @@ function formationsCatalog(data, alt) {
         const programsHtml = level.programs
           .map(
             (p) => `
-              <li class="program-item">
+              <li class="program-item" data-search="${escapeHtml([p.label, p.domain || ''].join(' ').toLowerCase())}">
                 <span class="program-name">${escapeHtml(p.label)}</span>
-                ${p.note ? `<span class="program-note">${escapeHtml(p.note)}</span>` : ''}
+                ${p.duration ? `<span class="program-note">${escapeHtml(p.duration)}</span>` : ''}
               </li>
             `
           )
           .join('');
         return `
-          <section class="section section--text${alt ? ' section--alt' : ''}">
+          <section class="section section--text catalog-level${alt ? ' section--alt' : ''}" id="${escapeHtml(level.id)}" data-level="${escapeHtml(level.id)}">
             <div class="container">
               <h2 class="section-title">${escapeHtml(level.label)}</h2>
               <p>${escapeHtml(level.description)}</p>
@@ -661,11 +649,13 @@ function formationsCatalog(data, alt) {
       <div class="container">
         <div class="formation-search">
           <label class="sr-only" for="formation-search">${escapeHtml(data.searchPlaceholder || 'Rechercher')}</label>
-          <input type="search" id="formation-search" placeholder="${escapeHtml(data.searchPlaceholder || '')}" aria-label="${escapeHtml(data.searchPlaceholder || '')}">
+          <input type="search" id="formation-search" placeholder="${escapeHtml(data.searchPlaceholder || '')}" aria-label="${escapeHtml(data.searchPlaceholder || '')}" aria-describedby="formation-search-status">
+          <p id="formation-search-status" class="note" aria-live="polite"></p>
         </div>
         ${levelsHtml}
         <div class="cta-wrap"><a class="button button--primary" href="${escapeHtml(data.ctaHref || '/formations/')}">${escapeHtml(data.ctaLabel || 'Voir toutes les formations')}</a></div>
         ${data.note ? `<p class="note note--block">${escapeHtml(data.note)}</p>` : ''}
+        ${data.sourceUrl ? `<p class="note"><a href="${escapeHtml(data.sourceUrl)}" target="_blank" rel="noopener noreferrer">Consulter le catalogue publié par l’UCAO-UUCo</a></p>` : ''}
       </div>
     </section>
   `;
@@ -683,6 +673,7 @@ function newsFullList(data, alt) {
           <h3 class="news-card__title">${escapeHtml(item.title)}</h3>
           <p class="news-card__desc">${escapeHtml(item.summary || '')}</p>
           <span class="news-card__category">${escapeHtml(item.category || '')}</span>
+          ${sourceLink(item)}
           ${item.note ? `<span class="note">${escapeHtml(item.note)}</span>` : ''}
         </article>
       `
@@ -759,6 +750,67 @@ function faqList(data, alt) {
   `;
 }
 
+function sourceLink(item) {
+  if (!item.sourceUrl) return '';
+  return `<p class="news-card__source"><a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener noreferrer">Lire la publication originale</a></p>`;
+}
+
+function admissionDocuments(data) {
+  const block = data.documents;
+  if (!block || !block.groups) return '';
+  const groupsHtml = block.groups.map(group => `
+    <section class="document-group">
+      <h3>${escapeHtml(group.title)}</h3>
+      <ul class="text-list">${group.items.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
+    </section>
+  `).join('');
+  return `
+    <section class="section section--text section--alt">
+      <div class="container">
+        <h2 class="section-title">${escapeHtml(block.title || 'Documents à fournir')}</h2>
+        <div class="document-groups">${groupsHtml}</div>
+        ${block.note ? `<p class="note note--block">${escapeHtml(block.note)}</p>` : ''}
+        ${block.sourceUrl ? `<p><a class="button button--ghost" href="${escapeHtml(block.sourceUrl)}" target="_blank" rel="noopener noreferrer">Voir la procédure publiée par l’UCAO-UUCo</a></p>` : ''}
+      </div>
+    </section>
+  `;
+}
+
+function financialInfo(data) {
+  const block = data.financial;
+  if (!block) return '';
+  return `
+    <section class="section section--text">
+      <div class="container">
+        <div class="text-block">
+          <h2 class="section-title">${escapeHtml(block.title || 'Informations financières')}</h2>
+          ${block.text ? `<p>${escapeHtml(block.text)}</p>` : ''}
+          ${block.note ? `<p class="note note--block">${escapeHtml(block.note)}</p>` : ''}
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+function admissionsContact(data) {
+  const block = data.contactAdmissions;
+  if (!block) return '';
+  const email = block.email ? `<p><strong>E-mail :</strong> <a href="mailto:${escapeHtml(block.email)}">${escapeHtml(block.email)}</a></p>` : '';
+  const phones = block.phones && block.phones.length
+    ? `<p><strong>Téléphone :</strong> ${block.phones.map(p => `<a href="tel:${escapeHtml(p.replace(/\s/g, ''))}">${escapeHtml(p)}</a>`).join(' · ')}</p>`
+    : '';
+  return `
+    <section class="section section--text section--alt">
+      <div class="container">
+        <h2 class="section-title">${escapeHtml(block.title || 'Contacter la scolarité')}</h2>
+        ${block.text ? `<p>${escapeHtml(block.text)}</p>` : ''}
+        ${email}
+        ${phones}
+        ${block.note ? `<p class="note note--block">${escapeHtml(block.note)}</p>` : ''}
+      </div>
+    </section>
+  `;
+}
 function legalBlocks(data, alt) {
   if (!data.blocks) return '';
   const blocksHtml = data.blocks
@@ -767,6 +819,7 @@ function legalBlocks(data, alt) {
         <div class="legal-block">
           <h3 class="legal-block__title">${escapeHtml(b.title)}</h3>
           <p>${escapeHtml(b.content)}</p>
+          ${b.url ? `<p><a href="${escapeHtml(b.url)}" target="_blank" rel="noopener noreferrer">Consulter la source</a></p>` : ''}
         </div>
       `
     )
@@ -854,7 +907,7 @@ ${nav(site, navItems, currentSlug)}
 ${body}
 </main>
 ${footer(site, navItems)}
-${consentBanner(site)}
+
 <script src="/js/main.js"></script>
 </body>
 </html>`;
@@ -867,7 +920,7 @@ ${intro(data)}
 ${statsGrid(data, 'stats')}
 ${programDiscovery(data, 'programs')}
 ${textCta(data, 'admissions', false)}
-${videoBlock(data, 'video', false)}
+
 ${newsEvents(data, 'newsEvents')}
 ${textCta(data, 'vie', false)}
 ${valeursGrid(data, 'valeurs')}
@@ -886,15 +939,16 @@ function programDiscovery(data, key) {
         ${block.searchPlaceholder ? `
           <div class="formation-search" style="max-width: var(--read-width); margin-bottom: var(--space-2xl);">
             <label class="sr-only" for="program-search">${escapeHtml(block.searchPlaceholder)}</label>
-            <input type="search" id="program-search" placeholder="${escapeHtml(block.searchPlaceholder)}" aria-label="${escapeHtml(block.searchPlaceholder)}">
+            <input type="search" id="program-search" placeholder="${escapeHtml(block.searchPlaceholder)}" aria-label="${escapeHtml(block.searchPlaceholder)}" aria-describedby="program-search-status">
+            <p id="program-search-status" class="note" aria-live="polite"></p>
           </div>
         ` : ''}
         ${block.items && block.items.length ? `
           <div class="card-grid">
             ${block.items.map(item => `
-              <article class="card program-card">
+              <article class="card program-card" data-search="${escapeHtml(item.label + ' ' + (item.desc || '')).toLowerCase()}">
                 <h3 class="card__title">${escapeHtml(item.label)}</h3>
-                <p class="card__desc">${escapeHtml(item.desc || '')}</p>
+                ${item.desc ? `<p class="card__desc">${escapeHtml(item.desc)}</p>` : ''}
                 ${item.href ? `<a class="button button--ghost card__cta" href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>` : ''}
               </article>
             `).join('')}
@@ -918,6 +972,7 @@ function newsEvents(data, key) {
           <h3 class="news-card__title">${escapeHtml(item.title)}</h3>
           <p class="news-card__desc">${escapeHtml(item.summary || '')}</p>
           <span class="news-card__category">${escapeHtml(item.category || '')}</span>
+          ${sourceLink(item)}
         </article>
       `
     )
@@ -977,6 +1032,9 @@ ${contactForm(data, true)}
 ${faqList(data, false)}
 ${legalBlocks(data, true)}
 ${steps(data, false)}
+${admissionDocuments(data)}
+${financialInfo(data)}
+${admissionsContact(data)}
 ${actionsList(data, true)}
 ${formationsCatalog(data.slug === 'formations' ? globals.formations : null, true)}
 ${newsFullList(data.slug === 'actualites' ? globals.actualites : null, false)}
