@@ -18,14 +18,14 @@ Defined in `:root` of `src/styles/main.css`. Reference: `--color-*` variables.
 | Secondary light | `--color-secondary-light` | #f3e5e5 | Dérivé clair | Alternating section backgrounds, badges |
 | Accent | `--color-accent` | #991915 | = Secondary | Sparing highlights only |
 | Accent hover | `--color-accent-hover` | #7a1411 | = Secondary dark | Hover on accent elements |
-| Background | `--color-bg` | #fafaf9 | Blanc cassé du logo (off-white) | Page background (all pages) |
+| Background | `--color-bg` | #f7f5f0 | Blanc cassé du logo (off-white) | Page background (all pages) |
 | Surface | `--color-surface` | #ffffff | Blanc pur | Cards, panels, modals, dropdowns |
-| Text | `--color-text` | #22223b | Near-black with blue undertone | Primary body text |
-| Text muted | `--color-text-muted` | #6b7280 | Medium gray | Captions, metadata, secondary labels |
-| Text light | `--color-text-light` | #9ca3af | Light gray | Timestamps, author names, footnotes |
-| Borders | `--color-border` | #e5e7eb | Light gray | Component borders, dividers |
+| Text | `--color-text` | #211f2d | Near-black with blue undertone | Primary body text |
+| Text muted | `--color-text-muted` | #625f6d | Medium gray | Captions, metadata, secondary labels |
+| Text light | `--color-text-light` | #827e89 | Light gray | Timestamps, author names, footnotes |
+| Borders | `--color-border` | #e5e0d8 | Light gray | Component borders, dividers |
 | Border focus | `--color-border-focus` | #312783 | = Primary | `:focus-visible` outline |
-| Shadow | `--color-shadow` | rgba(49,39,131,0.08) | Primary at 8% | Card elevation on hover only |
+| Shadow | `--color-shadow` | rgba(31,27,65,0.12) | Primary at 8% | Card elevation on hover only |
 
 ### Contrast Verification (WCAG 2.1 AA)
 
@@ -43,21 +43,21 @@ Defined in `:root` of `src/styles/main.css`. Reference: `--color-*` variables.
 
 ## 2. Typography
 
-### Font Stack (System UI — no external fonts)
-```css
---font-display: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
---font-body: var(--font-display);  /* same stack */
-```
+### Font Stack (editorial display + system body)
+\`\`\`css
+--font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+--font-body: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+\`\`\`
 
-**Rationale**: Zero external font requests → performance, privacy, offline-first. System stack matches Aalto's minimalist approach.
+Display typography uses a locally available serif stack for institutional character; body copy stays on the system sans-serif stack to preserve legibility, offline resilience and zero external font requests.
 
 ### Type Scale
 
 | Token | Value | rem | px (16px base) | Usage |
 |-------|-------|-----|----------------|-------|
-| `--size-display` | 3.5rem | 3.5 | 56 | Hero title, major section openers |
-| `--size-h1` | 2.25rem | 2.25 | 36 | Page-level H1 |
-| `--size-h2` | 1.625rem | 1.625 | 26 | Section titles (H2) |
+| `--size-display` | `clamp(2.75rem, 5.2vw, 4.75rem)` | fluid | fluid | Hero title, major section openers |
+| `--size-h1` | `clamp(2.2rem, 4.2vw, 3.7rem)` | fluid | fluid | Page-level H1 |
+| `--size-h2` | `clamp(1.7rem, 2.8vw, 2.55rem)` | fluid | fluid | Section titles (H2) |
 | `--size-h3` | 1.25rem | 1.25 | 20 | Card titles, program names, H3 |
 | `--size-body` | 1.0625rem | 1.0625 | 17 | Paragraph text |
 | `--size-caption` | 0.8125rem | 0.8125 | 13 | Captions, footnotes, `[À CONFIRMER]` notes |
@@ -246,32 +246,27 @@ Two buttons only: `.button--primary` "Accepter" / `.button--ghost` "Refuser". Li
 
 ## 7. Motion & Animation
 
-```css
---duration-fast: 150ms;
---duration-normal: 250ms;
---easing: cubic-bezier(0.4, 0, 0.2, 1);
-```
+Motion is used to clarify hierarchy and provide feedback, not as decoration.
 
-**Only functional animations:**
-- Button hover/active (transform, background)
-- Card hover (shadow, translateY)
-- Focus outline (no transition — instant)
-- Mobile menu slide (transform, 250ms)
-- Consent banner slide-up (transform, 250ms)
+**Page entrance**
+- Hero eyebrow, title, lead and calls to action enter with a short staggered rise.
+- Hero photography settles in slightly after the text.
+- No autoplay media, parallax, cursor effects or automatic carousels.
 
-**No decorative animations**: no fade-in on scroll, no parallax, no auto-carousel.
+**On-scroll reveal**
+- Cards, statistics, split-content blocks, quotations and FAQ items reveal once when they enter the viewport.
+- Implemented with \`IntersectionObserver\`; no scroll polling loop.
+- Without JavaScript, all content remains visible. If the API is unavailable, elements are immediately visible.
 
-**Reduced motion:**
-```css
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-```
+**Interaction**
+- Buttons lift slightly on hover and respond on active press.
+- Cards lift subtly; editorial images scale only on hover-capable devices.
+- Mobile navigation slides in with a dismissible backdrop; Escape closes it and focus returns to the menu trigger.
+- Header elevation changes after the first scroll threshold.
 
----
+**Reduced motion**
+- \`prefers-reduced-motion: reduce\` disables entrance and reveal motion and keeps all content visible.
+- Motion never carries information required to understand or use a page.
 
 ## 8. Implementation Checklist (src/styles/main.css)
 
@@ -286,4 +281,4 @@ Two buttons only: `.button--primary` "Accepter" / `.button--ghost` "Refuser". Li
 
 ---
 
-*Design system version 1.0 — aligned with DESIGN-BRIEF.md Direction A (Éditoriale Prestigieuse), verified against 9 reference sites via REA.*
+*Design system version 1.1 — editorial refinement for UCAO-UUCo; retains Direction A, the logo palette and the lightweight static-site architecture.*
