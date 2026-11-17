@@ -1,57 +1,100 @@
 {
   "slug": "contact",
   "title": "Contact",
-  "metaDescription": "Contacter l’UCAO-UUCo : coordonnées, localisation, itinéraire et formulaire de contact à Conakry, Guinée.",
+  "metaDescription": "Coordonnées, adresse et itinéraire pour contacter l’UCAO-UUCo à Conakry.",
   "hero": {
-    "kicker": "Contact",
-    "title": "Contactez-nous",
-    "lead": "Vous souhaitez plus d’informations sur nos formations, nos services et nos partenariats ?",
-    "image": "WhatsApp Image 2026-11-14 at 3.03.26 PM.jpeg",
-    "imageAlt": "Étudiants sur le campus de l’UCAO-UUCo à Conakry.",
-    "imageCredit": "Photo fournie par l’UCAO-UUCo — campus de Conakry.",
-    "ctaPrimary": { "label": "Découvrir les formations", "href": "/formations/" },
-    "ctaSecondary": { "label": "Voir la procédure d’admission", "href": "/admissions/" }
+    "kicker": "Nous contacter",
+    "title": "Parlons de votre projet d’études",
+    "lead": "Pour toute question sur les formations, les admissions ou la vie universitaire, contactez l’Unité Universitaire de Conakry.",
+    "image": "campus-entree.jpg",
+    "imageAlt": "Entrée du campus de l’UCAO-UUCo à Conakry.",
+    "imageCredit": "Photo fournie par l’UCAO-UUCo.",
+    "ctaPrimary": {
+      "label": "Voir les formations",
+      "href": "/formations/"
+    },
+    "ctaSecondary": {
+      "label": "Préparer son admission",
+      "href": "/admissions/"
+    }
   },
   "coords": {
     "title": "Coordonnées",
-    "email": "[À CONFIRMER] info@ucao-uuco.org",
-    "emailNote": "Deux variantes observées sur l’ancien site : info@ucao.uuco.org et info@ucao-uuco.org. L’adresse officielle doit être confirmée par l’administration.",
-    "phones": ["(+224) 620 42 66 12", "(+224) 621 28 66 81", "(+224) 629 38 90 58"],
-    "phonesNote": "À confirmer par l’administration.",
-    "address": "Coléah, route de Niger, à côté de l’église catholique Saint Michel, Conakry, Guinée",
-    "addressNote": "À confirmer par l’administration."
+    "email": "info@ucao-uuco.org",
+    "phones": [
+      "(+224) 620 42 66 12",
+      "(+224) 621 28 66 81",
+      "(+224) 629 38 90 58"
+    ],
+    "address": "Coléah, route du Niger, à côté de l’église catholique Saint-Michel, Conakry, Guinée",
+    "note": "La page Contact du site institutionnel publie info@ucao-uuco.org. Son en-tête affiche également info@ucao.uuco.org. Si un message reste sans réponse, confirmez l’adresse par téléphone."
   },
   "localisation": {
-    "title": "Notre localisation",
-    "text": "Nous sommes situés à Coléah, sur la route de Niger, à côté de l’église catholique Saint Michel.",
+    "title": "Se rendre au campus",
+    "text": "Le campus est situé à Coléah, sur la route du Niger, à côté de l’église catholique Saint-Michel, à Conakry.",
     "mapUrl": "https://maps.app.goo.gl/u3j6UvU2s3dyW8oi8",
-    "mapLabel": "Voir l’itinéraire",
-    "note": "[À CONFIRMER]"
+    "mapLabel": "Ouvrir l’itinéraire"
   },
   "form": {
-    "title": "Envoyez-nous un message",
+    "title": "Formulaire de contact",
     "fields": [
-      { "name": "nom", "label": "Nom", "type": "text", "required": true, "placeholder": "Votre nom" },
-      { "name": "email", "label": "E-mail", "type": "email", "required": true, "placeholder": "votre@email.com" },
-      { "name": "sujet", "label": "Sujet", "type": "text", "required": false, "placeholder": "Objet de votre message" },
-      { "name": "message", "label": "Message", "type": "textarea", "required": true, "placeholder": "Votre message" }
+      {
+        "name": "nom",
+        "label": "Nom et prénom",
+        "type": "text",
+        "required": true,
+        "placeholder": "Votre nom et prénom"
+      },
+      {
+        "name": "email",
+        "label": "Adresse e-mail",
+        "type": "email",
+        "required": true,
+        "placeholder": "vous@exemple.com"
+      },
+      {
+        "name": "sujet",
+        "label": "Objet",
+        "type": "text",
+        "required": false,
+        "placeholder": "Objet de votre demande"
+      },
+      {
+        "name": "message",
+        "label": "Message",
+        "type": "textarea",
+        "required": true,
+        "placeholder": "Votre message"
+      }
     ],
-    "submit": "Envoyer le message",
-    "note": "Aucun backend n’est identifié pour ce formulaire. La limite est documentée et aucune soumission simulée n’est affichée comme réussie."
+    "submit": "Vérifier le message",
+    "note": "Ce formulaire n’est pas connecté à un service de réception : il ne transmet pas votre message. Pour joindre l’administration, utilisez les coordonnées ci-dessus. N’y saisissez pas de données personnelles sensibles."
   },
   "acces": {
     "title": "Accès rapide",
     "items": [
-      { "label": "Formations", "href": "/formations/" },
-      { "label": "Admissions", "href": "/admissions/" },
-      { "label": "Actualités", "href": "/actualites/" },
-      { "label": "Université", "href": "/universite/" }
+      {
+        "label": "Catalogue des formations",
+        "href": "/formations/"
+      },
+      {
+        "label": "Admissions",
+        "href": "/admissions/"
+      },
+      {
+        "label": "Actualités",
+        "href": "/actualites/"
+      },
+      {
+        "label": "Présentation de l’université",
+        "href": "/universite/"
+      }
     ]
   },
   "campusImage": {
-    "image": "WhatsApp Image 2026-11-14 at 3.02.57 PM.jpeg",
-    "imageAlt": "Étudiants sur le campus de l’UCAO-UUCo à Conakry.",
-    "credit": "Photo fournie par l’UCAO-UUCo — vie étudiante sur le campus.",
+    "image": "campus-banc-etudiants.jpg",
+    "imageAlt": "Étudiants sur le campus de l’UCAO-UUCo.",
+    "credit": "Photo fournie par l’UCAO-UUCo.",
     "reverse": false
   }
 }

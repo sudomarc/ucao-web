@@ -1,50 +1,102 @@
 {
   "slug": "admissions",
   "title": "Admissions",
-  "metaDescription": "Procédures d’admission, conditions, documents nécessaires et étapes pour s’inscrire à l’UCAO-UUCo à Conakry.",
+  "metaDescription": "Étapes d’admission et pièces à préparer pour une candidature en Licence ou en Master à l’UCAO-UUCo.",
   "hero": {
-    "kicker": "Admissions",
-    "title": "Rejoindre l’UCAO-UUCo",
-    "lead": "Découvrez la procédure d’admission, les conditions et les documents nécessaires pour intégrer l’une de nos formations.",
-    "image": "WhatsApp Image 2026-11-14 at 3.03.15 PM.jpeg",
-    "imageAlt": "Portrait d’une étudiante de l’UCAO-UUCo à Conakry.",
-    "imageCredit": "Photo fournie par l’UCAO-UUCo — étudiante sur le campus.",
-    "ctaPrimary": { "label": "Voir le catalogue des formations", "href": "/formations/" },
-    "ctaSecondary": { "label": "Contacter le service des admissions", "href": "/contact/" }
+    "kicker": "Candidatures",
+    "title": "Préparer son admission",
+    "lead": "Les étapes et les pièces publiées par l’UCAO-UUCo pour constituer un dossier de candidature.",
+    "image": "campus-portrait.jpg",
+    "imageAlt": "Étudiante de l’UCAO-UUCo.",
+    "imageCredit": "Photo fournie par l’UCAO-UUCo.",
+    "ctaPrimary": {
+      "label": "Voir les formations",
+      "href": "/formations/"
+    },
+    "ctaSecondary": {
+      "label": "Contacter la scolarité",
+      "href": "/contact/"
+    }
   },
   "intro": {
-    "title": "Une procédure claire, étape par étape",
-    "text": "Rejoindre l’UCAO-UUCo se fait en plusieurs étapes, du choix de la formation à l’inscription finale. Chaque étape est décrite ci-dessous pour vous guider dans votre démarche."
+    "title": "Du choix de la filière au dépôt du dossier",
+    "text": "Commencez par identifier la formation visée, puis demandez à la scolarité de confirmer son ouverture, les conditions d’accès et les modalités de dépôt pour l’année universitaire 2026-2027."
   },
+  "stepsTitle": "Les étapes de candidature",
   "steps": [
-    { "title": "1. Choisir une formation", "text": "Consultez le catalogue des formations et identifiez celle qui correspond à votre projet." },
-    { "title": "2. Vérifier les conditions d’admission", "text": "Chaque formation définit ses propres conditions d’accès (niveau requis, diplôme, etc.)." },
-    { "title": "3. Constituer le dossier", "text": "Rassemblez les documents nécessaires : pièce d’identité, diplômes, relevés de notes, photos, etc." },
-    { "title": "4. Déposer la candidature", "text": "Déposez votre dossier auprès du service des admissions de l’unité de Conakry." },
-    { "title": "5. Réponse et inscription", "text": "Après examen du dossier, vous recevrez une réponse et pourrez finaliser votre inscription." }
+    {
+      "title": "Choisir une filière",
+      "text": "Consultez le catalogue et sélectionnez le parcours de Licence ou de Master qui correspond à votre projet."
+    },
+    {
+      "title": "Vérifier les conditions",
+      "text": "Demandez à la scolarité les prérequis, les places disponibles et l’ouverture effective de la filière pour l’année 2026-2027."
+    },
+    {
+      "title": "Préparer les pièces",
+      "text": "Réunissez les documents listés ci-dessous. Les originaux, copies certifiées et formats acceptés doivent être confirmés auprès du service."
+    },
+    {
+      "title": "Déposer le dossier",
+      "text": "Le site institutionnel indique que le dossier doit être fourni au service de la scolarité de l’UCAO-UUCo."
+    },
+    {
+      "title": "Confirmer les frais avant paiement",
+      "text": "Demandez un barème daté pour 2026-2027 et les coordonnées de paiement directement à l’administration. N’utilisez pas un ancien numéro de compte ou un ancien tarif."
+    }
   ],
-  "documents": [
-    "Pièce d’identité ou passeport",
-    "Diplôme(s) obtenu(s) et relevés de notes",
-    "Acte de naissance",
-    "Photos d’identité",
-    "Justificatif de domicile"
-  ],
-  "documentsNote": "Liste à confirmer par le service des admissions de l’UCAO-UUCo.",
+  "documents": {
+    "title": "Pièces indiquées par l’établissement",
+    "groups": [
+      {
+        "title": "Candidature en Licence",
+        "items": [
+          "Demande d’inscription ou lettre de motivation",
+          "Attestation du baccalauréat et relevé de notes",
+          "Copie de l’acte de naissance",
+          "Deux photos d’identité",
+          "Certificat de résidence",
+          "Certificat médical",
+          "Reçu de versement délivré par VistaGui, après confirmation écrite des frais et des coordonnées de paiement par la scolarité"
+        ]
+      },
+      {
+        "title": "Candidature en Master",
+        "items": [
+          "Demande d’inscription ou lettre de motivation",
+          "Attestation du baccalauréat et relevé de notes",
+          "Copie de l’acte de naissance",
+          "Deux photos d’identité",
+          "Certificat de résidence",
+          "Certificat médical",
+          "Diplôme de Licence et relevés de notes",
+          "Reçu de versement délivré par VistaGui, après confirmation écrite des frais et des coordonnées de paiement par la scolarité"
+        ]
+      }
+    ],
+    "note": "Liste transcrite de la page officielle des inscriptions. Confirmez les pièces, les formats et les éventuelles pièces complémentaires pour la rentrée 2026-2027.",
+    "sourceUrl": "https://ucao-uuco.org/inscription/"
+  },
   "financial": {
-    "title": "Informations financières",
-    "text": "Les tarifs, échéances et conditions de paiement figurant sur l’ancien site concernaient l’année 2025-2026. Ils ne sont pas présentés comme les tarifs actuels et doivent être confirmés par l’administration avant toute republication.",
-    "note": "[À CONFIRMER] Aucun tarif n’est affiché sur ce site en l’absence de confirmation officielle."
+    "title": "Frais de scolarité",
+    "text": "Les montants accessibles sur le site institutionnel sont explicitement datés de l’année universitaire 2025-2026. Ils ne sont donc pas repris ici comme tarifs actuels.",
+    "note": "Avant tout versement, demandez à la scolarité le barème officiel 2026-2027, les frais annexes, les échéances et les coordonnées bancaires confirmées par écrit."
   },
   "contactAdmissions": {
-    "text": "Pour toute question sur la procédure d’admission, contactez le service des admissions de l’unité de Conakry.",
-    "email": "[À CONFIRMER]",
-    "phones": ["(+224) 620 42 66 12", "(+224) 621 28 66 81", "(+224) 629 38 90 58"]
+    "title": "Contacter la scolarité",
+    "text": "Pour vérifier l’ouverture d’une filière, les conditions d’accès et les documents à fournir, contactez directement l’UCAO-UUCo.",
+    "email": "info@ucao-uuco.org",
+    "phones": [
+      "(+224) 620 42 66 12",
+      "(+224) 621 28 66 81",
+      "(+224) 629 38 90 58"
+    ],
+    "note": "La page Contact officielle affiche info@ucao-uuco.org ; l’en-tête du site affiche aussi info@ucao.uuco.org. En cas de doute, privilégiez un appel téléphonique."
   },
   "campusImage": {
-    "image": "WhatsApp Image 2026-11-14 at 3.02.57 PM (1).jpeg",
-    "imageAlt": "Étudiants de l’UCAO-UUCo lors d’un événement sur le campus (Octobre Rose).",
-    "credit": "Photo fournie par l’UCAO-UUCo — événement étudiant sur le campus de Conakry.",
+    "image": "campus-groupe-rose.jpg",
+    "imageAlt": "Étudiants réunis lors d’une activité sur le campus.",
+    "credit": "Photo fournie par l’UCAO-UUCo.",
     "reverse": false
   }
 }

@@ -2,37 +2,27 @@
   "lang": "fr",
   "siteName": "UCAO-UUCo",
   "fullName": "Université Catholique de l'Afrique de l'Ouest – Unité Universitaire de Conakry",
-  "tagline": "Une université de droit pontifical au service de la formation et de l'humanisme, au cœur de Conakry.",
+  "tagline": "Foi, science, action : une formation intellectuelle et humaine au service de la société.",
   "email": "info@ucao-uuco.org",
-  "emailNote": "Deux variantes observées sur l'ancien site : info@ucao.uuco.org et info@ucao-uuco.org. L'adresse officielle doit être confirmée par l'administration avant publication.",
-  "phones": ["(+224) 620 42 66 12", "(+224) 621 28 66 81", "(+224) 629 38 90 58"],
-  "phonesNote": "À confirmer par l'administration.",
-  "address": "Coléah, route de Niger, à côté de l'église catholique Saint Michel, Conakry, Guinée",
-  "addressNote": "À confirmer par l'administration.",
+  "emailNote": "L’en-tête du site institutionnel affiche aussi info@ucao.uuco.org. En cas de non-réponse, confirmez l’adresse auprès du secrétariat par téléphone.",
+  "phones": [
+    "(+224) 620 42 66 12",
+    "(+224) 621 28 66 81",
+    "(+224) 629 38 90 58"
+  ],
+  "phonesNote": "Numéros publiés sur les pages officielles de l’UCAO-UUCo.",
+  "address": "Coléah, route du Niger, à côté de l’église catholique Saint-Michel, Conakry, Guinée",
+  "addressNote": "Localisation publiée sur le site institutionnel.",
   "facebook": "https://www.facebook.com/ucaoguinee",
-  "facebookNote": "À confirmer.",
+  "facebookNote": "Page Facebook indiquée par le site institutionnel.",
   "mapUrl": "https://maps.app.goo.gl/u3j6UvU2s3dyW8oi8",
-  "mapNote": "Lien Google Maps vers le campus (Coléah, route de Niger).",
-  "logoAlt": "Logo officiel de l'UCAO-UUCo",
+  "mapNote": "Lien d’itinéraire publié sur la page d’accueil institutionnelle.",
+  "logoAlt": "Logo officiel de l’Université Catholique de l’Afrique de l’Ouest",
   "logoSrc": "/assets/images/UCAO_LOGO.png",
   "faviconSrc": "/assets/images/favicon.svg",
-  "ogImage": "/assets/images/hero-campus.webp",
+  "ogImage": "/assets/images/campus-classe-cahiers.jpg",
   "twitterHandle": null,
   "author": "UCAO-UUCo",
   "copyright": "© UCAO-UUCo – Tous droits réservés.",
-  "metaDescription": "Université Catholique de l'Afrique de l'Ouest – Unité Universitaire de Conakry. Formations, admissions, vie universitaire et actualités à Conakry, Guinée.",
-  "languages": [
-    { "code": "fr", "label": "FR", "href": "/" },
-    { "code": "en", "label": "EN", "href": "/en/" }
-  ],
-  "consent": {
-    "text": "Nous utilisons des cookies pour améliorer votre expérience. En cliquant sur « Accepter », vous consentez à leur utilisation.",
-    "policyHref": "/politique-confidentialite/",
-    "acceptLabel": "Accepter",
-    "rejectLabel": "Refuser"
-  },
-  "emergencyAlert": {
-    "text": "Aucune alerte en cours.",
-    "link": null
-  }
+  "metaDescription": "Site de l’Université Catholique de l’Afrique de l’Ouest – Unité Universitaire de Conakry : formations, admissions, vie universitaire et actualités à Conakry, Guinée."
 }

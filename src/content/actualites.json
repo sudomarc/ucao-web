@@ -30,6 +30,8 @@
     }
   ],
   "emptyState": "Aucune actualité publiée pour le moment.",
-  "ctaLabel": "Voir toutes les actualités",
-  "ctaHref": "/actualites/"
+  "cta": {
+    "label": "Visiter le site institutionnel",
+    "href": "https://ucao-uuco.org/"
+  }
 }

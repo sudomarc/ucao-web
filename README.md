@@ -1,49 +1,48 @@
-# Site vitrine UCAO-UUCo — Refonte
+# Site vitrine UCAO-UUCo
+
+Site institutionnel statique de l’Université Catholique de l’Afrique de l’Ouest – Unité Universitaire de Conakry.
 
 ## Stack
-Site statique généré par un script Node.js sans dépendance externe (`src/build.js`).
-- HTML statique (pas de rendu côté client, pas de framework JavaScript).
-- CSS natif avec variables (design system), pas de framework CSS.
-- JavaScript vanilla (menu mobile, formulaire, reveal au scroll).
-- Contenus centralisés dans `src/content/` (JSON).
+- Génération HTML statique par Node.js (src/build.js).
+- Contenus éditoriaux centralisés dans src/content/ (JSON).
+- CSS natif et JavaScript vanilla.
+- Déploiement Vercel (vercel.json).
 
 ## Structure
 ```
 src/
-  build.js            # Générateur de site statique
+  build.js
   content/
-    site.json         # Configuration éditoriale et coordonnées
-    nav.json          # Navigation principale
-    formations.json   # Catalogue de formations (à confirmer)
-    actualites.json   # Actualités (à confirmer)
-    pages/            # Contenu de chaque page (JSON)
-  styles/
-    main.css          # Design system
-  scripts/
-    main.js           # JavaScript vanilla
-  assets/
-    images/           # Images intégrées (libres de droit) + placeholders
-      hero-conakry.webp / .jpg   # Hero d'accueil (Conakry, CC BY-SA 4.0, Wikimedia Commons)
-      conakry-ville.webp / .jpg  # Illustration intérieure (Conakry, CC BY-SA 4.0)
-      logo-ucao.svg              # Marque créée pour la refonte (à remplacer par le logo officiel)
-      favicon.svg
-      hero-placeholder.svg       # Placeholder conservé (non référencé)
-      image-licenses.md          # Provenance et licences de chaque photographie
-    robots.txt
-dist/                 # Build généré (gitignoré)
+    site.json
+    nav.json
+    formations.json
+    actualites.json
+    pages/
+  styles/main.css
+  scripts/main.js
+  assets/images/
+dist/                 # sortie générée par le build
+AGENTS.md             # règles de contribution et fiabilité éditoriale
+editorial-tracking.md # sources, conflits et données à confirmer
 ```
 
-## Contenus et fiabilité
-Les données inconnues sont marquées `[À CONFIRMER]` dans `editorial-tracking.md`. Aucun chiffre, diplôme, accréditation, tarif ou photo n’est inventé. L’adresse e-mail présente un conflit (`info@ucao.uuco.org` vs `info@ucao-uuco.org`) à trancher par l’administration.
+## Contenu et sources
+Les contenus institutionnels ont été recoupés avec les pages officielles de l’UCAO-UUCo. Les sources, dates de consultation, incohérences et limites sont consignées dans editorial-tracking.md.
+
+Points de vigilance :
+- Le site officiel annonce 8 Licences mais en énumère 9.
+- Les Masters incluent un doublon sur la page source ; le catalogue local conserve les 11 intitulés distincts.
+- Les tarifs disponibles en ligne sont datés de 2025-2026 et ne sont pas réutilisés comme tarifs actuels.
+- Les habilitations doivent être vérifiées auprès du MESRS/ANAQ pour chaque filière.
+- Deux adresses e-mail différentes apparaissent sur le site officiel.
+- Le formulaire de contact n’est pas relié à un service d’envoi.
 
 ## Commandes
-```
-npm install   # aucune dépendance externe (optionnel)
-npm run build # génère le site statique dans dist/
+```sh
+npm run build
 ```
 
-## Déploiement
-À configurer (hébergement statique). Ne pas déployer sans autorisation explicite.
+Aucune dépendance n’est nécessaire pour générer le site.
 
-## Licence
-UNLICENSED.
+## Gouvernance
+Lire AGENTS.md avant toute modification. Ne pas fusionner dans main ni déployer sans autorisation explicite.

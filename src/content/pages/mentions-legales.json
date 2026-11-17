@@ -1,18 +1,38 @@
 {
   "slug": "mentions-legales",
   "title": "Mentions légales",
-  "metaDescription": "Mentions légales de l’UCAO-UUCo : éditeur, hébergeur et informations légales.",
+  "metaDescription": "Informations relatives à l’éditeur et à l’hébergement du site UCAO-UUCo.",
   "hero": {
-    "kicker": "Mentions légales",
+    "kicker": "Informations légales",
     "title": "Mentions légales",
-    "lead": "Informations légales concernant le site de l’UCAO-UUCo."
+    "lead": "Éditeur, hébergement et crédits du site institutionnel."
   },
   "blocks": [
-    { "title": "Éditeur", "content": "Université Catholique de l’Afrique de l’Ouest – Unité Universitaire de Conakry (UCAO-UUCo). [À CONFIRMER]" },
-    { "title": "Siège", "content": "Coléah, route de Niger, Conakry, Guinée. [À CONFIRMER]" },
-    { "title": "Directeur de la publication", "content": "[À CONFIRMER]" },
-    { "title": "Hébergement", "content": "[À CONFIRMER — hébergeur à préciser]" },
-    { "title": "Crédits", "content": "Conception et réalisation du site : refonte institutionnelle UCAO-UUCo." }
+    {
+      "title": "Éditeur du site",
+      "content": "Université Catholique de l’Afrique de l’Ouest – Unité Universitaire de Conakry (UCAO-UUCo)."
+    },
+    {
+      "title": "Adresse de l’établissement",
+      "content": "Coléah, route du Niger, à côté de l’église catholique Saint-Michel, Conakry, Guinée."
+    },
+    {
+      "title": "Publication",
+      "content": "La publication est portée par l’UCAO-UUCo. L’établissement doit communiquer le nom de la personne physique responsable de la publication pour compléter les mentions légales."
+    },
+    {
+      "title": "Hébergement technique",
+      "content": "Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis. Plateforme : Vercel.",
+      "url": "https://vercel.com/legal"
+    },
+    {
+      "title": "Contact",
+      "content": "Téléphones : (+224) 620 42 66 12, (+224) 621 28 66 81 et (+224) 629 38 90 58. E-mail publié sur la page Contact : info@ucao-uuco.org."
+    },
+    {
+      "title": "Crédits",
+      "content": "Photographies de campus fournies par l’UCAO-UUCo. Identité institutionnelle : logo officiel de l’UCAO."
+    }
   ],
-  "note": "Les informations manquantes sont marquées [À CONFIRMER] et ne sont pas inventées."
+  "note": "La direction de l’UCAO-UUCo doit valider ces mentions, notamment le responsable de publication et l’entité juridique éditrice, avant de considérer cette page comme une notice légale définitive."
 }
