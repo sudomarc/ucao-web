@@ -1,100 +1,35 @@
 {
   "slug": "contact",
   "title": "Contact",
-  "metaDescription": "Coordonnées, adresse et itinéraire pour contacter l’UCAO-UUCo à Conakry.",
-  "hero": {
-    "kicker": "Nous contacter",
-    "title": "Parlons de votre projet d’études",
-    "lead": "Pour toute question sur les formations, les admissions ou la vie universitaire, contactez l’Unité Universitaire de Conakry.",
-    "image": "campus-entree.jpg",
-    "imageAlt": "Entrée du campus de l’UCAO-UUCo à Conakry.",
-    "imageCredit": "Photo fournie par l’UCAO-UUCo.",
-    "ctaPrimary": {
-      "label": "Voir les formations",
-      "href": "/formations/"
+  "metaDescription": "Coordonnées, adresse, itinéraire et formulaire pour joindre l'UCAO-UUCo à Conakry.",
+  "blocks": [
+    {
+      "type": "hero",
+      "variant": "band",
+      "kicker": "Nous contacter",
+      "title": "Parlons de votre projet d'études",
+      "lead": "Pour toute question sur les formations, les admissions ou la vie universitaire, contactez l'Unité Universitaire de Conakry."
     },
-    "ctaSecondary": {
-      "label": "Préparer son admission",
-      "href": "/admissions/"
+    {
+      "type": "contact"
+    },
+    {
+      "type": "editorial",
+      "title": "Se rendre au campus",
+      "text": "L'UCAO-UUCo est située à Coléah, sur la route du Niger, à côté de l'église catholique Saint-Michel, à Conakry. Un itinéraire est disponible via le lien publié sur la page d'accueil institutionnelle.",
+      "image": "campus-etudiants-murale.webp",
+      "imageAlt": "Étudiants devant un mur peint du campus de l'UCAO-UUCo.",
+      "linkHref": "https://maps.app.goo.gl/u3j6UvU2s3dyW8oi8",
+      "linkLabel": "Ouvrir l'itinéraire vers le campus",
+      "reverse": true
+    },
+    {
+      "type": "cta",
+      "variant": "red",
+      "title": "Avant de poser une question",
+      "text": "Catalogue des formations, procédure d'admission, questions fréquentes : la plupart des réponses se trouvent déjà sur ce site.",
+      "ctaPrimary": { "label": "Formations", "href": "/formations/" },
+      "ctaSecondary": { "label": "Admissions", "href": "/admissions/" }
     }
-  },
-  "coords": {
-    "title": "Coordonnées",
-    "email": "info@ucao-uuco.org",
-    "phones": [
-      "(+224) 620 42 66 12",
-      "(+224) 621 28 66 81",
-      "(+224) 629 38 90 58"
-    ],
-    "address": "Coléah, route du Niger, à côté de l’église catholique Saint-Michel, Conakry, Guinée",
-    "note": "La page Contact du site institutionnel publie info@ucao-uuco.org. Son en-tête affiche également info@ucao.uuco.org. Si un message reste sans réponse, confirmez l’adresse par téléphone."
-  },
-  "localisation": {
-    "title": "Se rendre au campus",
-    "text": "Le campus est situé à Coléah, sur la route du Niger, à côté de l’église catholique Saint-Michel, à Conakry.",
-    "mapUrl": "https://maps.app.goo.gl/u3j6UvU2s3dyW8oi8",
-    "mapLabel": "Ouvrir l’itinéraire"
-  },
-  "form": {
-    "title": "Formulaire de contact",
-    "fields": [
-      {
-        "name": "nom",
-        "label": "Nom et prénom",
-        "type": "text",
-        "required": true,
-        "placeholder": "Votre nom et prénom"
-      },
-      {
-        "name": "email",
-        "label": "Adresse e-mail",
-        "type": "email",
-        "required": true,
-        "placeholder": "vous@exemple.com"
-      },
-      {
-        "name": "sujet",
-        "label": "Objet",
-        "type": "text",
-        "required": false,
-        "placeholder": "Objet de votre demande"
-      },
-      {
-        "name": "message",
-        "label": "Message",
-        "type": "textarea",
-        "required": true,
-        "placeholder": "Votre message"
-      }
-    ],
-    "submit": "Vérifier le message",
-    "note": "Ce formulaire n’est pas connecté à un service de réception : il ne transmet pas votre message. Pour joindre l’administration, utilisez les coordonnées ci-dessus. N’y saisissez pas de données personnelles sensibles."
-  },
-  "acces": {
-    "title": "Accès rapide",
-    "items": [
-      {
-        "label": "Catalogue des formations",
-        "href": "/formations/"
-      },
-      {
-        "label": "Admissions",
-        "href": "/admissions/"
-      },
-      {
-        "label": "Actualités",
-        "href": "/actualites/"
-      },
-      {
-        "label": "Présentation de l’université",
-        "href": "/universite/"
-      }
-    ]
-  },
-  "campusImage": {
-    "image": "campus-banc-etudiants.jpg",
-    "imageAlt": "Étudiants sur le campus de l’UCAO-UUCo.",
-    "credit": "Photo fournie par l’UCAO-UUCo.",
-    "reverse": false
-  }
+  ]
 }

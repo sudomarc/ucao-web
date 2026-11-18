@@ -1,34 +1,41 @@
 {
   "slug": "politique-confidentialite",
   "title": "Politique de confidentialité",
-  "metaDescription": "Informations sur le formulaire de contact, les données techniques et la confidentialité sur le site UCAO-UUCo.",
-  "hero": {
-    "kicker": "Données personnelles",
-    "title": "Confidentialité",
-    "lead": "Ce que le site fait — et ne fait pas — avec les informations que vous saisissez."
-  },
+  "metaDescription": "Informations sur le formulaire de contact, les données techniques et la confidentialité sur le site de l'UCAO-UUCo.",
   "blocks": [
     {
-      "title": "Éditeur et responsable",
-      "content": "Le site présente l’UCAO-UUCo comme son éditeur. L’établissement doit confirmer l’identité du responsable de traitement et fournir un contact dédié aux demandes relatives aux données personnelles."
+      "type": "hero",
+      "variant": "band",
+      "kicker": "Données personnelles",
+      "title": "Politique de confidentialité",
+      "lead": "Ce que le site fait — et ne fait pas — avec les informations que vous saisissez."
     },
     {
-      "title": "Formulaire de contact",
-      "content": "Dans la version actuelle, le formulaire n’est relié à aucun service d’envoi. Le script vérifie les champs dans le navigateur, mais ne transmet pas le message et ne l’enregistre pas. N’utilisez pas ce formulaire pour communiquer des informations personnelles sensibles."
-    },
-    {
-      "title": "Données techniques",
-      "content": "Le site est hébergé sur la plateforme Vercel. Comme tout service d’hébergement, celle-ci peut traiter des données techniques de connexion conformément à sa propre notice de confidentialité.",
-      "url": "https://vercel.com/legal/privacy-notice"
-    },
-    {
-      "title": "Cookies et mesure d’audience",
-      "content": "Le code du site ne met actuellement en œuvre ni outil de mesure d’audience ni script publicitaire. Aucun bandeau de consentement aux cookies n’est donc affiché dans cette version."
-    },
-    {
-      "title": "Durée de conservation et droits",
-      "content": "Aucune durée de conservation de demandes de contact ne peut être annoncée tant que le formulaire n’est pas relié à un système de réception. Pour toute question sur les données traitées par l’établissement, contactez directement l’UCAO-UUCo."
+      "type": "legal",
+      "blocks": [
+        {
+          "title": "Éditeur et responsable",
+          "content": "Le site présente l'UCAO-UUCo comme son éditeur. L'établissement doit confirmer l'identité du responsable de traitement et fournir un contact dédié aux demandes relatives aux données personnelles."
+        },
+        {
+          "title": "Formulaire de contact",
+          "content": "Dans la version actuelle, le formulaire n'est relié à aucun service d'envoi. Le script vérifie les champs dans le navigateur, mais ne transmet pas le message et ne l'enregistre pas. N'utilisez pas ce formulaire pour communiquer des informations personnelles sensibles."
+        },
+        {
+          "title": "Données techniques",
+          "content": "Le site est hébergé sur la plateforme Vercel. Comme tout service d'hébergement, celle-ci peut traiter des données techniques de connexion conformément à sa propre notice de confidentialité.",
+          "url": "https://vercel.com/legal/privacy-notice"
+        },
+        {
+          "title": "Cookies et mesure d'audience",
+          "content": "Le code du site ne met actuellement en œuvre ni outil de mesure d'audience ni script publicitaire. Aucun bandeau de consentement aux cookies n'est donc affiché dans cette version."
+        },
+        {
+          "title": "Durée de conservation et droits",
+          "content": "Aucune durée de conservation de demandes de contact ne peut être annoncée tant que le formulaire n'est pas relié à un système de réception. Pour toute question sur les données traitées par l'établissement, contactez directement l'UCAO-UUCo."
+        }
+      ],
+      "note": "Cette page décrit le fonctionnement technique de la version actuelle du site. Elle doit être validée et complétée par le responsable de traitement de l'UCAO-UUCo avant publication comme politique officielle."
     }
-  ],
-  "note": "Cette page décrit le fonctionnement technique de la version actuelle du site. Elle doit être validée et complétée par le responsable de traitement de l’UCAO-UUCo avant publication comme politique officielle."
+  ]
 }

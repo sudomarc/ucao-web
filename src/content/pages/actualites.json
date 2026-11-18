@@ -1,14 +1,34 @@
 {
   "slug": "actualites",
   "title": "Actualités",
-  "metaDescription": "Publications institutionnelles, colloques et événements de l’UCAO-UUCo à Conakry.",
-  "hero": {
-    "kicker": "Actualités",
-    "title": "La vie de l’UCAO-UUCo",
-    "lead": "Retrouvez les articles et événements publiés par l’Unité Universitaire de Conakry."
-  },
-  "intro": {
-    "title": "Publications institutionnelles",
-    "text": "Cette sélection reprend les articles disponibles dans les archives du site officiel de l’UCAO-UUCo, avec leur date de publication et un lien vers la source originale."
-  }
+  "metaDescription": "Publications institutionnelles, colloques et événements de l'UCAO-UUCo à Conakry, avec liens vers les sources originales.",
+  "blocks": [
+    {
+      "type": "hero",
+      "variant": "split",
+      "kicker": "Actualités",
+      "title": "La vie de l'UCAO-UUCo",
+      "lead": "Les articles et événements publiés par l'Unité Universitaire de Conakry.",
+      "image": "campus-octobre-rose-couloir.webp",
+      "imageAlt": "Deux étudiantes de l'UCAO-UUCo dans un couloir du campus.",
+      "ctaPrimary": { "label": "Visiter le site institutionnel", "href": "https://ucao-uuco.org/", "external": true }
+    },
+    {
+      "type": "lede",
+      "title": "Publications institutionnelles",
+      "text": "Cette sélection reprend les articles disponibles dans les archives du site officiel de l'UCAO-UUCo, avec leur date de publication et un lien vers la source originale. Les dates correspondent aux dates de publication des articles, pas nécessairement à celles des événements."
+    },
+    {
+      "type": "news",
+      "source": "actualites"
+    },
+    {
+      "type": "cta",
+      "variant": "navy",
+      "title": "Suivre l'actualité de l'établissement",
+      "text": "Les nouvelles publications sont d'abord mises en ligne sur le site institutionnel de l'UCAO-UUCo et sur sa page Facebook.",
+      "ctaPrimary": { "label": "Site institutionnel", "href": "https://ucao-uuco.org/", "external": true },
+      "ctaSecondary": { "label": "Page Facebook", "href": "https://www.facebook.com/ucaoguinee", "external": true }
+    }
+  ]
 }

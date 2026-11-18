@@ -1,40 +1,47 @@
 {
   "slug": "faq",
   "title": "FAQ",
-  "metaDescription": "Réponses aux questions fréquentes sur les formations, les admissions et le campus de l’UCAO-UUCo.",
-  "hero": {
-    "kicker": "Aide et informations",
-    "title": "Questions fréquentes",
-    "lead": "Les informations essentielles pour préparer votre candidature et contacter l’UCAO-UUCo."
-  },
-  "items": [
+  "metaDescription": "Réponses aux questions fréquentes sur les formations, les admissions, les frais et le campus de l'UCAO-UUCo.",
+  "blocks": [
     {
-      "q": "Où se trouve l’UCAO-UUCo ?",
-      "a": "L’Unité Universitaire de Conakry est située à Coléah, sur la route du Niger, à côté de l’église catholique Saint-Michel, à Conakry. Un lien d’itinéraire est disponible sur la page Contact."
+      "type": "hero",
+      "variant": "band",
+      "kicker": "Aide et informations",
+      "title": "Questions fréquentes",
+      "lead": "Les informations essentielles pour préparer votre candidature et contacter l'UCAO-UUCo."
     },
     {
-      "q": "Quelles formations sont proposées ?",
-      "a": "Le catalogue institutionnel présente des Licences en science politique, droit, économie-gestion, biologie médicale, gestion des ressources humaines, agroalimentaire, génie informatique, communication-journalisme et sociologie. Il présente également onze intitulés distincts de Master. Consultez la page Formations et demandez à la scolarité de confirmer les parcours ouverts en 2026-2027."
-    },
-    {
-      "q": "Combien de temps durent les formations ?",
-      "a": "Le site officiel indique une durée de 3 ou 4 ans selon la Licence. Il présente les Masters comme des cours du soir d’une durée de 2 ans. Les durées exactes doivent être confirmées pour la filière visée."
-    },
-    {
-      "q": "Quels documents préparer pour une candidature ?",
-      "a": "Pour une Licence, le site officiel demande notamment une lettre de motivation, l’attestation et le relevé du baccalauréat, une copie de l’acte de naissance, deux photos, un certificat de résidence, un certificat médical et un reçu de versement. Pour un Master, il ajoute le diplôme de Licence et les relevés correspondants. Consultez la page Admissions pour le détail et confirmez la liste auprès de la scolarité."
-    },
-    {
-      "q": "Quels sont les frais de scolarité 2026-2027 ?",
-      "a": "Les tarifs publiés sur le site institutionnel sont datés de 2025-2026. Ils ne permettent pas d’établir les tarifs 2026-2027. Demandez un barème daté et les coordonnées de paiement directement à la scolarité avant tout versement."
-    },
-    {
-      "q": "Les diplômes et les filières sont-ils habilités ?",
-      "a": "Le site de l’UCAO-UUCo affirme que ses diplômes sont reconnus par l’État guinéen et que l’UCAO est membre du CAMES. Nous n’avons pas pu vérifier, dans une source primaire récente, l’habilitation en vigueur de chaque filière. Demandez à l’établissement la référence de l’arrêté applicable au diplôme visé et vérifiez-la auprès du MESRS ou de l’ANAQ avant de payer."
-    },
-    {
-      "q": "Quelle adresse e-mail utiliser ?",
-      "a": "La page Contact du site institutionnel publie info@ucao-uuco.org, tandis que l’en-tête affiche info@ucao.uuco.org. En cas de doute ou d’absence de réponse, appelez l’un des numéros affichés sur la page Contact."
+      "type": "faq",
+      "items": [
+        {
+          "q": "Où se trouve l'UCAO-UUCo ?",
+          "a": "L'Unité Universitaire de Conakry est située à Coléah, sur la route du Niger, à côté de l'église catholique Saint-Michel, à Conakry. Un lien d'itinéraire est disponible sur la page Contact."
+        },
+        {
+          "q": "Quelles formations sont proposées ?",
+          "a": "Le catalogue institutionnel présente des Licences en science politique, droit, économie-gestion, biologie médicale, gestion des ressources humaines, agroalimentaire, génie informatique, communication-journalisme et sociologie. Il présente également onze intitulés distincts de Master. Consultez la page Formations et demandez à la scolarité de confirmer les parcours ouverts en 2026-2027."
+        },
+        {
+          "q": "Combien de temps durent les formations ?",
+          "a": "Le site officiel indique une durée de 3 ou 4 ans selon la Licence, et précise 4 ans pour la biologie médicale, l'agroalimentaire, le génie informatique et la communication-journalisme. Les Masters sont présentés comme des cours du soir d'une durée de 2 ans. Les durées exactes doivent être confirmées pour la filière visée."
+        },
+        {
+          "q": "Quels documents préparer pour une candidature ?",
+          "a": "Pour une Licence, le site officiel demande notamment une lettre de motivation, l'attestation et le relevé du baccalauréat, une copie de l'acte de naissance, deux photos, un certificat de résidence, un certificat médical et un reçu de versement. Pour un Master, il ajoute le diplôme de Licence et les relevés correspondants. Consultez la page Admissions pour le détail et confirmez la liste auprès de la scolarité."
+        },
+        {
+          "q": "Quels sont les frais de scolarité 2026-2027 ?",
+          "a": "Les tarifs publiés sur le site institutionnel sont datés de 2025-2026. Ils ne permettent pas d'établir les tarifs 2026-2027. Demandez un barème daté et les coordonnées de paiement directement à la scolarité avant tout versement."
+        },
+        {
+          "q": "Les diplômes et les filières sont-ils habilités ?",
+          "a": "Le site de l'UCAO-UUCo affirme que ses diplômes sont reconnus par l'État guinéen et que l'UCAO est membre du CAMES. Nous n'avons pas pu vérifier, dans une source primaire récente, l'habilitation en vigueur de chaque filière. Demandez à l'établissement la référence de l'arrêté applicable au diplôme visé et vérifiez-la auprès du MESRS ou de l'ANAQ avant de payer."
+        },
+        {
+          "q": "Quelle adresse e-mail utiliser ?",
+          "a": "La page Contact du site institutionnel publie info@ucao-uuco.org, tandis que l'en-tête affiche info@ucao.uuco.org. En cas de doute ou d'absence de réponse, appelez l'un des numéros affichés sur la page Contact."
+        }
+      ]
     }
   ]
 }

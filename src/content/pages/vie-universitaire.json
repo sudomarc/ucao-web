@@ -1,60 +1,89 @@
 {
   "slug": "vie-universitaire",
   "title": "Vie universitaire",
-  "metaDescription": "Vie étudiante, rencontres académiques et campus de l’UCAO-UUCo à Conakry.",
-  "hero": {
-    "kicker": "Vie de campus",
-    "title": "Apprendre et s’engager à Conakry",
-    "lead": "La vie universitaire de l’UCAO-UUCo associe formation, rencontres, activités étudiantes et ouverture sur la société.",
-    "image": "campus-groupe-rose.jpg",
-    "imageAlt": "Étudiants réunis lors d’une activité sur le campus de l’UCAO-UUCo.",
-    "imageCredit": "Photo fournie par l’UCAO-UUCo.",
-    "ctaPrimary": {
-      "label": "Découvrir les formations",
-      "href": "/formations/"
-    },
-    "ctaSecondary": {
-      "label": "Voir les actualités",
-      "href": "/actualites/"
-    }
-  },
-  "intro": {
-    "title": "Une communauté universitaire active",
-    "text": "Les publications de l’UCAO-UUCo documentent des journées étudiantes, des activités culturelles et sportives, des conférences et des rencontres scientifiques. Les exemples ci-dessous sont tirés des événements publiés par l’établissement."
-  },
-  "sections": [
+  "metaDescription": "Vie étudiante, rencontres académiques et campus de l'UCAO-UUCo à Conakry, illustrés par les publications et les photos de l'établissement.",
+  "blocks": [
     {
-      "title": "La Journée de l’Étudiant",
-      "text": "L’UCAO-UUCo présente cette journée comme un rendez-vous de sa communauté universitaire. L’édition publiée en novembre 2025 associait activités culturelles et sportives, ateliers, conférences, échanges et valorisation des talents étudiants.",
-      "image": "campus-etudiants-sacs.jpg",
-      "imageAlt": "Étudiants de l’UCAO-UUCo réunis sur le campus.",
-      "credit": "Photo fournie par l’UCAO-UUCo.",
-      "href": "https://ucao-uuco.org/2025/11/14/cest-la-journee-de-letudiant-a-lucao/",
-      "linkLabel": "Lire l’article sur la Journée de l’Étudiant"
+      "type": "hero",
+      "variant": "split",
+      "kicker": "Vie de campus",
+      "title": "Apprendre et s'engager à Conakry",
+      "lead": "La vie universitaire de l'UCAO-UUCo associe formation, rencontres académiques et activités étudiantes.",
+      "image": "campus-octobre-rose-groupe.webp",
+      "imageAlt": "Étudiants de l'UCAO-UUCo tenant un cadre « Octobre Rose » lors d'une action de sensibilisation sur le campus.",
+      "ctaPrimary": { "label": "Voir les actualités", "href": "/actualites/" },
+      "ctaSecondary": { "label": "Découvrir les formations", "href": "/formations/" }
     },
     {
+      "type": "lede",
+      "title": "Une communauté universitaire active",
+      "text": "Les publications de l'UCAO-UUCo documentent des journées étudiantes, des colloques et des actions de sensibilisation. Les rendez-vous présentés ci-dessous sont ceux que l'établissement a publiés ; les autres aspects de la vie du campus (horaires de bibliothèque, services, logements) ne sont pas décrits en ligne et doivent être confirmés auprès de l'administration."
+    },
+    {
+      "type": "editorial",
+      "title": "La Journée de l'Étudiant",
+      "text": "L'UCAO-UUCo présente cette journée comme un rendez-vous de sa communauté universitaire. L'édition publiée en novembre 2025 associait activités culturelles et sportives, ateliers, conférences, échanges et valorisation des talents étudiants.",
+      "image": "campus-octobre-rose-couloir.webp",
+      "imageAlt": "Deux étudiantes de l'UCAO-UUCo dans un couloir du campus.",
+      "linkHref": "https://ucao-uuco.org/2025/11/14/cest-la-journee-de-letudiant-a-lucao/",
+      "linkLabel": "Lire l'article sur la Journée de l'Étudiant"
+    },
+    {
+      "type": "editorial",
       "title": "Conférences et rencontres scientifiques",
-      "text": "En novembre 2025, l’UCAO a organisé avec l’Université Catholique de Lyon un colloque sur la gouvernance de la diversité culturelle. Les séances se sont tenues du 13 au 15 novembre au Palais du Peuple, à Conakry.",
-      "image": "campus-classe-cahiers.jpg",
-      "imageAlt": "Étudiants en cours à l’UCAO-UUCo.",
-      "credit": "Photo fournie par l’UCAO-UUCo.",
-      "href": "https://ucao-uuco.org/2025/11/16/colloque-international-sur-la-gouvernance-de-la-diversite-culturelle-organise-par-lucao/",
-      "linkLabel": "Consulter le compte rendu du colloque"
+      "text": "En novembre 2025, l'UCAO a organisé avec l'Université Catholique de Lyon un colloque international sur la gouvernance de la diversité culturelle. Les séances se sont tenues du 13 au 15 novembre 2025 au Palais du Peuple, à Conakry.",
+      "image": "etudiantes-salle.webp",
+      "imageAlt": "Étudiantes de l'UCAO-UUCo pendant une séance de formation en salle.",
+      "linkHref": "https://ucao-uuco.org/2025/11/16/colloque-international-sur-la-gouvernance-de-la-diversite-culturelle-organise-par-lucao/",
+      "linkLabel": "Consulter le compte rendu du colloque",
+      "reverse": true
     },
     {
-      "title": "Le campus de Conakry",
-      "text": "L’Unité Universitaire de Conakry est située à Coléah, sur la route du Niger, à côté de l’église catholique Saint-Michel. Cette indication est publiée sur le site institutionnel.",
-      "image": "campus-entree.jpg",
-      "imageAlt": "Entrée du campus de l’UCAO-UUCo.",
-      "credit": "Photo fournie par l’UCAO-UUCo.",
-      "href": "https://maps.app.goo.gl/u3j6UvU2s3dyW8oi8",
-      "linkLabel": "Voir l’itinéraire vers le campus"
+      "type": "editorial",
+      "title": "Octobre Rose sur le campus",
+      "text": "Des photos fournies par l'établissement documentent une opération Octobre Rose menée sur le campus : les étudiants portent le ruban rose et des cadres « Octobre Rose » sont photographiés dans la cour et les couloirs de l'université. Le détail de l'édition (date, programme, partenaires) n'est pas publié en ligne : demandez-le à l'administration.",
+      "image": "campus-octobre-rose-cour.webp",
+      "imageAlt": "Deux étudiantes de l'UCAO-UUCo avec un cadre « Octobre Rose » dans la cour du campus.",
+      "reverse": true
+    },
+    {
+      "type": "gallery",
+      "title": "Le campus en images",
+      "lead": "Photographies fournies par l'UCAO-UUCo.",
+      "images": [
+        {
+          "src": "campus-batiment-etudiants.webp",
+          "alt": "Étudiants devant le bâtiment des salles de classe, sur le campus de l'UCAO-UUCo."
+        },
+        {
+          "src": "campus-etudiants-murale.webp",
+          "alt": "Étudiants rassemblés devant un mur peint du campus de l'UCAO-UUCo."
+        },
+        {
+          "src": "etudiantes-salle.webp",
+          "alt": "Étudiantes de l'UCAO-UUCo pendant une séance de formation en salle."
+        },
+        {
+          "src": "campus-octobre-rose-groupe.webp",
+          "alt": "Étudiants de l'UCAO-UUCo tenant un cadre « Octobre Rose » sur le campus."
+        },
+        {
+          "src": "campus-octobre-rose-couloir.webp",
+          "alt": "Deux étudiantes de l'UCAO-UUCo tenant un cadre « Octobre Rose » dans un couloir."
+        },
+        {
+          "src": "campus-octobre-rose-cour.webp",
+          "alt": "Deux étudiantes de l'UCAO-UUCo avec un cadre « Octobre Rose » dans la cour du campus."
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "variant": "red",
+      "title": "Venir au campus",
+      "text": "Le campus est situé à Coléah, sur la route du Niger, à côté de l'église catholique Saint-Michel, à Conakry.",
+      "ctaPrimary": { "label": "Ouvrir l'itinéraire", "href": "https://maps.app.goo.gl/u3j6UvU2s3dyW8oi8", "external": true },
+      "ctaSecondary": { "label": "Contacter l'université", "href": "/contact/" }
     }
-  ],
-  "campusImage": {
-    "image": "campus-banc-etudiants.jpg",
-    "imageAlt": "Étudiants sur le campus de l’UCAO-UUCo.",
-    "credit": "Photo fournie par l’UCAO-UUCo.",
-    "reverse": false
-  }
+  ]
 }

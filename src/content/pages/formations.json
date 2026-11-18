@@ -1,32 +1,36 @@
 {
   "slug": "formations",
   "title": "Formations",
-  "metaDescription": "Catalogue des formations de Licence et de Master publiées par l’UCAO-UUCo à Conakry.",
-  "hero": {
-    "kicker": "Offre de formation",
-    "title": "Choisir son parcours",
-    "lead": "Découvrez les filières de Licence et de Master présentées dans le catalogue institutionnel de l’UCAO-UUCo.",
-    "image": "campus-entree.jpg",
-    "imageAlt": "Entrée du campus de l’UCAO-UUCo à Conakry.",
-    "imageCredit": "Photo fournie par l’UCAO-UUCo.",
-    "ctaPrimary": {
-      "label": "Préparer son admission",
-      "href": "/admissions/"
+  "metaDescription": "Catalogue des formations de Licence et de Master publiées par l'UCAO-UUCo à Conakry : intitulés, durées et domaines.",
+  "blocks": [
+    {
+      "type": "hero",
+      "variant": "split",
+      "kicker": "Offre de formation",
+      "title": "Choisir son parcours",
+      "lead": "Les filières de Licence et de Master présentées dans le catalogue de l'UCAO-UUCo.",
+      "image": "etudiantes-salle.webp",
+      "imageAlt": "Étudiantes de l'UCAO-UUCo pendant une séance de formation en salle.",
+      "ctaPrimary": { "label": "Préparer son admission", "href": "/admissions/" },
+      "ctaSecondary": { "label": "Poser une question", "href": "/contact/" }
     },
-    "ctaSecondary": {
-      "label": "Poser une question",
-      "href": "/contact/"
+    {
+      "type": "lede",
+      "title": "Un catalogue par niveau",
+      "text": "Le catalogue officiel couvre des domaines variés : sciences politiques, droit, économie et gestion, sciences humaines, communication, technologie, sciences alimentaires et santé. Les durées affichées ci-dessous reprennent les indications publiées par l'établissement.",
+      "note": "Le catalogue officiel annonce 8 formations de Licence tout en énumérant 9 intitulés. La liste ci-dessous conserve les 9 intitulés visibles ; l'ouverture de chaque filière pour 2026-2027 et les habilitations en vigueur sont à confirmer auprès de la scolarité."
+    },
+    {
+      "type": "catalogue",
+      "source": "formations"
+    },
+    {
+      "type": "cta",
+      "variant": "red",
+      "title": "Candidater à une formation",
+      "text": "Les pièces à fournir et les étapes de candidature sont publiées par l'établissement pour la Licence et le Master.",
+      "ctaPrimary": { "label": "Voir la procédure d'admission", "href": "/admissions/" },
+      "ctaSecondary": { "label": "Contacter la scolarité", "href": "/contact/" }
     }
-  },
-  "intro": {
-    "title": "Un catalogue par niveau",
-    "text": "Le catalogue officiel couvre des domaines variés : sciences politiques, droit, économie et gestion, sciences humaines, communication, technologie, sciences alimentaires et santé. Les durées et modalités affichées ci-dessous reprennent les informations publiées par l’établissement."
-  },
-  "formationsImage": {
-    "image": "campus-classe-cahiers.jpg",
-    "imageAlt": "Étudiants en cours à l’UCAO-UUCo.",
-    "credit": "Photo fournie par l’UCAO-UUCo.",
-    "reverse": true
-  },
-  "note": "Le site institutionnel annonce 8 formations de Licence tout en en listant 9. La liste ci-dessous reprend les 9 intitulés distincts visibles sur sa page, sans masquer cet écart. L’ouverture de chaque filière pour 2026-2027 et les actes d’habilitation en vigueur doivent être confirmés auprès de la scolarité."
+  ]
 }

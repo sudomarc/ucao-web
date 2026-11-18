@@ -1,77 +1,97 @@
 {
   "slug": "universite",
   "title": "Université",
-  "metaDescription": "Histoire, mission et présence de l’Université Catholique de l’Afrique de l’Ouest et de son unité universitaire à Conakry.",
-  "hero": {
-    "kicker": "L’institution",
-    "title": "Une université catholique en réseau",
-    "lead": "L’UCAO relie plusieurs unités universitaires en Afrique de l’Ouest. Conakry accueille l’une de ces unités depuis 2008, selon la présentation de l’établissement.",
-    "image": "campus-banc-etudiants.jpg",
-    "imageAlt": "Étudiants sur le campus de l’UCAO-UUCo à Conakry.",
-    "imageCredit": "Photo fournie par l’UCAO-UUCo.",
-    "ctaPrimary": {
-      "label": "Découvrir les formations",
-      "href": "/formations/"
+  "metaDescription": "Histoire, mission et organisation de l'Université Catholique de l'Afrique de l'Ouest et de son Unité Universitaire de Conakry.",
+  "blocks": [
+    {
+      "type": "hero",
+      "variant": "split",
+      "kicker": "L'institution",
+      "title": "Une université catholique en réseau",
+      "lead": "L'UCAO relie plusieurs unités universitaires en Afrique de l'Ouest. Conakry accueille l'une d'elles, l'UCAO-UUCo.",
+      "image": "campus-etudiants-murale.webp",
+      "imageAlt": "Étudiants rassemblés devant un mur peint du campus de l'UCAO-UUCo.",
+      "ctaPrimary": { "label": "Découvrir les formations", "href": "/formations/" },
+      "ctaSecondary": { "label": "Contacter l'université", "href": "/contact/" }
     },
-    "ctaSecondary": {
-      "label": "Contacter l’université",
-      "href": "/contact/"
+    {
+      "type": "jumpnav",
+      "links": [
+        { "label": "Historique", "href": "#historique" },
+        { "label": "Mission", "href": "#mission" },
+        { "label": "L'unité de Conakry", "href": "#uuco" },
+        { "label": "Pourquoi choisir l'UCAO-UUCo", "href": "#choisir" }
+      ]
+    },
+    {
+      "type": "lede",
+      "title": "Le réseau UCAO et l'unité de Conakry",
+      "text": "L'Université Catholique de l'Afrique de l'Ouest (UCAO) est une université de droit pontifical, fondée en février 2000 par la Conférence Épiscopale Régionale de l'Afrique de l'Ouest (CERAO), à Conakry, selon l'histoire publiée par l'établissement. L'UCAO se présente comme le plus grand réseau universitaire d'Afrique de l'Ouest, avec des unités universitaires dans sept pays et un rectorat basé à Bobo-Dioulasso, au Burkina Faso.",
+      "note": "Éléments repris des pages institutionnelles de l'UCAO-UUCo (consultées le 17 novembre 2026)."
+    },
+    {
+      "type": "textlist",
+      "id": "historique",
+      "title": "Repères historiques",
+      "items": [
+        "Février 2000 : fondation de l'Université Catholique de l'Afrique de l'Ouest par la CERAO, à Conakry, selon l'histoire publiée par l'UCAO.",
+        "Le réseau installe ensuite des unités universitaires dans sept pays d'Afrique de l'Ouest, avec un rectorat à Bobo-Dioulasso, selon la présentation de l'établissement.",
+        "2008 : création de l'Unité Universitaire de Conakry (UCAO-UUCo), selon la présentation de l'établissement."
+      ],
+      "note": "Le jubilé des 25 ans célébré en novembre 2025 se rapporte à la fondation du réseau UCAO en 2000 ; la création de l'unité de Conakry est un événement distinct (2008)."
+    },
+    {
+      "type": "values",
+      "id": "mission",
+      "title": "La mission de l'UCAO",
+      "lead": "Selon sa présentation institutionnelle, l'UCAO répond, dans sa constitution, son organisation et son fonctionnement, aux normes de l'Église régissant les universités et instituts supérieurs, notamment les constitutions apostoliques Sapientia Christiana et Ex corde Ecclesiae. Elle s'assigne l'objectif d'« assurer sous une forme institutionnelle une présence chrétienne dans le monde universitaire face aux grands problèmes de la société et de la culture ».",
+      "items": [
+        { "label": "Inspiration chrétienne", "text": "De la part des individus comme de la communauté universitaire en tant que telle." },
+        { "label": "Réflexion à la lumière de la foi", "text": "Sur les acquisitions récentes de la connaissance humaine, auxquelles l'université cherche à apporter une contribution par ses propres recherches." },
+        { "label": "Fidélité au message chrétien", "text": "Tel qu'il est présenté par l'Église." },
+        { "label": "Engagement institutionnel", "text": "Au service du peuple de Dieu et de la famille humaine en marche." }
+      ],
+      "note": "Formulations adaptées de la page « Qui sommes-nous ? » de l'UCAO-UUCo."
+    },
+    {
+      "type": "editorial",
+      "id": "uuco",
+      "title": "L'Unité Universitaire de Conakry",
+      "text": "L'UCAO-UUCo a pour mission, depuis sa création en 2008, d'offrir une formation académique adaptée aux besoins locaux et internationaux du marché de l'emploi, selon sa présentation institutionnelle. L'établissement indique proposer un enseignement qui s'inscrit dans la ligne de la doctrine sociale de l'Église et ne se limite pas à la transmission du savoir : il s'attache à inculquer des valeurs morales et humaines, une culture managériale, l'éthique des affaires, la prise de décision et l'engagement. Les formations dispensées sont de niveau Licence et Master.",
+      "image": "etudiantes-salle.webp",
+      "imageAlt": "Étudiantes de l'UCAO-UUCo pendant une séance de formation en salle.",
+      "note": "La page institutionnelle mentionne plus de 350 étudiants sans date de référence ; ce chiffre n'est pas affiché tant que l'établissement ne l'a pas confirmé.",
+      "reverse": true
+    },
+    {
+      "type": "values",
+      "id": "choisir",
+      "title": "Pourquoi choisir l'UCAO-UUCo ?",
+      "lead": "L'établissement met en avant, sur sa page institutionnelle, les points suivants :",
+      "items": [
+        { "label": "Diplômes", "text": "Des diplômes présentés comme reconnus par l'État guinéen." },
+        { "label": "CAMES", "text": "Une université membre du CAMES (Conseil Africain et Malgache de l'Enseignement Supérieur), selon l'établissement." },
+        { "label": "Réseau", "text": "Le plus grand réseau universitaire privé d'Afrique de l'Ouest, présent dans 7 pays, selon l'établissement." },
+        { "label": "Choix de formations", "text": "Un large choix de formations de Licence et de Master, intellectuelles et humaines." }
+      ],
+      "note": "Ces affirmations sont celles de l'établissement. L'habilitation en vigueur de chaque filière doit être vérifiée auprès du MESRS ou de l'ANAQ avant toute inscription : voir la FAQ."
+    },
+    {
+      "type": "editorial",
+      "title": "Venir sur le campus",
+      "text": "L'UCAO-UUCo est située à Coléah, sur la route du Niger, à côté de l'église catholique Saint-Michel, à Conakry — une adresse publiée sur les pages institutionnelles de l'établissement.",
+      "image": "campus-batiment-etudiants.webp",
+      "imageAlt": "Étudiants devant le bâtiment des salles de classe, sur le campus de l'UCAO-UUCo.",
+      "linkHref": "https://maps.app.goo.gl/u3j6UvU2s3dyW8oi8",
+      "linkLabel": "Ouvrir l'itinéraire vers le campus"
+    },
+    {
+      "type": "cta",
+      "variant": "navy",
+      "title": "Découvrir l'offre de formation",
+      "text": "Neuf filières de Licence et onze intitulés de Master figurent au catalogue publié par l'établissement.",
+      "ctaPrimary": { "label": "Voir les formations", "href": "/formations/" },
+      "ctaSecondary": { "label": "Préparer son admission", "href": "/admissions/" }
     }
-  },
-  "intro": {
-    "title": "Le réseau UCAO et l’unité de Conakry",
-    "text": "L’Université Catholique de l’Afrique de l’Ouest (UCAO) a été fondée en février 2000 par la Conférence Épiscopale Régionale de l’Afrique de l’Ouest (CERAO), selon l’histoire publiée par l’institution. L’UCAO se présente comme une université de droit pontifical. Son unité universitaire de Conakry (UCAO-UUCo) indique avoir été créée en 2008."
-  },
-  "reseau": {
-    "title": "Un réseau universitaire ouest-africain",
-    "text": "La présentation institutionnelle indique que le réseau UCAO est présent dans sept pays et que son rectorat est basé à Bobo-Dioulasso, au Burkina Faso. Le réseau rassemble des unités universitaires dont les domaines de formation sont adaptés à leurs contextes."
-  },
-  "histoire": {
-    "title": "Repères historiques",
-    "items": [
-      "Février 2000 : fondation de l’Université Catholique de l’Afrique de l’Ouest par la CERAO, selon l’histoire publiée par l’UCAO.",
-      "2008 : création de l’Unité Universitaire de Conakry, selon la présentation de l’UCAO-UUCo."
-    ]
-  },
-  "missions": {
-    "title": "La mission de l’UCAO",
-    "items": [
-      "Faire vivre une inspiration chrétienne au sein de la communauté universitaire.",
-      "Mettre les connaissances en dialogue avec les grandes questions de la société et de la culture.",
-      "Contribuer à la mission éducatrice de l’Église en Afrique au niveau de l’enseignement supérieur.",
-      "Former des personnes capables de prendre des responsabilités et de servir la société."
-    ]
-  },
-  "valeurs": {
-    "title": "Principes institutionnels",
-    "items": [
-      {
-        "label": "Inspiration chrétienne",
-        "desc": "Une identité qui engage l’institution et sa communauté."
-      },
-      {
-        "label": "Foi et connaissance",
-        "desc": "Un dialogue continu entre la foi et les acquisitions de la connaissance humaine."
-      },
-      {
-        "label": "Fidélité",
-        "desc": "Une référence au message chrétien tel que présenté par l’Église."
-      },
-      {
-        "label": "Engagement",
-        "desc": "Un service rendu à la communauté humaine et à la société."
-      }
-    ]
-  },
-  "unitee": {
-    "title": "L’Unité Universitaire de Conakry",
-    "text": "L’UCAO-UUCo est l’implantation guinéenne du réseau UCAO. L’établissement indique que sa mission locale est de proposer une formation académique adaptée aux besoins du contexte guinéen et aux évolutions du marché de l’emploi.",
-    "address": "Coléah, route du Niger, à côté de l’église catholique Saint-Michel, Conakry, Guinée"
-  },
-  "campusImage": {
-    "image": "campus-entree.jpg",
-    "imageAlt": "Entrée du campus de l’UCAO-UUCo.",
-    "credit": "Photo fournie par l’UCAO-UUCo.",
-    "reverse": false
-  }
+  ]
 }

@@ -1,152 +1,101 @@
 {
   "slug": "home",
   "title": "Accueil",
-  "metaDescription": "Découvrez l’UCAO-UUCo à Conakry : formations de Licence et Master, admissions, vie universitaire et actualités.",
-  "hero": {
-    "kicker": "Université Catholique de l’Afrique de l’Ouest",
-    "title": "Unité Universitaire de Conakry",
-    "lead": "Une formation intellectuelle et humaine, ancrée en Guinée et ouverte sur l’Afrique de l’Ouest.",
-    "image": "campus-classe-cahiers.jpg",
-    "imageAlt": "Étudiants en cours à l’UCAO-UUCo.",
-    "imageCredit": "Photo fournie par l’UCAO-UUCo.",
-    "ctaPrimary": {
-      "label": "Explorer les formations",
-      "href": "/formations/"
+  "metaDescription": "L'Unité Universitaire de Conakry (UCAO-UUCo) propose des formations de Licence et de Master à Conakry : catalogue, admissions, vie universitaire et actualités.",
+  "blocks": [
+    {
+      "type": "hero",
+      "variant": "split",
+      "kicker": "Université Catholique de l'Afrique de l'Ouest",
+      "title": "Foi, science, action",
+      "lead": "Une formation intellectuelle et humaine, de la Licence au Master, au cœur de Conakry.",
+      "image": "campus-batiment-etudiants.webp",
+      "imageAlt": "Étudiants devant le bâtiment des salles de classe, sur le campus de l'UCAO-UUCo.",
+      "ctaPrimary": { "label": "Explorer les formations", "href": "/formations/" },
+      "ctaSecondary": { "label": "Préparer son admission", "href": "/admissions/" }
     },
-    "ctaSecondary": {
-      "label": "Préparer son admission",
-      "href": "/admissions/"
+    {
+      "type": "lede",
+      "title": "Une université en réseau, une unité à Conakry",
+      "lead": "L'UCAO est une université catholique de droit pontifical, née de la Conférence Épiscopale Régionale de l'Afrique de l'Ouest.",
+      "text": "Selon l'histoire publiée par l'établissement, l'Université Catholique de l'Afrique de l'Ouest (UCAO) a été fondée en février 2000 par la CERAO, à Conakry, et se compose d'unités universitaires présentes dans sept pays, avec un rectorat basé à Bobo-Dioulasso, au Burkina Faso. Son unité de Conakry, l'UCAO-UUCo, créée en 2008, propose des formations de Licence et de Master présentées comme adaptées aux besoins du marché de l'emploi local et international.",
+      "note": "Éléments repris des pages institutionnelles de l'UCAO-UUCo (consultées le 17 novembre 2026)."
+    },
+    {
+      "type": "stats",
+      "items": [
+        { "number": "2000", "label": "Fondation du réseau UCAO par la CERAO" },
+        { "number": "2008", "label": "Création de l'unité de Conakry" },
+        { "number": "7", "label": "Pays où l'UCAO annonce des unités universitaires" },
+        { "number": "9", "label": "Filières de Licence au catalogue publié" },
+        { "number": "11", "label": "Intitulés de Master au catalogue publié" }
+      ],
+      "note": "Le catalogue officiel annonce 8 formations de Licence tout en en énumérant 9 ; les deux repères sont indiqués dans la page Formations."
+    },
+    {
+      "type": "programs",
+      "title": "Les parcours proposés",
+      "lead": "Extraits du catalogue publié par l'établissement. L'ouverture effective de chaque filière pour 2026-2027 est à confirmer auprès de la scolarité.",
+      "licenceTitle": "Licence",
+      "licenceNote": "3 à 4 ans selon la spécialité",
+      "licenceItems": [
+        { "label": "Droit", "href": "/formations/?niveau=licence" },
+        { "label": "Génie informatique", "meta": "4 ans", "href": "/formations/?niveau=licence" },
+        { "label": "Biologie médicale — Technicien de laboratoire", "meta": "4 ans", "href": "/formations/?niveau=licence" },
+        { "label": "Économie-Gestion", "href": "/formations/?niveau=licence" }
+      ],
+      "masterTitle": "Master",
+      "masterNote": "Cours du soir · 2 ans",
+      "masterItems": [
+        { "label": "Comptabilité, Contrôle et Audit", "href": "/formations/?niveau=master" },
+        { "label": "Monnaie, Finance, Banque", "href": "/formations/?niveau=master" },
+        { "label": "Santé publique et communautaire", "href": "/formations/?niveau=master" },
+        { "label": "Diplomatie et géostratégie / Relations internationales", "href": "/formations/?niveau=master" }
+      ],
+      "cta": { "label": "Voir le catalogue complet", "href": "/formations/" }
+    },
+    {
+      "type": "cta",
+      "variant": "red",
+      "title": "Préparer son admission",
+      "text": "Les pièces demandées pour un dossier de candidature en Licence ou en Master sont publiées par l'établissement. Les tarifs en ligne sont datés de 2025-2026 : demandez le barème 2026-2027 à la scolarité avant tout versement.",
+      "ctaPrimary": { "label": "Étapes et documents", "href": "/admissions/" },
+      "ctaSecondary": { "label": "Contacter la scolarité", "href": "/contact/" }
+    },
+    {
+      "type": "news",
+      "title": "Actualités de l'UCAO-UUCo",
+      "source": "actualites",
+      "limit": 3,
+      "cta": { "label": "Toutes les actualités", "href": "/actualites/" }
+    },
+    {
+      "type": "editorial",
+      "title": "La vie universitaire à Conakry",
+      "text": "Journées de l'étudiant, colloques internationaux et actions de sensibilisation rythment l'année du campus. Les publications de l'établissement documentent ces rendez-vous, et des photos fournies par l'UCAO-UUCo illustrent la vie du campus, dont une opération Octobre Rose.",
+      "image": "campus-octobre-rose-groupe.webp",
+      "imageAlt": "Étudiants de l'UCAO-UUCo tenant un cadre « Octobre Rose » lors d'une action de sensibilisation sur le campus.",
+      "cta": { "label": "Découvrir la vie universitaire", "href": "/vie-universitaire/" }
+    },
+    {
+      "type": "values",
+      "title": "La mission d'une université catholique",
+      "lead": "Selon sa présentation institutionnelle, l'UCAO répond, comme université catholique, aux caractéristiques énoncées par la constitution apostolique Ex corde Ecclesiae.",
+      "items": [
+        { "label": "Inspiration chrétienne", "text": "Portée par les individus et par la communauté universitaire en tant que telle." },
+        { "label": "Réflexion à la lumière de la foi", "text": "Un travail continu sur les acquisitions récentes de la connaissance humaine, auquel l'université cherche à contribuer par ses propres recherches." },
+        { "label": "Fidélité au message chrétien", "text": "Tel qu'il est présenté par l'Église." },
+        { "label": "Engagement au service de la société", "text": "Un engagement institutionnel au service du peuple de Dieu et de la famille humaine." }
+      ],
+      "note": "Formulations adaptées de la page « Qui sommes-nous ? » de l'UCAO-UUCo."
+    },
+    {
+      "type": "cta",
+      "variant": "navy",
+      "title": "Une question sur votre projet d'études ?",
+      "text": "La scolarité répond aux questions sur les filières, les conditions d'accès et les pièces à fournir. Trois numéros de téléphone sont publiés par l'établissement, ainsi qu'une adresse e-mail.",
+      "ctaPrimary": { "label": "Contacter l'université", "href": "/contact/" },
+      "ctaSecondary": { "label": "Questions fréquentes", "href": "/faq/" }
     }
-  },
-  "intro": {
-    "title": "Une université en réseau, une présence à Conakry",
-    "lead": "Foi, science et action au service de la formation.",
-    "text": "Le réseau UCAO a été fondé en février 2000 par la Conférence Épiscopale Régionale de l’Afrique de l’Ouest. Son Unité Universitaire de Conakry, créée en 2008 selon la présentation institutionnelle, propose des formations de Licence et de Master dans plusieurs domaines."
-  },
-  "stats": {
-    "title": "Quelques repères",
-    "lead": "Repères publiés dans la présentation institutionnelle de l’UCAO-UUCo.",
-    "items": [
-      {
-        "number": "2000",
-        "label": "Fondation du réseau UCAO"
-      },
-      {
-        "number": "2008",
-        "label": "Création de l’unité de Conakry"
-      },
-      {
-        "number": "7",
-        "label": "Pays où le réseau indique être présent"
-      }
-    ]
-  },
-  "programs": {
-    "title": "Des parcours dans plusieurs domaines",
-    "lead": "Le catalogue institutionnel présente des formations en droit, gestion, sciences humaines, sciences politiques, technologie et santé.",
-    "searchPlaceholder": "Rechercher une formation…",
-    "items": [
-      {
-        "label": "Droit — Licence",
-        "desc": "Filière de Licence publiée par l’UCAO-UUCo.",
-        "href": "/formations/#licence"
-      },
-      {
-        "label": "Génie informatique — Licence",
-        "desc": "Durée indiquée dans le catalogue : 4 ans.",
-        "href": "/formations/#licence"
-      },
-      {
-        "label": "Biologie médicale — Licence",
-        "desc": "Technicien de laboratoire · durée indiquée : 4 ans.",
-        "href": "/formations/#licence"
-      },
-      {
-        "label": "Comptabilité, Contrôle et Audit — Master",
-        "desc": "Master annoncé en cours du soir, durée publiée : 2 ans.",
-        "href": "/formations/#master"
-      },
-      {
-        "label": "Monnaie, Finance, Banque — Master",
-        "desc": "Master annoncé en cours du soir, durée publiée : 2 ans.",
-        "href": "/formations/#master"
-      },
-      {
-        "label": "Gestion de projets et développement — Master",
-        "desc": "Master annoncé en cours du soir, durée publiée : 2 ans.",
-        "href": "/formations/#master"
-      }
-    ],
-    "cta": {
-      "label": "Consulter le catalogue complet",
-      "href": "/formations/"
-    }
-  },
-  "admissions": {
-    "title": "Préparer son admission",
-    "text": "Retrouvez les pièces publiées pour les candidatures en Licence et en Master. Les frais affichés sur l’ancien site concernent 2025-2026 : demandez le barème 2026-2027 directement à la scolarité avant tout paiement.",
-    "cta": {
-      "label": "Voir les étapes et les documents",
-      "href": "/admissions/"
-    }
-  },
-  "newsEvents": {
-    "title": "Actualités et événements",
-    "items": [
-      {
-        "title": "L’UCAO-UUCo célèbre son Jubilé des 25 ans",
-        "date": "28 novembre 2025",
-        "summary": "Une publication institutionnelle consacrée au jubilé et à l’histoire de l’établissement.",
-        "category": "Institution",
-        "sourceUrl": "https://ucao-uuco.org/2025/11/28/lucao-uuco-celebre-son-jubile-des-25-ans-un-quart-de-siecle-dexcellence-de-mission-et-de-service/"
-      },
-      {
-        "title": "Colloque international sur la gouvernance de la diversité culturelle",
-        "date": "16 novembre 2025",
-        "summary": "Un colloque organisé avec l’Université Catholique de Lyon au Palais du Peuple, à Conakry.",
-        "category": "Recherche",
-        "sourceUrl": "https://ucao-uuco.org/2025/11/16/colloque-international-sur-la-gouvernance-de-la-diversite-culturelle-organise-par-lucao/"
-      },
-      {
-        "title": "C’est la journée de l’étudiant à l’UCAO !",
-        "date": "14 novembre 2025",
-        "summary": "Une journée consacrée aux talents, aux échanges et à la vie étudiante.",
-        "category": "Vie étudiante",
-        "sourceUrl": "https://ucao-uuco.org/2025/11/14/cest-la-journee-de-letudiant-a-lucao/"
-      }
-    ],
-    "cta": {
-      "label": "Toutes les actualités",
-      "href": "/actualites/"
-    }
-  },
-  "vie": {
-    "title": "La vie universitaire à Conakry",
-    "text": "Journées étudiantes, rencontres académiques et activités de campus rythment la vie de l’UCAO-UUCo.",
-    "cta": {
-      "label": "Découvrir la vie universitaire",
-      "href": "/vie-universitaire/"
-    }
-  },
-  "valeurs": {
-    "title": "Une mission et des principes",
-    "items": [
-      {
-        "label": "Inspiration chrétienne",
-        "desc": "Une identité catholique assumée dans la vie de la communauté universitaire."
-      },
-      {
-        "label": "Dialogue entre foi et raison",
-        "desc": "Une réflexion sur les savoirs et les enjeux de la société à la lumière de la foi."
-      },
-      {
-        "label": "Fidélité et responsabilité",
-        "desc": "Un engagement éducatif inscrit dans la mission de l’Église en Afrique."
-      },
-      {
-        "label": "Service de la société",
-        "desc": "Former des personnes capables de contribuer à la vie sociale et au développement."
-      }
-    ]
-  }
+  ]
 }

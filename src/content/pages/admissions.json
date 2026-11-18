@@ -1,102 +1,121 @@
 {
   "slug": "admissions",
   "title": "Admissions",
-  "metaDescription": "Étapes d’admission et pièces à préparer pour une candidature en Licence ou en Master à l’UCAO-UUCo.",
-  "hero": {
-    "kicker": "Candidatures",
-    "title": "Préparer son admission",
-    "lead": "Les étapes et les pièces publiées par l’UCAO-UUCo pour constituer un dossier de candidature.",
-    "image": "campus-portrait.jpg",
-    "imageAlt": "Étudiante de l’UCAO-UUCo.",
-    "imageCredit": "Photo fournie par l’UCAO-UUCo.",
-    "ctaPrimary": {
-      "label": "Voir les formations",
-      "href": "/formations/"
+  "metaDescription": "Étapes d'admission et pièces à préparer pour une candidature en Licence ou en Master à l'UCAO-UUCo, à Conakry.",
+  "blocks": [
+    {
+      "type": "hero",
+      "variant": "split",
+      "kicker": "Candidatures",
+      "title": "Préparer son admission",
+      "lead": "Les étapes et les pièces publiées par l'UCAO-UUCo pour constituer un dossier de candidature.",
+      "image": "campus-octobre-rose-cour.webp",
+      "imageAlt": "Deux étudiantes de l'UCAO-UUCo dans la cour du campus.",
+      "ctaPrimary": { "label": "Voir les formations", "href": "/formations/" },
+      "ctaSecondary": { "label": "Contacter la scolarité", "href": "/contact/" }
     },
-    "ctaSecondary": {
-      "label": "Contacter la scolarité",
-      "href": "/contact/"
+    {
+      "type": "jumpnav",
+      "links": [
+        { "label": "Étapes", "href": "#etapes" },
+        { "label": "Documents", "href": "#documents" },
+        { "label": "Frais", "href": "#frais" },
+        { "label": "Contacter la scolarité", "href": "#scolarite" }
+      ]
+    },
+    {
+      "type": "lede",
+      "title": "Du choix de la filière au dépôt du dossier",
+      "text": "Commencez par identifier la formation visée, puis demandez à la scolarité de confirmer son ouverture, les conditions d'accès et les modalités de dépôt pour l'année universitaire 2026-2027."
+    },
+    {
+      "type": "steps",
+      "id": "etapes",
+      "title": "Les étapes de candidature",
+      "items": [
+        {
+          "title": "Choisir une filière",
+          "text": "Consultez le catalogue et sélectionnez le parcours de Licence ou de Master qui correspond à votre projet."
+        },
+        {
+          "title": "Vérifier les conditions",
+          "text": "Demandez à la scolarité les prérequis, les places disponibles et l'ouverture effective de la filière pour l'année 2026-2027."
+        },
+        {
+          "title": "Préparer les pièces",
+          "text": "Réunissez les documents listés ci-dessous. Les originaux, copies certifiées et formats acceptés doivent être confirmés auprès du service."
+        },
+        {
+          "title": "Déposer le dossier",
+          "text": "Le site institutionnel indique que le dossier doit être fourni au service de la scolarité de l'UCAO-UUCo."
+        },
+        {
+          "title": "Confirmer les frais avant paiement",
+          "text": "Demandez un barème daté pour 2026-2027 et les coordonnées de paiement directement à l'administration. N'utilisez pas un ancien numéro de compte ou un ancien tarif."
+        }
+      ]
+    },
+    {
+      "type": "documents",
+      "id": "documents",
+      "title": "Pièces indiquées par l'établissement",
+      "groups": [
+        {
+          "title": "Candidature en Licence",
+          "items": [
+            "Demande d'inscription ou lettre de motivation",
+            "Attestation du baccalauréat et relevé de notes",
+            "Copie de l'acte de naissance",
+            "Deux photos d'identité",
+            "Certificat de résidence",
+            "Certificat médical",
+            "Reçu de versement délivré par VistaGui, après confirmation écrite des frais et des coordonnées de paiement par la scolarité"
+          ]
+        },
+        {
+          "title": "Candidature en Master",
+          "items": [
+            "Demande d'inscription ou lettre de motivation",
+            "Attestation du baccalauréat et relevé de notes",
+            "Copie de l'acte de naissance",
+            "Deux photos d'identité",
+            "Certificat de résidence",
+            "Certificat médical",
+            "Diplôme de Licence et relevés de notes",
+            "Reçu de versement délivré par VistaGui, après confirmation écrite des frais et des coordonnées de paiement par la scolarité"
+          ]
+        }
+      ],
+      "note": "Liste transcrite de la page officielle des inscriptions. Confirmez les pièces, les formats et les éventuelles pièces complémentaires pour la rentrée 2026-2027.",
+      "sourceUrl": "https://ucao-uuco.org/inscription/"
+    },
+    {
+      "type": "notice",
+      "id": "frais",
+      "title": "Frais de scolarité",
+      "text": "Les montants accessibles sur le site institutionnel sont explicitement datés de l'année universitaire 2025-2026. Ils ne sont donc pas repris ici comme tarifs actuels.",
+      "note": "Avant tout versement, demandez à la scolarité le barème officiel 2026-2027, les frais annexes, les échéances et les coordonnées bancaires confirmées par écrit."
+    },
+    {
+      "type": "notice",
+      "id": "scolarite",
+      "title": "Contacter la scolarité",
+      "text": "Pour vérifier l'ouverture d'une filière, les conditions d'accès et les documents à fournir, contactez directement l'UCAO-UUCo.",
+      "email": "info@ucao-uuco.org",
+      "phones": [
+        "(+224) 620 42 66 12",
+        "(+224) 621 28 66 81",
+        "(+224) 629 38 90 58"
+      ],
+      "note": "La page Contact officielle affiche info@ucao-uuco.org ; l'en-tête du site affiche aussi info@ucao.uuco.org. En cas de doute, privilégiez un appel téléphonique."
+    },
+    {
+      "type": "cta",
+      "variant": "navy",
+      "title": "Questions fréquentes",
+      "text": "Durées des formations, habilitations, adresse e-mail à utiliser : les réponses vérifiables sont regroupées dans la FAQ.",
+      "ctaPrimary": { "label": "Consulter la FAQ", "href": "/faq/" },
+      "ctaSecondary": { "label": "Voir le catalogue", "href": "/formations/" }
     }
-  },
-  "intro": {
-    "title": "Du choix de la filière au dépôt du dossier",
-    "text": "Commencez par identifier la formation visée, puis demandez à la scolarité de confirmer son ouverture, les conditions d’accès et les modalités de dépôt pour l’année universitaire 2026-2027."
-  },
-  "stepsTitle": "Les étapes de candidature",
-  "steps": [
-    {
-      "title": "Choisir une filière",
-      "text": "Consultez le catalogue et sélectionnez le parcours de Licence ou de Master qui correspond à votre projet."
-    },
-    {
-      "title": "Vérifier les conditions",
-      "text": "Demandez à la scolarité les prérequis, les places disponibles et l’ouverture effective de la filière pour l’année 2026-2027."
-    },
-    {
-      "title": "Préparer les pièces",
-      "text": "Réunissez les documents listés ci-dessous. Les originaux, copies certifiées et formats acceptés doivent être confirmés auprès du service."
-    },
-    {
-      "title": "Déposer le dossier",
-      "text": "Le site institutionnel indique que le dossier doit être fourni au service de la scolarité de l’UCAO-UUCo."
-    },
-    {
-      "title": "Confirmer les frais avant paiement",
-      "text": "Demandez un barème daté pour 2026-2027 et les coordonnées de paiement directement à l’administration. N’utilisez pas un ancien numéro de compte ou un ancien tarif."
-    }
-  ],
-  "documents": {
-    "title": "Pièces indiquées par l’établissement",
-    "groups": [
-      {
-        "title": "Candidature en Licence",
-        "items": [
-          "Demande d’inscription ou lettre de motivation",
-          "Attestation du baccalauréat et relevé de notes",
-          "Copie de l’acte de naissance",
-          "Deux photos d’identité",
-          "Certificat de résidence",
-          "Certificat médical",
-          "Reçu de versement délivré par VistaGui, après confirmation écrite des frais et des coordonnées de paiement par la scolarité"
-        ]
-      },
-      {
-        "title": "Candidature en Master",
-        "items": [
-          "Demande d’inscription ou lettre de motivation",
-          "Attestation du baccalauréat et relevé de notes",
-          "Copie de l’acte de naissance",
-          "Deux photos d’identité",
-          "Certificat de résidence",
-          "Certificat médical",
-          "Diplôme de Licence et relevés de notes",
-          "Reçu de versement délivré par VistaGui, après confirmation écrite des frais et des coordonnées de paiement par la scolarité"
-        ]
-      }
-    ],
-    "note": "Liste transcrite de la page officielle des inscriptions. Confirmez les pièces, les formats et les éventuelles pièces complémentaires pour la rentrée 2026-2027.",
-    "sourceUrl": "https://ucao-uuco.org/inscription/"
-  },
-  "financial": {
-    "title": "Frais de scolarité",
-    "text": "Les montants accessibles sur le site institutionnel sont explicitement datés de l’année universitaire 2025-2026. Ils ne sont donc pas repris ici comme tarifs actuels.",
-    "note": "Avant tout versement, demandez à la scolarité le barème officiel 2026-2027, les frais annexes, les échéances et les coordonnées bancaires confirmées par écrit."
-  },
-  "contactAdmissions": {
-    "title": "Contacter la scolarité",
-    "text": "Pour vérifier l’ouverture d’une filière, les conditions d’accès et les documents à fournir, contactez directement l’UCAO-UUCo.",
-    "email": "info@ucao-uuco.org",
-    "phones": [
-      "(+224) 620 42 66 12",
-      "(+224) 621 28 66 81",
-      "(+224) 629 38 90 58"
-    ],
-    "note": "La page Contact officielle affiche info@ucao-uuco.org ; l’en-tête du site affiche aussi info@ucao.uuco.org. En cas de doute, privilégiez un appel téléphonique."
-  },
-  "campusImage": {
-    "image": "campus-groupe-rose.jpg",
-    "imageAlt": "Étudiants réunis lors d’une activité sur le campus.",
-    "credit": "Photo fournie par l’UCAO-UUCo.",
-    "reverse": false
-  }
+  ]
 }

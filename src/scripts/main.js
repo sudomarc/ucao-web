@@ -1,7 +1,9 @@
 /**
- * UCAO-UUCo — progressive enhancements.
- * Accessible mobile navigation, honest contact-form feedback and
- * motion-safe reveal transitions. The page remains readable without JS.
+ * UCAO-UUCo — Améliorations progressives.
+ * Navigation mobile accessible, retour honnête du formulaire (aucune
+ * simulation d'envoi), recherche dans le catalogue, ancres de niveau et
+ * révélations au scroll respectueuses de prefers-reduced-motion.
+ * Le site reste lisible et utilisable sans JavaScript.
  */
 (function () {
   'use strict';
@@ -13,7 +15,7 @@
   var mobileQuery = window.matchMedia('(max-width: 960px)');
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  /* ---------- Mobile navigation ---------- */
+  /* ---------- Navigation mobile (tiroir + backdrop + piège de focus) ---------- */
   if (toggle && nav) {
     var backdrop = document.createElement('button');
     backdrop.type = 'button';
@@ -71,20 +73,20 @@
       }
 
       if (event.key === 'Tab') {
-        var links = Array.prototype.slice.call(
+        var focusable = Array.prototype.slice.call(
           nav.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
         ).filter(function (element) {
           return element.offsetWidth || element.offsetHeight || element.getClientRects().length;
         });
 
-        if (!links.length) {
+        if (!focusable.length) {
           event.preventDefault();
           toggle.focus();
           return;
         }
 
-        var first = links[0];
-        var last = links[links.length - 1];
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
 
         if (event.shiftKey && (document.activeElement === first || document.activeElement === toggle)) {
           event.preventDefault();
@@ -109,7 +111,7 @@
     syncNavigationMode();
   }
 
-  /* ---------- Header elevation ---------- */
+  /* ---------- Élévation du header au scroll ---------- */
   if (header) {
     function updateHeader() {
       var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
@@ -120,7 +122,7 @@
     updateHeader();
   }
 
-  /* ---------- Contact form: no simulated delivery ---------- */
+  /* ---------- Formulaire de contact : aucune simulation d'envoi ---------- */
   var form = document.getElementById('contact-form');
   var status = document.getElementById('form-status');
   var submitBtn = document.getElementById('form-submit');
@@ -168,41 +170,24 @@
 
       window.setTimeout(function () {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Envoyer le message';
+        submitBtn.textContent = 'Vérifier le message';
         status.textContent =
-          'Ce formulaire n’est pas encore connecté à un service de réception. ' +
-          'L’administration doit configurer un backend (formulaire, e-mail ou API) ' +
-          'avant que les messages puissent être envoyés. Aucune donnée n’est stockée ' +
-          'dans ce navigateur.';
+          'Vérification terminée : ce formulaire n’est pas connecté à un service de réception, ' +
+          'il ne transmet pas votre message. Pour joindre l’administration, utilisez les ' +
+          'coordonnées affichées à côté du formulaire. Aucune donnée n’est enregistrée.';
         status.setAttribute('aria-live', 'assertive');
       }, 450);
     });
   }
 
-  /* ---------- Programme search and level deep-links ---------- */
+  /* ---------- Recherche dans le catalogue et filtre par niveau ---------- */
   function normaliseSearch(value) {
     return String(value || '').toLocaleLowerCase('fr').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   }
 
-  var homeSearch = document.getElementById('program-search');
-  if (homeSearch) {
-    var homeCards = Array.prototype.slice.call(document.querySelectorAll('.program-card'));
-    var homeStatus = document.getElementById('program-search-status');
-    homeSearch.addEventListener('input', function () {
-      var query = normaliseSearch(homeSearch.value.trim());
-      var visible = 0;
-      homeCards.forEach(function (card) {
-        var match = !query || normaliseSearch(card.getAttribute('data-search')).indexOf(query) !== -1;
-        card.hidden = !match;
-        if (match) visible += 1;
-      });
-      if (homeStatus) homeStatus.textContent = visible ? visible + ' parcours affiché(s).' : 'Aucun parcours ne correspond à votre recherche.';
-    });
-  }
-
   var catalogueSearch = document.getElementById('formation-search');
   if (catalogueSearch) {
-    var catalogueLevels = Array.prototype.slice.call(document.querySelectorAll('.catalog-level'));
+    var catalogueLevels = Array.prototype.slice.call(document.querySelectorAll('.catalogue__level'));
     var catalogueStatus = document.getElementById('formation-search-status');
     var requestedLevel = new URLSearchParams(window.location.search).get('niveau');
     if (requestedLevel !== 'licence' && requestedLevel !== 'master') requestedLevel = '';
@@ -219,24 +204,39 @@
           if (match) { sectionVisible += 1; visible += 1; }
         });
         section.hidden = !levelAllowed || sectionVisible === 0;
+        var groupTitles = section.querySelectorAll('.catalogue__group');
+        groupTitles.forEach(function (group) {
+          var hasVisible = Array.prototype.some.call(group.querySelectorAll('.program-item'), function (i) { return !i.hidden; });
+          group.hidden = !hasVisible;
+        });
       });
-      if (catalogueStatus) catalogueStatus.textContent = visible ? visible + ' formation(s) affichée(s).' : 'Aucune formation ne correspond à ces critères.';
+      if (catalogueStatus) {
+        catalogueStatus.textContent = visible
+          ? visible + ' formation(s) affichée(s).'
+          : 'Aucune formation ne correspond à ces critères.';
+      }
     }
 
     catalogueSearch.addEventListener('input', filterCatalogue);
     filterCatalogue();
+
+    if (requestedLevel) {
+      var target = document.getElementById(requestedLevel);
+      if (target) {
+        window.setTimeout(function () {
+          target.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
+        }, 60);
+      }
+    }
   }
 
-  /* ---------- Scroll reveals: IntersectionObserver, once per element ---------- */
+  /* ---------- Révélation au scroll : une seule fois par élément ---------- */
   var revealElements = document.querySelectorAll(
-    '.card, .news-card, .step-card, .stat, .split-section__text, ' +
-    '.split-section__media, .pullquote, .faq-item'
+    '.news-entry, .value, .step, .doc-group, .notice, .editorial__media, ' +
+    '.editorial__text, .stat, .program-item, .gallery__item, .contact-card, .faq-item'
   );
 
   if (reducedMotion.matches || !('IntersectionObserver' in window)) {
-    revealElements.forEach(function (element) {
-      element.classList.add('is-visible');
-    });
     return;
   }
 
@@ -251,8 +251,8 @@
       });
     }, {
       root: null,
-      rootMargin: '0px 0px -48px 0px',
-      threshold: 0.08
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.06
     });
 
     revealElements.forEach(function (element) {

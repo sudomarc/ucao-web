@@ -1,16 +1,27 @@
 {
   "slug": "404",
   "title": "Page introuvable",
-  "metaDescription": "La page demandée n’existe pas sur le site de l’UCAO-UUCo.",
-  "hero": {
-    "kicker": "Erreur 404",
-    "title": "Page introuvable",
-    "lead": "La page que vous recherchez n’existe pas ou a été déplacée."
-  },
-  "actions": [
-    { "label": "Retour à l’accueil", "href": "/" },
-    { "label": "Formations", "href": "/formations/" },
-    { "label": "Admissions", "href": "/admissions/" },
-    { "label": "Contact", "href": "/contact/" }
+  "metaDescription": "La page demandée n'existe pas sur le site de l'UCAO-UUCo.",
+  "blocks": [
+    {
+      "type": "hero",
+      "variant": "band",
+      "kicker": "Erreur 404",
+      "title": "Page introuvable",
+      "lead": "La page que vous recherchez n'existe pas ou a été déplacée."
+    },
+    {
+      "type": "lede",
+      "text": "Vous pouvez reprendre votre navigation depuis l'une de ces pages :"
+    },
+    {
+      "type": "actions",
+      "items": [
+        { "label": "Retour à l'accueil", "href": "/" },
+        { "label": "Formations", "href": "/formations/" },
+        { "label": "Admissions", "href": "/admissions/" },
+        { "label": "Contact", "href": "/contact/" }
+      ]
+    }
   ]
 }

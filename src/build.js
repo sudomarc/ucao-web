@@ -1,13 +1,13 @@
 /**
  * UCAO-UUCo — Générateur de site statique (zéro dépendance externe).
  *
- * Lit les contenus centralisés dans src/content/, applique les templates HTML,
- * et écrit les pages statiques dans dist/.
+ * Lit les contenus centralisés dans src/content/ (pages décrites en « blocks »),
+ * applique des composants HTML sémantiques et écrit les pages statiques dans dist/.
  *
- * Direction artistique : identité dérivée du logo officiel UCAO-UUCo
- * (bleu #312783, rouge #991915, blanc), composition éditoriale inspirée de SOAS
- * avec une identité propre. Utilisation du vrai logo et des vraies photos du
- * campus fournies dans les assets.
+ * Identité visuelle dérivée du logo officiel UCAO (navy #1d2f56, rouge #9c1e28),
+ * composition éditoriale : héros photographique, bandes institutionnelles,
+ * typographie serif pour les titres, listes éditoriales plutôt que grilles
+ * de cartes identiques. Toutes les photos proviennent de l'UCAO-UUCo.
  */
 
 const fs = require('fs');
@@ -20,7 +20,7 @@ const STYLES_DIR = path.join(ROOT, 'src', 'styles');
 const SCRIPTS_DIR = path.join(ROOT, 'src', 'scripts');
 const DIST_DIR = path.join(ROOT, 'dist');
 
-/** Lecture JSON avec gestion d’erreur explicite. */
+/** Lecture JSON avec gestion d'erreur explicite. */
 function readJson(rel) {
   const full = path.join(CONTENT_DIR, rel);
   if (!fs.existsSync(full)) {
@@ -29,17 +29,8 @@ function readJson(rel) {
   return JSON.parse(fs.readFileSync(full, 'utf8'));
 }
 
-/** Lecture d’un fichier texte brut. */
-function readFile(rel, dir = ROOT) {
-  const full = path.join(dir, rel);
-  if (!fs.existsSync(full)) {
-    throw new Error(`Fichier manquant : ${full}`);
-  }
-  return fs.readFileSync(full, 'utf8');
-}
-
-/** Échappement HTML pour le contenu utilisateur / éditorial. */
-function escapeHtml(str) {
+/** Échappement HTML pour tout contenu éditorial. */
+function esc(str) {
   if (str == null) return '';
   return String(str)
     .replace(/&/g, '&amp;')
@@ -49,1099 +40,799 @@ function escapeHtml(str) {
     .replace(/'/g, '&#039;');
 }
 
-/** Titre de page complet. */
-function pageTitle(data, site) {
-  const base = escapeHtml(data.title || site.siteName);
-  return `${base} — ${escapeHtml(site.fullName)}`;
+/** Liens : attribue target/rel aux URL externes. */
+function linkAttrs(href) {
+  if (!href) return '';
+  const external = /^https?:\/\//i.test(href);
+  return external ? ' target="_blank" rel="noopener noreferrer"' : '';
 }
 
-/** Méta description. */
-function metaDesc(data, site) {
-  return escapeHtml(data.metaDescription || site.metaDescription);
+function telHref(phone) {
+  return 'tel:' + String(phone).replace(/\s/g, '');
 }
 
-/** Canonical (à confirmer quand l’URL de production est vérifiée — ici on ne l’invente pas). */
-function canonical(slug) {
-  return '';
+/** Image : balise <picture> avec source WebP et repli JPEG du même nom. */
+function picture(name, alt, options = {}) {
+  if (!name) return '';
+  const base = String(name).replace(/\.webp$/i, '').replace(/\.jpe?g$/i, '');
+  const eager = options.eager ? 'eager' : 'lazy';
+  const cls = options.cls ? ` class="${esc(options.cls)}"` : '';
+  return (
+    `<picture>` +
+    `<source type="image/webp" srcset="/assets/images/${esc(base)}.webp">` +
+    `<img${cls} src="/assets/images/${esc(base)}.jpg" alt="${esc(alt || '')}" ` +
+    `loading="${eager}" decoding="async">` +
+    `</picture>`
+  );
 }
 
-/** Open Graph image. */
-function ogImage(site) {
-  return site.ogImage ? escapeHtml(site.ogImage) : '';
+function button(label, href, variant, external) {
+  const attrs = external ? ' target="_blank" rel="noopener noreferrer"' : '';
+  return `<a class="button button--${esc(variant)}" href="${esc(href)}"${attrs}>${esc(label)}</a>`;
 }
 
-/** ---------- Alias d’images vers noms simples ---------- */
-const IMAGE_ALIASES = {
-  'WhatsApp Image 2026-11-14 at 3.02.57 PM (1).jpeg': 'campus-groupe-rose.jpg',
-  'WhatsApp Image 2026-11-14 at 3.02.57 PM.jpeg': 'campus-etudiants-sacs.jpg',
-  'WhatsApp Image 2026-11-14 at 3.03.04 PM.jpeg': 'campus-classe-cahiers.jpg',
-  'WhatsApp Image 2026-11-14 at 3.03.26 PM.jpeg': 'campus-banc-etudiants.jpg',
-  'WhatsApp Image 2026-11-14 at 3.02.58 PM.jpeg': 'campus-entree.jpg',
-  'WhatsApp Image 2026-11-14 at 3.03.15 PM.jpeg': 'campus-portrait.jpg',
-};
+/** ---------- En-tête de document ---------- */
 
-/** Résout un chemin image : alias → nom simple avec préfixe /assets/images/, sinon tel quel. */
-function resolveImage(src) {
-  if (!src) return src;
-  if (src.startsWith('/') || src.startsWith('http')) return src;
-  if (IMAGE_ALIASES[src]) return '/assets/images/' + IMAGE_ALIASES[src];
-  return '/assets/images/' + src;
-}
-
-/** ---------- Composants de shell ---------- */
-
-function skipLink() {
+function head(site, data) {
+  const title = `${esc(data.title || site.siteName)} — ${esc(site.fullName)}`;
+  const desc = esc(data.metaDescription || site.metaDescription);
   return `
-    <a class="skip-link" href="#main">Aller au contenu principal</a>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${title}</title>
+    <meta name="description" content="${desc}">
+    <meta name="language" content="fr">
+    <meta name="author" content="${esc(site.author)}">
+    <meta name="theme-color" content="#1d2f56">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="icon" href="${esc(site.faviconSrc)}" type="image/png" sizes="48x48">
+    <link rel="apple-touch-icon" href="${esc(site.roundIconSrc)}">
+    <meta property="og:title" content="${title}">
+    <meta property="og:description" content="${desc}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="${esc(site.ogImage)}">
+    <meta property="og:locale" content="fr_FR">
   `;
 }
 
-function emergencyAlert(site) {
-  const alert = site.emergencyAlert;
-  if (!alert || !alert.text) return '';
+/** ---------- Structure commune (header / footer) ---------- */
+
+function topbar(site) {
+  const phone = site.phones && site.phones.length ? site.phones[0] : '';
+  const phonesHtml = (site.phones || [])
+    .map((p) => `<a href="${telHref(p)}">${esc(p)}</a>`)
+    .join('<span class="topbar__sep" aria-hidden="true">·</span>');
   return `
-    <div class="emergency-alert" role="alert" aria-live="assertive">
-      ${escapeHtml(alert.text)}
-      ${alert.link ? `<a href="${escapeHtml(alert.link.href)}">${escapeHtml(alert.link.label)}</a>` : ''}
+    <div class="topbar">
+      <div class="topbar__inner">
+        <div class="topbar__motto">Foi · Science · Action</div>
+        <div class="topbar__contact">
+          <span class="topbar__phones">${phonesHtml}</span>
+          <span class="topbar__sep" aria-hidden="true">·</span>
+          <a href="mailto:${esc(site.email)}">${esc(site.email)}</a>
+          <span class="topbar__sep" aria-hidden="true">·</span>
+          <a href="${esc(site.facebook)}" target="_blank" rel="noopener noreferrer">Facebook</a>
+        </div>
+      </div>
     </div>
   `;
 }
 
-function langSwitcher(site) {
-  const langs = site.languages;
-  if (!langs || !langs.length) return '';
-  const current = site.lang || 'fr';
-  const items = langs.map(l => `
-    <a href="${escapeHtml(l.href)}" hreflang="${escapeHtml(l.code)}" ${l.code === current ? 'aria-current="true"' : ''}>${escapeHtml(l.label)}</a>
-  `).join('');
-  return `<nav class="lang-switcher" aria-label="Langue">${items}</nav>`;
+function navLink(item, currentSlug, top) {
+  const active = item.href === currentSlug || (currentSlug === '' && item.href === '/');
+  const cls = top ? 'nav-link' : 'nav-sublink';
+  const activeCls = top && active ? ' nav-link--active' : '';
+  const aria = active ? ' aria-current="page"' : '';
+  const external = linkAttrs(item.href);
+  const sub = top && item.children && item.children.length
+    ? `<ul class="nav-submenu">${item.children.map((c) => navLink(c, currentSlug, false)).join('')}</ul>`
+    : '';
+  return `<li><a class="${cls}${activeCls}" href="${esc(item.href)}"${aria}${external}>${esc(item.label)}</a>${sub}</li>`;
 }
 
-function nav(site, navItems, currentSlug) {
-  const itemsHtml = navItems
-    .map(
-      (item) => {
-        const active = item.href === currentSlug || (currentSlug === '' && item.label === 'Accueil') ? ' aria-current="page"' : '';
-        const submenu = item.children && item.children.length ? renderSubmenu(item.children) : '';
-        return `<li class="nav-item${submenu ? ' nav-item--has-submenu' : ''}"><a class="nav-link${active ? ' nav-link--active' : ''}" href="${escapeHtml(item.href)}"${active}>${escapeHtml(item.label)}</a>${submenu}</li>`;
-      }
-    )
-    .join('');
-
-  const ctaHtml = `
-    <div class="header-ctas">
-      <a class="button button--primary" href="/formations/">Découvrir les formations</a>
-      <a class="button button--secondary" href="/admissions/">Admissions</a>
-    </div>
-  `;
-
-  const logoMarkup = `
-    <img src="${escapeHtml(site.logoSrc || '/assets/images/UCAO_LOGO.png')}"
-         alt="${escapeHtml(site.logoAlt || 'Logo UCAO-UUCo')}"
-         width="200" height="148" loading="eager">
-  `;
-
+function header(site, navItems, currentSlug) {
+  const itemsHtml = navItems.map((i) => navLink(i, currentSlug, true)).join('');
   return `
-    <header class="site-header">
+    ${topbar(site)}
+    <header class="site-header" id="top">
       <div class="header-inner">
-        <a class="site-brand" href="/">
-          <span class="site-brand__logo">${logoMarkup}</span>
-          <span class="site-brand__text">
-            <span class="site-brand__name">${escapeHtml(site.siteName)}</span>
-            <span class="site-brand__sub">${escapeHtml(site.fullName)}</span>
+        <a class="brand" href="/" aria-label="${esc(site.fullName)} — retour à l'accueil">
+          <img class="brand__logo" src="${esc(site.logoSrc)}" alt="${esc(site.logoAlt)}" width="110" height="86" loading="eager" decoding="async">
+          <span class="brand__text">
+            <span class="brand__name">${esc(site.siteName)}</span>
+            <span class="brand__sub">Unité Universitaire de Conakry</span>
           </span>
         </a>
-
-        ${langSwitcher(site)}
-
-        <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Ouvrir le menu">
-          <span class="menu-toggle__bar"></span>
-          <span class="menu-toggle__bar"></span>
-          <span class="menu-toggle__bar"></span>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Ouvrir le menu">
+          <span class="menu-toggle__bar" aria-hidden="true"></span>
+          <span class="menu-toggle__bar" aria-hidden="true"></span>
+          <span class="menu-toggle__bar" aria-hidden="true"></span>
         </button>
-
-        <nav class="main-nav" id="main-menu">
-          <ul class="nav-list">
-            ${itemsHtml}
-          </ul>
-          ${ctaHtml}
+        <nav class="main-nav" id="main-menu" aria-label="Navigation principale">
+          <ul class="nav-list">${itemsHtml}</ul>
+          <a class="button button--primary nav-cta" href="/admissions/">Candidater</a>
         </nav>
       </div>
     </header>
   `;
 }
 
-function renderSubmenu(children) {
-  const items = children.map(c => `<li><a class="nav-sublink" href="${escapeHtml(c.href)}">${escapeHtml(c.label)}</a></li>`).join('');
-  return `<ul class="nav-submenu">${items}</ul>`;
-}
-
-function footer(site, navItems) {
-  const quickLinks = navItems
-    .slice(0, 5)
-    .map((item) => `<li><a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a></li>`)
+function footer(site, navData) {
+  const phonesHtml = (site.phones || [])
+    .map((p) => `<li><a class="footer__link" href="${telHref(p)}">${esc(p)}</a></li>`)
     .join('');
-
-  const phonesHtml = site.phones
-    .map((p) => `<li><a class="footer-link" href="tel:${escapeHtml(p.replace(/\s/g, ''))}">${escapeHtml(p)}</a></li>`)
+  const explore = (navData.footerExplore || [])
+    .map((i) => `<li><a class="footer__link" href="${esc(i.href)}">${esc(i.label)}</a></li>`)
     .join('');
-
-  const logoMarkup = `
-    <img src="${escapeHtml(site.logoSrc || '/assets/images/UCAO_LOGO.png')}"
-         alt="${escapeHtml(site.logoAlt || 'Logo UCAO-UUCo')}"
-         width="140" height="104" loading="lazy">
-  `;
-
-  const email = site.email?.replace(/\[À CONFIRMER\] /, '') || '';
-
+  const info = (navData.footerInfo || [])
+    .map((i) => `<li><a class="footer__link" href="${esc(i.href)}">${esc(i.label)}</a></li>`)
+    .join('');
   return `
     <footer class="site-footer">
-      <div class="footer-inner">
-        <div class="footer-block footer-brand">
-          <div class="footer-brand__logo">${logoMarkup}</div>
-          <p class="footer-text">${escapeHtml(site.fullName)}</p>
-          <p class="footer-text">${escapeHtml(site.address)}</p>
-          <ul class="footer-contact">
-            ${phonesHtml}
-            <li><a class="footer-link" href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></li>
-          </ul>
-          ${site.facebook ? `<p class="footer-social"><a class="footer-link" href="${escapeHtml(site.facebook)}" target="_blank" rel="noopener">Facebook</a></p>` : ''}
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <div class="footer__brand-row">
+            <img class="footer__logo" src="${esc(site.roundIconSrc)}" alt="" width="64" height="64" loading="lazy" decoding="async">
+            <div>
+              <p class="footer__name">${esc(site.siteName)}</p>
+              <p class="footer__fullname">${esc(site.fullName)}</p>
+            </div>
+          </div>
+          <p class="footer__tagline">${esc(site.tagline)}</p>
+          <p class="footer__address">${esc(site.address)}</p>
+          <p class="footer__social">
+            <a class="footer__link" href="${esc(site.facebook)}" target="_blank" rel="noopener noreferrer">${esc(site.facebookLabel)}</a>
+          </p>
         </div>
-        <div class="footer-block">
-          <h2 class="footer-heading">Liens rapides</h2>
-          <ul class="footer-links">
-            ${quickLinks}
+        <nav class="footer__col" aria-label="Explorer le site">
+          <h2 class="footer__heading">Explorer</h2>
+          <ul class="footer__links">${explore}</ul>
+        </nav>
+        <nav class="footer__col" aria-label="Informations pratiques et légales">
+          <h2 class="footer__heading">Informations</h2>
+          <ul class="footer__links">${info}</ul>
+        </nav>
+        <div class="footer__col">
+          <h2 class="footer__heading">Contact</h2>
+          <ul class="footer__links footer__contact">${phonesHtml}
+            <li><a class="footer__link" href="mailto:${esc(site.email)}">${esc(site.email)}</a></li>
           </ul>
-        </div>
-        <div class="footer-block">
-          <h2 class="footer-heading">Informations</h2>
-          <ul class="footer-links">
-            <li><a class="footer-link" href="/universite/">Université</a></li>
-            <li><a class="footer-link" href="/formations/">Formations</a></li>
-            <li><a class="footer-link" href="/admissions/">Admissions</a></li>
-            <li><a class="footer-link" href="/actualites/">Actualités</a></li>
-            <li><a class="footer-link" href="/contact/">Contact</a></li>
-            <li><a class="footer-link" href="/mentions-legales/">Mentions légales</a></li>
-            <li><a class="footer-link" href="/politique-confidentialite/">Confidentialité</a></li>
-          </ul>
+          <p><a class="button button--inverse footer__map" href="${esc(site.mapUrl)}" target="_blank" rel="noopener noreferrer">${esc(site.mapLabel)}</a></p>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p class="footer-copyright">${escapeHtml(site.copyright)}</p>
-        <p class="footer-note">${escapeHtml(site.emailNote || '')}</p>
+      <div class="footer__bottom">
+        <p class="footer__copyright">${esc(site.copyright)}</p>
+        <p class="footer__note">${esc(site.emailNote)}</p>
       </div>
     </footer>
   `;
 }
 
-function head(site, data) {
-  return `
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${pageTitle(data, site)}</title>
-    <meta name="description" content="${metaDesc(data, site)}">
-    <meta name="language" content="fr">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="icon" href="${escapeHtml(site.faviconSrc || '/assets/images/favicon.svg')}" type="image/svg+xml">
-    <meta property="og:title" content="${pageTitle(data, site)}">
-    <meta property="og:description" content="${metaDesc(data, site)}">
-    <meta property="og:type" content="website">
-    ${site.ogImage ? `<meta property="og:image" content="${escapeHtml(site.ogImage)}">` : ''}
-    <meta property="og:locale" content="fr_FR">
-    ${canonical(data.slug) ? `<link rel="canonical" href="${canonical(data.slug)}">` : ''}
-  `;
-}
+/** ---------- Blocs éditoriaux ---------- */
 
-/** Head complet pour le <head> HTML. */
-function head(site, data) {
-  return `
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${pageTitle(data, site)}</title>
-    <meta name="description" content="${metaDesc(data, site)}">
-    <meta name="language" content="fr">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="icon" href="${escapeHtml(site.faviconSrc || '/assets/images/favicon.svg')}" type="image/svg+xml">
-    <meta property="og:title" content="${pageTitle(data, site)}">
-    <meta property="og:description" content="${metaDesc(data, site)}">
-    <meta property="og:type" content="website">
-    ${site.ogImage ? `<meta property="og:image" content="${escapeHtml(site.ogImage)}">` : ''}
-    <meta property="og:locale" content="fr_FR">
-    ${canonical(data.slug) ? `<link rel="canonical" href="${canonical(data.slug)}">` : ''}
-  `;
-}
-
-/** ---------- Composants éditoriaux ---------- */
-
-function hero(data) {
-  const h = data.hero;
-  if (!h) return '';
-  const hasImage = Boolean(h.image);
-  const resolvedImage = hasImage ? resolveImage(h.image) : '';
-  const heroClass = hasImage ? 'hero hero--image' : 'hero';
-  return `
-    <section class="${heroClass}" aria-labelledby="hero-title">
-      <div class="hero__inner">
-        <div class="hero__content">
-          ${h.kicker ? `<span class="hero__kicker">${escapeHtml(h.kicker)}</span>` : ''}
-          <h1 class="hero__title" id="hero-title">${escapeHtml(h.title)}</h1>
-          ${h.lead ? `<p class="hero__lead">${escapeHtml(h.lead)}</p>` : ''}
-          <div class="hero__ctas">
-            ${h.ctaPrimary ? `<a class="button button--primary" href="${escapeHtml(h.ctaPrimary.href)}">${escapeHtml(h.ctaPrimary.label)}</a>` : ''}
-            ${h.ctaSecondary ? `<a class="button button--secondary" href="${escapeHtml(h.ctaSecondary.href)}">${escapeHtml(h.ctaSecondary.label)}</a>` : ''}
+function blockHero(b) {
+  if (b.variant === 'band') {
+    return `
+      <section class="hero hero--band" aria-labelledby="hero-title">
+        <div class="container">
+          <div class="hero__content">
+            ${b.kicker ? `<p class="kicker kicker--light">${esc(b.kicker)}</p>` : ''}
+            <h1 class="hero__title" id="hero-title">${esc(b.title)}</h1>
+            ${b.lead ? `<p class="hero__lead">${esc(b.lead)}</p>` : ''}
+            ${b.ctaPrimary ? `<div class="hero__ctas">${button(b.ctaPrimary.label, b.ctaPrimary.href, 'inverse', b.ctaPrimary.external)}</div>` : ''}
           </div>
         </div>
-        ${hasImage ? `
-          <div class="hero__media">
-            <img src="${escapeHtml(resolvedImage)}" alt="${escapeHtml(h.imageAlt || 'Illustration')}" loading="eager" width="1200" height="630">
-            ${h.imageCredit ? `<p class="image-credit">${escapeHtml(h.imageCredit)}</p>` : ''}
-          </div>
+      </section>
+    `;
+  }
+  return `
+    <section class="hero hero--split" aria-labelledby="hero-title">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          ${b.kicker ? `<p class="kicker">${esc(b.kicker)}</p>` : ''}
+          <h1 class="hero__title" id="hero-title">${esc(b.title)}</h1>
+          ${b.lead ? `<p class="hero__lead">${esc(b.lead)}</p>` : ''}
+          ${(b.ctaPrimary || b.ctaSecondary) ? `
+            <div class="hero__ctas">
+              ${b.ctaPrimary ? button(b.ctaPrimary.label, b.ctaPrimary.href, 'primary', b.ctaPrimary.external) : ''}
+              ${b.ctaSecondary ? button(b.ctaSecondary.label, b.ctaSecondary.href, 'ghost', b.ctaSecondary.external) : ''}
+            </div>
+          ` : ''}
+        </div>
+        ${b.image ? `
+          <figure class="hero__media">
+            ${picture(b.image, b.imageAlt, { eager: true, cls: 'hero__img' })}
+            ${b.imageCredit ? `<figcaption class="credit">${esc(b.imageCredit)}</figcaption>` : ''}
+          </figure>
         ` : ''}
       </div>
     </section>
   `;
 }
 
-function intro(data) {
-  if (!data.intro) return '';
+function blockLede(b) {
   return `
-    <section class="section section--text">
+    <section class="section section--tight">
       <div class="container">
-        <div class="text-block">
-          ${data.intro.title ? `<h2 class="section-title">${escapeHtml(data.intro.title)}</h2>` : ''}
-          ${data.intro.lead ? `<p class="lead">${escapeHtml(data.intro.lead)}</p>` : ''}
-          ${data.intro.text ? `<p>${escapeHtml(data.intro.text)}</p>` : ''}
+        <div class="lede">
+          ${b.kicker ? `<p class="kicker">${esc(b.kicker)}</p>` : ''}
+          ${b.title ? `<h2 class="section-title">${esc(b.title)}</h2>` : ''}
+          ${b.lead ? `<p class="lede__lead">${esc(b.lead)}</p>` : ''}
+          ${b.text ? `<p class="lede__text">${esc(b.text)}</p>` : ''}
+          ${b.note ? `<p class="note">${esc(b.note)}</p>` : ''}
         </div>
       </div>
     </section>
   `;
 }
 
-function cards(data, key, alt) {
-  const block = data[key];
-  if (!block || !block.items) return '';
-  const itemsHtml = block.items
-    .map(
-      (item) => `
-        <article class="card">
-          ${item.image ? `<div class="card__media"><img src="${escapeHtml(resolveImage(item.image))}" alt="${escapeHtml(item.imageAlt || item.label)}" loading="lazy"></div>` : ''}
-          <h3 class="card__title">${escapeHtml(item.label)}</h3>
-          <p class="card__desc">${escapeHtml(item.desc || item.text || '')}</p>
-          ${item.href ? `<a class="button button--ghost card__cta" href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>` : ''}
-          ${item.note ? `<span class="note">${escapeHtml(item.note)}</span>` : ''}
-        </article>
-      `
-    )
+function blockJumpnav(b) {
+  if (!b.links || !b.links.length) return '';
+  const links = b.links
+    .map((l) => `<a class="jumpnav__link" href="${esc(l.href)}">${esc(l.label)}</a>`)
     .join('');
-
-  const sectionClass = alt ? 'section section--cards section--alt' : 'section section--cards';
   return `
-    <section class="${sectionClass}">
+    <nav class="jumpnav" aria-label="Dans cette page">
       <div class="container">
-        ${block.title ? `<h2 class="section-title">${escapeHtml(block.title)}</h2>` : ''}
-        <div class="card-grid">
-          ${itemsHtml}
-        </div>
-        ${block.cta ? `<div class="cta-wrap"><a class="button button--primary" href="${escapeHtml(block.cta.href)}">${escapeHtml(block.cta.label)}</a></div>` : ''}
-        ${block.note ? `<p class="note note--block">${escapeHtml(block.note)}</p>` : ''}
+        <span class="jumpnav__label">Dans cette page :</span>
+        <div class="jumpnav__links">${links}</div>
       </div>
-    </section>
+    </nav>
   `;
 }
 
-function textList(data, key, alt) {
-  const block = data[key];
-  if (!block) return '';
-  let inner = '';
-  if (block.items) {
-    inner = `<ul class="text-list">${block.items.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`;
-  } else if (block.text) {
-    inner = `<p>${escapeHtml(block.text)}</p>`;
-  } else {
-    return '';
-  }
-  const sectionClass = alt ? 'section section--text section--alt' : 'section section--text';
-  return `
-    <section class="${sectionClass}">
-      <div class="container">
-        ${block.title ? `<h2 class="section-title">${escapeHtml(block.title)}</h2>` : ''}
-        ${inner}
-        ${block.note ? `<p class="note note--block">${escapeHtml(block.note)}</p>` : ''}
-      </div>
-    </section>
-  `;
-}
-
-function textCta(data, key, alt) {
-  const block = data[key];
-  if (!block) return '';
-  const sectionClass = alt ? 'section section--text section--alt' : 'section section--text';
-  return `
-    <section class="${sectionClass}">
-      <div class="container">
-        <div class="text-block">
-          ${block.title ? `<h2 class="section-title">${escapeHtml(block.title)}</h2>` : ''}
-          ${block.text ? `<p>${escapeHtml(block.text)}</p>` : ''}
-          ${block.cta ? `<div class="cta-wrap"><a class="button button--primary" href="${escapeHtml(block.cta.href)}">${escapeHtml(block.cta.label)}</a></div>` : ''}
-          ${block.note ? `<p class="note note--block">${escapeHtml(block.note)}</p>` : ''}
-        </div>
-      </div>
-    </section>
-  `;
-}
-
-/** ---------- NOUVEAU : Vidéo embarquée (lecteur HTML5 natif) ---------- */
-function videoBlock(data, key, alt) {
-  const block = data[key];
-  if (!block || !block.video) return '';
-  const poster = block.poster ? resolveImage(block.poster) : '';
-  const sectionClass = alt ? 'section section--video section--alt' : 'section section--video';
-  return `
-    <section class="${sectionClass}">
-      <div class="container">
-        <div class="video-block">
-          ${block.title ? `<h2 class="section-title">${escapeHtml(block.title)}</h2>` : ''}
-          ${block.lead ? `<p class="lead">${escapeHtml(block.lead)}</p>` : ''}
-          <div class="video-block__player">
-            <video controls preload="metadata" width="100%" ${poster ? `poster="${escapeHtml(poster)}"` : ''}>
-              <source src="${escapeHtml(block.video)}" type="video/mp4">
-              Votre navigateur ne prend pas en charge la vidéo HTML5.
-            </video>
-          </div>
-          ${block.credit ? `<p class="image-credit">${escapeHtml(block.credit)}</p>` : ''}
-        </div>
-      </div>
-    </section>
-  `;
-}
-
-/** ---------- NOUVEAU : Image avec légende et crédit ---------- */
-function imageBlock(data, key, alt) {
-  const block = data[key];
-  if (!block || !block.image) return '';
-  const resolvedImage = resolveImage(block.image);
-  const sectionClass = alt ? 'section section--image section--alt' : 'section section--image';
-  return `
-    <section class="${sectionClass}">
-      <div class="container">
-        <div class="split-section${block.reverse ? ' split-section--reverse' : ''}">
-          ${block.title ? `<div class="split-section__text"><h2 class="section-title">${escapeHtml(block.title)}</h2>${block.text ? `<p>${escapeHtml(block.text)}</p>` : ''}</div>` : ''}
-          <div class="split-section__media">
-            <img src="${escapeHtml(resolvedImage)}" alt="${escapeHtml(block.imageAlt || block.title || 'Image')}" loading="lazy" width="800" height="600">
-            ${block.credit ? `<p class="image-credit">${escapeHtml(block.credit)}</p>` : ''}
-          </div>
-        </div>
-      </div>
-    </section>
-  `;
-}
-
-/** ---------- NOUVEAU : Liste de sections (texte + image, pour vie-universitaire) ---------- */
-function sectionsList(data) {
-  const sections = data.sections;
-  if (!sections || !sections.length) return '';
-  const itemsHtml = sections
+function blockStats(b) {
+  const items = (b.items || [])
     .map(
-      (s, i) => `
-        <section class="section section--text${i % 2 === 1 ? ' section--alt' : ''}">
-          <div class="container">
-            <div class="split-section${s.reverse ? ' split-section--reverse' : ''}">
-              <div class="split-section__text">
-                <h2 class="section-title">${escapeHtml(s.title)}</h2>
-                <p>${escapeHtml(s.text)}</p>
-                ${s.note ? `<p class="note">${escapeHtml(s.note)}</p>` : ''}
-                ${s.href ? `<p><a class="button button--ghost" href="${escapeHtml(s.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.linkLabel || "En savoir plus")}</a></p>` : ''}
-              </div>
-              ${s.image ? `<div class="split-section__media">${renderImageBlock(s)}</div>` : ''}
-            </div>
-          </div>
-        </section>
-      `
-    )
-    .join('');
-  return itemsHtml;
-}
-
-/** ---------- NOUVEAU : Section split texte/image (asymétrique) ---------- */
-function splitSection(data, leftKey, rightKey, alt) {
-  const left = data[leftKey];
-  const right = data[rightKey];
-  if (!left && !right) return '';
-  const sectionClass = alt ? 'section section--split section--alt' : 'section section--split';
-  return `
-    <section class="${sectionClass}">
-      <div class="container">
-        <div class="split-section${right.reverse ? ' split-section--reverse' : ''}">
-          ${left ? `<div class="split-section__text">${renderMarkdownish(left)}</div>` : ''}
-          ${right ? `<div class="split-section__media">${renderImageBlock(right)}</div>` : ''}
-        </div>
-      </div>
-    </section>
-  `;
-}
-
-function renderImageBlock(block) {
-  if (!block) return '';
-  let html = '';
-  if (block.image) {
-    const resolvedImage = resolveImage(block.image);
-    html += `<img src="${escapeHtml(resolvedImage)}" alt="${escapeHtml(block.imageAlt || 'Image')}" loading="lazy" width="800" height="600">`;
-  }
-  if (block.credit) html += `<p class="image-credit">${escapeHtml(block.credit)}</p>`;
-  return html;
-}
-
-/** ---------- NOUVEAU : Stats grid (faits et chiffres) ---------- */
-function statsGrid(data, key) {
-  const block = data[key];
-  if (!block || !block.items) return '';
-  const itemsHtml = block.items
-    .map(
-      (item) => `
+      (i) => `
         <div class="stat">
-          <span class="stat__number">${escapeHtml(item.number)}</span>
-          <span class="stat__label">${escapeHtml(item.label)}</span>
+          <span class="stat__number">${esc(i.number)}</span>
+          <span class="stat__label">${esc(i.label)}</span>
         </div>
       `
     )
     .join('');
   return `
-    <section class="section section--stats">
+    <section class="stats-band" aria-label="Repères de l'établissement">
       <div class="container">
-        ${block.title ? `<h2 class="section-title">${escapeHtml(block.title)}</h2>` : ''}
-        ${(block.lead || block.text) ? `<p class="lead text-block--centered">${escapeHtml(block.lead || block.text)}</p>` : ''}
-        <div class="stats-grid">${itemsHtml}</div>
-        ${block.note ? `<p class="note note--block">${escapeHtml(block.note)}</p>` : ''}
+        ${b.title ? `<h2 class="stats-band__title">${esc(b.title)}</h2>` : ''}
+        <div class="stats-band__grid">${items}</div>
+        ${b.note ? `<p class="note note--light">${esc(b.note)}</p>` : ''}
       </div>
     </section>
   `;
 }
 
-/** ---------- NOUVEAU : Pullquote (citation mise en avant) ---------- */
-function pullquote(data, key) {
-  const block = data[key];
-  if (!block) return '';
+function programRow(p) {
   return `
-    <section class="section section--quote section--alt">
+    <li class="program-row">
+      <a href="${esc(p.href)}"${linkAttrs(p.href)}>
+        <span class="program-row__name">${esc(p.label)}</span>
+        ${p.meta ? `<span class="program-row__meta">${esc(p.meta)}</span>` : ''}
+      </a>
+    </li>
+  `;
+}
+
+function blockPrograms(b) {
+  const col = (title, note, items) => `
+    <div class="programs__col">
+      <div class="programs__head">
+        <h3 class="programs__level">${esc(title)}</h3>
+        ${note ? `<span class="programs__note">${esc(note)}</span>` : ''}
+      </div>
+      <ul class="program-rows">${(items || []).map(programRow).join('')}</ul>
+    </div>
+  `;
+  return `
+    <section class="section">
       <div class="container">
-        <div class="pullquote">
-          <p>${escapeHtml(block.text)}</p>
-          ${block.cite ? `<span class="pullquote__cite">${escapeHtml(block.cite)}</span>` : ''}
+        ${b.title ? `<h2 class="section-title">${esc(b.title)}</h2>` : ''}
+        ${b.lead ? `<p class="lede__text">${esc(b.lead)}</p>` : ''}
+        <div class="programs">
+          ${col(b.licenceTitle, b.licenceNote, b.licenceItems)}
+          ${col(b.masterTitle, b.masterNote, b.masterItems)}
         </div>
+        ${b.cta ? `<p class="cta-line">${button(b.cta.label, b.cta.href, 'primary')}</p>` : ''}
       </div>
     </section>
   `;
 }
 
-/** ---------- NOUVEAU : Valeurs avec titre + texte ---------- */
-function valeurGrid(data, key) {
-  const block = data[key];
-  if (!block || !block.items) return '';
-  const itemsHtml = block.items
-    .map(
-      (item) => `
-        <article class="card">
-          <h3 class="card__title">${escapeHtml(item.label)}</h3>
-          <p class="card__desc">${escapeHtml(item.desc || item.text || '')}</p>
-        </article>
-      `
-    )
-    .join('');
-  return `
-    <section class="section section--values section--alt">
-      <div class="container">
-        ${block.title ? `<h2 class="section-title">${escapeHtml(block.title)}</h2>` : ''}
-        <div class="card-grid">${itemsHtml}</div>
-        ${block.note ? `<p class="note note--block">${escapeHtml(block.note)}</p>` : ''}
-      </div>
-    </section>
-  `;
-}
-
-function steps(data, alt) {
-  if (!data.steps) return '';
-  const itemsHtml = data.steps
-    .map(
-      (step, i) => `
-        <article class="step-card">
-          <div class="step-card__num">${i + 1}</div>
-          <div class="step-card__content">
-            <h3 class="step-card__title">${escapeHtml(step.title)}</h3>
-            <p>${escapeHtml(step.text)}</p>
-          </div>
-        </article>
-      `
-    )
-    .join('');
-  const sectionClass = alt ? 'section section--steps section--alt' : 'section section--steps';
-  return `
-    <section class="${sectionClass}">
-      <div class="container">
-        <h2 class="section-title">${escapeHtml(data.stepsTitle || "Procédure d’admission")}</h2>
-        <div class="step-list">${itemsHtml}</div>
-      </div>
-    </section>
-  `;
-}
-
-function newsBlock(data, alt) {
-  const block = data.actualites || data;
-  if (!block.items) return '';
-  const itemsHtml = block.items
-    .map(
-      (item) => `
-        <article class="news-card">
-          ${item.image ? `<div class="news-card__media"><img src="${escapeHtml(resolveImage(item.image))}" alt="${escapeHtml(item.imageAlt || item.title)}" loading="lazy"></div>` : ''}
-          <time class="news-card__date">${escapeHtml(item.date)}</time>
-          <h3 class="news-card__title">${escapeHtml(item.title)}</h3>
-          <p class="news-card__desc">${escapeHtml(item.summary || '')}</p>
-          <span class="news-card__category">${escapeHtml(item.category || '')}</span>
-          ${sourceLink(item)}
-          ${item.note ? `<span class="note">${escapeHtml(item.note)}</span>` : ''}
-        </article>
-      `
-    )
-    .join('');
-
-  const sectionClass = alt ? 'section section--news section--alt' : 'section section--news';
-  return `
-    <section class="${sectionClass}">
-      <div class="container">
-        ${block.title ? `<h2 class="section-title">${escapeHtml(block.title)}</h2>` : ''}
-        <div class="news-grid">${itemsHtml}</div>
-        ${block.cta ? `<div class="cta-wrap"><a class="button button--primary" href="${escapeHtml(block.cta.href)}">${escapeHtml(block.cta.label)}</a></div>` : ''}
-        ${block.note ? `<p class="note note--block">${escapeHtml(block.note)}</p>` : ''}
-      </div>
-    </section>
-  `;
-}
-
-/** Catalogue de formations (niveaux + programmes). */
-function formationsCatalog(data, alt) {
+function blockCatalogue(b, globals) {
+  const data = b.source ? globals[b.source] : null;
   if (!data || !data.levels) return '';
-  const levelsHtml = data.levels
-    .map(
-      (level) => {
-        const programsHtml = level.programs
-          .map(
-            (p) => `
-              <li class="program-item" data-search="${escapeHtml([p.label, p.domain || ''].join(' ').toLowerCase())}">
-                <span class="program-name">${escapeHtml(p.label)}</span>
-                ${p.duration ? `<span class="program-note">${escapeHtml(p.duration)}</span>` : ''}
-              </li>
-            `
-          )
-          .join('');
-        return `
-          <section class="section section--text catalog-level${alt ? ' section--alt' : ''}" id="${escapeHtml(level.id)}" data-level="${escapeHtml(level.id)}">
-            <div class="container">
-              <h2 class="section-title">${escapeHtml(level.label)}</h2>
-              <p>${escapeHtml(level.description)}</p>
-              <ul class="program-list">${programsHtml}</ul>
+  const levels = data.levels
+    .map((level) => {
+      const groups = (level.groups || [])
+        .map((group) => {
+          const rows = (group.programs || [])
+            .map((p) => {
+              const search = [p.label, group.title, level.label].join(' ').toLowerCase();
+              return `
+                <li class="program-item" data-search="${esc(search)}">
+                  <span class="program-item__name">${esc(p.label)}</span>
+                  ${p.duration ? `<span class="program-item__meta">${esc(p.duration)}</span>` : ''}
+                </li>
+              `;
+            })
+            .join('');
+          return `
+            <div class="catalogue__group">
+              <h3 class="catalogue__group-title">${esc(group.title)}</h3>
+              <ul class="program-list">${rows}</ul>
             </div>
-          </section>
-        `;
-      }
-    )
+          `;
+        })
+        .join('');
+      return `
+        <div class="catalogue__level" id="${esc(level.id)}" data-level="${esc(level.id)}">
+          <div class="catalogue__level-head">
+            <h2 class="catalogue__level-title">${esc(level.label)}</h2>
+            <p class="catalogue__level-desc">${esc(level.description)}</p>
+          </div>
+          ${groups}
+        </div>
+      `;
+    })
     .join('');
   return `
-    <section class="section section--formations${alt ? ' section--alt' : ''}">
+    <section class="section section--tint" id="catalogue">
       <div class="container">
         <div class="formation-search">
-          <label class="sr-only" for="formation-search">${escapeHtml(data.searchPlaceholder || 'Rechercher')}</label>
-          <input type="search" id="formation-search" placeholder="${escapeHtml(data.searchPlaceholder || '')}" aria-label="${escapeHtml(data.searchPlaceholder || '')}" aria-describedby="formation-search-status">
-          <p id="formation-search-status" class="note" aria-live="polite"></p>
+          <label class="sr-only" for="formation-search">${esc(data.searchPlaceholder || 'Rechercher')}</label>
+          <input type="search" id="formation-search" placeholder="${esc(data.searchPlaceholder || '')}"
+                 aria-label="${esc(data.searchPlaceholder || '')}" aria-describedby="formation-search-status">
+          <p id="formation-search-status" class="formation-search__status" aria-live="polite"></p>
         </div>
-        ${levelsHtml}
-        <div class="cta-wrap"><a class="button button--primary" href="${escapeHtml(data.ctaHref || '/formations/')}">${escapeHtml(data.ctaLabel || 'Voir toutes les formations')}</a></div>
-        ${data.note ? `<p class="note note--block">${escapeHtml(data.note)}</p>` : ''}
-        ${data.sourceUrl ? `<p class="note"><a href="${escapeHtml(data.sourceUrl)}" target="_blank" rel="noopener noreferrer">Consulter le catalogue publié par l’UCAO-UUCo</a></p>` : ''}
+        ${levels}
+        <p class="cta-line">${button(data.ctaLabel || 'Nous contacter', data.ctaHref || '/contact/', 'primary')}</p>
+        ${data.note ? `<p class="note note--block">${esc(data.note)}</p>` : ''}
+        ${data.sourceUrl ? `<p class="note"><a href="${esc(data.sourceUrl)}" target="_blank" rel="noopener noreferrer">Consulter le catalogue publié par l'UCAO-UUCo</a></p>` : ''}
       </div>
     </section>
   `;
 }
 
-/** Liste complète des actualités. */
-function newsFullList(data, alt) {
-  if (!data || !data.items) return '';
-  const itemsHtml = data.items
+function blockCta(b) {
+  const variant = b.variant === 'red' ? 'red' : 'navy';
+  return `
+    <section class="cta-band cta-band--${esc(variant)}">
+      <div class="container cta-band__inner">
+        <div class="cta-band__text">
+          <h2 class="cta-band__title">${esc(b.title)}</h2>
+          ${b.text ? `<p class="cta-band__desc">${esc(b.text)}</p>` : ''}
+        </div>
+        <div class="cta-band__actions">
+          ${b.ctaPrimary ? button(b.ctaPrimary.label, b.ctaPrimary.href, 'inverse', b.ctaPrimary.external) : ''}
+          ${b.ctaSecondary ? `<a class="button button--ghost-inverse" href="${esc(b.ctaSecondary.href)}"${linkAttrs(b.ctaSecondary.href)}>${esc(b.ctaSecondary.label)}</a>` : ''}
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+function newsItem(item) {
+  return `
+    <article class="news-entry">
+      <div class="news-entry__meta">
+        <time class="news-entry__date">${esc(item.date)}</time>
+        ${item.category ? `<span class="news-entry__category">${esc(item.category)}</span>` : ''}
+      </div>
+      <div class="news-entry__body">
+        ${item.sourceUrl
+          ? `<h3 class="news-entry__title"><a href="${esc(item.sourceUrl)}" target="_blank" rel="noopener noreferrer">${esc(item.title)}</a></h3>`
+          : `<h3 class="news-entry__title">${esc(item.title)}</h3>`}
+        ${item.summary ? `<p class="news-entry__summary">${esc(item.summary)}</p>` : ''}
+        ${item.sourceUrl ? `<p class="news-entry__source"><a href="${esc(item.sourceUrl)}" target="_blank" rel="noopener noreferrer">Lire la publication originale</a></p>` : ''}
+      </div>
+    </article>
+  `;
+}
+
+function blockNews(b, globals) {
+  let items;
+  if (b.source && globals[b.source]) {
+    items = globals[b.source].items || [];
+    const limit = b.limit || items.length;
+    items = items.slice(0, limit);
+  } else {
+    items = b.items || [];
+  }
+  if (!items.length) return '';
+  return `
+    <section class="section section--tint">
+      <div class="container">
+        ${b.title ? `<h2 class="section-title">${esc(b.title)}</h2>` : ''}
+        ${b.note ? `<p class="lede__text">${esc(b.note)}</p>` : ''}
+        <div class="news-list">${items.map(newsItem).join('')}</div>
+        ${b.emptyState ? `<p class="note">${esc(b.emptyState)}</p>` : ''}
+        ${b.cta ? `<p class="cta-line">${button(b.cta.label, b.cta.href, 'primary')}</p>` : ''}
+      </div>
+    </section>
+  `;
+}
+
+function blockEditorial(b) {
+  const media = b.image
+    ? `<figure class="editorial__media">${picture(b.image, b.imageAlt, { cls: 'editorial__img' })}</figure>`
+    : '';
+  const text = `
+    <div class="editorial__text">
+      ${b.kicker ? `<p class="kicker">${esc(b.kicker)}</p>` : ''}
+      <h2 class="section-title">${esc(b.title)}</h2>
+      ${b.text ? `<p class="editorial__para">${esc(b.text)}</p>` : ''}
+      ${b.note ? `<p class="note">${esc(b.note)}</p>` : ''}
+      ${b.linkHref ? `<p class="editorial__link">${button(b.linkLabel || 'En savoir plus', b.linkHref, 'ghost', /^https?:/i.test(b.linkHref))}</p>` : ''}
+    </div>
+  `;
+  const inner = b.reverse ? media + text : text + media;
+  return `
+    <section class="section"${b.id ? ` id="${esc(b.id)}"` : ''}>
+      <div class="container">
+        <div class="editorial${b.reverse ? ' editorial--reverse' : ''}">
+          ${inner}
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+function blockValues(b) {
+  const items = (b.items || [])
     .map(
-      (item) => `
-        <article class="news-card">
-          ${item.image ? `<div class="news-card__media"><img src="${escapeHtml(resolveImage(item.image))}" alt="${escapeHtml(item.imageAlt || item.title)}" loading="lazy"></div>` : ''}
-          <time class="news-card__date">${escapeHtml(item.date)}</time>
-          <h3 class="news-card__title">${escapeHtml(item.title)}</h3>
-          <p class="news-card__desc">${escapeHtml(item.summary || '')}</p>
-          <span class="news-card__category">${escapeHtml(item.category || '')}</span>
-          ${sourceLink(item)}
-          ${item.note ? `<span class="note">${escapeHtml(item.note)}</span>` : ''}
-        </article>
+      (i) => `
+        <div class="value">
+          <h3 class="value__label">${esc(i.label)}</h3>
+          <p class="value__text">${esc(i.text)}</p>
+        </div>
       `
     )
     .join('');
-  const sectionClass = alt ? 'section section--news section--alt' : 'section section--news';
   return `
-    <section class="${sectionClass}">
+    <section class="section"${b.id ? ` id="${esc(b.id)}"` : ''}>
       <div class="container">
-        <h2 class="section-title">${escapeHtml(data.title || 'Actualités')}</h2>
-        <div class="news-grid">${itemsHtml}</div>
-        ${data.emptyState ? `<p class="note">${escapeHtml(data.emptyState)}</p>` : ''}
-        ${data.cta ? `<div class="cta-wrap"><a class="button button--primary" href="${escapeHtml(data.cta.href)}">${escapeHtml(data.cta.label)}</a></div>` : ''}
-        ${data.note ? `<p class="note note--block">${escapeHtml(data.note)}</p>` : ''}
+        ${b.title ? `<h2 class="section-title">${esc(b.title)}</h2>` : ''}
+        ${b.lead ? `<p class="lede__text">${esc(b.lead)}</p>` : ''}
+        <div class="values-grid">${items}</div>
+        ${b.note ? `<p class="note note--block">${esc(b.note)}</p>` : ''}
       </div>
     </section>
   `;
 }
 
-function contactForm(data, alt) {
-  const form = data.form;
-  if (!form) return '';
-  const fieldsHtml = form.fields
+function blockTextlist(b) {
+  const items = (b.items || [])
+    .map((i) => `<li>${esc(i)}</li>`)
+    .join('');
+  return `
+    <section class="section"${b.id ? ` id="${esc(b.id)}"` : ''}>
+      <div class="container">
+        <div class="textlist">
+          ${b.title ? `<h2 class="section-title">${esc(b.title)}</h2>` : ''}
+          ${b.lead ? `<p class="lede__text">${esc(b.lead)}</p>` : ''}
+          <ul class="dotted-list">${items}</ul>
+          ${b.note ? `<p class="note note--block">${esc(b.note)}</p>` : ''}
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+function blockSteps(b) {
+  const items = (b.items || [])
     .map(
-      (f) => `
-        <div class="form-field">
-          <label for="form-${escapeHtml(f.name)}">${escapeHtml(f.label)}${f.required ? ' <span class="required" aria-hidden="true">*</span>' : ''}</label>
-          ${f.type === 'textarea'
-            ? `<textarea id="form-${escapeHtml(f.name)}" name="${escapeHtml(f.name)}" placeholder="${escapeHtml(f.placeholder || '')}" ${f.required ? 'required' : ''}></textarea>`
-            : `<input type="${escapeHtml(f.type)}" id="form-${escapeHtml(f.name)}" name="${escapeHtml(f.name)}" placeholder="${escapeHtml(f.placeholder || '')}" ${f.required ? 'required' : ''}>`}
-          <p class="field-error" id="form-${escapeHtml(f.name)}-error" aria-live="polite"></p>
+      (s, i) => `
+        <li class="step">
+          <span class="step__num" aria-hidden="true">${i + 1}</span>
+          <div class="step__content">
+            <h3 class="step__title">${esc(s.title)}</h3>
+            <p class="step__text">${esc(s.text)}</p>
+          </div>
+        </li>
+      `
+    )
+    .join('');
+  return `
+    <section class="section section--tint"${b.id ? ` id="${esc(b.id)}"` : ''}>
+      <div class="container">
+        ${b.title ? `<h2 class="section-title">${esc(b.title)}</h2>` : ''}
+        <ol class="steps">${items}</ol>
+      </div>
+    </section>
+  `;
+}
+
+function blockDocuments(b) {
+  const groups = (b.groups || [])
+    .map(
+      (g) => `
+        <div class="doc-group">
+          <h3 class="doc-group__title">${esc(g.title)}</h3>
+          <ul class="check-list">${(g.items || []).map((i) => `<li>${esc(i)}</li>`).join('')}</ul>
         </div>
       `
     )
     .join('');
-
-  const sectionClass = alt ? 'section section--form section--alt' : 'section section--form';
   return `
-    <section class="${sectionClass}">
+    <section class="section"${b.id ? ` id="${esc(b.id)}"` : ''}>
       <div class="container">
-        <div class="form-wrap">
-          <form id="contact-form" action="#" method="post" novalidate>
-            ${fieldsHtml}
-            <button class="button button--primary" type="submit" id="form-submit">${escapeHtml(form.submit || 'Envoyer')}</button>
-          </form>
-          <div id="form-status" role="status" aria-live="polite" class="form-status"></div>
-        </div>
-        ${form.note ? `<p class="note note--block">${escapeHtml(form.note)}</p>` : ''}
+        ${b.title ? `<h2 class="section-title">${esc(b.title)}</h2>` : ''}
+        <div class="doc-groups">${groups}</div>
+        ${b.note ? `<p class="note note--block">${esc(b.note)}</p>` : ''}
+        ${b.sourceUrl ? `<p class="cta-line"><a class="button button--ghost" href="${esc(b.sourceUrl)}" target="_blank" rel="noopener noreferrer">Voir la procédure publiée par l'UCAO-UUCo</a></p>` : ''}
       </div>
     </section>
   `;
 }
 
-function faqList(data, alt) {
-  if (!data.items) return '';
-  const itemsHtml = data.items
+function blockNotice(b) {
+  const email = b.email
+    ? `<p class="notice__row"><strong>E-mail :</strong> <a href="mailto:${esc(b.email)}">${esc(b.email)}</a></p>`
+    : '';
+  const phones = (b.phones && b.phones.length)
+    ? `<p class="notice__row"><strong>Téléphone :</strong> ${b.phones.map((p) => `<a href="${telHref(p)}">${esc(p)}</a>`).join(' · ')}</p>`
+    : '';
+  return `
+    <section class="section"${b.id ? ` id="${esc(b.id)}"` : ''}>
+      <div class="container">
+        <div class="notice">
+          <h2 class="notice__title">${esc(b.title)}</h2>
+          ${b.text ? `<p class="notice__text">${esc(b.text)}</p>` : ''}
+          ${email}
+          ${phones}
+          ${b.note ? `<p class="note">${esc(b.note)}</p>` : ''}
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+function blockContact(b, globals, site) {
+  const phones = (site.phones || [])
+    .map((p) => `<li><a href="${telHref(p)}">${esc(p)}</a></li>`)
+    .join('');
+  return `
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h2 class="section-title">Coordonnées</h2>
+            <p class="contact-card__row"><strong>Adresse :</strong> ${esc(site.address)}</p>
+            <ul class="contact-card__phones">${phones}</ul>
+            <p class="contact-card__row"><strong>E-mail :</strong> <a href="mailto:${esc(site.email)}">${esc(site.email)}</a></p>
+            <p class="contact-card__row">
+              <strong>Itinéraire :</strong>
+              <a href="${esc(site.mapUrl)}" target="_blank" rel="noopener noreferrer">${esc(site.mapLabel)}</a>
+            </p>
+            <p class="contact-card__row">
+              <strong>Facebook :</strong>
+              <a href="${esc(site.facebook)}" target="_blank" rel="noopener noreferrer">${esc(site.facebookLabel)}</a>
+            </p>
+            <p class="note">${esc(site.emailNote)}</p>
+          </div>
+          <div class="contact-card contact-card--form">
+            <h2 class="section-title">Formulaire de contact</h2>
+            <form id="contact-form" action="#" method="post" novalidate>
+              <div class="form-field">
+                <label for="form-nom">Nom et prénom <span class="required" aria-hidden="true">*</span></label>
+                <input type="text" id="form-nom" name="nom" placeholder="Votre nom et prénom" required>
+                <p class="field-error" id="form-nom-error" aria-live="polite"></p>
+              </div>
+              <div class="form-field">
+                <label for="form-email">Adresse e-mail <span class="required" aria-hidden="true">*</span></label>
+                <input type="email" id="form-email" name="email" placeholder="vous@exemple.com" required>
+                <p class="field-error" id="form-email-error" aria-live="polite"></p>
+              </div>
+              <div class="form-field">
+                <label for="form-sujet">Objet</label>
+                <input type="text" id="form-sujet" name="sujet" placeholder="Objet de votre demande">
+                <p class="field-error" id="form-sujet-error" aria-live="polite"></p>
+              </div>
+              <div class="form-field">
+                <label for="form-message">Message <span class="required" aria-hidden="true">*</span></label>
+                <textarea id="form-message" name="message" rows="6" placeholder="Votre message" required></textarea>
+                <p class="field-error" id="form-message-error" aria-live="polite"></p>
+              </div>
+              <button class="button button--primary" type="submit" id="form-submit">Vérifier le message</button>
+            </form>
+            <div id="form-status" role="status" aria-live="polite" class="form-status"></div>
+            <p class="note note--block">Ce formulaire n'est pas connecté à un service de réception : il ne transmet pas votre message. Pour joindre l'administration, utilisez les coordonnées ci-dessus. N'y saisissez pas de données personnelles sensibles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+function blockFaq(b) {
+  const items = (b.items || [])
     .map(
-      (item) => `
+      (i) => `
         <details class="faq-item">
-          <summary class="faq-summary">${escapeHtml(item.q)}</summary>
-          <p class="faq-answer">${escapeHtml(item.a)}</p>
+          <summary class="faq-item__q">${esc(i.q)}</summary>
+          <div class="faq-item__a">${esc(i.a)}</div>
         </details>
       `
     )
     .join('');
-  const sectionClass = alt ? 'section section--faq section--alt' : 'section section--faq';
   return `
-    <section class="${sectionClass}">
+    <section class="section section--tight">
       <div class="container">
-        <div class="faq-list">${itemsHtml}</div>
-        ${data.note ? `<p class="note note--block">${escapeHtml(data.note)}</p>` : ''}
+        <div class="faq-list">${items}</div>
+        ${b.note ? `<p class="note note--block">${esc(b.note)}</p>` : ''}
       </div>
     </section>
   `;
 }
 
-function sourceLink(item) {
-  if (!item.sourceUrl) return '';
-  return `<p class="news-card__source"><a href="${escapeHtml(item.sourceUrl)}" target="_blank" rel="noopener noreferrer">Lire la publication originale</a></p>`;
-}
-
-function admissionDocuments(data) {
-  const block = data.documents;
-  if (!block || !block.groups) return '';
-  const groupsHtml = block.groups.map(group => `
-    <section class="document-group">
-      <h3>${escapeHtml(group.title)}</h3>
-      <ul class="text-list">${group.items.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>
-    </section>
-  `).join('');
-  return `
-    <section class="section section--text section--alt">
-      <div class="container">
-        <h2 class="section-title">${escapeHtml(block.title || 'Documents à fournir')}</h2>
-        <div class="document-groups">${groupsHtml}</div>
-        ${block.note ? `<p class="note note--block">${escapeHtml(block.note)}</p>` : ''}
-        ${block.sourceUrl ? `<p><a class="button button--ghost" href="${escapeHtml(block.sourceUrl)}" target="_blank" rel="noopener noreferrer">Voir la procédure publiée par l’UCAO-UUCo</a></p>` : ''}
-      </div>
-    </section>
-  `;
-}
-
-function financialInfo(data) {
-  const block = data.financial;
-  if (!block) return '';
-  return `
-    <section class="section section--text">
-      <div class="container">
-        <div class="text-block">
-          <h2 class="section-title">${escapeHtml(block.title || 'Informations financières')}</h2>
-          ${block.text ? `<p>${escapeHtml(block.text)}</p>` : ''}
-          ${block.note ? `<p class="note note--block">${escapeHtml(block.note)}</p>` : ''}
-        </div>
-      </div>
-    </section>
-  `;
-}
-
-function admissionsContact(data) {
-  const block = data.contactAdmissions;
-  if (!block) return '';
-  const email = block.email ? `<p><strong>E-mail :</strong> <a href="mailto:${escapeHtml(block.email)}">${escapeHtml(block.email)}</a></p>` : '';
-  const phones = block.phones && block.phones.length
-    ? `<p><strong>Téléphone :</strong> ${block.phones.map(p => `<a href="tel:${escapeHtml(p.replace(/\s/g, ''))}">${escapeHtml(p)}</a>`).join(' · ')}</p>`
-    : '';
-  return `
-    <section class="section section--text section--alt">
-      <div class="container">
-        <h2 class="section-title">${escapeHtml(block.title || 'Contacter la scolarité')}</h2>
-        ${block.text ? `<p>${escapeHtml(block.text)}</p>` : ''}
-        ${email}
-        ${phones}
-        ${block.note ? `<p class="note note--block">${escapeHtml(block.note)}</p>` : ''}
-      </div>
-    </section>
-  `;
-}
-function legalBlocks(data, alt) {
-  if (!data.blocks) return '';
-  const blocksHtml = data.blocks
+function blockGallery(b) {
+  const figures = (b.images || [])
     .map(
-      (b) => `
+      (img) => `
+        <figure class="gallery__item">
+          ${picture(img.src, img.alt, { cls: 'gallery__img' })}
+        </figure>
+      `
+    )
+    .join('');
+  return `
+    <section class="section section--tint">
+      <div class="container">
+        ${b.title ? `<h2 class="section-title">${esc(b.title)}</h2>` : ''}
+        ${b.lead ? `<p class="lede__text">${esc(b.lead)}</p>` : ''}
+        <div class="gallery">${figures}</div>
+      </div>
+    </section>
+  `;
+}
+
+function blockLegal(b) {
+  const blocks = (b.blocks || [])
+    .map(
+      (bl) => `
         <div class="legal-block">
-          <h3 class="legal-block__title">${escapeHtml(b.title)}</h3>
-          <p>${escapeHtml(b.content)}</p>
-          ${b.url ? `<p><a href="${escapeHtml(b.url)}" target="_blank" rel="noopener noreferrer">Consulter la source</a></p>` : ''}
+          <h2 class="legal-block__title">${esc(bl.title)}</h2>
+          <p class="legal-block__text">${esc(bl.content)}</p>
+          ${bl.url ? `<p class="legal-block__link"><a href="${esc(bl.url)}" target="_blank" rel="noopener noreferrer">Consulter la source</a></p>` : ''}
         </div>
       `
     )
     .join('');
-  const sectionClass = alt ? 'section section--legal section--alt' : 'section section--legal';
   return `
-    <section class="${sectionClass}">
+    <section class="section">
       <div class="container">
-        ${blocksHtml}
-        ${data.note ? `<p class="note note--block">${escapeHtml(data.note)}</p>` : ''}
+        <div class="legal-list">${blocks}</div>
+        ${b.note ? `<p class="note note--block">${esc(b.note)}</p>` : ''}
       </div>
     </section>
   `;
 }
 
-function actionsList(data, alt) {
-  if (!data.actions) return '';
-  const itemsHtml = data.actions
-    .map(
-      (a) => `<a class="button button--primary" href="${escapeHtml(a.href)}">${escapeHtml(a.label)}</a>`
-    )
+function blockActions(b) {
+  const items = (b.items || [])
+    .map((i) => button(i.label, i.href, 'primary'))
     .join('');
-  const sectionClass = alt ? 'section section--text section--alt' : 'section section--text';
   return `
-    <section class="${sectionClass}">
+    <section class="section section--tight">
       <div class="container">
-        <div class="actions-wrap">${itemsHtml}</div>
+        <div class="actions">${items}</div>
       </div>
     </section>
   `;
 }
 
-function twoColumn(data, leftKey, rightKey, alt) {
-  const left = data[leftKey];
-  const right = data[rightKey];
-  if (!left && !right) return '';
-  const sectionClass = alt ? 'section section--two-col section--alt' : 'section section--two-col';
-  return `
-    <section class="${sectionClass}">
-      <div class="container">
-        <div class="two-col">
-          ${left ? `<div class="two-col__side">${renderMarkdownish(left)}</div>` : ''}
-          ${right ? `<div class="two-col__side">${renderMarkdownish(right)}</div>` : ''}
-        </div>
-      </div>
-    </section>
-  `;
-}
+const RENDERERS = {
+  hero: blockHero,
+  lede: blockLede,
+  jumpnav: blockJumpnav,
+  stats: blockStats,
+  programs: blockPrograms,
+  catalogue: blockCatalogue,
+  cta: blockCta,
+  news: blockNews,
+  editorial: blockEditorial,
+  values: blockValues,
+  textlist: blockTextlist,
+  steps: blockSteps,
+  documents: blockDocuments,
+  notice: blockNotice,
+  contact: blockContact,
+  faq: blockFaq,
+  gallery: blockGallery,
+  legal: blockLegal,
+  actions: blockActions,
+};
 
-/** Rend un bloc texte simple (titre + paragraphe) sans Markdown externe. */
-function renderMarkdownish(block) {
-  if (!block) return '';
-  let html = '';
-  if (block.title) html += `<h3>${escapeHtml(block.title)}</h3>`;
-  if (block.text) html += `<p>${escapeHtml(block.text)}</p>`;
-  if (block.email) html += `<p><strong>E-mail :</strong> <a href="mailto:${escapeHtml(block.email.replace(/\[À CONFIRMER\] /, ''))}">${escapeHtml(block.email)}</a></p>`;
-  if (block.phones && block.phones.length) {
-    html += `<p><strong>Tél. :</strong> ${block.phones.map((p) => `<a href="tel:${escapeHtml(p.replace(/\s/g, ''))}">${escapeHtml(p)}</a>`).join(' · ')}</p>`;
-  }
-  if (block.address) html += `<p><strong>Adresse :</strong> ${escapeHtml(block.address)}</p>`;
-  if (block.mapUrl) {
-    html += `<p><a class="button button--ghost" href="${escapeHtml(block.mapUrl)}" target="_blank" rel="noopener">${escapeHtml(block.mapLabel || 'Voir l’itinéraire')}</a></p>`;
-  }
-  if (block.items) {
-    html += `<ul>${block.items.map((i) => `<li>${escapeHtml(i)}</li>`).join('')}</ul>`;
-  }
-  if (block.note) html += `<p class="note">${escapeHtml(block.note)}</p>`;
-  return html;
-}
+/** ---------- Assemblage ---------- */
 
-/** ---------- Assembleurs de pages ---------- */
-
-function layout(site, navItems, data, body) {
-  const currentSlug = data.slug || '';
+function layout(site, navData, data, body) {
+  const currentSlug = data.slug === 'home' ? '' : `/${data.slug}/`;
   return `<!DOCTYPE html>
-<html lang="${escapeHtml(site.lang)}">
+<html lang="${esc(site.lang)}">
 <head>
 ${head(site, data)}
 </head>
 <body>
-${skipLink()}
-${emergencyAlert(site)}
-${nav(site, navItems, currentSlug)}
+<a class="skip-link" href="#main">Aller au contenu principal</a>
+${header(site, navData.main, currentSlug)}
 <main id="main" class="page-main">
 ${body}
 </main>
-${footer(site, navItems)}
-
+${footer(site, navData)}
 <script src="/js/main.js"></script>
 </body>
 </html>`;
 }
 
-function renderHome(site, navItems, data) {
-  const body = `
-${hero(data)}
-${intro(data)}
-${statsGrid(data, 'stats')}
-${programDiscovery(data, 'programs')}
-${textCta(data, 'admissions', false)}
-
-${newsEvents(data, 'newsEvents')}
-${textCta(data, 'vie', false)}
-${valeursGrid(data, 'valeurs')}
-  `;
-  return layout(site, navItems, data, body);
-}
-
-function programDiscovery(data, key) {
-  const block = data[key];
-  if (!block) return '';
-  return `
-    <section class="section section--programs">
-      <div class="container">
-        ${block.title ? `<h2 class="section-title">${escapeHtml(block.title)}</h2>` : ''}
-        ${block.lead ? `<p class="lead">${escapeHtml(block.lead)}</p>` : ''}
-        ${block.searchPlaceholder ? `
-          <div class="formation-search" style="max-width: var(--read-width); margin-bottom: var(--space-2xl);">
-            <label class="sr-only" for="program-search">${escapeHtml(block.searchPlaceholder)}</label>
-            <input type="search" id="program-search" placeholder="${escapeHtml(block.searchPlaceholder)}" aria-label="${escapeHtml(block.searchPlaceholder)}" aria-describedby="program-search-status">
-            <p id="program-search-status" class="note" aria-live="polite"></p>
-          </div>
-        ` : ''}
-        ${block.items && block.items.length ? `
-          <div class="card-grid">
-            ${block.items.map(item => `
-              <article class="card program-card" data-search="${escapeHtml(item.label + ' ' + (item.desc || '')).toLowerCase()}">
-                <h3 class="card__title">${escapeHtml(item.label)}</h3>
-                ${item.desc ? `<p class="card__desc">${escapeHtml(item.desc)}</p>` : ''}
-                ${item.href ? `<a class="button button--ghost card__cta" href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>` : ''}
-              </article>
-            `).join('')}
-          </div>
-        ` : ''}
-        ${block.cta ? `<div class="cta-wrap"><a class="button button--primary" href="${escapeHtml(block.cta.href)}">${escapeHtml(block.cta.label)}</a></div>` : ''}
-      </div>
-    </section>
-  `;
-}
-
-function newsEvents(data, key) {
-  const block = data[key];
-  if (!block || !block.items) return '';
-  const itemsHtml = block.items
-    .map(
-      (item) => `
-        <article class="news-card">
-          ${item.image ? `<div class="news-card__media"><img src="${escapeHtml(resolveImage(item.image))}" alt="${escapeHtml(item.imageAlt || item.title)}" loading="lazy"></div>` : ''}
-          <time class="news-card__date">${escapeHtml(item.date)}</time>
-          <h3 class="news-card__title">${escapeHtml(item.title)}</h3>
-          <p class="news-card__desc">${escapeHtml(item.summary || '')}</p>
-          <span class="news-card__category">${escapeHtml(item.category || '')}</span>
-          ${sourceLink(item)}
-        </article>
-      `
-    )
-    .join('');
-
-  return `
-    <section class="section section--news section--alt">
-      <div class="container">
-        ${block.title ? `<h2 class="section-title">${escapeHtml(block.title)}</h2>` : ''}
-        <div class="news-grid">${itemsHtml}</div>
-        ${block.cta ? `<div class="cta-wrap"><a class="button button--primary" href="${escapeHtml(block.cta.href)}">${escapeHtml(block.cta.label)}</a></div>` : ''}
-      </div>
-    </section>
-  `;
-}
-
-function valeursGrid(data, key) {
-  const block = data[key];
-  if (!block || !block.items) return '';
-  const itemsHtml = block.items
-    .map(
-      (item) => `
-        <article class="card valeur-card">
-          <h3 class="card__title">${escapeHtml(item.label)}</h3>
-          <p class="card__desc">${escapeHtml(item.desc || item.text || '')}</p>
-        </article>
-      `
-    )
-    .join('');
-  return `
-    <section class="section section--values section--alt">
-      <div class="container">
-        ${block.title ? `<h2 class="section-title">${escapeHtml(block.title)}</h2>` : ''}
-        <div class="card-grid">${itemsHtml}</div>
-        ${block.note ? `<p class="note note--block">${escapeHtml(block.note)}</p>` : ''}
-      </div>
-    </section>
-  `;
-}
-
-function renderGeneric(site, navItems, data, globals) {
-  const body = `
-${hero(data)}
-${intro(data)}
-${splitSection(data, 'formationsIntro', 'formationsImage')}
-${sectionsList(data)}
-<section class="section-divider"></section>
-${textList(data, 'reseau', true)}
-${textList(data, 'histoire', false)}
-${textList(data, 'missions', true)}
-${valeurGrid(data, 'valeurs')}
-${textList(data, 'unitee', true)}
-${imageBlock(data, 'campusImage', false)}
-<section class="section-divider"></section>
-${twoColumn(data, 'coords', 'localisation', false)}
-${contactForm(data, true)}
-${faqList(data, false)}
-${legalBlocks(data, true)}
-${steps(data, false)}
-${admissionDocuments(data)}
-${financialInfo(data)}
-${admissionsContact(data)}
-${actionsList(data, true)}
-${formationsCatalog(data.slug === 'formations' ? globals.formations : null, true)}
-${newsFullList(data.slug === 'actualites' ? globals.actualites : null, false)}
-  `;
-  return layout(site, navItems, data, body);
-}
-
-/** ---------- Build ---------- */
-
 function ensureDir(dir) {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 }
 
-function writeFile(rel, content) {
-  const full = path.join(DIST_DIR, rel);
-  ensureDir(path.dirname(full));
-  fs.writeFileSync(full, content);
-}
-
-function copyAssets() {
-  if (!fs.existsSync(ASSETS_DIR)) return;
-  const walk = (dir, out) => {
-    ensureDir(out);
-    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-      const src = path.join(dir, entry.name);
-      const dest = path.join(out, entry.name);
-      if (entry.isDirectory()) {
-        walk(src, dest);
-      } else {
-        fs.copyFileSync(src, dest);
-      }
-    }
-  };
-  walk(ASSETS_DIR, path.join(DIST_DIR, 'assets'));
-}
-
-/** Copie les photos WhatsApp avec des noms simples (alias) vers dist/assets/images/. */
-function copyAndRenameImages() {
-  const imagesDir = path.join(ASSETS_DIR, 'images');
-  const outDir = path.join(DIST_DIR, 'assets', 'images');
-  ensureDir(outDir);
-  for (const [originalName, aliasName] of Object.entries(IMAGE_ALIASES)) {
-    const src = path.join(imagesDir, originalName);
-    if (fs.existsSync(src)) {
-      fs.copyFileSync(src, path.join(outDir, aliasName));
-    }
-  }
-}
-
-function copyStylesAndScripts() {
-  if (fs.existsSync(STYLES_DIR)) {
-    for (const file of fs.readdirSync(STYLES_DIR)) {
-      const full = path.join(STYLES_DIR, file);
-      if (fs.statSync(full).isFile()) {
-        ensureDir(path.join(DIST_DIR, 'css'));
-        fs.copyFileSync(full, path.join(DIST_DIR, 'css', file));
-      }
-    }
-  }
-  if (fs.existsSync(SCRIPTS_DIR)) {
-    for (const file of fs.readdirSync(SCRIPTS_DIR)) {
-      const full = path.join(SCRIPTS_DIR, file);
-      if (fs.statSync(full).isFile()) {
-        ensureDir(path.join(DIST_DIR, 'js'));
-        fs.copyFileSync(full, path.join(DIST_DIR, 'js', file));
-      }
+function copyDir(srcDir, destDir, skipTest) {
+  if (!fs.existsSync(srcDir)) return;
+  ensureDir(destDir);
+  for (const entry of fs.readdirSync(srcDir, { withFileTypes: true })) {
+    if (skipTest && skipTest(entry.name, entry.isDirectory())) continue;
+    const src = path.join(srcDir, entry.name);
+    const dest = path.join(destDir, entry.name);
+    if (entry.isDirectory()) {
+      copyDir(src, dest, skipTest);
+    } else {
+      fs.copyFileSync(src, dest);
     }
   }
 }
 
 function build() {
+  if (fs.existsSync(DIST_DIR)) fs.rmSync(DIST_DIR, { recursive: true, force: true });
   ensureDir(DIST_DIR);
 
   const site = readJson('site.json');
-  const navItems = readJson('nav.json');
+  const navData = readJson('nav.json');
+  const globals = {
+    formations: readJson('formations.json'),
+    actualites: readJson('actualites.json'),
+  };
 
-  // Contenus globaux (catalogue + actualités), partagés par plusieurs pages.
-  let globals = {};
-  try { globals.formations = readJson('formations.json'); } catch (e) { globals.formations = null; }
-  try { globals.actualites = readJson('actualites.json'); } catch (e) { globals.actualites = null; }
-
-  // Pages désignées par slug.
   const pageSlugs = fs
     .readdirSync(path.join(CONTENT_DIR, 'pages'))
     .filter((f) => f.endsWith('.json'))
     .map((f) => f.replace(/\.json$/, ''));
 
+  let count = 0;
   for (const slug of pageSlugs) {
     const data = readJson(`pages/${slug}.json`);
-    let html;
+    const blocks = data.blocks || [];
+    const body = blocks
+      .map((b) => {
+        const renderer = RENDERERS[b.type];
+        if (!renderer) throw new Error(`Type de bloc inconnu « ${b.type} » dans la page « ${slug} »`);
+        return renderer(b, globals, site);
+      })
+      .join('\n');
+    const html = layout(site, navData, data, body);
     if (slug === 'home') {
-      html = renderHome(site, navItems, data);
-      writeFile('index.html', html);
+      fs.writeFileSync(path.join(DIST_DIR, 'index.html'), html);
     } else if (slug === '404') {
-      html = renderGeneric(site, navItems, data, globals);
-      writeFile('404.html', html);
+      fs.writeFileSync(path.join(DIST_DIR, '404.html'), html);
     } else {
-      html = renderGeneric(site, navItems, data, globals);
-      writeFile(`${slug}/index.html`, html);
+      ensureDir(path.join(DIST_DIR, slug));
+      fs.writeFileSync(path.join(DIST_DIR, slug, 'index.html'), html);
     }
+    count += 1;
   }
 
-  copyStylesAndScripts();
-  copyAssets();
-  copyAndRenameImages();
+  copyDir(ASSETS_DIR, path.join(DIST_DIR, 'assets'), (name, isDir) => name.startsWith('_'));
+  copyDir(STYLES_DIR, path.join(DIST_DIR, 'css'));
+  copyDir(SCRIPTS_DIR, path.join(DIST_DIR, 'js'));
 
-  console.log(`Build terminé : ${pageSlugs.length} page(s) générée(s) dans dist/`);
+  fs.writeFileSync(
+    path.join(DIST_DIR, 'robots.txt'),
+    'User-agent: *\nAllow: /\n',
+  );
+
+  console.log(`Build terminé : ${count} page(s) générée(s) dans dist/`);
 }
 
 try {

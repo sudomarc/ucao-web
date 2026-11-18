@@ -1,138 +1,83 @@
 {
-  "note": "Catalogue reconstitué à partir de la page « Nos formations » du site officiel. Cette page annonce 8 licences mais en énumère 9 ; les 9 intitulés distincts sont conservés sans annoncer un total. La liste des masters contient 11 intitulés distincts, avec Santé publique et communautaire répété une seconde fois sur la page source. L’ouverture effective des parcours pour l’année 2026-2027 et les habilitations en vigueur doivent être confirmées auprès de la scolarité.",
   "sourceUrl": "https://ucao-uuco.org/nos-formations/",
+  "note": "Catalogue reconstitué à partir de la page « Nos formations » du site officiel. Cette page annonce 8 licences mais en énumère 9 ; les 9 intitulés distincts sont conservés sans annoncer un total. La liste des masters contient 11 intitulés distincts, avec Santé publique et communautaire répété une seconde fois sur la page source. L'ouverture effective des parcours pour l'année 2026-2027 et les habilitations en vigueur doivent être confirmées auprès de la scolarité.",
   "levels": [
     {
       "id": "licence",
       "label": "Licence",
-      "description": "Le catalogue institutionnel indique une durée de 3 ou 4 ans selon la spécialité. Seules les durées explicitement indiquées par l’établissement sont reprises ci-dessous.",
-      "programs": [
+      "description": "Le catalogue institutionnel indique une durée de 3 ou 4 ans selon la spécialité. Seules les durées explicitement indiquées par l'établissement sont reprises ci-dessous.",
+      "groups": [
         {
-          "id": "science-politique",
-          "label": "Science politique",
-          "domain": "Sciences politiques"
+          "title": "Sciences politiques et juridiques",
+          "programs": [
+            { "label": "Science politique" },
+            { "label": "Droit" }
+          ]
         },
         {
-          "id": "droit",
-          "label": "Droit",
-          "domain": "Sciences juridiques"
+          "title": "Économie et gestion",
+          "programs": [
+            { "label": "Économie-Gestion" },
+            { "label": "Gestion des ressources humaines" }
+          ]
         },
         {
-          "id": "economie-gestion",
-          "label": "Économie-Gestion",
-          "domain": "Sciences économiques et gestion"
+          "title": "Sciences et technologie",
+          "programs": [
+            { "label": "Génie informatique", "duration": "4 ans" },
+            { "label": "Agroalimentaire", "duration": "4 ans" },
+            { "label": "Biologie médicale — Technicien de laboratoire", "duration": "4 ans" }
+          ]
         },
         {
-          "id": "biologie-medicale",
-          "label": "Biologie médicale – Technicien de laboratoire",
-          "domain": "Sciences fondamentales et technologie",
-          "duration": "4 ans"
-        },
-        {
-          "id": "gestion-ressources-humaines",
-          "label": "Gestion des ressources humaines",
-          "domain": "Gestion"
-        },
-        {
-          "id": "agroalimentaire",
-          "label": "Agroalimentaire",
-          "domain": "Sciences fondamentales et technologie",
-          "duration": "4 ans"
-        },
-        {
-          "id": "genie-informatique",
-          "label": "Génie informatique",
-          "domain": "Sciences et technologie",
-          "duration": "4 ans"
-        },
-        {
-          "id": "communication-journalisme",
-          "label": "Communication & Journalisme",
-          "domain": "Langues et communication",
-          "duration": "4 ans"
-        },
-        {
-          "id": "sociologie",
-          "label": "Sociologie",
-          "domain": "Sciences humaines"
+          "title": "Langues, communication et sciences humaines",
+          "programs": [
+            { "label": "Communication & Journalisme", "duration": "4 ans" },
+            { "label": "Sociologie" }
+          ]
         }
       ]
     },
     {
       "id": "master",
       "label": "Master",
-      "description": "Le site officiel présente ces masters comme des formations en cours du soir d’une durée de 2 ans. Les horaires, conditions d’accès et parcours ouverts pour 2026-2027 sont à demander à la scolarité.",
-      "programs": [
+      "description": "Le site officiel présente ces masters comme des formations en cours du soir d'une durée de 2 ans. Les horaires, conditions d'accès et parcours ouverts pour 2026-2027 sont à demander à la scolarité.",
+      "groups": [
         {
-          "id": "monnaie-finance-banque",
-          "label": "Monnaie, Finance, Banque",
-          "domain": "Économie et finance",
-          "duration": "2 ans · cours du soir"
+          "title": "Économie, finance et gestion",
+          "programs": [
+            { "label": "Monnaie, Finance, Banque" },
+            { "label": "Comptabilité, Contrôle et Audit" },
+            { "label": "Gestion des ressources humaines" },
+            { "label": "Gestion des projets et développement" }
+          ]
         },
         {
-          "id": "gestion-environnementale-sociale",
-          "label": "Gestion environnementale et sociale",
-          "domain": "Environnement",
-          "duration": "2 ans · cours du soir"
+          "title": "Droit et relations internationales",
+          "programs": [
+            { "label": "Diplomatie et géostratégie / Relations internationales" },
+            { "label": "Carrière judiciaire" },
+            { "label": "Droit des affaires" }
+          ]
         },
         {
-          "id": "comptabilite-controle-audit",
-          "label": "Comptabilité, Contrôle et Audit",
-          "domain": "Comptabilité et gestion",
-          "duration": "2 ans · cours du soir"
+          "title": "Environnement, logistique et sciences appliquées",
+          "programs": [
+            { "label": "Gestion environnementale et sociale" },
+            { "label": "Logistique et transports" },
+            { "label": "Agroalimentaire — Nutrition et sciences des aliments" }
+          ]
         },
         {
-          "id": "diplomatie-geostrategie",
-          "label": "Diplomatie et géostratégie / Relations internationales",
-          "domain": "Science politique et relations internationales",
-          "duration": "2 ans · cours du soir"
-        },
-        {
-          "id": "gestion-ressources-humaines-master",
-          "label": "Gestion des ressources humaines",
-          "domain": "Gestion",
-          "duration": "2 ans · cours du soir"
-        },
-        {
-          "id": "gestion-projets-developpement",
-          "label": "Gestion des projets et développement",
-          "domain": "Gestion de projets",
-          "duration": "2 ans · cours du soir"
-        },
-        {
-          "id": "logistique-transports",
-          "label": "Logistique et transports",
-          "domain": "Transport et logistique",
-          "duration": "2 ans · cours du soir"
-        },
-        {
-          "id": "agroalimentaire-nutrition",
-          "label": "Agroalimentaire – Nutrition et sciences des aliments",
-          "domain": "Sciences alimentaires",
-          "duration": "2 ans · cours du soir"
-        },
-        {
-          "id": "sante-publique-communautaire",
-          "label": "Santé publique et communautaire",
-          "domain": "Santé",
-          "duration": "2 ans · cours du soir"
-        },
-        {
-          "id": "carriere-judiciaire",
-          "label": "Carrière judiciaire",
-          "domain": "Sciences juridiques",
-          "duration": "2 ans · cours du soir"
-        },
-        {
-          "id": "droit-affaires",
-          "label": "Droit des affaires",
-          "domain": "Sciences juridiques",
-          "duration": "2 ans · cours du soir"
+          "title": "Santé",
+          "programs": [
+            { "label": "Santé publique et communautaire" }
+          ]
         }
       ]
     }
   ],
-  "searchPlaceholder": "Rechercher par formation ou domaine…",
+  "searchPlaceholder": "Rechercher une formation…",
   "ctaLabel": "Demander les conditions et le catalogue 2026-2027",
   "ctaHref": "/contact/"
 }

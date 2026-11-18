@@ -8,7 +8,7 @@ Dernière recherche documentaire : **17 novembre 2026**.
 |---|---|---|
 | Formations | https://ucao-uuco.org/nos-formations/ | Intitulés Licence et Master, durées générales, cours du soir |
 | Admissions | https://ucao-uuco.org/inscription/ | Pièces publiées pour Licence et Master ; tarifs explicitement datés de 2025-2026 |
-| Histoire et mission | https://ucao-uuco.org/qui-sommes-nous/ | Fondation du réseau en février 2000 ; présence annoncée dans 7 pays ; rectorat à Bobo-Dioulasso ; création de l’unité de Conakry en 2008 |
+| Histoire et mission | https://ucao-uuco.org/qui-sommes-nous/ | Fondation du réseau UCAO par la CERAO en février 2000 **à Conakry** (la page situe elle-même la fondation à Conakry) ; présence annoncée dans 7 pays ; rectorat à Bobo-Dioulasso ; création de l’unité de Conakry en 2008 |
 | Accueil institutionnel | https://ucao-uuco.org/ | Dates des trois publications de novembre 2025 ; localisation ; e-mail affiché dans l’en-tête |
 | Contact institutionnel | https://ucao-uuco.org/contacct/ | Adresse e-mail affichée sur la page Contact, téléphones et adresse |
 | Jubilé | https://ucao-uuco.org/2025/11/28/lucao-uuco-celebre-son-jubile-des-25-ans-un-quart-de-siecle-dexcellence-de-mission-et-de-service/ | Publication datée du 28 novembre 2025 |
@@ -19,7 +19,7 @@ Dernière recherche documentaire : **17 novembre 2026**.
 
 ## Informations intégrées dans le site
 
-- **Réseau UCAO :** fondation en février 2000 par la CERAO, selon la page institutionnelle.
+- **Réseau UCAO :** fondation en février 2000 par la CERAO **à Conakry**, selon la page institutionnelle. La page formule elle-même la fondation comme ayant eu lieu à Conakry ; le site reprend cette formulation.
 - **Unité de Conakry :** création en 2008, selon la page institutionnelle. Ces deux dates ne désignent pas le même événement.
 - **Réseau :** présence annoncée dans 7 pays et rectorat annoncé à Bobo-Dioulasso.
 - **Formations Licence :** le site annonce 8 formations mais en énumère 9 : Science politique, Droit, Économie-Gestion, Biologie médicale – Technicien de laboratoire, Gestion des ressources humaines, Agroalimentaire, Génie informatique, Communication & Journalisme, Sociologie. Les 9 intitulés visibles sont conservés ; aucun total de 8 n’est affiché comme s’il était cohérent.
@@ -29,6 +29,14 @@ Dernière recherche documentaire : **17 novembre 2026**.
 - **Actualités :** trois articles institutionnels publiés les 14, 16 et 28 novembre 2025 ; liens vers les publications originales.
 - **Contact :** page Contact : info@ucao-uuco.org ; en-tête du site : info@ucao.uuco.org. Les trois numéros et l’adresse de Coléah sont affichés sur les pages officielles.
 - **Hébergement :** le projet est déployé sur Vercel ; l’hébergeur technique est indiqué comme Vercel Inc.
+
+## Médias et provenance (état du 17 novembre 2026)
+
+- **Photos authentiques fournies par l'établissement :** six photographies du campus et de l'opération Octobre Rose (novembre 2025, événement documenté par l'UCAO-UUCo). Elles ont été renommées de manière sémantique (`campus-batiment-etudiants`, `campus-etudiants-murale`, `etudiantes-salle`, `campus-octobre-rose-groupe`, `campus-octobre-rose-couloir`, `campus-octobre-rose-cour`) et optimisées en WebP + JPEG. Les originaux sont archivés dans `src/assets/_originals/` (exclu du build).
+- **Fichiers factices supprimés :** `logo-ucao.svg`, `hero-placeholder.svg` et `favicon.svg` étaient des génériques de substitution non fournis par l'établissement ; ils ne sont plus référencés ni publiés.
+- **Dérivés du logo officiel :** `favicon-48.png`, `apple-touch-icon.png` (recadrage circulaire du logo réel) et `og-ucao-uuco.jpg` (carte de partage 1200×630 composée sur fond marine avec le logo). Aucune de ces compositions n'est présentée comme une photographie du campus.
+- **Chiffre « plus de 350 étudiants » :** mentionné sur la page institutionnelle sans date de référence ; volontairement non affiché sur le site public.
+- **Aucune image de substitution :** chaque photo publiée provient de l'établissement ; les héros de pages sans photo disponible utilisent un bandeau marine typographique, pas une image générique.
 
 ## Conflits et limites qui restent ouverts
 

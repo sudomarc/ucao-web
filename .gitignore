@@ -1,6 +1,5 @@
-# Dépendances / build
+# Dépendances
 node_modules/
-dist/
 .DS_Store
 Thumbs.db
 
@@ -20,8 +19,12 @@ yarn-error.log*
 .env
 .env.local
 
-# Images temporellesWhatsApp
+# Images WhatsApp temporaires — ignorées, SAUF les assets officiels du site
 *.jpeg
 *.jpg
 *.png
 *.webp
+!src/assets/images/**
+!src/assets/images/**/**
+!dist/assets/images/**
+!dist/assets/images/**/**
