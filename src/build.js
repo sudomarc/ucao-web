@@ -4,8 +4,10 @@
  * Lit les contenus centralisés dans src/content/ (pages décrites en « blocks »),
  * applique des composants HTML sémantiques et écrit les pages statiques dans dist/.
  *
- * Identité visuelle dérivée du logo officiel UCAO (navy #1d2f56, rouge #9c1e28),
- * composition éditoriale : héros photographique, bandes institutionnelles,
+ * Identité visuelle dérivée du logo officiel UCAO_LOGO.png :
+ * - Bleu primaire #312783 (texte "UCAO" / "UCWA")
+ * - Rouge secondaire #991915 (carte d'Afrique, croix, "FOI SCIENCE ACTION")
+ * Composition éditoriale : héros photographique, bandes institutionnelles,
  * typographie serif pour les titres, listes éditoriales plutôt que grilles
  * de cartes identiques. Toutes les photos proviennent de l'UCAO-UUCo.
  */
@@ -68,7 +70,20 @@ function picture(name, alt, options = {}) {
 
 function button(label, href, variant, external) {
   const attrs = external ? ' target="_blank" rel="noopener noreferrer"' : '';
-  return `<a class="button button--${esc(variant)}" href="${esc(href)}"${attrs}>${esc(label)}</a>`;
+  // Map old variant names to new ones
+  const variantMap = {
+    'primary': 'primary',
+    'secondary': 'secondary',
+    'ghost': 'ghost',
+    'ghost-secondary': 'ghost-secondary',
+    'inverse': 'inverse',
+    'ghost-inverse': 'ghost-inverse',
+    'outline': 'outline',
+    'red': 'primary',      // legacy: maps to primary (red)
+    'navy': 'secondary'    // legacy: maps to secondary (navy)
+  };
+  const mappedVariant = variantMap[variant] || variant;
+  return `<a class="button button--${esc(mappedVariant)}" href="${esc(href)}"${attrs}>${esc(label)}</a>`;
 }
 
 /** ---------- En-tête de document ---------- */
@@ -83,7 +98,7 @@ function head(site, data) {
     <meta name="description" content="${desc}">
     <meta name="language" content="fr">
     <meta name="author" content="${esc(site.author)}">
-    <meta name="theme-color" content="#1d2f56">
+    <meta name="theme-color" content="#312783">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="icon" href="${esc(site.faviconSrc)}" type="image/png" sizes="48x48">
     <link rel="apple-touch-icon" href="${esc(site.roundIconSrc)}">
