@@ -1,6 +1,5 @@
 {
   "main": [
-    { "label": "Accueil", "href": "/" },
     { "label": "Université", "href": "/universite/" },
     {
       "label": "Formations",
