@@ -1035,7 +1035,6 @@ body.menu-open { overflow: hidden; }
 }
 
 @media (max-width: 960px) {
-  .hero--split .hero__media { order: -1; }
   .hero__img, .hero__media img { max-height: 340px; }
   .hero--band .hero__content { padding: var(--space-14) 0; }
   .hero--band::after, .hero--band::before { display: none; }
