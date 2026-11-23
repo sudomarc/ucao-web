@@ -26,19 +26,17 @@
     {
       "type": "lede",
       "title": "Le réseau UCAO et l'unité de Conakry",
-      "text": "L'Université Catholique de l'Afrique de l'Ouest (UCAO) est une université de droit pontifical, fondée en février 2000 par la Conférence Épiscopale Régionale de l'Afrique de l'Ouest (CERAO), à Conakry, selon l'histoire publiée par l'établissement. L'UCAO se présente comme le plus grand réseau universitaire d'Afrique de l'Ouest, avec des unités universitaires dans sept pays et un rectorat basé à Bobo-Dioulasso, au Burkina Faso.",
-      "note": "Éléments repris des pages institutionnelles de l'UCAO-UUCo (consultées le 17 novembre 2026)."
+      "text": "L'Université Catholique de l'Afrique de l'Ouest (UCAO) est une université de droit pontifical, fondée en février 2000 par la Conférence Épiscopale Régionale de l'Afrique de l'Ouest (CERAO), à Conakry. L'UCAO est le plus grand réseau universitaire d'Afrique de l'Ouest, avec des unités universitaires dans sept pays et un rectorat basé à Bobo-Dioulasso, au Burkina Faso."
     },
     {
       "type": "textlist",
       "id": "historique",
       "title": "Repères historiques",
       "items": [
-        "Février 2000 : fondation de l'Université Catholique de l'Afrique de l'Ouest par la CERAO, à Conakry, selon l'histoire publiée par l'UCAO.",
-        "Le réseau installe ensuite des unités universitaires dans sept pays d'Afrique de l'Ouest, avec un rectorat à Bobo-Dioulasso, selon la présentation de l'établissement.",
-        "2008 : création de l'Unité Universitaire de Conakry (UCAO-UUCo), selon la présentation de l'établissement."
+        "Février 2000 : fondation de l'Université Catholique de l'Afrique de l'Ouest par la CERAO, à Conakry.",
+        "Le réseau installe ensuite des unités universitaires dans sept pays d'Afrique de l'Ouest, avec un rectorat à Bobo-Dioulasso.",
+        "2008 : création de l'Unité Universitaire de Conakry (UCAO-UUCo)."
       ],
-      "note": "Le jubilé des 25 ans célébré en novembre 2025 se rapporte à la fondation du réseau UCAO en 2000 ; la création de l'unité de Conakry est un événement distinct (2008)."
     },
     {
       "type": "values",
@@ -51,7 +49,6 @@
         { "label": "Fidélité au message chrétien", "text": "Tel qu'il est présenté par l'Église." },
         { "label": "Engagement institutionnel", "text": "Au service du peuple de Dieu et de la famille humaine en marche." }
       ],
-      "note": "Formulations adaptées de la page « Qui sommes-nous ? » de l'UCAO-UUCo."
     },
     {
       "type": "editorial",
@@ -60,7 +57,6 @@
       "text": "L'UCAO-UUCo a pour mission, depuis sa création en 2008, d'offrir une formation académique adaptée aux besoins locaux et internationaux du marché de l'emploi, selon sa présentation institutionnelle. L'établissement indique proposer un enseignement qui s'inscrit dans la ligne de la doctrine sociale de l'Église et ne se limite pas à la transmission du savoir : il s'attache à inculquer des valeurs morales et humaines, une culture managériale, l'éthique des affaires, la prise de décision et l'engagement. Les formations dispensées sont de niveau Licence et Master.",
       "image": "etudiantes-salle.webp",
       "imageAlt": "Étudiantes de l'UCAO-UUCo pendant une séance de formation en salle.",
-      "note": "La page institutionnelle mentionne plus de 350 étudiants sans date de référence ; ce chiffre n'est pas affiché tant que l'établissement ne l'a pas confirmé.",
       "reverse": true
     },
     {
@@ -70,11 +66,10 @@
       "lead": "L'établissement met en avant, sur sa page institutionnelle, les points suivants :",
       "items": [
         { "label": "Diplômes", "text": "Des diplômes présentés comme reconnus par l'État guinéen." },
-        { "label": "CAMES", "text": "Une université membre du CAMES (Conseil Africain et Malgache de l'Enseignement Supérieur), selon l'établissement." },
-        { "label": "Réseau", "text": "Le plus grand réseau universitaire privé d'Afrique de l'Ouest, présent dans 7 pays, selon l'établissement." },
+        { "label": "CAMES", "text": "Une université membre du CAMES (Conseil Africain et Malgache de l'Enseignement Supérieur)." },
+        { "label": "Réseau", "text": "Le plus grand réseau universitaire privé d'Afrique de l'Ouest, présent dans 7 pays." },
         { "label": "Choix de formations", "text": "Un large choix de formations de Licence et de Master, intellectuelles et humaines." }
       ],
-      "note": "Ces affirmations sont celles de l'établissement. L'habilitation en vigueur de chaque filière doit être vérifiée auprès du MESRS ou de l'ANAQ avant toute inscription : voir la FAQ."
     },
     {
       "type": "editorial",
@@ -87,7 +82,7 @@
     },
     {
       "type": "cta",
-      "variant": "navy",
+      "variant": "secondary",
       "title": "Découvrir l'offre de formation",
       "text": "Neuf filières de Licence et onze intitulés de Master figurent au catalogue publié par l'établissement.",
       "ctaPrimary": { "label": "Voir les formations", "href": "/formations/" },

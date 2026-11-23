@@ -24,8 +24,5 @@
   ],
   "author": "UCAO-UUCo",
   "license": "UNLICENSED",
-  "dependencies": {
-    "rea": "^0.0.1",
-    "rea-agents": "^6.9.0"
-  }
+  "dependencies": {}
 }

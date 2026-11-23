@@ -86,15 +86,14 @@
           ]
         }
       ],
-      "note": "Liste transcrite de la page officielle des inscriptions. Confirmez les pièces, les formats et les éventuelles pièces complémentaires pour la rentrée 2026-2027.",
+      "note": "Pièces à confirmer auprès de la scolarité pour la rentrée 2026-2027."
       "sourceUrl": "https://ucao-uuco.org/inscription/"
     },
     {
       "type": "notice",
       "id": "frais",
       "title": "Frais de scolarité",
-      "text": "Les montants accessibles sur le site institutionnel sont explicitement datés de l'année universitaire 2025-2026. Ils ne sont donc pas repris ici comme tarifs actuels.",
-      "note": "Avant tout versement, demandez à la scolarité le barème officiel 2026-2027, les frais annexes, les échéances et les coordonnées bancaires confirmées par écrit."
+      "text": "Les montants de scolarité sont communiqués par la scolarité sur demande."
     },
     {
       "type": "notice",
@@ -107,11 +106,10 @@
         "(+224) 621 28 66 81",
         "(+224) 629 38 90 58"
       ],
-      "note": "La page Contact officielle affiche info@ucao-uuco.org ; l'en-tête du site affiche aussi info@ucao.uuco.org. En cas de doute, privilégiez un appel téléphonique."
     },
     {
       "type": "cta",
-      "variant": "navy",
+      "variant": "secondary",
       "title": "Questions fréquentes",
       "text": "Durées des formations, habilitations, adresse e-mail à utiliser : les réponses vérifiables sont regroupées dans la FAQ.",
       "ctaPrimary": { "label": "Consulter la FAQ", "href": "/faq/" },

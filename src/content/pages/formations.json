@@ -17,8 +17,7 @@
     {
       "type": "lede",
       "title": "Un catalogue par niveau",
-      "text": "Le catalogue officiel couvre des domaines variés : sciences politiques, droit, économie et gestion, sciences humaines, communication, technologie, sciences alimentaires et santé. Les durées affichées ci-dessous reprennent les indications publiées par l'établissement.",
-      "note": "Le catalogue officiel annonce 8 formations de Licence tout en énumérant 9 intitulés. La liste ci-dessous conserve les 9 intitulés visibles ; l'ouverture de chaque filière pour 2026-2027 et les habilitations en vigueur sont à confirmer auprès de la scolarité."
+      "text": "Le catalogue couvre des domaines variés : sciences politiques, droit, économie et gestion, sciences humaines, communication, technologie, sciences alimentaires et santé."
     },
     {
       "type": "catalogue",
@@ -26,7 +25,7 @@
     },
     {
       "type": "cta",
-      "variant": "red",
+      "variant": "primary",
       "title": "Candidater à une formation",
       "text": "Les pièces à fournir et les étapes de candidature sont publiées par l'établissement pour la Licence et le Master.",
       "ctaPrimary": { "label": "Voir la procédure d'admission", "href": "/admissions/" },

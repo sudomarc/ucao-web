@@ -1,11 +1,10 @@
 {
   "sourceUrl": "https://ucao-uuco.org/nos-formations/",
-  "note": "Catalogue reconstitué à partir de la page « Nos formations » du site officiel. Cette page annonce 8 licences mais en énumère 9 ; les 9 intitulés distincts sont conservés sans annoncer un total. La liste des masters contient 11 intitulés distincts, avec Santé publique et communautaire répété une seconde fois sur la page source. L'ouverture effective des parcours pour l'année 2026-2027 et les habilitations en vigueur doivent être confirmées auprès de la scolarité.",
   "levels": [
     {
       "id": "licence",
       "label": "Licence",
-      "description": "Le catalogue institutionnel indique une durée de 3 ou 4 ans selon la spécialité. Seules les durées explicitement indiquées par l'établissement sont reprises ci-dessous.",
+      "description": "Durée de 3 ou 4 ans selon la spécialité.",
       "groups": [
         {
           "title": "Sciences politiques et juridiques",
@@ -41,7 +40,7 @@
     {
       "id": "master",
       "label": "Master",
-      "description": "Le site officiel présente ces masters comme des formations en cours du soir d'une durée de 2 ans. Les horaires, conditions d'accès et parcours ouverts pour 2026-2027 sont à demander à la scolarité.",
+      "description": "Formations en cours du soir sur 2 ans.",
       "groups": [
         {
           "title": "Économie, finance et gestion",

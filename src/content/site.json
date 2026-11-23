@@ -5,7 +5,6 @@
   "shortName": "UCAO – Unité Universitaire de Conakry",
   "tagline": "Foi, science, action — une formation intellectuelle et humaine au service de la société.",
   "email": "info@ucao-uuco.org",
-  "emailNote": "La page Contact du site institutionnel publie info@ucao-uuco.org ; son en-tête affiche aussi info@ucao.uuco.org.",
   "phones": [
     "(+224) 620 42 66 12",
     "(+224) 621 28 66 81",
@@ -21,6 +20,7 @@
   "roundIconSrc": "/assets/images/apple-touch-icon.png",
   "faviconSrc": "/assets/images/favicon-48.png",
   "ogImage": "/assets/images/og-ucao-uuco.jpg",
+  "siteUrl": "https://ucao-uuco.org",
   "author": "UCAO-UUCo",
   "copyright": "© UCAO-UUCo – Tous droits réservés.",
   "metaDescription": "Site de l'Université Catholique de l'Afrique de l'Ouest – Unité Universitaire de Conakry : formations de Licence et de Master, admissions, vie universitaire et actualités à Conakry, Guinée."

@@ -24,7 +24,7 @@
     },
     {
       "type": "cta",
-      "variant": "navy",
+      "variant": "secondary",
       "title": "Suivre l'actualité de l'établissement",
       "text": "Les nouvelles publications sont d'abord mises en ligne sur le site institutionnel de l'UCAO-UUCo et sur sa page Facebook.",
       "ctaPrimary": { "label": "Site institutionnel", "href": "https://ucao-uuco.org/", "external": true },

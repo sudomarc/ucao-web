@@ -79,7 +79,7 @@
     },
     {
       "type": "cta",
-      "variant": "red",
+      "variant": "primary",
       "title": "Venir au campus",
       "text": "Le campus est situé à Coléah, sur la route du Niger, à côté de l'église catholique Saint-Michel, à Conakry.",
       "ctaPrimary": { "label": "Ouvrir l'itinéraire", "href": "https://maps.app.goo.gl/u3j6UvU2s3dyW8oi8", "external": true },

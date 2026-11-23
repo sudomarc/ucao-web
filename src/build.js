@@ -105,7 +105,7 @@ function head(site, data) {
     <meta property="og:title" content="${title}">
     <meta property="og:description" content="${desc}">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="${esc(site.ogImage)}">
+    <meta property="og:image" content="${esc(site.siteUrl || '')}${esc(site.ogImage)}">
     <meta property="og:locale" content="fr_FR">
   `;
 }
@@ -351,8 +351,10 @@ function blockPrograms(b) {
 }
 
 function blockCatalogue(b, globals) {
-  const data = b.source ? globals[b.source] : null;
-  if (!data || !data.levels) return '';
+  if (!b.source || !globals[b.source] || !globals[b.source].levels) {
+    throw new Error(`Source de catalogue invalide « ${b.source && b.source} »`);
+  }
+  const data = globals[b.source];
   const levels = data.levels
     .map((level) => {
       const groups = (level.groups || [])
@@ -406,7 +408,13 @@ function blockCatalogue(b, globals) {
 }
 
 function blockCta(b) {
-  const variant = b.variant === 'red' ? 'red' : 'navy';
+  const variantMap = {
+    primary: 'primary',
+    secondary: 'secondary',
+    red: 'primary',
+    navy: 'secondary'
+  };
+  const variant = variantMap[b.variant] || 'primary';
   return `
     <section class="cta-band cta-band--${esc(variant)}">
       <div class="container cta-band__inner">
@@ -427,7 +435,7 @@ function newsItem(item) {
   return `
     <article class="news-entry">
       <div class="news-entry__meta">
-        <time class="news-entry__date">${esc(item.date)}</time>
+        <time class="news-entry__date" datetime="${esc(item.date)}">${esc(item.date)}</time>
         ${item.category ? `<span class="news-entry__category">${esc(item.category)}</span>` : ''}
       </div>
       <div class="news-entry__body">
@@ -443,7 +451,10 @@ function newsItem(item) {
 
 function blockNews(b, globals) {
   let items;
-  if (b.source && globals[b.source]) {
+  if (b.source) {
+    if (!globals[b.source]) {
+      throw new Error(`Source de bloc inconnue « ${b.source} » dans la page`);
+    }
     items = globals[b.source].items || [];
     const limit = b.limit || items.length;
     items = items.slice(0, limit);

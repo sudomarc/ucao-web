@@ -18,8 +18,7 @@
       "type": "lede",
       "title": "Une université en réseau, une unité à Conakry",
       "lead": "L'UCAO est une université catholique de droit pontifical, née de la Conférence Épiscopale Régionale de l'Afrique de l'Ouest.",
-      "text": "Selon l'histoire publiée par l'établissement, l'Université Catholique de l'Afrique de l'Ouest (UCAO) a été fondée en février 2000 par la CERAO, à Conakry, et se compose d'unités universitaires présentes dans sept pays, avec un rectorat basé à Bobo-Dioulasso, au Burkina Faso. Son unité de Conakry, l'UCAO-UUCo, créée en 2008, propose des formations de Licence et de Master présentées comme adaptées aux besoins du marché de l'emploi local et international.",
-      "note": "Éléments repris des pages institutionnelles de l'UCAO-UUCo (consultées le 17 novembre 2026)."
+      "text": "L'Université Catholique de l'Afrique de l'Ouest (UCAO) a été fondée en février 2000 par la CERAO, à Conakry. Son unité de Conakry, l'UCAO-UUCo, créée en 2008, propose des formations de Licence et de Master adaptées aux besoins du marché de l'emploi local et international. L'UCAO se compose d'unités universitaires présentes dans sept pays, avec un rectorat basé à Bobo-Dioulasso, au Burkina Faso."
     },
     {
       "type": "stats",
@@ -30,12 +29,12 @@
         { "number": "9", "label": "Filières de Licence au catalogue publié" },
         { "number": "11", "label": "Intitulés de Master au catalogue publié" }
       ],
-      "note": "Le catalogue officiel annonce 8 formations de Licence tout en en énumérant 9 ; les deux repères sont indiqués dans la page Formations."
+      "note": "Repères de l'établissement."
     },
     {
       "type": "programs",
       "title": "Les parcours proposés",
-      "lead": "Extraits du catalogue publié par l'établissement. L'ouverture effective de chaque filière pour 2026-2027 est à confirmer auprès de la scolarité.",
+      "lead": "Extraits du catalogue publié par l'établissement.",
       "licenceTitle": "Licence",
       "licenceNote": "3 à 4 ans selon la spécialité",
       "licenceItems": [
@@ -56,9 +55,9 @@
     },
     {
       "type": "cta",
-      "variant": "red",
+      "variant": "primary",
       "title": "Préparer son admission",
-      "text": "Les pièces demandées pour un dossier de candidature en Licence ou en Master sont publiées par l'établissement. Les tarifs en ligne sont datés de 2025-2026 : demandez le barème 2026-2027 à la scolarité avant tout versement.",
+      "text": "Les pièces demandées pour un dossier de candidature en Licence ou en Master sont publiées par l'établissement."
       "ctaPrimary": { "label": "Étapes et documents", "href": "/admissions/" },
       "ctaSecondary": { "label": "Contacter la scolarité", "href": "/contact/" }
     },
@@ -87,11 +86,11 @@
         { "label": "Fidélité au message chrétien", "text": "Tel qu'il est présenté par l'Église." },
         { "label": "Engagement au service de la société", "text": "Un engagement institutionnel au service du peuple de Dieu et de la famille humaine." }
       ],
-      "note": "Formulations adaptées de la page « Qui sommes-nous ? » de l'UCAO-UUCo."
+      "note": "Mission de l'université catholique."
     },
     {
       "type": "cta",
-      "variant": "navy",
+      "variant": "secondary",
       "title": "Une question sur votre projet d'études ?",
       "text": "La scolarité répond aux questions sur les filières, les conditions d'accès et les pièces à fournir. Trois numéros de téléphone sont publiés par l'établissement, ainsi qu'une adresse e-mail.",
       "ctaPrimary": { "label": "Contacter l'université", "href": "/contact/" },
