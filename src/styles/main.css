@@ -3188,3 +3188,46 @@ body {
 .values-grid {
   counter-reset: ucaovalue;
 }
+
+
+/* Preserve contrast when the visitor prefers the existing dark colour scheme. */
+@media (prefers-color-scheme: dark) {
+  .brand__name,
+  .hero__title,
+  .programs__level,
+  .news-entry__title a,
+  .value__label {
+    color: #f0f1f5;
+  }
+
+  .hero--split {
+    background: var(--color-bg);
+  }
+
+  .kicker,
+  .programs__note,
+  .news-entry__date,
+  .value::before {
+    color: #e28b86;
+  }
+
+  .section-title::after,
+  .hero__media::before,
+  .editorial__media::before {
+    border-color: var(--color-secondary-light);
+    background-color: var(--color-secondary-light);
+  }
+
+  .section-title::after {
+    background-color: var(--color-secondary-light);
+  }
+
+  .news-entry__title a:hover {
+    color: #f0a19c;
+  }
+
+  .program-row__meta {
+    background: #302c5c;
+    color: #f0f1f5;
+  }
+}
