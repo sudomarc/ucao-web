@@ -433,7 +433,7 @@ function blockCta(b) {
 
 function formatNewsDate(isoDate) {
   const date = new Date(`${isoDate}T00:00:00Z`);
-  if (!/^\\d{4}-\\d{2}-\\d{2}$/.test(isoDate) || Number.isNaN(date.getTime())) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(isoDate) || Number.isNaN(date.getTime())) {
     throw new Error(`Date d'actualité invalide : ${isoDate}`);
   }
   return new Intl.DateTimeFormat('fr-FR', {
