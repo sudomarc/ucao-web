@@ -153,6 +153,10 @@ function header(site, navItems, currentSlug) {
       <div class="header-inner">
         <a class="brand" href="/" aria-label="${esc(site.fullName)} — retour à l'accueil">
           <img class="brand__logo" src="${esc(site.logoSrc)}" alt="${esc(site.logoAlt)}" width="84" height="72" loading="eager" decoding="async">
+          <span class="brand__copy" aria-hidden="true">
+            <span class="brand__name">UCAO</span>
+            <span class="brand__descriptor">Unité Universitaire de Conakry</span>
+          </span>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu" aria-label="Ouvrir le menu">
           <span class="menu-toggle__bar" aria-hidden="true"></span>
