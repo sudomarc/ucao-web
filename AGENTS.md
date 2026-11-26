@@ -39,3 +39,14 @@ Before proposing a change:
 5. Report what was actually verified and what remains unverified.
 
 Do not merge into main or deploy to production without explicit user authorization.
+
+## Collaboration and pull requests
+- All changes must be submitted through a pull request targeting `main`. Never commit or push directly to `main`.
+- Every PR must reference an existing GitHub issue and include a closing keyword in its body, such as `Closes #123`. A PR without an issue link is incomplete.
+- Keep one focused issue per PR where practical. List every resolved issue with a closing keyword when more than one is necessary.
+- Use a dedicated branch named `feat/<issue-number>-short-description`, `fix/<issue-number>-short-description`, or `docs/<issue-number>-short-description`.
+- Complete the repository PR template at `.github/pull_request_template.md`.
+- Request review from the other project collaborator. The PR author must not approve their own PR. Address review feedback before merging.
+- Do not merge with failing checks, unresolved review comments, missing verification evidence, or missing issue linkage.
+- Follow `CONTRIBUTING.md` for the full collaboration workflow.
+- GitHub branch protection / repository rulesets must enforce pull requests and required checks where repository administration permits. Written instructions and templates alone do not technically block direct pushes.
