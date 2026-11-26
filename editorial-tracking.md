@@ -1,6 +1,6 @@
 # Suivi éditorial et vérification des sources — UCAO-UUCo
 
-Dernière recherche documentaire : **17 novembre 2026**.
+Dernière recherche documentaire : **25 novembre 2026**.
 
 ## Sources primaires consultées
 
@@ -59,6 +59,24 @@ Dernière recherche documentaire : **17 novembre 2026**.
 - Le MESRS explique que l’ANAQ évalue les programmes et les institutions et délivre des attestations d’accréditation et d’habilitation : https://mesrs.gov.gn/ceremonie-de-proclamation-des-resultats-definitifs-des-evaluations-et-de-remise-des-attestations-daccreditation-dhabilitation-institutionnelle-et-de-ranking-aux-ies/
 - L’arrêté 2022-897 publié par LégisGuinée comporte une liste de diplômes associés à l’UCAO : https://legisguinee.com/textes/arrete-2022-897-habilitation-neuf-09-institutions-enseignement-superieur-delivre
 - Cette référence historique ne suffit pas à établir l’habilitation actuelle de chaque programme en 2026-2027. Une copie des actes en vigueur doit être demandée au MESRS/ANAQ.
+
+## Contrôle documentaire complémentaire — 25 novembre 2026
+
+| Sujet | Source primaire consultée le 25 novembre 2026 | Résultat et décision |
+|---|---|---|
+| Admissions et tarifs | https://ucao-uuco.org/inscription/ | La page affiche toujours des barèmes explicitement intitulés 2025-2026. Aucun barème 2026-2027 n'a été trouvé. Ne pas réutiliser les montants, échéances ou coordonnées de paiement affichés. |
+| Actualités UCAO-UUCo | https://ucao-uuco.org/ | Les trois publications visibles et datées dans la rubrique Actualités restent celles du 14, 16 et 28 novembre 2025. Aucune publication institutionnelle plus récente n'a été confirmée lors de ce contrôle. |
+| Calendrier universitaire national | https://mesrs.gov.gn/les-preparatifs-de-la-rentree-universitaire-2026-2027-au-coeur-de-la-reunion-de-cabinet/ | Le MESRS indique le 6 octobre 2026 que la rentrée universitaire 2026-2027 est prévue le 19 octobre 2026. Cette information nationale ne confirme pas l'ouverture d'une filière particulière à l'UCAO-UUCo. |
+| Inscriptions dans les IES | https://mesrs.gov.gn/communiques/ | L'index du MESRS présente un communiqué du 21 octobre 2026 relatif aux inscriptions pédagogiques et administratives dans les IES. Aucun acte ou barème spécifique à l'UCAO-UUCo n'y a été identifié dans les éléments consultés. |
+| Autorisations / habilitations | https://parcoursupguinee.org/institutions ; https://mesrs.gov.gn/ | Les informations publiques consultées ne suffisent pas à établir la validité actuelle d'une habilitation, par programme, pour 2026-2027. Demander les actes officiels en vigueur et leur périmètre exact à l'administration / au MESRS / à l'ANAQ. |
+
+### Conséquences pour les publications 2026-2027
+
+- La rentrée universitaire nationale est annoncée pour le 19 octobre 2026, mais aucune preuve primaire propre à l'UCAO-UUCo n'a été trouvée pour confirmer quelles filières sont effectivement ouvertes.
+- Les tarifs visibles sur la page officielle UCAO concernent explicitement 2025-2026. Ils ne doivent pas être présentés comme des tarifs 2026-2027.
+- Le calendrier national des IES ne remplace pas une validation institutionnelle des formations, des conditions d'admission ou des moyens de paiement.
+- Les nouvelles publications ne doivent pas être créées à partir d'informations générales du MESRS : seules les actualités de l'UCAO-UUCo, approuvées et sourcées, peuvent alimenter son fil d'actualités.
+- Le document de collecte et de validation à compléter par l'administration est disponible dans `docs/administrative-validation/ACADEMIC-AND-ADMISSIONS-VALIDATION.md`.
 
 ## Règle de publication
 

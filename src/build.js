@@ -431,11 +431,24 @@ function blockCta(b) {
   `;
 }
 
+function formatNewsDate(isoDate) {
+  const date = new Date(`${isoDate}T00:00:00Z`);
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(isoDate) || Number.isNaN(date.getTime())) {
+    throw new Error(`Date d'actualité invalide : ${isoDate}`);
+  }
+  return new Intl.DateTimeFormat('fr-FR', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC'
+  }).format(date);
+}
+
 function newsItem(item) {
   return `
     <article class="news-entry">
       <div class="news-entry__meta">
-        <time class="news-entry__date" datetime="${esc(item.date)}">${esc(item.date)}</time>
+        <time class="news-entry__date" datetime="${esc(item.date)}">${esc(formatNewsDate(item.date))}</time>
         ${item.category ? `<span class="news-entry__category">${esc(item.category)}</span>` : ''}
       </div>
       <div class="news-entry__body">
@@ -450,31 +463,34 @@ function newsItem(item) {
 }
 
 function blockNews(b, globals) {
-  let items;
-  if (b.source) {
-    if (!globals[b.source]) {
-      throw new Error(`Source de bloc inconnue « ${b.source} » dans la page`);
-    }
-    items = globals[b.source].items || [];
-    const limit = b.limit || items.length;
-    items = items.slice(0, limit);
-  } else {
-    items = b.items || [];
+  const source = b.source ? globals[b.source] : null;
+  if (b.source && !source) {
+    throw new Error(`Source de bloc inconnue « ${b.source} » dans la page`);
   }
-  if (!items.length) return '';
+
+  let items = source ? (source.items || []) : (b.items || []);
+  const limit = b.limit || items.length;
+  items = items.slice(0, limit);
+
+  const emptyState = b.emptyState || (source && source.emptyState) || '';
+  const statusMessage = items.length
+    ? (emptyState
+      ? `<p class="note note--block" role="status" aria-live="polite">${esc(emptyState)}</p>`
+      : '')
+    : `<p class="note note--block" role="status" aria-live="polite">${esc(emptyState || 'Aucune publication disponible pour le moment.')}</p>`;
+
   return `
     <section class="section section--tint">
       <div class="container">
         ${b.title ? `<h2 class="section-title">${esc(b.title)}</h2>` : ''}
         ${b.note ? `<p class="lede__text">${esc(b.note)}</p>` : ''}
-        <div class="news-list">${items.map(newsItem).join('')}</div>
-        ${b.emptyState ? `<p class="note">${esc(b.emptyState)}</p>` : ''}
+        ${items.length ? `<div class="news-list">${items.map(newsItem).join('')}</div>` : ''}
+        ${statusMessage}
         ${b.cta ? `<p class="cta-line">${button(b.cta.label, b.cta.href, 'primary')}</p>` : ''}
       </div>
     </section>
   `;
 }
-
 function blockEditorial(b) {
   const media = b.image
     ? `<figure class="editorial__media">${picture(b.image, b.imageAlt, { cls: 'editorial__img' })}</figure>`

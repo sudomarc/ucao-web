@@ -11,16 +11,34 @@
       "lead": "L'UCAO relie plusieurs unités universitaires en Afrique de l'Ouest. Conakry accueille l'une d'elles, l'UCAO-UUCo.",
       "image": "campus-etudiants-murale.webp",
       "imageAlt": "Étudiants rassemblés devant un mur peint du campus de l'UCAO-UUCo.",
-      "ctaPrimary": { "label": "Découvrir les formations", "href": "/formations/" },
-      "ctaSecondary": { "label": "Contacter l'université", "href": "/contact/" }
+      "ctaPrimary": {
+        "label": "Découvrir les formations",
+        "href": "/formations/"
+      },
+      "ctaSecondary": {
+        "label": "Contacter l'université",
+        "href": "/contact/"
+      }
     },
     {
       "type": "jumpnav",
       "links": [
-        { "label": "Historique", "href": "#historique" },
-        { "label": "Mission", "href": "#mission" },
-        { "label": "L'unité de Conakry", "href": "#uuco" },
-        { "label": "Pourquoi choisir l'UCAO-UUCo", "href": "#choisir" }
+        {
+          "label": "Historique",
+          "href": "#historique"
+        },
+        {
+          "label": "Mission",
+          "href": "#mission"
+        },
+        {
+          "label": "L'unité de Conakry",
+          "href": "#uuco"
+        },
+        {
+          "label": "Pourquoi choisir l'UCAO-UUCo",
+          "href": "#choisir"
+        }
       ]
     },
     {
@@ -36,7 +54,7 @@
         "Février 2000 : fondation de l'Université Catholique de l'Afrique de l'Ouest par la CERAO, à Conakry.",
         "Le réseau installe ensuite des unités universitaires dans sept pays d'Afrique de l'Ouest, avec un rectorat à Bobo-Dioulasso.",
         "2008 : création de l'Unité Universitaire de Conakry (UCAO-UUCo)."
-      ],
+      ]
     },
     {
       "type": "values",
@@ -44,11 +62,23 @@
       "title": "La mission de l'UCAO",
       "lead": "Selon sa présentation institutionnelle, l'UCAO répond, dans sa constitution, son organisation et son fonctionnement, aux normes de l'Église régissant les universités et instituts supérieurs, notamment les constitutions apostoliques Sapientia Christiana et Ex corde Ecclesiae. Elle s'assigne l'objectif d'« assurer sous une forme institutionnelle une présence chrétienne dans le monde universitaire face aux grands problèmes de la société et de la culture ».",
       "items": [
-        { "label": "Inspiration chrétienne", "text": "De la part des individus comme de la communauté universitaire en tant que telle." },
-        { "label": "Réflexion à la lumière de la foi", "text": "Sur les acquisitions récentes de la connaissance humaine, auxquelles l'université cherche à apporter une contribution par ses propres recherches." },
-        { "label": "Fidélité au message chrétien", "text": "Tel qu'il est présenté par l'Église." },
-        { "label": "Engagement institutionnel", "text": "Au service du peuple de Dieu et de la famille humaine en marche." }
-      ],
+        {
+          "label": "Inspiration chrétienne",
+          "text": "De la part des individus comme de la communauté universitaire en tant que telle."
+        },
+        {
+          "label": "Réflexion à la lumière de la foi",
+          "text": "Sur les acquisitions récentes de la connaissance humaine, auxquelles l'université cherche à apporter une contribution par ses propres recherches."
+        },
+        {
+          "label": "Fidélité au message chrétien",
+          "text": "Tel qu'il est présenté par l'Église."
+        },
+        {
+          "label": "Engagement institutionnel",
+          "text": "Au service du peuple de Dieu et de la famille humaine en marche."
+        }
+      ]
     },
     {
       "type": "editorial",
@@ -65,11 +95,23 @@
       "title": "Pourquoi choisir l'UCAO-UUCo ?",
       "lead": "L'établissement met en avant, sur sa page institutionnelle, les points suivants :",
       "items": [
-        { "label": "Diplômes", "text": "Des diplômes présentés comme reconnus par l'État guinéen." },
-        { "label": "CAMES", "text": "Une université membre du CAMES (Conseil Africain et Malgache de l'Enseignement Supérieur)." },
-        { "label": "Réseau", "text": "Le plus grand réseau universitaire privé d'Afrique de l'Ouest, présent dans 7 pays." },
-        { "label": "Choix de formations", "text": "Un large choix de formations de Licence et de Master, intellectuelles et humaines." }
-      ],
+        {
+          "label": "Diplômes",
+          "text": "Des diplômes présentés comme reconnus par l'État guinéen."
+        },
+        {
+          "label": "CAMES",
+          "text": "Une université membre du CAMES (Conseil Africain et Malgache de l'Enseignement Supérieur)."
+        },
+        {
+          "label": "Réseau",
+          "text": "Le plus grand réseau universitaire privé d'Afrique de l'Ouest, présent dans 7 pays."
+        },
+        {
+          "label": "Choix de formations",
+          "text": "Un large choix de formations de Licence et de Master, intellectuelles et humaines."
+        }
+      ]
     },
     {
       "type": "editorial",
@@ -85,8 +127,14 @@
       "variant": "secondary",
       "title": "Découvrir l'offre de formation",
       "text": "Neuf filières de Licence et onze intitulés de Master figurent au catalogue publié par l'établissement.",
-      "ctaPrimary": { "label": "Voir les formations", "href": "/formations/" },
-      "ctaSecondary": { "label": "Préparer son admission", "href": "/admissions/" }
+      "ctaPrimary": {
+        "label": "Voir les formations",
+        "href": "/formations/"
+      },
+      "ctaSecondary": {
+        "label": "Préparer son admission",
+        "href": "/admissions/"
+      }
     }
   ]
 }
