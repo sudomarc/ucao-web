@@ -3172,3 +3172,19 @@ body {
     transition: none !important;
   }
 }
+
+
+/* Layering and numbering refinements for the editorial image frames. */
+.hero__media,
+.editorial__media {
+  isolation: isolate;
+}
+
+.hero__media::before,
+.editorial__media::before {
+  z-index: 0;
+}
+
+.values-grid {
+  counter-reset: ucaovalue;
+}
