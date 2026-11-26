@@ -3211,15 +3211,13 @@ body {
     color: #e28b86;
   }
 
-  .section-title::after,
-  .hero__media::before,
-  .editorial__media::before {
-    border-color: var(--color-secondary-light);
+  .section-title::after {
     background-color: var(--color-secondary-light);
   }
 
-  .section-title::after {
-    background-color: var(--color-secondary-light);
+  .hero__media::before,
+  .editorial__media::before {
+    border-color: var(--color-secondary-light);
   }
 
   .news-entry__title a:hover {
