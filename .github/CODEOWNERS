@@ -1,2 +1,5 @@
 # Only the repository owner is authorized to approve changes to any path.
 * @sudomarc
+
+# Protect the ownership policy itself from being reassigned by a collaborator.
+/.github/CODEOWNERS @sudomarc
