@@ -46,3 +46,4 @@ Remaining risks / follow-up:
 - [ ] The change stays within the issue scope.
 - [ ] The acceptance criteria are addressed.
 - [ ] Documentation is updated where needed.
+- [ ] If this PR was authored by @luciengbamou1-cmd, it has an APPROVE review from @sudomarc on the latest revision.

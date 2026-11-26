@@ -41,12 +41,14 @@ Before proposing a change:
 Do not merge into main or deploy to production without explicit user authorization.
 
 ## Collaboration and pull requests
-- All changes must be submitted through a pull request targeting `main`. Never commit or push directly to `main`.
-- Every PR must reference an existing GitHub issue and include a closing keyword in its body, such as `Closes #123`. A PR without an issue link is incomplete.
+- Every change must be submitted through a pull request targeting `main`. Contributors must never commit or push directly to `main`.
+- Every PR must reference an existing GitHub issue and include a closing keyword in its body, such as `Closes #123`.
 - Keep one focused issue per PR where practical. List every resolved issue with a closing keyword when more than one is necessary.
 - Use a dedicated branch named `feat/<issue-number>-short-description`, `fix/<issue-number>-short-description`, or `docs/<issue-number>-short-description`.
 - Complete the repository PR template at `.github/pull_request_template.md`.
-- Request review from the other project collaborator. The PR author must not approve their own PR. Address review feedback before merging.
-- Do not merge with failing checks, unresolved review comments, missing verification evidence, or missing issue linkage.
-- Follow `CONTRIBUTING.md` for the full collaboration workflow.
-- GitHub branch protection / repository rulesets must enforce pull requests and required checks where repository administration permits. Written instructions and templates alone do not technically block direct pushes.
+- **Only @sudomarc may approve a pull request.** A PR authored by @luciengbamou1-cmd cannot be merged until @sudomarc has submitted an approving review on the current PR revision.
+- A review comment is not an approval. A `REQUEST_CHANGES` review is not an approval. Changes requested by @sudomarc must be addressed, then @sudomarc must approve the updated revision.
+- @luciengbamou1-cmd must not merge their own PRs. @sudomarc, as repository administrator, retains the ability to push and merge at their discretion, including bypassing review requirements when they explicitly choose to do so.
+- Do not merge with failing checks, unresolved review comments, missing verification evidence, or missing issue linkage, unless @sudomarc explicitly chooses to override these requirements.
+- Follow `CONTRIBUTING.md` for the full workflow.
+- These written rules do not enforce GitHub permissions by themselves. The `main` branch must have an active repository ruleset / branch protection rule requiring a pull request and approval from a code owner, with `@sudomarc` as the sole code owner. Configure the rule so repository administrators can bypass it; do not grant bypass to the development collaborator.
