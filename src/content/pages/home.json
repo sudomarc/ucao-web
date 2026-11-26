@@ -11,8 +11,14 @@
       "lead": "Une formation intellectuelle et humaine, de la Licence au Master, au cœur de Conakry.",
       "image": "campus-batiment-etudiants.webp",
       "imageAlt": "Étudiants devant le bâtiment des salles de classe, sur le campus de l'UCAO-UUCo.",
-      "ctaPrimary": { "label": "Explorer les formations", "href": "/formations/" },
-      "ctaSecondary": { "label": "Préparer son admission", "href": "/admissions/" }
+      "ctaPrimary": {
+        "label": "Explorer les formations",
+        "href": "/formations/"
+      },
+      "ctaSecondary": {
+        "label": "Préparer son admission",
+        "href": "/admissions/"
+      }
     },
     {
       "type": "lede",
@@ -23,11 +29,26 @@
     {
       "type": "stats",
       "items": [
-        { "number": "2000", "label": "Fondation du réseau UCAO par la CERAO" },
-        { "number": "2008", "label": "Création de l'unité de Conakry" },
-        { "number": "7", "label": "Pays où l'UCAO annonce des unités universitaires" },
-        { "number": "9", "label": "Filières de Licence au catalogue publié" },
-        { "number": "11", "label": "Intitulés de Master au catalogue publié" }
+        {
+          "number": "2000",
+          "label": "Fondation du réseau UCAO par la CERAO"
+        },
+        {
+          "number": "2008",
+          "label": "Création de l'unité de Conakry"
+        },
+        {
+          "number": "7",
+          "label": "Pays où l'UCAO annonce des unités universitaires"
+        },
+        {
+          "number": "9",
+          "label": "Filières de Licence au catalogue publié"
+        },
+        {
+          "number": "11",
+          "label": "Intitulés de Master au catalogue publié"
+        }
       ],
       "note": "Repères de l'établissement."
     },
@@ -38,35 +59,73 @@
       "licenceTitle": "Licence",
       "licenceNote": "3 à 4 ans selon la spécialité",
       "licenceItems": [
-        { "label": "Droit", "href": "/formations/?niveau=licence" },
-        { "label": "Génie informatique", "meta": "4 ans", "href": "/formations/?niveau=licence" },
-        { "label": "Biologie médicale — Technicien de laboratoire", "meta": "4 ans", "href": "/formations/?niveau=licence" },
-        { "label": "Économie-Gestion", "href": "/formations/?niveau=licence" }
+        {
+          "label": "Droit",
+          "href": "/formations/?niveau=licence"
+        },
+        {
+          "label": "Génie informatique",
+          "meta": "4 ans",
+          "href": "/formations/?niveau=licence"
+        },
+        {
+          "label": "Biologie médicale — Technicien de laboratoire",
+          "meta": "4 ans",
+          "href": "/formations/?niveau=licence"
+        },
+        {
+          "label": "Économie-Gestion",
+          "href": "/formations/?niveau=licence"
+        }
       ],
       "masterTitle": "Master",
       "masterNote": "Cours du soir · 2 ans",
       "masterItems": [
-        { "label": "Comptabilité, Contrôle et Audit", "href": "/formations/?niveau=master" },
-        { "label": "Monnaie, Finance, Banque", "href": "/formations/?niveau=master" },
-        { "label": "Santé publique et communautaire", "href": "/formations/?niveau=master" },
-        { "label": "Diplomatie et géostratégie / Relations internationales", "href": "/formations/?niveau=master" }
+        {
+          "label": "Comptabilité, Contrôle et Audit",
+          "href": "/formations/?niveau=master"
+        },
+        {
+          "label": "Monnaie, Finance, Banque",
+          "href": "/formations/?niveau=master"
+        },
+        {
+          "label": "Santé publique et communautaire",
+          "href": "/formations/?niveau=master"
+        },
+        {
+          "label": "Diplomatie et géostratégie / Relations internationales",
+          "href": "/formations/?niveau=master"
+        }
       ],
-      "cta": { "label": "Voir le catalogue complet", "href": "/formations/" }
+      "cta": {
+        "label": "Voir le catalogue complet",
+        "href": "/formations/"
+      }
     },
     {
       "type": "cta",
       "variant": "primary",
       "title": "Préparer son admission",
-      "text": "Les pièces demandées pour un dossier de candidature en Licence ou en Master sont publiées par l'établissement."
-      "ctaPrimary": { "label": "Étapes et documents", "href": "/admissions/" },
-      "ctaSecondary": { "label": "Contacter la scolarité", "href": "/contact/" }
+      "text": "Les pièces demandées pour un dossier de candidature en Licence ou en Master sont publiées par l'établissement.",
+      "ctaPrimary": {
+        "label": "Étapes et documents",
+        "href": "/admissions/"
+      },
+      "ctaSecondary": {
+        "label": "Contacter la scolarité",
+        "href": "/contact/"
+      }
     },
     {
       "type": "news",
       "title": "Actualités de l'UCAO-UUCo",
       "source": "actualites",
       "limit": 3,
-      "cta": { "label": "Toutes les actualités", "href": "/actualites/" }
+      "cta": {
+        "label": "Toutes les actualités",
+        "href": "/actualites/"
+      }
     },
     {
       "type": "editorial",
@@ -74,17 +133,32 @@
       "text": "Journées de l'étudiant, colloques internationaux et actions de sensibilisation rythment l'année du campus. Les publications de l'établissement documentent ces rendez-vous, et des photos fournies par l'UCAO-UUCo illustrent la vie du campus, dont une opération Octobre Rose.",
       "image": "campus-octobre-rose-groupe.webp",
       "imageAlt": "Étudiants de l'UCAO-UUCo tenant un cadre « Octobre Rose » lors d'une action de sensibilisation sur le campus.",
-      "cta": { "label": "Découvrir la vie universitaire", "href": "/vie-universitaire/" }
+      "cta": {
+        "label": "Découvrir la vie universitaire",
+        "href": "/vie-universitaire/"
+      }
     },
     {
       "type": "values",
       "title": "La mission d'une université catholique",
       "lead": "Selon sa présentation institutionnelle, l'UCAO répond, comme université catholique, aux caractéristiques énoncées par la constitution apostolique Ex corde Ecclesiae.",
       "items": [
-        { "label": "Inspiration chrétienne", "text": "Portée par les individus et par la communauté universitaire en tant que telle." },
-        { "label": "Réflexion à la lumière de la foi", "text": "Un travail continu sur les acquisitions récentes de la connaissance humaine, auquel l'université cherche à contribuer par ses propres recherches." },
-        { "label": "Fidélité au message chrétien", "text": "Tel qu'il est présenté par l'Église." },
-        { "label": "Engagement au service de la société", "text": "Un engagement institutionnel au service du peuple de Dieu et de la famille humaine." }
+        {
+          "label": "Inspiration chrétienne",
+          "text": "Portée par les individus et par la communauté universitaire en tant que telle."
+        },
+        {
+          "label": "Réflexion à la lumière de la foi",
+          "text": "Un travail continu sur les acquisitions récentes de la connaissance humaine, auquel l'université cherche à contribuer par ses propres recherches."
+        },
+        {
+          "label": "Fidélité au message chrétien",
+          "text": "Tel qu'il est présenté par l'Église."
+        },
+        {
+          "label": "Engagement au service de la société",
+          "text": "Un engagement institutionnel au service du peuple de Dieu et de la famille humaine."
+        }
       ],
       "note": "Mission de l'université catholique."
     },
@@ -93,8 +167,14 @@
       "variant": "secondary",
       "title": "Une question sur votre projet d'études ?",
       "text": "La scolarité répond aux questions sur les filières, les conditions d'accès et les pièces à fournir. Trois numéros de téléphone sont publiés par l'établissement, ainsi qu'une adresse e-mail.",
-      "ctaPrimary": { "label": "Contacter l'université", "href": "/contact/" },
-      "ctaSecondary": { "label": "Questions fréquentes", "href": "/faq/" }
+      "ctaPrimary": {
+        "label": "Contacter l'université",
+        "href": "/contact/"
+      },
+      "ctaSecondary": {
+        "label": "Questions fréquentes",
+        "href": "/faq/"
+      }
     }
   ]
 }
