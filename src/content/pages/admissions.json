@@ -11,16 +11,34 @@
       "lead": "Les étapes et les pièces publiées par l'UCAO-UUCo pour constituer un dossier de candidature.",
       "image": "campus-octobre-rose-cour.webp",
       "imageAlt": "Deux étudiantes de l'UCAO-UUCo dans la cour du campus.",
-      "ctaPrimary": { "label": "Voir les formations", "href": "/formations/" },
-      "ctaSecondary": { "label": "Contacter la scolarité", "href": "/contact/" }
+      "ctaPrimary": {
+        "label": "Voir les formations",
+        "href": "/formations/"
+      },
+      "ctaSecondary": {
+        "label": "Contacter la scolarité",
+        "href": "/contact/"
+      }
     },
     {
       "type": "jumpnav",
       "links": [
-        { "label": "Étapes", "href": "#etapes" },
-        { "label": "Documents", "href": "#documents" },
-        { "label": "Frais", "href": "#frais" },
-        { "label": "Contacter la scolarité", "href": "#scolarite" }
+        {
+          "label": "Étapes",
+          "href": "#etapes"
+        },
+        {
+          "label": "Documents",
+          "href": "#documents"
+        },
+        {
+          "label": "Frais",
+          "href": "#frais"
+        },
+        {
+          "label": "Contacter la scolarité",
+          "href": "#scolarite"
+        }
       ]
     },
     {
@@ -86,7 +104,7 @@
           ]
         }
       ],
-      "note": "Pièces à confirmer auprès de la scolarité pour la rentrée 2026-2027."
+      "note": "Pièces à confirmer auprès de la scolarité pour la rentrée 2026-2027.",
       "sourceUrl": "https://ucao-uuco.org/inscription/"
     },
     {
@@ -105,15 +123,21 @@
         "(+224) 620 42 66 12",
         "(+224) 621 28 66 81",
         "(+224) 629 38 90 58"
-      ],
+      ]
     },
     {
       "type": "cta",
       "variant": "secondary",
       "title": "Questions fréquentes",
       "text": "Durées des formations, habilitations, adresse e-mail à utiliser : les réponses vérifiables sont regroupées dans la FAQ.",
-      "ctaPrimary": { "label": "Consulter la FAQ", "href": "/faq/" },
-      "ctaSecondary": { "label": "Voir le catalogue", "href": "/formations/" }
+      "ctaPrimary": {
+        "label": "Consulter la FAQ",
+        "href": "/faq/"
+      },
+      "ctaSecondary": {
+        "label": "Voir le catalogue",
+        "href": "/formations/"
+      }
     }
   ]
 }
