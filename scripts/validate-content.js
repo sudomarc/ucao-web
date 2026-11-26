@@ -46,7 +46,7 @@ if (news) {
       if (typeof item.title !== 'string' || !item.title.trim()) {
         errors.push(`${prefix}.title doit être une chaîne non vide.`);
       }
-      if (typeof item.date !== 'string' || !/^\\d{4}-\\d{2}-\\d{2}$/.test(item.date)) {
+      if (typeof item.date !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(item.date)) {
         errors.push(`${prefix}.date doit être au format ISO YYYY-MM-DD.`);
       } else {
         const timestamp = Date.parse(`${item.date}T00:00:00.000Z`);
@@ -54,7 +54,7 @@ if (news) {
           errors.push(`${prefix}.date n'est pas une date calendaire valide.`);
         }
       }
-      if (typeof item.sourceUrl !== 'string' || !/^https?:\\/\\//.test(item.sourceUrl)) {
+      if (typeof item.sourceUrl !== 'string' || !/^https?:\/\//.test(item.sourceUrl)) {
         errors.push(`${prefix}.sourceUrl doit être une URL HTTP(S).`);
       }
     }
